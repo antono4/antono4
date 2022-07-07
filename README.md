@@ -1,359 +1,254 @@
-<h1 align="center">Awesome GitHub Profile README 
-<a href="https://www.producthunt.com/posts/awesome-github-profiles?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-awesome-github-profiles" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=277987&theme=light" alt="Awesome GitHub Profiles - Best curated list of developers readme, updated every 15 min | Product Hunt" style="width: 200px; height: 44px;" width="200" height="44" /></a></h1>
-<div align="center">
-<img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome Badge"/>
-<a href="https://arbeitnow.com/?utm_source=awesome-github-profile-readme"><img src="https://img.shields.io/static/v1?label=&labelColor=505050&message=arbeitnow&color=%230076D6&style=flat&logo=google-chrome&logoColor=%230076D6" alt="website"/></a>
-<!-- <img src="http://hits.dwyl.com/abhisheknaiidu/awesome-github-profile-readme.svg" alt="Hits Badge"/> -->
-<img src="https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
-<a href="https://discord.gg/XTW52Kt"><img src="https://img.shields.io/discord/733027681184251937.svg?style=flat&label=Join%20Community&color=7289DA" alt="Join Community Badge"/></a>
-<a href="https://twitter.com/abhisheknaiidu" ><img src="https://img.shields.io/twitter/follow/abhisheknaiidu.svg?style=social" /> </a>
+<!-- <p align="center">
+  Visitor count<br>
+  <img src="https://profile-counter.glitch.me/Antono/count.svg" />
+</p> -->
+
+<p align="center">
+  <a href="https://space.bilibili.com/12767066">
+        <img alt="bilibili"
+            src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.swo.moe%2Fstats%2Fbilibili%2F12767066&query=count&color=282c34&label=%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9&labelColor=FE7398&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAD7ElEQVR4nO2dW9WrMBCFK6ESkFAJSKiESqgEHCABCZWAhEpAAhL2ecik5dDc%2FpXLBDLfWnlqy0xmJ5BMQnq5CIIgCIIgCIIgCIIgCEIBAHQAemYfrgCunD6wAKAHsEKxALgx+bCQD8%2FS9tmgVqeDr1lLigDgZvDhXso+K9TyTBQRwRJ8AHjntl0Flh5QRAQK%2FmKxPeayWx2OXpBNBKiHvi34b7T2MC4pAvW6twR%2FRwkRKPizBN8CgEcuESj4Lwm+BwBjahEk+H8EwJRKhOaCDzW8e1JLfkUUH1NgmR3XmHffHR1l+72BSs8d7w8U+JDAnZERQMcV+CtUi7dNqFqibB4J7vtrq7xKCuAasbTMXCL4T+5aVk6+2xHUrWdhruAR6HIJcOeu2UHI8zyAe2ytWfEdWz9PVvQ8YAmIQ5dDAB9LFsMVAv8oMO2zAGrC5WNIarRiAuKR9jYEd9pY08aa6uUzIHGRdkgKd8pY0yc1WjEBAqypDYoAG0QAZkQAZkQAZkQAZk4vANQenjsSzS3I%2FwcSbXU5jQBUkRtdf4Rar90v8kSv3+I3ffCCSpk8I%2Fw+lgDkdI%2Fv2rEp2CaiWm1AsDQLlDAD+dlFXLMeAaCSeLZdaSFE5VUQNot38cKuEeBgAsSuG0flVZBmEanbXfNQAsS0fgBYIn2fIu3%2FBBMHEyBmDXlFfA8IzeHb+Ems4WAChKykrVA9ZfsQTL57jXzRg4A5wC%2FA8N4ADiZAZwm2XjW75Qh2KOTfA0p4kygPw28OJcCVgn3nDnYo2EwEYRgGH0qAMyICMCMCMCMCMCMCMCMCMCMCfP3qwHDOQ4AAUekTk8FaBRihJnZdYbvtCGC7LvmkM63GjVDINPFrQgCq5ETXfmMzI90FXzPvfqt7x4rEu%2FZaEcCUxFvgz2zO+BUn6UkoaEEAsptiMSX5e8FoRYCN7cVgb4Vq7U%2FH50Pq4JNP7Qiw8UFnJwcK+tXy+Wj6PLEvPgHSHv5UgwA1IQIwwyFAyLJin9RoxYgAzAQIkPwNmf26busC+OIx5TDqo5nDT+F%2FSS%2F9CYzwb+No49zNy2evkYv0LywGGAXUvp6eSneycqOic0w20k7CNgKE7jJunSGLACTCxF27ylmQc98T5MQUH49swd+I0HPXslLKnT0N+wnkrTKi9JZL%2FL9i1SorMmdeQ4TQQ7OFMxIMzGD45w8nUL1im7efENZLJpgPSw0pfz0cdt4U3230Td%2FTvx2R6d2FrHhEWLkq5PELOMsRPHCPnAZGv1xJteL7jbJiaW3sB2nDvPC%2FosSYvjRQz4cJ6n7KO3rYQL7M+L6nVtfDVRAEQRAEQRAEQRAEIZ5%2FSAXmdfXaoQsAAAAASUVORK5CYII%3D&suffix=+%E5%85%B3%E6%B3%A8&cacheSeconds=3600)" />
+    </a>
+    <a href="https://github.com/Antono">
+        <img alt="github"
+            src="https://img.shields.io/github/stars/Antono?affiliations=OWNER&color=%23ffe411&label=github%20stars&logo=github&logoColor=%23fffFF&style=flat" />
+    </a>
+    <a href="https://www.zhihu.com/people/mkosto">
+        <img
+            src="https://img.shields.io/badge/dynamic/json?label=%E7%9F%A5%E4%B9%8E%E5%85%B3%E6%B3%A8&labelColor=0084ff&color=282c34&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dzhihu%26queryKey%3Dmkosto&longCache=true" />
+    </a>
+    <a href="https://juejin.cn/user/2348212565837165">
+        <img alt="juejin"
+            src="https://img.shields.io/badge/%E6%8E%98%E9%87%91-2022%E5%B9%B4%E5%BA%A6%E6%91%B8%E9%B1%BC%E4%BD%9C%E8%80%851%E5%90%8D-%23007fff" />
+    </a>
+     <a href="https://www.youtube.com/channel/UCpCzS_uKS1zzOAUjuuBNXDQ">
+       <img alt="YouTube Channel Views" src="https://img.shields.io/youtube/channel/views/UCpCzS_uKS1zzOAUjuuBNXDQ">
+    </a>
+</p>
+
+<p>
+  <a href="https://count.getloli.com/"><img src="https://count.getloli.com/get/@:Antono"></a>
+  <img src="https://weather-icon.journeyad.repl.co/@shenzhen?v=1" align="right">
+</p>
+
+<h1 align="center">Hi 👋, I'm Antono</h1>
+<h3 align="center">A passionate fullstack developer from Indonesia</h3>
+
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://developer.android.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://www.gnu.org/software/bash/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://flutter.dev" target="_blank"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://golang.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="go" width="40" height="40"/> </a> <a href="hexo.io/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/hexoio/hexoio-icon.svg" alt="hexo" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.jenkins.io" target="_blank"> <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="jenkins" width="40" height="40"/> </a> <a href="https://kotlinlang.org" target="_blank"> <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="kotlin" width="40" height="40"/> </a> <a href="https://kubernetes.io" target="_blank"> <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="kubernetes" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.nginx.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="nginx" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://reactnative.dev/" target="_blank"> <img src="https://reactnative.dev/img/header_logo.svg" alt="reactnative" width="40" height="40"/> </a> <a href="https://spring.io/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> <a href="https://vuejs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" width="40" height="40"/> </a> <a href="https://webpack.js.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg" alt="webpack" width="40" height="40"/> </a> </p>
+
+
+
+![Github Stats](https://github-readme-stats.vercel.app/api?username=Antono&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)
+
+![](https://raw.githubusercontent.com/Antono/github-stats-transparent/output/generated/overview.svg)
+![](https://raw.githubusercontent.com/Antono/github-stats-transparent/output/generated/languages.svg)
+
+
+<details open>
+ <summary> 😇 <b>Medium Published articles</b>: </summary>
 <br>
+    <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Antono/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@Antono/0" alt="Recent Article 0"></a>
+  <br>
+    <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Antono/1"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@Antono/1" alt="Recent Article 1"></a>
+  <br>
+    <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Antono/2"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@Antono/2" alt="Recent Article 2"></a>
+  <br>
 
-<i>A curated list of awesome Github Profile READMEs</i>
+</details>
 
-<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/stargazers"><img src="https://img.shields.io/github/stars/abhisheknaiidu/awesome-github-profile-readme" alt="Stars Badge"/></a>
-<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/network/members"><img src="https://img.shields.io/github/forks/abhisheknaiidu/awesome-github-profile-readme" alt="Forks Badge"/></a>
-<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/pulls"><img src="https://img.shields.io/github/issues-pr/abhisheknaiidu/awesome-github-profile-readme" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/issues"><img src="https://img.shields.io/github/issues/abhisheknaiidu/awesome-github-profile-readme" alt="Issues Badge"/></a>
-<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/abhisheknaiidu/awesome-github-profile-readme?color=2b9348"></a>
-<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme/blob/master/LICENSE"><img src="https://img.shields.io/github/license/abhisheknaiidu/awesome-github-profile-readme?color=2b9348" alt="License Badge"/></a>
+### Latest Tweets
 
-<img alt="Awesome GitHub Profile Readme" src="assets/agpr.gif"> </img>
+<p><a href="https://www.twitter.com/Antono"><img src="https://github-readme-twitter-gazf.vercel.app/api?id=Antono&amp;layout=wide" alt="github-readme-twitter"></a></p>
 
-<i>Loved the project? Please consider [donating](https://paypal.me/abhisheknaiidu) to help it improve!</i>
+### 🎧 Spotify Playing
 
-</div>
-
-### Contents:
-  - [Categories](#categories)
-      - [GitHub Actions 🤖](#github-actions-)
-      - [Game Mode 🚀](#game-mode-)
-      - [Code Mode 👨🏽‍💻](#code-mode-)
-      - [Dynamic Realtime 💫](#dynamic-realtime-)
-      - [A Little Bit of Everything 😃](#a-little-bit-of-everything-)
-      - [Descriptive 🗒](#descriptive-)
-      - [Simple but Innovative Ones 🤗](#simple-but-innovative-ones-)
-      - [Typing.. Mode 🎰](#typing-mode-)
-      - [Anime 👾](#anime-)
-      - [Minimalistic ✨](#minimalistic-)
-      - [GIFS 👻](#gifs-)
-      - [Just Images 🎭](#just-images-)
-      - [Badges 🎫](#badges-)
-      - [Fancy Fonts 🖋](#fancy-fonts-)
-      - [Icons 🎯](#icons-)
-      - [Retro 😎](#retro-)
-  - [Tools](#tools)
-  - [Articles](#articles)
-  - [Video Tutorials](#tutorials)
-  - [Contribute](#contribute)
-  - [License](#license)
+![spotify-github-profile](/img/default.svg)
+<!-- [![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=g9mmploi6sdrg6sk0xosqex2u&cover_image=true&theme=default)](https://github.com/kittinan/spotify-github-profile) -->
 
 
-## Categories
+### :dart: Weekly Fuck The Code
 
-#### GitHub Actions 🤖
-- [Abhishek Naidu](https://github.com/abhisheknaiidu/abhisheknaiidu)
-- [Thomas Guibert](https://github.com/thmsgbrt/thmsgbrt)
-- [Brian Douglas](https://github.com/bdougie/bdougie)
-- [Shawn Wang](https://github.com/sw-yx/sw-yx)
-- [Simon Willison](https://github.com/simonw/simonw)
-- [Mike Coutermarsh](https://github.com/mscoutermarsh/mscoutermarsh)
-- [Michael Hoffmann (Mokkapps)](https://github.com/mokkapps/mokkapps)
-- [Athul Cyriac Ajay](https://github.com/athul/athul)
-- [Gautam Krishna R](https://github.com/gautamkrishnar/gautamkrishnar)
-- [Roald Nefs](https://github.com/roaldnefs/roaldnefs)
-- [Leo](https://github.com/mopig/mopig)
-- [Dhruv Jain](https://github.com/maddhruv/maddhruv)
-- [Erwin Lejeune](https://github.com/guilyx/guilyx)
-- [Jessica Lim](https://github.com/JessicaLim8/JessicaLim8)
-- [侑夕-Tw93](https://github.com/tw93/tw93)
-- [liununu](https://github.com/liununu/liununu)
-- [Filippo Rossi (qu4k)](https://github.com/qu4k/qu4k)
-- [Moe Poi ~](https://github.com/moepoi/moepoi)
-- [Elon Tang (blackcater)](https://github.com/blackcater/blackcater)
-- [Stanley Lim (Spiderpig86)](https://github.com/Spiderpig86/Spiderpig86)
-- [Akshit Garg (gargakshit)](https://github.com/gargakshit/gargakshit)
-- [Yufan You](https://github.com/ouuan/ouuan)
-- [Danny Koppenhagen](https://github.com/d-koppenhagen/d-koppenhagen)
-- [Vidya Bhandary](https://github.com/vidyabhandary/vidyabhandary)
-- [Rao Hai](https://github.com/RaoHai/RaoHai)
-- [Jatin Rao](https://github.com/jatin2003/jatin2003)
-- [teoxoy](https://github.com/teoxoy/teoxoy)
-- [Aral Roca](https://github.com/aralroca/aralroca)
-- [codeSTACKr](https://github.com/codestackr/codestackr)
-- [itgoyo](https://github.com/itgoyo/itgoyo)
-- [lifeparticle](https://github.com/lifeparticle/lifeparticle)
+<!--START_SECTION:waka-->
 
-#### Game Mode 🚀
-- [Tim Burgan](https://github.com/timburgan/timburgan)
-- [Ben Sampica](https://github.com/benjaminsampica/benjaminsampica)
-- [Kavish Hukmani](https://github.com/DoubleGremlin181/DoubleGremlin181)
-- [Jonathan Gin](https://github.com/JonathanGin52/JonathanGin52)
-- [Ross Williams](https://github.com/rossjrw/rossjrw)
-- [kylepls](https://github.com/kylepls/kylepls)
-- [Aaron Liu](https://github.com/HFO4/HFO4)
-- [marcizhu](https://github.com/marcizhu/marcizhu)
+```text
+JSON         2 hrs 14 mins   █████████▒░░░░░░░░░░░░░░░   37.09 %
+YAML         1 hr 36 mins    ██████▓░░░░░░░░░░░░░░░░░░   26.71 %
+TOML         1 hr 18 mins    █████▒░░░░░░░░░░░░░░░░░░░   21.61 %
+INI          49 mins         ███▒░░░░░░░░░░░░░░░░░░░░░   13.65 %
+Other        2 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.56 %
+```
 
-#### Code Mode 👨🏽‍💻
-- [Thaiane Braga](https://github.com/Thaiane/Thaiane)
-- [Ash Baker](https://github.com/ashbakernz/ashbakernz)
-- [Anmol Singh](https://github.com/anmol098/anmol098)
-- [Kiho](https://github.com/monkindey/monkindey)
-- [Marton](https://github.com/martonlederer/martonlederer)
-- [Redowan Delowar](https://github.com/rednafi/rednafi)
-- [Zhenye Na](https://github.com/Zhenye-Na/Zhenye-Na)
+<!--END_SECTION:waka-->
 
-#### Dynamic Realtime 💫
-- [Kirill Feschenko](https://github.com/xcaq/xcaq)
-- [Anurag Hazra](https://github.com/anuraghazra/anuraghazra)
-- [DenverCoder1](https://github.com/DenverCoder1/DenverCoder1)
-- [Hemant Joshi](https://github.com/8bithemant/8bithemant)
-- [Kittinan](https://github.com/kittinan/kittinan)
-- [Andrew Novac](https://github.com/novatorem/novatorem)
-- [Johnny Villegas](https://github.com/C9-LinkRs/C9-LinkRs)
-- [Andrew Young](https://github.com/andyruwruw/andyruwruw)
-- [Rashmi Jadhav](https://github.com/rusty-sj/rusty-sj)
-- [andyruwruw](https://github.com/andyruwruw/andyruwruw)
-- [Jacob Colvin](https://github.com/MacroPower/MacroPower)
-- [Osman Durdağ](https://github.com/zumrudu-anka/zumrudu-anka)
-- [iampavangandhi](https://github.com/iampavangandhi/iampavangandhi)
-- [Dani Akash](https://github.com/daniakash/daniakash)
-- [Rahul Jha](https://github.com/rahul-jha98/rahul-jha98)
+### :sparkles: My Followers
 
-#### A Little Bit of Everything 😃
-- [Raymond Li](https://github.com/Raymo111/Raymo111)
-- [Martin Heinz](https://github.com/MartinHeinz/MartinHeinz)
-- [Adam Alston](https://github.com/adamalston/adamalston)
-- [Rafnix Guzmán](https://github.com/rafnixg/rafnixg)
-- [Aditya Pal](https://github.com/sciencepal/sciencepal)
-- [Hedy Li](https://github.com/hedythedev/hedythedev)
-- [Xunzhuo](https://github.com/xunzhuo/xunzhuo)
-- [Khaleel Gibran](https://github.com/khalby786/khalby786)
-- [Apoorv Tyagi](https://github.com/apoorvtyagi/apoorvtyagi)
-- [CxyFreedom](https://github.com/cxyfreedom/cxyfreedom)
-- [Miller Camilo Vega](https://github.com/minoveaz/minoveaz)
-- [Abhishek Maira](https://github.com/AbhishekMaira10/AbhishekMaira10)
-- [Clayton Hamilton](https://github.com/claytonjhamilton/claytonjhamilton)
-- [Sy Rashid](https://github.com/syrashid/syrashid)
-- [Quin Knight](https://github.com/cheesits456/cheesits456)
-- [Jackyu-1999](https://github.com/Jackyu-1999/Jackyu-1999)
-- [Rak Laptudirm](https://github.com/raklaptudirm/raklaptudirm)
-- [Trini B](https://github.com/trinib/trinib)
-- [holic-x](https://github.com/holic-x/holic-x)
+![Metrics](https://metrics.lecoq.io/Antono?template=classic&base.header=0&base.activity=0&base.community=0&base.repositories=0&base.metadata=0&people=1&people.limit=24&people.identicons=false&people.identicons.hide=false&people.size=28&people.types=followers%2C%20following&people.shuffle=false&config.timezone=Asia%2FShanghai)
 
-#### Descriptive 🗒
-- [Filip Troníček](https://github.com/filiptronicek/filiptronicek)
-- [Garima Singh](https://github.com/garimasingh128/garimasingh128)
-- [lizheming](https://github.com/lizheming/lizheming)
-- [Nguyễn Hoàng Dương](https://github.com/you-create/you-create)
-- [Saksham Taneja](https://github.com/sakshamtaneja21/sakshamtaneja21)
-- [TheAbbie](https://github.com/theabbie/theabbie)
-- [Keshav Singh](https://github.com/keshavsingh4522/keshavsingh4522)
-- [Vidur Satija](https://github.com/vidursatija/vidursatija)
-- [Dani El-Ayyass](https://github.com/dayyass/dayyass)
-- [Nanra Sukedy](https://github.com/Nanra/Nanra)
+<!--START_SECTION:top-followers-->
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/snowdream">
+        <img src="https://avatars2.githubusercontent.com/u/737958" width="100px;" alt="snowdream"/>
+      </a>
+      <br />
+      <a href="https://github.com/snowdream">snowdream</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/lowlighter">
+        <img src="https://avatars2.githubusercontent.com/u/22963968" width="100px;" alt="lowlighter"/>
+      </a>
+      <br />
+      <a href="https://github.com/lowlighter">Simon Lecoq</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Leticia-maria">
+        <img src="https://avatars2.githubusercontent.com/u/60739184" width="100px;" alt="Leticia-maria"/>
+      </a>
+      <br />
+      <a href="https://github.com/Leticia-maria">Letícia Maria Pequeno Madureira</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/donmartz">
+        <img src="https://avatars2.githubusercontent.com/u/78443365" width="100px;" alt="donmartz"/>
+      </a>
+      <br />
+      <a href="https://github.com/donmartz">donmartz</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/jhonataT">
+        <img src="https://avatars2.githubusercontent.com/u/51134324" width="100px;" alt="jhonataT"/>
+      </a>
+      <br />
+      <a href="https://github.com/jhonataT">Jhonata Tenório</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/bitmote">
+        <img src="https://avatars2.githubusercontent.com/u/26090768" width="100px;" alt="bitmote"/>
+      </a>
+      <br />
+      <a href="https://github.com/bitmote">ZhengXiaolei</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/zhuwenxing">
+        <img src="https://avatars2.githubusercontent.com/u/12268675" width="100px;" alt="zhuwenxing"/>
+      </a>
+      <br />
+      <a href="https://github.com/zhuwenxing">zhuwenxing</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/AlphaTechnolog">
+        <img src="https://avatars2.githubusercontent.com/u/54639968" width="100px;" alt="AlphaTechnolog"/>
+      </a>
+      <br />
+      <a href="https://github.com/AlphaTechnolog">Gabriel Guerra</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/cnsuhao">
+        <img src="https://avatars2.githubusercontent.com/u/23429527" width="100px;" alt="cnsuhao"/>
+      </a>
+      <br />
+      <a href="https://github.com/cnsuhao">cnsuhao</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Matrixbirds">
+        <img src="https://avatars2.githubusercontent.com/u/9990676" width="100px;" alt="Matrixbirds"/>
+      </a>
+      <br />
+      <a href="https://github.com/Matrixbirds">matrixbirds</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/swhgoon">
+        <img src="https://avatars2.githubusercontent.com/u/840150" width="100px;" alt="swhgoon"/>
+      </a>
+      <br />
+      <a href="https://github.com/swhgoon">SwhGo_oN</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/MadhavDev-prog">
+        <img src="https://avatars2.githubusercontent.com/u/13887725" width="100px;" alt="MadhavDev-prog"/>
+      </a>
+      <br />
+      <a href="https://github.com/MadhavDev-prog">suffixdev</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/victoryang00">
+        <img src="https://avatars2.githubusercontent.com/u/40686366" width="100px;" alt="victoryang00"/>
+      </a>
+      <br />
+      <a href="https://github.com/victoryang00">victoryang00</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/imknown">
+        <img src="https://avatars2.githubusercontent.com/u/5681447" width="100px;" alt="imknown"/>
+      </a>
+      <br />
+      <a href="https://github.com/imknown">imknown J. Kimu</a>
+    </td>
+  </tr>
+</table>
+<!--END_SECTION:top-followers-->
 
-#### Simple but Innovative Ones 🤗
-- [Nate Moore](https://github.com/natemoo-re/natemoo-re)
-- [Jhey Tompkins](https://github.com/jh3y/jh3y)
-- [Waylon Walker](https://github.com/WaylonWalker/WaylonWalker)
-- [Vansh Kapoor](https://github.com/vanshkapoor/vanshkapoor)
-- [Harsh Kumar Khatri](https://github.com/harshkumarkhatri/harshkumarkhatri)
-- [Stephen Ajulu](https://github.com/stephenajulu/stephenajulu)
-- [Haany Ali](https://github.com/MarikIshtar007/MarikIshtar007)
-- [Anurag Singh](https://github.com/ashleymavericks/ashleymavericks)
-- [Rishit Dagli](https://github.com/Rishit-dagli/Rishit-dagli)
-- [Vinit Shahdeo](https://github.com/vinitshahdeo/vinitshahdeo/)
-- [Fatih Kadir Akın](https://github.com/f/f/)
-- [Lucas Vazquez](https://github.com/lucasvazq/lucasvazq)
-- [小弟调调™](https://github.com/jaywcjlove/jaywcjlove)
-- [alx365](https://github.com/alx365/alx365)
-- [Johnny Villegas](https://github.com/C9-LinkRs/C9-LinkRs)
-- [一缕殇流化隐半边冰霜](https://github.com/halfrost/halfrost)
-- [Srihari Kapu](https://github.com/sriharikapu/sriharikapu)
-- [vaaski](https://github.com/vaaski/vaaski)
-- [Arturs Smirnovs](https://github.com/arturssmirnovs/arturssmirnovs)
-- [Yash Sahijwani](https://github.com/Terabyte17/Terabyte17)
-- [Hemanth Kollipara](https://github.com/Defcon27/Defcon27)
-- [Tushar Mittal](https://github.com/techytushar/techytushar)
-- [Onimur](https://github.com/onimur/onimur)
-- [Bruno Tacca](https://github.com/brunotacca/brunotacca)
-- [Matthew Taylor](https://github.com/Wrapperup/Wrapperup)
+名字：李狗蛋LGD
 
-#### Typing.. Mode 🎰
-- [Mathieu Ledru](https://github.com/matyo91/matyo91)
-- [CyrisXD](https://github.com/CyrisXD/CyrisXD)
-- [Mpho Mphego](https://github.com/mmphego/mmphego)
-- [Abhinav Sharma](https://github.com/ABSphreak/ABSphreak)
-- [Mason Slover](https://github.com/MasonSlover/MasonSlover)
-- [SuperSupeng](https://github.com/SuperSupeng/SuperSupeng)
+Github：Antono
 
-#### Anime 👾
-- [Ing](https://github.com/innng/innng)
-- [edisonlee55](https://github.com/edisonlee55/edisonlee55)
-- [Ashutosh](https://github.com/Xx-Ashutosh-xX/Xx-Ashutosh-xX)
-- [Yukii](https://github.com/PrincessAkira/PrincessAkira)
+微博、知乎、B站：李狗蛋LGD
 
-#### Minimalistic ✨
-- [Caneco](https://github.com/caneco/)
-- [Gift Egwuenu](https://github.com/lauragift21/lauragift21)
-- [Kelechi Precious Nwachukwu](https://github.com/PluckyPrecious/PluckyPrecious)
-- [Ghazi Khan](https://github.com/gkhan205)
-- [Pratik Kumar](https://github.com/pr2tik1/pr2tik1)
-- [Dennis Hartrampf](https://github.com/DennisHartrampf/DennisHartrampf)
-- [MrStanDu33](https://github.com/MrStanDu33/MrStanDu33)
-- [Jayraj Roshan](https://github.com/jayrajroshan/jayrajroshan)
-- [amxchang](https://github.com/amxchang/amxchang)
-- [ridermansb](https://github.com/Ridermansb/Ridermansb)
-- [Maximous Black](https://github.com/maximousblk/maximousblk)
-- [Alex Martin](https://github.com/AlexMartinFR/AlexMartinFR)
-- [ChungZH](https://github.com/ChungZH/ChungZH/)
-- [Orhun](https://github.com/orhun/orhun)
-- [Aveek Saha](https://github.com/Aveek-Saha/Aveek-Saha)
-- [Federico Dondi](https://github.com/federico-dondi)
-- [Zheeeng](https://github.com/Zheeeng/Zheeeng)
-- [TallGuyJenks](https://github.com/tallguyjenks/tallguyjenks)
-- [Stefanie Grunwald](https://github.com/moertel/moertel)
-- [Abdul Khaliq](https://github.com/kha7iq/kha7iq)
+斗鱼房间:https://www.douyu.com/201001
 
-#### GIFS 👻
-- [Pouya Saadeghi](https://github.com/saadeghi/saadeghi)
-- [Ari](https://github.com/ari-hacks/ari-hacks)
-- [Siv Ram Shastri](https://github.com/Prince-Shivaram/Prince-Shivaram)
-- [Shanu Mishra](https://github.com/Shanu1515/Shanu1515)
-- [Shubham Kumar](https://github.com/imskr/imskr)
-- [Duncan](https://github.com/dephraiim/dephraiim)
-- [Demartini](https://github.com/demartini/demartini)
-- [Sindre Sorhus](https://github.com/sindresorhus/sindresorhus)
-- [Pranjal Bhardwaj](https://github.com/Bhard27/Bhard27)
-- [Okan Koçyiğit](https://github.com/okankocyigit/okankocyigit)
-- [Raghav Khullar](https://github.com/RaghavK16/RaghavK16)
-- [xrkffgg](https://github.com/xrkffgg/xrkffgg)
-- [Kevin Cui](https://github.com/KevCui/KevCui)
-- [Muskan Rani](https://github.com/muskanrani/muskanrani)
-- [Rishav Anand](https://github.com/rishavanand/rishavanand)
-- [KelviNosse](https://github.com/KelviNosse/KelviNosse)
-- [nilfalse](https://github.com/nilfalse/nilfalse)
-- [Shahriar Shafin](https://github.com/ShahriarShafin/ShahriarShafin)
-- [Somnath Paul](https://github.com/SP-XD/SP-XD)
-- [Ksenia Morozova](https://github.com/kmoroz/kmoroz)
+B站房间:https://live.bilibili.com/3519206
 
-#### Just Images 🎭
-- [Zack Krida](https://github.com/zackkrida/zackkrida)
-- [偏右](https://github.com/afc163/afc163)
-- [thewhiteh4t](https://github.com/thewhiteh4t/thewhiteh4t)
-- [Akash Rai](https://github.com/akasrai/akasrai)
-- [Oussama Bouchikhi](https://github.com/oussamabouchikhi/oussamabouchikhi)
-- [Daily Random Photo](https://github.com/dailyrandomphoto/dailyrandomphoto)
+Don't be a programmer, Be a problem solver.
 
-#### Badges 🎫
-- [Anirudh Emmadi](https://github.com/aemmadi/aemmadi)
-- [Brendon Smith](https://github.com/br3ndonland/br3ndonland)
-- [Alwin Wang](https://github.com/alwinw/alwinw)
-- [Moshfiq Rony](https://github.com/moshfiqrony/moshfiqrony)
-- [Ileriayo Adebiyi](https://github.com/ileriayo/ileriayo)
-- [Samujjwaal Dey](https://github.com/samujjwaal/samujjwaal)
-- [Char-Al](https://github.com/char-al/char-al)
-- [Oka](https://github.com/Coordinate-Cat/Coordinate-Cat)
-- [Nikita Rusetskii](https://github.com/xtenzQ/xtenzQ)
-- [Raphael Ebner](https://github.com/rafi0101/rafi0101)
+公众号：v2code
 
-#### Fancy Fonts 🖋
-- [xiaoluoboding](https://github.com/xiaoluoboding/xiaoluoboding)
+- 📫 How to reach me:
+    - :octocat: [Github@Antono](https://github.com/Antono)
+    - :email: [Antono@gmail.com](mailto:Antono@gmail.com)
+    - :tv: [Bilibili@Antono](https://space.bilibili.com/12767066)
+    - :tv: [Youtube@Antono](https://www.youtube.com/channel/UCpCzS_uKS1zzOAUjuuBNXDQ?view_as=subscriber)
+    - :camera:[Instagram@Antono](https://www.instagram.com/Antono1991/)
+    - :bird:[twitter@Antono](https://twitter.com/Antono/)
 
-#### Icons 🎯
-- [Yuan Tang](https://github.com/terrytangyuan/terrytangyuan)
-- [Hussainweb](https://github.com/hussainweb/hussainweb)
-- [Peter Han](https://github.com/peterthehan/peterthehan)
-- [Thomas George Thomas](https://github.com/Thomas-George-T/Thomas-George-T)
-- [Derek Nguyen](https://github.com/dereknguyen269/dereknguyen269)
-- [Valentin Briand](https://github.com/vbriand/vbriand)
 
-#### Retro 😎
-- [Livio Brunner](https://github.com/BrunnerLivio/BrunnerLivio)
-- [Christian Petersen](https://github.com/fnky/fnky)
+- :computer: PC/Mac:
 
-## Tools
-- [Todoist Stats in Readme](https://github.com/abhisheknaiidu/todoist-readme) - Daily Todoist Stats on your Profile Readme
-- [Visitor Badge](https://visitor-badge.glitch.me/#docs) - Count visitors for your README.md, Issues, PRs in GitHub
-- [1990s style Visitor Counter](https://twitter.com/ryanlanciaux/status/1283755637126705152) - Add a 1990s style visitor counter with one line of markdown.
-- [Vistor Count](https://pufler.dev/git-badges/) - Count visitors for README.md that can be used with shields.io
-- [Shields Project](https://shields.io/) - Use Shields to create profile badges, compatible with Simple Icons
-- [Github Readme Stats](https://github.com/anuraghazra/github-readme-stats) - Get dynamically generated GitHub stats on your readmes
-- [GitHub Streak Stats](https://github.com/DenverCoder1/github-readme-streak-stats) - 🔥 Stay motivated and show off your contribution streak! 🌟 Display your total contributions, current streak, and longest streak on your GitHub profile README
-- [Simple Icons](https://github.com/simple-icons/simple-icons#cdn-usage) -  SVG icons for popular brands for your README.md files
-- [Laravel GitHub Profile Visit Counter](https://github.com/caneco/laravel-github-profile-view-counter) - Add on your Laravel project a quick-badge to count your profile visits.
-- [Dev Metrics in Readme](https://github.com/athul/waka-readme) - [WakaTime](https://wakatime.com/) Weekly Metrics on your Profile Readme
-- [Profile Activity Generator](https://github.com/omidnikrah/profile-activity-generator) - Generate custom profile activity for your profile README
-- [Current UTC time](https://github.com/jojoee/jojoee) - Example code of server that can serve dynamic content on GitHub profile
-- [Github Activity in README](https://github.com/jamesgeorge007/github-activity-readme) - Updates `README.md` with the recent GitHub activity of a user
-- [Github Profile README Generator](https://github.com/rahuldkjain/github-profile-readme-generator) - This tool provides an easy way to create github profile readme with latest addons like `visitors count`, `github stats` etc.
-- [Dynamic Profile Page On Github](https://github.com/umutphp/github-action-dynamic-profile-page) - Get dynamically generated list of your commits (of the repositories that the action is configured) on GitHub profile readme.
-- [npm package downloads](https://github.com/maddhruv/github-readme-npm-downloads) - Show all of your npm packages and their total downloads
-- [All Dev Stats in Readme](https://github.com/anmol098/waka-readme-stats) - Are you an early 🐤 or a night 🦉? When are you most productive during the day? What languages you code in? And other stuff... Let's check out in your readme!
-- [Feedparser](https://pythonhosted.org/feedparser/) - Convenient processing of RSS files
-- [Profile README Widgets](https://github.com/marketplace/actions/profile-readme) - Add simple widgets to your profile readme.
-- [Spotify now playing card generator](https://github.com/kittinan/spotify-github-profile) - Generate your Spotify now playing card for your GitHub profile
-- [Markdown Badges](https://github.com/Ileriayo/markdown-badges) - Add badges to your profile.
-- [Latest Blog Posts and StackOverflow activity in readme](https://github.com/gautamkrishnar/blog-post-workflow) - Show your latest blog posts from any sources or StackOverflow activity on your GitHub profile/project readme automatically using the RSS feed using this Github Action
-- [GitHub Readme LinkedIn](https://github.com/soroushchehresa/github-readme-linkedin) - Get dynamically generated images from your LinkedIn profile on your GitHub readmes
-- [GitHub Readme Medium](https://github.com/omidnikrah/github-readme-medium) - Show your latest Medium article on your readmes!
-- [GitHub Readme StackOverflow](https://github.com/omidnikrah/github-readme-stackoverflow) - Dynamically generated your StackOverflow profile status on your GitHub readmes!
-- [StackOverflow Stats Badge](https://github.com/claytonjhamilton/stackoverflow-badge) - Display your stats with this Unique StackOverflow Badge!
-- [Github Profile README Generator](https://github.com/arturssmirnovs/github-profile-readme-generator) - This project allows you to create nice and simple github profile readme files.
-- [Profile Readme Stats](https://github.com/marketplace/actions/profile-readme-stats) - [Github Action] Showcase your github stats on your profile README.md
-- [README Jokes](https://github.com/ABSphreak/readme-jokes) - Random dev jokes in your GitHub README.
-- [GitHub Profile Trophy](https://github.com/ryo-ma/github-profile-trophy) - 🏆 Add dynamically generated GitHub Trophy on your readme
-- [Github Readme Twitter](https://github.com/gazf/github-readme-twitter) - Show your latest tweet on your readmes.
-- [Random Dev Memes](https://github.com/techytushar/random-memer) - Random dev memes to display on your GitHub README.
-- [GitHub Readme Quotes](https://github.com/PiyushSuthar/github-readme-quotes) - Dev quotes on your GitHub Profile Readme.
-- [GitHub Profilinator](https://github.com/rishavanand/github-profilinator) - This tool contains small GUI components that you can hook together to generate markdown for your perfect readme.
-- [PageSpeed score](https://github.com/ankurparihar/readme-pagespeed-insights) - Generate website's PageSpeed score in animated svg form which can be used in GitHub README
-- [Gitwar Profile Score](https://github.com/iampavangandhi/Gitwar) - Add your Github Profile Score in README.
-- [Header Images for Github Profile READMEs](https://github.com/khalby786/REHeader) - Generate header images for your GitHub profile READMEs with custom content
-- [YouTube Channel Stats](https://github.com/DenverCoder1/github-readme-youtube-stats) - 📺 Display number of subscribers on YouTube and/or your channel's view count as a badge
-- [Current Book Status from GoodReads](https://github.com/theFr1nge/goodreads-readme) - Add a card of the current book you are reading that automatically syncs with GoodReads to display your progress.
-- [Readme Typing SVG](https://github.com/DenverCoder1/readme-typing-svg) - :zap: Dynamically generated, customizable SVG that gives the appearance of typing and deleting text
+    - NUC8i7HVK 64G 2TSSD Big Sur 11.2 + Win10
+    - MacBookPro2015 16G 256SSD
+    - Mac Mini m1 16G 512SSD
+    - i7-6700k 32G 256SSD+4T RX590 MacOS Big Sur 11.1
+    - i5-4590  16G 1TSSD RX570 MacOS Catalina 10.15.7
+    - i5-10400  16G 512SSD Ubuntu20.04 + Win10
+    - i5-10400  16G 512SSD+256SSD Win10 + Big Sur 11.1
+    - TencentCloud 4Core-4G-80G-1200G/3Year Ubuntu20.04
+    - 蜗牛星际 J1900+4G +3T DSM918+
+    - 威联通QNAP TS462C 500G
 
-## Articles
-- ["How To Create A GitHub Profile README"](https://www.aboutmonica.com/blog/how-to-create-a-github-profile-readme) - *Monica Powell*
-- ["How to Stand Out on Github with Profile READMEs"](https://medium.com/better-programming/how-to-stand-out-on-github-with-profile-readmes-dfd2102a3490?source=friends_link&sk=61df9c4b63b329ad95528b8d7c00061f) - *Jessica Lim*
-- ["What's on your GitHub Profile"](https://dev.to/waylonwalker/what-s-on-your-github-profile-40p3) - *Waylon Walker*
-- ["3 Ways to Spice up your Github Profile README 🔥"](https://dev.to/jayehernandez/3-ways-to-spice-up-your-github-profile-readme-1276) - *Jaye Hernandez*
-- ["Dynamically Generated Github Stats For Your Profile ReadMe"](https://dev.to/anuraghazra/dynamically-generated-github-stats-for-your-profile-readme-o4g) - *Anurag Hazra*
-- ["How to create an awesome GIF for your GitHub Profile README"](https://dev.to/satvikchachra/how-to-add-an-awesome-readme-to-your-github-profile-361n) - *Satvik Chachra*
-- ["Create a special repository in your GitHub Profile 🔨, supported and unsupported features"](https://torrocus.com/blog/special-github-repository/) - *Alex Malaszkiewicz*
-- ["How to create a Github Profile README with Dynamic Github Stats"](https://codewithghazi.com/how-to-create-a-github-profile-readme-with-dynamic-github-stats/) - *Ghazi Khan*
-- ["How I Built A Self-Updating README On My Github Profile"](https://www.mokkapps.de/blog/how-i-built-a-self-updating-readme-on-my-git-hub-profile/) - *Michael Hoffmann (Mokkapps)*
-- ["Building a self-updating profile README for GitHub"](https://simonwillison.net/2020/Jul/10/self-updating-profile-readme/) - *Simon Willison*
-- ["How to create an interactive README for your GitHub profile"](https://kavishhukmani.me/github-profile-interactive-readme-tutorial/) - *Kavish Hukmani*
-- ["什么？Github 居然可以这么玩？"](https://zhuanlan.zhihu.com/p/161705999) - *Tw93*
-- ["Getting started with Markdown Badges"](https://dev.to/ileriayo/mardown-badges-2og0) - *Ileriayo Adebiyi*
-- ["Show your latest dev.to posts automatically on your GitHub profile readme"](https://dev.to/gautamkrishnar/show-your-latest-dev-to-posts-automatically-in-your-github-profile-readme-3nk8)  - *Gautam krishna R*
-- ["How I Built A Self-Updating README by Webhooks and Netlify Functions"](https://github.com/RaoHai/RaoHai/blob/master/How-I-Built-A-Self-Updating-README-by-Webhooks-and-Netlify-Functions.md/) - *Rao Hai*
-- ["Build a Stunning README For Your GitHub Profile"](https://towardsdatascience.com/build-a-stunning-readme-for-your-github-profile-9b80434fe5d7) - *Martin Heinz*
-- ["How I added my Spotify statistics to my GitHub readme 📜"](https://dev.to/gargakshit/how-i-added-my-spotify-statistics-to-my-github-readme-4jdd) - *Akshit Garg*
-- ["Static Readme Regeneration"](https://dev.to/aralroca/static-readme-regeneration-4pf2) - *Aral Roca*
-- ["How to Create a Self-Updating README.md for Your GitHub Profile"](https://medium.com/@th.guibert/how-to-create-a-self-updating-readme-md-for-your-github-profile-f8b05744ca91) - *Thomas Guibert*
-- ["一文玩转github主页"](https://blog.holic-x.com/wv-blog/post/7ad96a5d.html) - *holic-x*
+- :iphone: phone/iPhone:
+    - iPhone12
 
-## Tutorials
-- ["Create Impressive GitHub Portfolio"](https://www.youtube.com/watch?v=dkE4mVhwMB4) - *MTECHVIRAL*
-- ["How To Create a Github Profile ReadMe"](https://www.youtube.com/watch?v=DOiGs2NiDbU) - *James Q Quick*
-- ["How to create a GitHub profile README"](https://www.youtube.com/watch?v=vND_UY7xk24) - *Code With Confidence*
-- ["How To Create A GitHub Profile README"](https://www.youtube.com/watch?v=Y1z7_GfEPiE) - *Program With Erik*
-- ["Next Level GitHub Profile README"](https://youtu.be/ECuqb5Tv9qI) - *codeSTACKr*
+- :camera: Camera:
+    - Sony A6000
+    - Sony A6400
 
-## Contribute
+- :microphone: Mic:
+    - SM7B + ID14MKII
+    - MAONO PM320T + E2
 
-Contributions are always welcome!
-Please read the [contribution guidelines](contributing.md) first.
+| :pencil2: | :video_game: | :book: |:clapper:  |
+| --- | --- | --- | --- |
+| [Blogs](https://Antono.github.io/) |[Games](https://Antono.github.io/games/)  | [Books](https://Antono.github.io/books/) | [Movies](https://Antono.github.io/movies/) |
 
-## Special Thanks 🙇
-- [Zetao Zhuang](https://github.com/zzetao) for making the amazing site for this repo!
 
-## License 
+### :zap: Recent Activity
 
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+<!--START_SECTION:activity-->
+1. 🗣 Commented on [#168](https://github.com/biliup/biliup/issues/168) in [biliup/biliup](https://github.com/biliup/biliup)
+2. ❗️ Opened issue [#285](https://github.com/Antono/500Days-Of-Github/issues/285) in [Antono/500Days-Of-Github](https://github.com/Antono/500Days-Of-Github)
+<!--END_SECTION:activity-->
 
-To the extent possible under law, [Abhishek Naidu](https://abhisheknaidu.tech/) has waived all copyright and related or neighboring rights to this work.
+
+
