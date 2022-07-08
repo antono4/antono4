@@ -23,7 +23,9 @@
 <h1 align="center">Hi 👋, I'm Antono</h1>
 <h3 align="center">A passionate fullstack developer from Indonesia</h3>
 
-![Github Stats](https://github-readme-stats.vercel.app/api?username=antono4&bg_color=30,e96333,901e95&title_color=47ff4a&text_color=47ff4a)
+![antono4's Stats](https://github-readme-stats.vercel.app/api?username=antono4&theme=vue-dark&show_icons=true&hide_border=false&count_private=true)
+![antono4's Streak](https://github-readme-streak-stats.herokuapp.com/?user=antono4&theme=vue-dark&hide_border=false)
+![antono4's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=vue-dark&show_icons=true&hide_border=false&layout=compact)
 
 ![](https://raw.githubusercontent.com/Antono/github-stats-transparent/output/generated/overview.svg)
 ![](https://raw.githubusercontent.com/Antono/github-stats-transparent/output/generated/languages.svg)
