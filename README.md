@@ -33,7 +33,7 @@
 <h1 align="center">Hi 👋, I'm Antono</h1>
 <h3 align="center">A passionate fullstack developer from Indonesia</h3>
 
-![Github Stats](https://github-readme-stats.vercel.app/api?username=Antono4&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)
+![Github Stats](https://github-readme-stats.vercel.app/api?username=antono4&bg_color=30,e96333,901e95&title_color=47ff4a&text_color=47ff4a)
 
 ![](https://raw.githubusercontent.com/Antono/github-stats-transparent/output/generated/overview.svg)
 ![](https://raw.githubusercontent.com/Antono/github-stats-transparent/output/generated/languages.svg)
