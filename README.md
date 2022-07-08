@@ -17,7 +17,7 @@
 
 <p>
   <a href="https://count.getloli.com/"><img src="https://count.getloli.com/get/@:Antono"></a>
-  <img src="https://weather-icon.journeyad.repl.co/@shenzhen?v=1" align="right">
+  <img src="https://weather-icon.journeyad.repl.co/@Antono?v=1" align="right">
 </p>
 
 <h1 align="center">Hi 👋, I'm Antono</h1>
@@ -38,18 +38,15 @@
 <details open>
  <summary> 😇 <b>Medium Published articles</b>: </summary>
 <br>
-    <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Antono/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@Antono/0" alt="Recent Article 0"></a>
+    <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Antono4/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@Antono4/0" alt="Recent Article 0"></a>
   <br>
-    <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Antono/1"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@Antono/1" alt="Recent Article 1"></a>
+    <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Antono4/1"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@Antono4/1" alt="Recent Article 1"></a>
   <br>
-    <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Antono/2"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@Antono/2" alt="Recent Article 2"></a>
+    <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Antono4/2"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@Antono4/2" alt="Recent Article 2"></a>
   <br>
 
 </details>
 
-### Latest Tweets
-
-<p><a href="https://www.twitter.com/Antono"><img src="https://github-readme-twitter-gazf.vercel.app/api?id=Antono&amp;layout=wide" alt="github-readme-twitter"></a></p>
 
 ### 🎧 Spotify Playing
 
@@ -182,15 +179,11 @@ Other        2 mins          ░░░░░░░░░░░░░░░░░
 </table>
 <!--END_SECTION:top-followers-->
 
-名字：李狗蛋LGD
+
 
 Github：Antono
 
-微博、知乎、B站：李狗蛋LGD
 
-斗鱼房间:https://www.douyu.com/201001
-
-B站房间:https://live.bilibili.com/3519206
 
 Don't be a programmer, Be a problem solver.
 
@@ -198,36 +191,11 @@ Don't be a programmer, Be a problem solver.
 
 - 📫 How to reach me:
     - :octocat: [Github@Antono4](https://github.com/Antono4)
-    - :email: [Antono@gmail.com](mailto:Antono@gmail.com)
-    - :tv: [Bilibili@Antono](https://space.bilibili.com/12767066)
+    - :email: [Antono@gmail.com](mailto:Antonockr1@gmail.com)
     - :tv: [Youtube@Antono](https://www.youtube.com/channel/UCpCzS_uKS1zzOAUjuuBNXDQ?view_as=subscriber)
-    - :camera:[Instagram@Antono](https://www.instagram.com/Antono1991/)
-    - :bird:[twitter@Antono](https://twitter.com/Antono/)
+    - :camera:[Instagram@Antono](https://www.instagram.com/Antonockr/)
 
 
-- :computer: PC/Mac:
-
-    - NUC8i7HVK 64G 2TSSD Big Sur 11.2 + Win10
-    - MacBookPro2015 16G 256SSD
-    - Mac Mini m1 16G 512SSD
-    - i7-6700k 32G 256SSD+4T RX590 MacOS Big Sur 11.1
-    - i5-4590  16G 1TSSD RX570 MacOS Catalina 10.15.7
-    - i5-10400  16G 512SSD Ubuntu20.04 + Win10
-    - i5-10400  16G 512SSD+256SSD Win10 + Big Sur 11.1
-    - TencentCloud 4Core-4G-80G-1200G/3Year Ubuntu20.04
-    - 蜗牛星际 J1900+4G +3T DSM918+
-    - 威联通QNAP TS462C 500G
-
-- :iphone: phone/iPhone:
-    - iPhone12
-
-- :camera: Camera:
-    - Sony A6000
-    - Sony A6400
-
-- :microphone: Mic:
-    - SM7B + ID14MKII
-    - MAONO PM320T + E2
 
 | :pencil2: | :video_game: | :book: |:clapper:  |
 | --- | --- | --- | --- |
