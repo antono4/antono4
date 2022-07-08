@@ -207,13 +207,17 @@ Don't be a programmer, Be a problem solver.
 | --- | --- | --- | --- |
 | [Blogs](https://Antono.github.io/) |[Games](https://Antono.github.io/games/)  | [Books](https://Antono.github.io/books/) | [Movies](https://Antono.github.io/movies/) |
 
+ [<img align="left" width="390" alt="🦑" src="https://gist.githubusercontent.com/lowlighter/3c6eaedf50273adfb7a510822672f570/raw/general.svg">](#)
+[<img align="right" width="150" alt="🦑" src="https://count.getloli.com/get/@:lowlighter?theme=rule34">](https://www.youtube.com/watch?v=PqXPW0oBKgg)
+[<img align="right" width="390" alt="🦑" src="https://gist.githubusercontent.com/lowlighter/3c6eaedf50273adfb7a510822672f570/raw/medias.svg?p">](#)
+<img align="right" width="390" height="31" alt="🦑" src="https://gist.githubusercontent.com/lowlighter/3c6eaedf50273adfb7a510822672f570/raw/placeholder.svg"> 
 
-### :zap: Recent Activity
+[<img align="left" width="390" alt="🦑" src="https://gist.githubusercontent.com/lowlighter/3c6eaedf50273adfb7a510822672f570/raw/sponsors.svg">](https://github.com/sponsors/lowlighter)
+[<img align="right" width="390" alt="🦑" src="https://gist.githubusercontent.com/lowlighter/3c6eaedf50273adfb7a510822672f570/raw/achievements.svg">](#)
 
-<!--START_SECTION:activity-->
-1. 🗣 Commented on [#168](https://github.com/biliup/biliup/issues/168) in [biliup/biliup](https://github.com/biliup/biliup)
-2. ❗️ Opened issue [#285](https://github.com/Antono/500Days-Of-Github/issues/285) in [Antono/500Days-Of-Github](https://github.com/Antono/500Days-Of-Github)
-<!--END_SECTION:activity-->
+<img width="100%" height="30" alt="🦑" src="https://gist.githubusercontent.com/lowlighter/3c6eaedf50273adfb7a510822672f570/raw/placeholder.svg"> 
+
+[<img align="right" alt="🦑" src="https://user-images.githubusercontent.com/22963968/159836902-a7553777-f1e2-49ed-90fc-9721322b3f44.png">](#)
 
 
 
