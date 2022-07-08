@@ -203,10 +203,8 @@ Don't be a programmer, Be a problem solver.
 
 
 
-| :pencil2: | :video_game: | :book: |:clapper:  |
-| --- | --- | --- | --- |
-| [Blogs](https://Antono.github.io/) |[Games](https://Antono.github.io/games/)  | [Books](https://Antono.github.io/books/) | [Movies](https://Antono.github.io/movies/) |
-
+ 
+ https://metrics.lecoq.io/insights/antono4
  [<img align="left" width="390" alt="🦑" src="https://gist.githubusercontent.com/lowlighter/3c6eaedf50273adfb7a510822672f570/raw/general.svg">](#)
 [<img align="right" width="150" alt="🦑" src="https://count.getloli.com/get/@:lowlighter?theme=rule34">](https://www.youtube.com/watch?v=PqXPW0oBKgg)
 [<img align="right" width="390" alt="🦑" src="https://gist.githubusercontent.com/lowlighter/3c6eaedf50273adfb7a510822672f570/raw/medias.svg?p">](#)
