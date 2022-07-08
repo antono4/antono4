@@ -19,7 +19,11 @@
   <a href="https://count.getloli.com/"><img src="https://count.getloli.com/get/@:Antono"></a>
   <img src="https://weather-icon.journeyad.repl.co/@shenzhen?v=5" align="right">
 </p>
-
+<div align='center'>
+  <a href="https://github.com/DenverCoder1/readme-typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,%20world!%20I'm%20a%20Antono;PHP%20Language%20developer;%20Computational%20Chemist;Always%20learning%20new%20things;I%20do%20science%20for%20helping%20people&font=Fira%20Code&center=true&width=440&height=45&color=f75c7e&vCenter=true&size=22">
+  </a>
+</div> 
 <h1 align="center">Hi 👋, I'm Antono</h1>
 <h3 align="center">A passionate fullstack developer from Indonesia</h3>
 
