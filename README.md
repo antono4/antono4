@@ -15,6 +15,7 @@
 <div align='center'>
   <a href="https://github.com/DenverCoder1/readme-typing-svg">
     <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,%20world!%20I'm%20a%20Antono;PHP%20Language%20developer;%20Computational%20Chemist;Always%20learning%20new%20things;I%20do%20science%20for%20helping%20people&font=Fira%20Code&center=true&width=440&height=45&color=f75c7e&vCenter=true&size=22">
+
   </a>
 </div> 
 <h1 align="center">Hi 👋, I'm Antono</h1>
@@ -37,23 +38,6 @@
 
 
 
-<details open>
- <summary> 😇 <b>Medium Published articles</b>: </summary>
-<br>
-    <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Antono4/0"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@Antono4/0" alt="Recent Article 0"></a>
-  <br>
-    <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Antono4/1"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@Antono4/1" alt="Recent Article 1"></a>
-  <br>
-    <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@Antono4/2"><img src="https://github-readme-medium-recent-article.vercel.app/medium/@Antono4/2" alt="Recent Article 2"></a>
-  <br>
-
-</details>
-
-
-### 🎧 Spotify Playing
-
-![spotify-github-profile](/img/default.svg)
-<!-- [![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=g9mmploi6sdrg6sk0xosqex2u&cover_image=true&theme=default)](https://github.com/kittinan/spotify-github-profile) -->
 
 
 ### :dart: Weekly Fuck The Code
