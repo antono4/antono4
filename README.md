@@ -40,12 +40,12 @@
 
 
 
-### :dart: Weekly Fuck The Code
+
 
 <!--START_SECTION:waka-->
 
 ```text
-JSON         2 hrs 14 mins   █████████▒░░░░░░░░░░░░░░░   37.09 %
+JSON         2 hrs 14 mins   ███████████████▒░░░░░░░░░   67.09 %
 YAML         1 hr 36 mins    ██████▓░░░░░░░░░░░░░░░░░░   26.71 %
 TOML         1 hr 18 mins    █████▒░░░░░░░░░░░░░░░░░░░   21.61 %
 INI          49 mins         ███▒░░░░░░░░░░░░░░░░░░░░░   13.65 %
