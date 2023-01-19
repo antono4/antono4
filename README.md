@@ -22,7 +22,7 @@
 
 <h3 align="center">A passionate fullstack developer from Indonesia</h3>
 
-![antono4's Stats](https://github-readme-stats.vercel.app/api?username=antono4&theme=vue-dark&show_icons=true&hide_border=true&count_private=true)
+
 ![antono4's Streak](https://github-readme-streak-stats.herokuapp.com/?user=antono4&theme=vue-dark&hide_border=true)
 
  
