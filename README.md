@@ -20,8 +20,7 @@
 
 <h3 align="center">A passionate fullstack developer from Indonesia</h3>
 
-
-![antono4's Streak](https://github-readme-streak-stats.herokuapp.com/?user=antono4&theme=vue-dark&hide_border=true)
+[![GitHub Streak](https://streak-stats.demolab.com?user=Antono4&date_format=j%20M%5B%20Y%5D&mode=weekly&card_width=505)](https://git.io/streak-stats)
 
 <a href="https://github.com/antono4/github-readme-stats">
   <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=antono4" />
