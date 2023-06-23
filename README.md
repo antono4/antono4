@@ -6,7 +6,9 @@
 
 
 
-</p>
+</p> 
+<a href="https://github.com/DenverCoder1/readme-typing-svg](https://user-images.githubusercontent.com/48784001/203785020-2b4826c1-7ddb-4de8-b65b-ebf6e04c5290.jpeg)">
+
 </p>
 <div align='center'>
   <a href="https://github.com/DenverCoder1/readme-typing-svg">
@@ -19,7 +21,7 @@
 <h1 align="center">Hi <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">, I'm Antono</h1>
 
 <h3 align="center">A passionate fullstack developer from Indonesia</h3>
-
+![1642320423853](https://user-images.githubusercontent.com/48784001/203785020-2b4826c1-7ddb-4de8-b65b-ebf6e04c5290.jpeg)
 
 ![antono4's Streak](https://github-readme-streak-stats.herokuapp.com/?user=antono4&theme=vue-dark&hide_border=true)
 
