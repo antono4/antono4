@@ -28,11 +28,7 @@
 <a href="https://github.com/antono4/convoychat">
   <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=antono4&layout=compact&langs_count=8&card_width=320" />
 </a>
-<h1 align="center">
-  <a href="https://sunguoqi.com/">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Merriweather&size=40&color=2958F7&center=true&multiline=true&width=600&height=60&lines=Welcome+To+My+GitHub">
-  </a>
-</h1>
+
 
 ![](https://raw.githubusercontent.com/Antono/github-stats-transparent/output/generated/overview.svg)
 ![](https://raw.githubusercontent.com/Antono/github-stats-transparent/output/generated/languages.svg)
@@ -57,7 +53,7 @@
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Antono4&layout=donut)](https://github.com/antono4/github-readme-stats)
 
 [![Antono4 wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)](https://github.com/Antono4/github-readme-stats)
-![Antono4 GitHub Repository Contribution stats](https://github-contributor-stats.vercel.app/api?username=Antono4)
+
 [![Antono4 trophy](https://github-profile-trophy.vercel.app/?username=antono4&theme=onedark)](https://github.com/antono4/github-profile-trophy)
 
 <!--START_SECTION:waka-->
