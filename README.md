@@ -7,7 +7,7 @@
 
   <a href="https://count.getloli.com/"><img src="https://count.getloli.com/get/@:Antono"></a>
   <img src="https://weather-icon.journeyad.repl.co/@shenzhen?v=5" align="right">
-  <img alt-"html5" src="https://64.media.tumblr.com/cf748aa5518f0ad3dae74162424f4a04/76ddd678316d5ac1-2e/s1280x1920/2d44253cd906c372b65071c303930a269bf38729.gif)" width="100" title="html5">
+
   
 </p> 
 
