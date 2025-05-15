@@ -12,7 +12,7 @@
 <p>
   </a>
 </div> 
-<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hey! Nice to see you.</h1>
+
 <h1 align="center">Hi <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">, I'm Antono</h1>
 
 <h3 align="center">A passionate fullstack developer from Indonesia</h3>
@@ -57,29 +57,19 @@
 
 ![](https://raw.githubusercontent.com/Antono4/github-stats-transparent/output/generated/overview.svg)
 ![](https://raw.githubusercontent.com/Antono4/github-stats-transparent/output/generated/languages.svg)
+[![Antono4 trophy](https://github-profile-trophy.vercel.app/?username=antono4&theme=onedark)](https://github.com/antono4/github-profile-trophy)
 
 <!-- profile-3d-contrib -->
 
-
-
 [![Antono4 wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)](https://github.com/Antono4/github-readme-stats)
 
-[![Antono4 trophy](https://github-profile-trophy.vercel.app/?username=antono4&theme=onedark)](https://github.com/antono4/github-profile-trophy)
 
-<!--START_SECTION:waka-->
 
-```text
-JSON         2 hrs 14 mins   ███████████████▒░░░░░░░░░   67.09 %
-YAML         1 hr 36 mins    ██████▓░░░░░░░░░░░░░░░░░░   26.71 %
-TOML         1 hr 18 mins    █████▒░░░░░░░░░░░░░░░░░░░   21.61 %
-INI          49 mins         ███▒░░░░░░░░░░░░░░░░░░░░░   13.65 %
-Other        2 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.56 %
-```
 
 <!--END_SECTION:waka-->
 
 
-
+<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hey! Nice to see you.</h1>
 
 
 Github：Antono4
