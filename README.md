@@ -1,7 +1,7 @@
-<!-- <p align="center">
+ <p align="center">
   Visitor count<br>
-  <img src="https://profile-counter.glitch.me/Antono/count.svg" />
-</p> -->
+  <img src="https://profile-counter.glitch.me/Antono4/count.svg" />
+</p> 
 
 </p> 
 
