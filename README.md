@@ -22,6 +22,8 @@
 
 <h3 align="center">A passionate fullstack developer from Indonesia</h3>
 
+[![GitHub Streak](https://streak-stats.demolab.com/?user=antono4)](https://git.io/streak-stats)
+
 [![GitHub Streak](https://streak-stats.demolab.com?user=Antono4&date_format=j%20M%5B%20Y%5D&mode=weekly&card_width=505)](https://git.io/streak-stats)
 
 <a href="https://github.com/antono4/github-readme-stats">
