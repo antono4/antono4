@@ -60,7 +60,7 @@
 
 <!-- profile-3d-contrib -->
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Antono4&layout=donut)](https://github.com/antono4/github-readme-stats)
+
 
 [![Antono4 wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)](https://github.com/Antono4/github-readme-stats)
 
