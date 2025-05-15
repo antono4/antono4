@@ -58,20 +58,6 @@
 ![](https://raw.githubusercontent.com/Antono4/github-stats-transparent/output/generated/overview.svg)
 ![](https://raw.githubusercontent.com/Antono4/github-stats-transparent/output/generated/languages.svg)
 
-
-
-<!-- Gif -->
-<div align="center">
-  <img alt-"html5" src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif" width="100" title="html5">
-  <img alt="ios" src="https://media.giphy.com/media/JQpOCgnGfb7FCvEVrd/giphy.gif" width="100" title="ios">
-  <img alt="VSCode" src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="100" title="vscode">
-  <img alt="python" src="https://i.giphy.com/media/LMt9638dO8dftAjtco/200.webp" width="100" title="python">
-  <img alt="javascript" src="https://media3.giphy.com/media/ln7z2eWriiQAllfVcn/200w.webp" width="100" title="javascript">
-  <img alt="vue" src="https://media.giphy.com/media/VgGthkhUvGgOit7Y9i/giphy.gif" width="100" title="vue">
-  <img alt="github" src="https://i.giphy.com/media/KzJkzjggfGN5Py6nkT/200.webp" width="100" title="github">
-  <img alt="node" src="https://media.giphy.com/media/kdFc8fubgS31b8DsVu/giphy.gif" width="85" title="node">
-</div>
-
 <!-- profile-3d-contrib -->
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Antono4&layout=donut)](https://github.com/antono4/github-readme-stats)
