@@ -12,6 +12,7 @@
 <p>
   </a>
 </div> 
+<h1><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> Hey! Nice to see you.</h1>
 <h1 align="center">Hi <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="30px">, I'm Antono</h1>
 
 <h3 align="center">A passionate fullstack developer from Indonesia</h3>
