@@ -59,8 +59,10 @@
 <!-- profile-3d-contrib -->
 
 [![Antono4 wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)](https://github.com/Antono4/github-readme-stats)
-https://raw.githubusercontent.com/ritesh-0309/ritesh-0309/output/github-snake.svg?_sm_au_=iVV6H21kPtJDwM1Q48RsKKHM7sFTF
 
+<a href="https://github.com/antono4/github-readme-stats">
+  <img height=200 align="center" src="https://raw.githubusercontent.com/ritesh-0309/ritesh-0309/output/github-snake.svg?_sm_au_=iVV6H21kPtJDwM1Q48RsKKHM7sFTF" />
+</a>
 
 
 <!--END_SECTION:waka-->
