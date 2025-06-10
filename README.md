@@ -10,7 +10,7 @@
   </a>
 </div> 
 
-<h1 align="center">Hi <img src="https://media.tenor.com/yCFHzEvKa9MAAAAi/hello.gif" width="30px">, I'm Antono</h1>
+<h1 align="center">Hi <img src="[https://media.tenor.com/yCFHzEvKa9MAAAAi/hello.gif](https://media.tenor.com/0CpFOKGVaeMAAAAi/hand-waving-hand.gif)" width="30px">, I'm Antono</h1>
 
 <h3 align="center">A passionate fullstack developer from Indonesia</h3>
 
