@@ -17,12 +17,8 @@
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=Antono4&date_format=j%20M%5B%20Y%5D&mode=weekly&card_width=505)](https://git.io/streak-stats)
 
-<a href="https://github.com/antono4/github-readme-stats">
-  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=antono4" />
-</a>
-<a href="https://github.com/antono4/convoychat">
-  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=antono4&layout=compact&langs_count=8&card_width=320" />
-</a>
+
+
 <h3>Languages and Tools</h3>
 <p>
   <img alt="React" src="https://img.shields.io/badge/-React-45b8d8?style=flat-square&logo=react&logoColor=white" />
@@ -58,7 +54,6 @@
 
 <!-- profile-3d-contrib -->
 
-[![Antono4 wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)](https://github.com/Antono4/github-readme-stats)
 
 <a href="https://github.com/antono4/github-readme-stats">
   <img height=200 align="center" src="https://raw.githubusercontent.com/ritesh-0309/ritesh-0309/output/github-snake.svg?_sm_au_=iVV6H21kPtJDwM1Q48RsKKHM7sFTF" />
