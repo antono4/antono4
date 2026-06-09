@@ -41,6 +41,30 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 ---
 
+## 📅 Contributions in the Last Year
+
+<div align="center">
+
+[![ Contributor's GitHub Activity Graph](https://github.com/antono4/antono4/raw/output/github-contribution-grid-snake.svg)](https://github.com/antono4/antono4)
+
+</div>
+
+<p align="center">
+
+![Contribution Calendar](https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=github_dark&area=true&hide_border=true&bg_color=0D1117&color=58A6FF&line=58A6FF&point=58A6FF&area_color=1F6FEB)
+
+</p>
+
+<div align="center">
+
+| Total Contributions | This Year | This Month |
+|:---:|:---:|:---:|
+| ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=antono4&show_icons=true&theme=transparent&bg_color=0D1117&text_color=58A6FF&border_color=30363D&hide_rank=false) | ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=antono4&show_icons=true&theme=transparent&bg_color=0D1117&text_color=58A6FF&border_color=30363D&custom_title=This+Year+Contributions) | ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=antono4&show_icons=true&theme=transparent&bg_color=0D1117&text_color=58A6FF&border_color=30363D&custom_title=This+Month+Contributions) |
+
+</div>
+
+---
+
 ## 🏆 Achievements
 
 <div align="center">
