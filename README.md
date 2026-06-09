@@ -2,6 +2,9 @@
 
 <div align="center">
 
+<!-- Animated Falling Stars Background -->
+![Falling Stars Animation](https://raw.githubusercontent.com/khalby786/khalby786/main/repos/portfolio/animated-stars.svg)
+
 [![Typing SVG](https://readme-typing-svg.demonomad.com?font=Fira+Code&size=22&duration=4000&pause=1000&color=f75c7e&vCenter=true&width=500&height=60&lines=Fullstack+Developer+%F0%9F%92%BB;Computational+Chemist+%F0%9F%91%8C;Building+innovative+solutions)](https://git.io/typing-svg)
 
 </div>
