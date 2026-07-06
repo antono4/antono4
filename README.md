@@ -83,7 +83,7 @@ A passionate **Fullstack Developer** & **Computational Chemist** from Indonesia 
 
 ![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=github_dark&area=true&hide_border=true&bg_color=0D1117&color=58A6FF&line=58A6FF&point=58A6FF&area_color=1F6FEB)
 
-![Snake Animation](https://github.com/antono4/antono4/raw/output/github-contribution-grid-snake.svg)
+
 
 </div>
 
