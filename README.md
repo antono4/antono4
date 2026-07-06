@@ -89,12 +89,6 @@ A passionate **Fullstack Developer** & **Computational Chemist** from Indonesia 
 
 ---
 
-## 🏆 Achievements
-
-<div align="center">
-
-
-[![Streak](https://streak-stats.demolab.com?user=Antono4&date_format=j%20M%5B%20Y%5D&mode=weekly&background=0D1117&border=30363D&stroke=58A6FF&ring=58A6FF&fire=58A6FF&currStreakNum=58A6FF&sideNums=58A6FF&currStreakLabel=58A6FF&sideLabels=58A6FF&nextDuelMsg=58A6FF)](https://git.io/streak-stats)
 
 </div>
 
