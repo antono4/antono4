@@ -2,26 +2,14 @@
 
 <!-- Enhanced Animations -->
 <style>
-:root {
-  --bg-dark: #0D1117;
-  --bg-card: #161B22;
-  --border-color: #30363D;
-  --accent-blue: #58A6FF;
-  --accent-cyan: #79C0FF;
-  --accent-purple: #A371F7;
-  --accent-green: #3FB950;
-  --accent-orange: #F0883E;
-  --accent-pink: #DB61A2;
-}
-
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-15px); }
 }
 
 @keyframes glow {
-  0%, 100% { text-shadow: 0 0 5px var(--accent-blue), 0 0 10px var(--accent-blue), 0 0 20px var(--accent-blue); }
-  50% { text-shadow: 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-cyan), 0 0 40px var(--accent-cyan), 0 0 60px var(--accent-blue); }
+  0%, 100% { text-shadow: 0 0 5px #58A6FF, 0 0 10px #58A6FF, 0 0 20px #58A6FF; }
+  50% { text-shadow: 0 0 10px #79C0FF, 0 0 20px #79C0FF, 0 0 40px #79C0FF, 0 0 60px #58A6FF; }
 }
 
 @keyframes gradient-shift {
@@ -61,29 +49,13 @@
 }
 
 @keyframes blink {
-  0%, 50% { border-color: var(--accent-blue); }
-  51%, 100% { border-color: transparent; }
-}
-
-@keyframes neon-border {
-  0% { box-shadow: 0 0 5px var(--accent-blue), 0 0 10px var(--accent-blue), inset 0 0 5px rgba(88, 166, 255, 0.1); }
-  50% { box-shadow: 0 0 15px var(--accent-cyan), 0 0 30px var(--accent-cyan), inset 0 0 10px rgba(88, 166, 255, 0.2); }
-  100% { box-shadow: 0 0 5px var(--accent-blue), 0 0 10px var(--accent-blue), inset 0 0 5px rgba(88, 166, 255, 0.1); }
-}
-
-@keyframes typeWriter {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes cursorBlink {
-  0%, 50% { border-color: var(--accent-blue); }
+  0%, 50% { border-color: #58A6FF; }
   51%, 100% { border-color: transparent; }
 }
 
 /* Main Container */
 .main-container {
-  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-card) 50%, var(--bg-dark) 100%);
+  background: linear-gradient(135deg, #0D1117 0%, #161B22 50%, #0D1117 100%);
   background-size: 400% 400%;
   animation: gradient-shift 15s ease infinite;
   padding: 50px 30px;
@@ -91,7 +63,7 @@
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--border-color);
+  border: 1px solid #30363D;
 }
 
 .main-container::before {
@@ -114,12 +86,12 @@
   animation: sparkle 3s ease-in-out infinite;
 }
 
-.particle:nth-child(1) { top: 10%; left: 5%; background: var(--accent-blue); animation-delay: 0s; }
-.particle:nth-child(2) { top: 20%; right: 10%; background: var(--accent-purple); animation-delay: 0.5s; }
-.particle:nth-child(3) { top: 60%; left: 8%; background: var(--accent-green); animation-delay: 1s; }
-.particle:nth-child(4) { top: 70%; right: 15%; background: var(--accent-orange); animation-delay: 1.5s; }
-.particle:nth-child(5) { top: 40%; left: 15%; background: var(--accent-pink); animation-delay: 2s; }
-.particle:nth-child(6) { top: 30%; right: 5%; background: var(--accent-cyan); animation-delay: 2.5s; }
+.particle:nth-child(1) { top: 10%; left: 5%; background: #58A6FF; animation-delay: 0s; }
+.particle:nth-child(2) { top: 20%; right: 10%; background: #A371F7; animation-delay: 0.5s; }
+.particle:nth-child(3) { top: 60%; left: 8%; background: #3FB950; animation-delay: 1s; }
+.particle:nth-child(4) { top: 70%; right: 15%; background: #F0883E; animation-delay: 1.5s; }
+.particle:nth-child(5) { top: 40%; left: 15%; background: #DB61A2; animation-delay: 2s; }
+.particle:nth-child(6) { top: 30%; right: 5%; background: #79C0FF; animation-delay: 2.5s; }
 
 /* Profile Ring Animation */
 .profile-wrapper {
@@ -134,8 +106,8 @@
   inset: -5px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: var(--accent-blue);
-  border-right-color: var(--accent-purple);
+  border-top-color: #58A6FF;
+  border-right-color: #A371F7;
   animation: rotate-slow 3s linear infinite;
 }
 
@@ -145,8 +117,8 @@
   inset: 3px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-bottom-color: var(--accent-green);
-  border-left-color: var(--accent-cyan);
+  border-bottom-color: #3FB950;
+  border-left-color: #79C0FF;
   animation: rotate-slow 2s linear infinite reverse;
 }
 
@@ -160,7 +132,7 @@
 }
 
 .hero-title span {
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple), var(--accent-cyan));
+  background: linear-gradient(90deg, #58A6FF, #A371F7, #79C0FF);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -171,10 +143,10 @@
 .typing-text {
   font-family: 'Courier New', monospace;
   font-size: 1.1em;
-  color: var(--accent-cyan);
+  color: #79C0FF;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid var(--accent-blue);
+  border-right: 3px solid #58A6FF;
   animation: typing 4s steps(50) 1s forwards, blink 0.8s step-end infinite;
   max-width: 100%;
 }
@@ -201,7 +173,7 @@
   padding: 10px 20px;
   border-radius: 12px;
   background: rgba(22, 27, 34, 0.8);
-  border: 1px solid var(--border-color);
+  border: 1px solid #30363D;
   transition: all 0.3s ease;
   overflow: hidden;
 }
@@ -226,7 +198,7 @@
 
 .social-btn:hover {
   transform: translateY(-5px) scale(1.05);
-  border-color: var(--accent-blue);
+  border-color: #58A6FF;
   box-shadow: 0 10px 30px rgba(88, 166, 255, 0.3);
 }
 
@@ -239,8 +211,8 @@
 }
 
 .stat-card {
-  background: linear-gradient(145deg, var(--bg-card), var(--bg-dark));
-  border: 1px solid var(--border-color);
+  background: linear-gradient(145deg, #161B22, #0D1117);
+  border: 1px solid #30363D;
   border-radius: 16px;
   padding: 20px;
   text-align: center;
@@ -264,18 +236,18 @@
 
 .stat-card:hover {
   transform: translateY(-8px) scale(1.02);
-  border-color: var(--accent-blue);
+  border-color: #58A6FF;
   box-shadow: 0 15px 40px rgba(88, 166, 255, 0.2);
 }
 
-.stat-card:nth-child(1):hover { border-color: var(--accent-blue); }
-.stat-card:nth-child(2):hover { border-color: var(--accent-orange); }
-.stat-card:nth-child(3):hover { border-color: var(--accent-green); }
+.stat-card:nth-child(1):hover { border-color: #58A6FF; }
+.stat-card:nth-child(2):hover { border-color: #F0883E; }
+.stat-card:nth-child(3):hover { border-color: #3FB950; }
 
 /* Tech Cards */
 .tech-card {
-  background: linear-gradient(145deg, var(--bg-card), var(--bg-dark));
-  border: 1px solid var(--border-color);
+  background: linear-gradient(145deg, #161B22, #0D1117);
+  border: 1px solid #30363D;
   border-radius: 16px;
   padding: 25px;
   margin: 20px 0;
@@ -291,7 +263,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple), var(--accent-cyan));
+  background: linear-gradient(90deg, #58A6FF, #A371F7, #79C0FF);
   background-size: 200% auto;
   animation: gradient-shift 3s ease infinite;
   transform: scaleX(0);
@@ -302,7 +274,7 @@
 
 .tech-card:hover {
   transform: translateY(-10px);
-  border-color: var(--accent-blue);
+  border-color: #58A6FF;
   box-shadow: 0 20px 50px rgba(88, 166, 255, 0.15);
 }
 
@@ -331,8 +303,8 @@
 
 /* Activity Wrapper */
 .activity-wrapper {
-  background: linear-gradient(145deg, var(--bg-card), var(--bg-dark));
-  border: 1px solid var(--border-color);
+  background: linear-gradient(145deg, #161B22, #0D1117);
+  border: 1px solid #30363D;
   border-radius: 20px;
   padding: 30px;
   margin: 25px 0;
@@ -347,7 +319,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple), var(--accent-green), var(--accent-orange));
+  background: linear-gradient(90deg, #58A6FF, #A371F7, #3FB950, #F0883E);
   background-size: 300% auto;
   animation: gradient-shift 4s ease infinite;
 }
@@ -361,8 +333,8 @@
 }
 
 .achievement-card {
-  background: linear-gradient(145deg, var(--bg-card), var(--bg-dark));
-  border: 1px solid var(--border-color);
+  background: linear-gradient(145deg, #161B22, #0D1117);
+  border: 1px solid #30363D;
   border-radius: 16px;
   padding: 25px;
   text-align: center;
@@ -377,8 +349,8 @@
 
 /* Fun Facts */
 .fun-fact-container {
-  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-dark) 100%);
-  border: 1px solid var(--border-color);
+  background: linear-gradient(135deg, #161B22 0%, #0D1117 100%);
+  border: 1px solid #30363D;
   border-radius: 20px;
   padding: 35px;
   margin: 25px 0;
@@ -400,7 +372,7 @@
 
 .fun-fact-item:hover {
   background: rgba(88, 166, 255, 0.08);
-  border-color: var(--accent-blue);
+  border-color: #58A6FF;
   transform: translateX(10px);
   padding-left: 25px;
 }
@@ -418,8 +390,8 @@
 
 /* Footer */
 .footer {
-  background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(13, 17, 23, 0.95) 100%);
-  border-top: 1px solid var(--border-color);
+  background: linear-gradient(180deg, #0D1117 0%, rgba(13, 17, 23, 0.95) 100%);
+  border-top: 1px solid #30363D;
   border-radius: 24px 24px 0 0;
   padding: 40px 30px;
   margin-top: 30px;
@@ -435,7 +407,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple), var(--accent-pink), var(--accent-orange));
+  background: linear-gradient(90deg, #58A6FF, #A371F7, #DB61A2, #F0883E);
   background-size: 300% auto;
   animation: gradient-shift 4s ease infinite;
 }
@@ -466,7 +438,7 @@
   display: inline-block;
   padding: 15px 35px;
   margin-top: 25px;
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  background: linear-gradient(135deg, #58A6FF, #A371F7);
   background-size: 200% auto;
   border: none;
   border-radius: 50px;
@@ -520,9 +492,9 @@
 
   <!-- Bio -->
   <p style="margin-top: 20px; font-size: 1.1em; color: #c9d1d9; max-width: 600px; margin-left: auto; margin-right: auto;">
-    A passionate <strong style="color: var(--accent-blue);">Fullstack Developer</strong> & 
-    <strong style="color: var(--accent-purple);">Computational Chemist</strong> from 
-    <strong style="color: var(--accent-green);">Indonesia 🇮🇩</strong>. 
+    A passionate <strong style="color: #58A6FF;">Fullstack Developer</strong> & 
+    <strong style="color: #A371F7;">Computational Chemist</strong> from 
+    <strong style="color: #3FB950;">Indonesia 🇮🇩</strong>. 
     I transform complex problems into elegant solutions through code.
   </p>
 
@@ -629,7 +601,7 @@
 ## 📊 Activity
 
 <div class="activity-wrapper">
-  <p style="text-align: center; margin-bottom: 20px; color: var(--accent-cyan);">
+  <p style="text-align: center; margin-bottom: 20px; color: #79C0FF;">
     ✨ Contribution Graph
   </p>
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=github_dark&area=true&hide_border=true&bg_color=0D1117&color=58A6FF&line=58A6FF&point=58A6FF&area_color=1F6FEB" width="100%" alt="Activity Graph"/>
@@ -695,7 +667,7 @@
   </div>
   
   <p class="final-message">
-    Made with <span class="heart">❤️</span> by <strong style="color: var(--accent-blue);">Antono</strong>
+    Made with <span class="heart">❤️</span> by <strong style="color: #58A6FF;">Antono</strong>
   </p>
   
   <p style="color: #8b949e; margin-top: 10px;">
