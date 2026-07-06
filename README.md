@@ -29,8 +29,7 @@ A passionate **Fullstack Developer** & **Computational Chemist** from Indonesia 
 
 <div align="center">
 
-| <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=transparent&bg_color=0D1117&text_color=58A6FF&border_color=30363D&hide_rank=true" width="200"/> | <img src="https://streak-stats.demolab.com?user=Antono4&date_format=j%20M%5B%20Y%5D&mode=weekly&background=0D1117&border=30363D&stroke=58A6FF&ring=58A6FF&fire=58A6FF&currStreakNum=58A6FF&sideNums=58A6FF&currStreakLabel=58A6FF&sideLabels=58A6FF&nextDuelMsg=58A6FF" width="200"/> | <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=transparent&bg_color=0D1117&text_color=58A6FF&border_color=30363D&layout=compact&hide_progress=false" width="200"/> |
-|:---:|:---:|:---:|
+<a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=antono4&theme=dark&hide_border=true&exclude_days=Sun%2CMon%2CTue%2CWed%2CThu%2CFri" alt="GitHub Streak" /></a>
 | **Profile Views** | **Contribution Streak** | **Top Languages** |
 
 </div>
