@@ -28,8 +28,7 @@ A passionate **Fullstack Developer** & **Computational Chemist** from Indonesia 
 ## 🎯 Quick Stats
 
 <div align="center">
-
-<a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=antono4&theme=dark&hide_border=true&exclude_days=Sun%2CMon%2CTue%2CWed%2CThu%2CFri" alt="GitHub Streak" /></a>
+<a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=antono4&theme=dark&hide_border=true&exclude_days=Sun%2CMon%2CTue%2CWed%2CThu%2CFri%2CSat&type=png" alt="GitHub Streak" /></a>
 </div>
 
 ---
