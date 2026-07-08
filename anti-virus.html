@@ -1241,17 +1241,19 @@
         let filesScanned = 48200;
 
         function startScan() {
+            const scanBtn = document.getElementById('scanBtn');
+            
             if (isScanning) return;
             
             isScanning = true;
-            const scanBtn = document.getElementById('scanBtn');
+            scanBtn.disabled = true;
+            
             const scanRing = document.getElementById('scanRing');
             const scanBadge = document.getElementById('scanBadge');
             const scanStatus = document.getElementById('scanStatus');
             const scanPath = document.getElementById('scanPath');
             const scanProgressBar = document.getElementById('scanProgressBar');
             
-            scanBtn.disabled = true;
             scanBtn.textContent = 'Scanning...';
             scanRing.classList.add('scanning');
             scanBadge.textContent = 'Scanning';
@@ -1354,10 +1356,17 @@
             
             const entry = document.createElement('div');
             entry.className = 'log-entry';
-            entry.innerHTML = `
-                <span class="log-time">${time}</span>
-                <span class="log-message ${type}">${message}</span>
-            `;
+            
+            const timeSpan = document.createElement('span');
+            timeSpan.className = 'log-time';
+            timeSpan.textContent = time;
+            
+            const messageSpan = document.createElement('span');
+            messageSpan.className = 'log-message ' + type;
+            messageSpan.textContent = message;
+            
+            entry.appendChild(timeSpan);
+            entry.appendChild(messageSpan);
             
             log.insertBefore(entry, log.firstChild);
         }
