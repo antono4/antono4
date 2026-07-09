@@ -4,9 +4,7 @@
 <!--                    MODERN PROFILE CARD                          -->
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
-<a href="https://github.com/antono4">
-  <img src="https://github-readme-profile.vercel.app/api/images/profile?username=antono4&theme=radical&include_all_commits=true" width="100%" alt="Profile Banner" style="border-radius: 16px; margin-bottom: 20px;"/>
-</a>
+
 
 ### 👋 Hi, I'm **Antono**
 
@@ -37,8 +35,7 @@ A passionate **Fullstack Developer** & **Computational Chemist** from **Indonesi
 ## 🎯 Quick Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=transparent&bg_color=0D1117&text_color=58A6FF&border_color=30363D&hide_rank=true&include_all_commits=true" alt="GitHub Stats" width="32%"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=transparent&bg_color=0D1117&text_color=3FB950&border_color=30363D&layout=compact" alt="Top Languages" width="32%"/>
+
   <img src="https://streak-stats.demolab.com?user=antono4&theme=dark&hide_border=true&exclude_days=Sun%2CMon%2CTue%2CWed%2CThu%2CFri%2CSat&type=png" alt="GitHub Streak" width="32%"/>
 </p>
 
@@ -86,7 +83,7 @@ A passionate **Fullstack Developer** & **Computational Chemist** from **Indonesi
 
 ## 📊 Activity
 
-<div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 20px; padding: 25px; margin: 20px 0; text-align: center;">
+
 
 ![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=github_dark&area=true&hide_border=true&bg_color=0D1117&color=58A6FF&line=58A6FF&point=58A6FF&area_color=1F6FEB)
 
@@ -129,7 +126,7 @@ A passionate **Fullstack Developer** & **Computational Chemist** from **Indonesi
 
 ---
 
-<div style="background: linear-gradient(180deg, #0D1117, #161B22); border-top: 1px solid #30363D; border-radius: 20px 20px 0 0; padding: 30px; margin-top: 30px; text-align: center;">
+
 
 ![Profile Views](https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=for-the-badge&label=Profile+Views)
 
