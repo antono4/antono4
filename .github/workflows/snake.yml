@@ -1,0 +1,33 @@
+name: Generate Snake Animation
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Run daily at midnight
+  workflow_dispatch:  # Allow manual trigger
+  push:
+    branches:
+      - main  # Run on push to main branch
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate contribution grid snake animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: antono4
+          outputs: |
+            github-contribution-grid-snake.svg
+            github-contribution-grid-snake-dark.svg
+
+      - name: Push to output branch
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git checkout -b output || true
+          git add github-contribution-grid-snake*.svg || true
+          git commit -m "Update snake animation [skip ci]" || echo "No changes to commit"
+          git push -f origin output || echo "Branch update skipped"
