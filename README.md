@@ -34,8 +34,6 @@ A passionate **Fullstack Developer** & **Computational Chemist** from **Indonesi
 ## Quick Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=transparent&bg_color=0D1117&text_color=58A6FF&border_color=30363D&hide_rank=true&include_all_commits=true" alt="GitHub Stats" width="32%"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=transparent&bg_color=0D1117&text_color=3FB950&border_color=30363D&layout=compact" alt="Top Languages" width="32%"/>
   <img src="https://streak-stats.demolab.com?user=antono4&theme=dark&hide_border=true&exclude_days=Sun%2CMon%2CTue%2CWed%2CThu%2CFri%2CSat&type=png" alt="GitHub Streak" width="32%"/>
 </p>
 
