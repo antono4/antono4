@@ -139,3 +139,7 @@ A passionate **Fullstack Developer** & **Computational Chemist** from **Indonesi
 🚀 *Let's build something amazing together!*
 
 </div>
+
+---
+
+> **Created by Antono**
