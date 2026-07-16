@@ -122,23 +122,8 @@ I love building:
 <!-- FOOTER -->
 ---
 <div align="center">
-  <p>⭐ From [antono4](https://github.com/antono4) with ❤️</p>
+  <p>⭐ From <a href="https://github.com/antono4">antono4</a> with ❤️</p>
   <p>
     <img src="https://img.shields.io/badge/Thanks%20for%20visiting!-1DA1F2?style=social" alt="Thanks" />
   </p>
 </div>
-
----
-
-<!-- MEMES (Optional - uncomment if you want)
-<img src='https://random-meme.herokuapp.com/' style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.1;">
--->
-
-<!-- 
-  INSTRUKSI PENGGUNAAN:
-  
-  1. Salin konten README ini ke: https://github.com/antono4/antono4.github.io/blob/main/README.md
-  2. Aktifkan GitHub Actions untuk stats (opsional)
-  3. Update email dan link portfolio sesuai informasi Anda
-  4. Tambahkan proyek baru ke section "Featured Projects" secara berkala
--->
