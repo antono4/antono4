@@ -113,9 +113,7 @@ I love building:
 <!-- ACTIVITY SECTION -->
 ## 📈 Recent Activity
 
-<!--START_SECTION:activity-->
-![Snake animation](https://github.com/antono4/antono4.github.io/blob/output/github-contribution-grid-snake.svg)
-<!--END_SECTION:activity-->
+![Snake animation](https://raw.githubusercontent.com/antono4/antono4/output/github-contribution-grid-snake.svg)
 
 ---
 
