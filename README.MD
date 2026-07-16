@@ -1,0 +1,144 @@
+<!-- GitHub Profile README - @antono4 -->
+<!-- Salin konten ini ke: https://github.com/antono4/antono4.github.io/blob/main/README.md -->
+
+<!-- HEADER SECTION -->
+<div align="center">
+  
+![Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Antono&fontSize=80&fontAlignY=35&desc=Full-Stack%20Developer%20|%20AI%20Enthusiast%20|%20Building%20the%20Future&descAlignY=60&descSize=20&animation=fadeIn)
+
+<h3 align="center">
+  <img src="https://komarev.com/ghpvc/?username=antono4&style=flat-square&color=blue" alt="Profile Views" />
+  <img src="https://img.shields.io/github/followers/antono4?style=flat-square&color=green" alt="Followers" />
+  <img src="https://img.shields.io/github/stars/antono4?style=flat-square&color=yellow" alt="Stars" />
+</h3>
+
+</div>
+
+<!-- ABOUT SECTION -->
+## 👋 Hi, I'm Antono!
+
+Passionate **Full-Stack Developer** from **West Java, Indonesia** 🇮🇩
+
+I love building:
+- 🤖 AI-powered applications & agents
+- 🌐 Web applications with modern tech stacks
+- 📱 Responsive & beautiful UIs
+- 🔧 Automation tools & scripts
+
+> *"Code is poetry written for machines, but should read like prose for humans."*
+
+<p align="center">
+  <a href="https://antono4.github.io" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-222?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
+  </a>
+  <a href="mailto:antonockr1@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+</p>
+
+---
+
+<!-- SKILLS SECTION -->
+## 🛠️ Tech Stack
+
+### Languages
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=java&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+
+### Frontend
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat-square&logo=sass&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+
+### Backend & AI
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-FFFF00?style=flat-square&logo=chainlink&logoColor=black)
+
+### Tools & Platforms
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+
+---
+
+<!-- GITHUB STATS SECTION -->
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&count_private=true&include_all_commits=true" alt="GitHub Stats" height="180px" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&layout=compact&langs_count=10" alt="Top Languages" height="180px" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=antono4&theme=midnight-purple&background=0d1117" alt="GitHub Streak" />
+</p>
+
+---
+
+## 🏆 Featured Projects
+
+### 🤖 AI & Agents
+| Project | Description | Stars |
+|--------|-------------|-------|
+| [social-media-agent](https://github.com/antono4/social-media-agent) | AI agent for creating social media content | ⭐ 0 |
+| [openmind](https://github.com/antono4/openmind) | Open-source AI assistant without token limitations | ⭐ 0 |
+| [openhuman-agent](https://github.com/antono4/openhuman-agent) | Human-like AI agent framework | ⭐ 0 |
+| [aether-ai](https://github.com/antono4/aether-ai) | Personal AI Super Intelligence | ⭐ 0 |
+
+### 🌐 Web Applications
+| Project | Description | Stars |
+|--------|-------------|-------|
+| [staynest-clone](https://github.com/antono4/staynest-clone) | Airbnb Clone - Vacation Rental Platform | ⭐ 0 |
+| [voltra](https://github.com/antono4/voltra) | Premium Electric Vehicle Platform | ⭐ 0 |
+| [content-generator-dashboard](https://github.com/antono4/content-generator-dashboard) | Content Generation Dashboard | ⭐ 0 |
+
+### 🔧 Tools & Utilities
+| Project | Description | Stars |
+|--------|-------------|-------|
+| [OptiCore-OS](https://github.com/antono4/OptiCore-OS) | Windows Optimization System | ⭐ 0 |
+| [n8n-development-assistant](https://github.com/antono4/n8n-development-assistant) | n8n Workflow Automation Helper | ⭐ 0 |
+| [wilayah-indonesia-CI-4](https://github.com/antono4/wilayah-indonesia-CI-4) | Indonesia Region API for CodeIgniter 4 | ⭐ 0 |
+
+---
+
+<!-- ACTIVITY SECTION -->
+## 📈 Recent Activity
+
+<!--START_SECTION:activity-->
+![Snake animation](https://github.com/antono4/antono4.github.io/blob/output/github-contribution-grid-snake.svg)
+<!--END_SECTION:activity-->
+
+---
+
+<!-- FOOTER -->
+---
+<div align="center">
+  <p>⭐ From [antono4](https://github.com/antono4) with ❤️</p>
+  <p>
+    <img src="https://img.shields.io/badge/Thanks%20for%20visiting!-1DA1F2?style=social" alt="Thanks" />
+  </p>
+</div>
+
+---
+
+<!-- MEMES (Optional - uncomment if you want)
+<img src='https://random-meme.herokuapp.com/' style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.1;">
+-->
+
+<!-- 
+  INSTRUKSI PENGGUNAAN:
+  
+  1. Salin konten README ini ke: https://github.com/antono4/antono4.github.io/blob/main/README.md
+  2. Aktifkan GitHub Actions untuk stats (opsional)
+  3. Update email dan link portfolio sesuai informasi Anda
+  4. Tambahkan proyek baru ke section "Featured Projects" secara berkala
+-->
