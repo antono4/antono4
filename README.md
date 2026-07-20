@@ -109,8 +109,8 @@ Currently expanding my skills in:
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats-sigma-five-79.vercel.app/api?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&count_private=true&include_all_commits=true" alt="GitHub Stats" height="180px" />
-  <img src="https://github-readme-stats-sigma-five-79.vercel.app/api/top-langs/?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&layout=compact&langs_count=10" alt="Top Languages" height="180px" />
+  <img src="https://github-readme-stats-jade-gamma.vercel.app/api?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&count_private=true&include_all_commits=true" alt="GitHub Stats" height="180px" />
+  <img src="https://github-readme-stats-jade-gamma.vercel.app/api/top-langs/?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&layout=compact&langs_count=10" alt="Top Languages" height="180px" />
 </p>
 
 <p align="center">
@@ -120,7 +120,7 @@ Currently expanding my skills in:
 ## 🏆 GitHub Achievements
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/api?username=antono4&theme=radical&margin-w=10&margin-h=10" alt="GitHub Trophies" />
+  <img src="https://github-profile-trophy-ochre.vercel.app/?username=antono4&theme=radical" alt="GitHub Trophies" />
 </p>
 
 ---
