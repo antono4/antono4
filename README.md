@@ -65,8 +65,7 @@ I love building:
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&count_private=true&include_all_commits=true" alt="GitHub Stats" height="180px" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&layout=compact&langs_count=10" alt="Top Languages" height="180px" />
+
 </p>
 
 <p align="center">
