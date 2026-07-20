@@ -4,95 +4,24 @@
 
 <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2FmbnlsemNoNGt6NzFqeHFxM3VyOXpkemdmZHdxMjJ3MjVuMXJsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8SzmrGqs6oD7i/giphy.gif" alt="Background" width="100%" />
 
-<style>
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-.animated-title {
-  animation: fadeInUp 1s ease-out;
-  color: white;
-  font-size: 3em;
-  font-weight: bold;
-  margin: 30px 0 10px 0;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-}
-.animated-subtitle {
-  animation: fadeInUp 1.3s ease-out;
-  color: rgba(255,255,255,0.9);
-  font-size: 1.2em;
-  margin: 5px 0;
-  font-weight: 300;
-}
-.typing-effect {
-  animation: fadeInUp 1.6s ease-out;
-  color: #00d4ff;
-  font-size: 1.1em;
-  font-family: 'Courier New', monospace;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid #00d4ff;
-  width: 0;
-  animation: typing 3s steps(40) 1.6s forwards, blink 0.7s step-end infinite, fadeInUp 0s ease-out;
-  max-width: 100%;
-}
-.items-section {
-  animation: fadeInUp 2s ease-out;
-  color: white;
-  margin: 20px 0;
-}
-.items-section p {
-  margin: 8px 0;
-  font-size: 1em;
-}
-.quote-box {
-  animation: fadeInUp 2.3s ease-out;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-  border-left: 4px solid #00d4ff;
-  padding: 20px 25px;
-  border-radius: 0 10px 10px 0;
-  margin: 25px auto;
-  max-width: 600px;
-  color: rgba(255,255,255,0.85);
-  font-style: italic;
-}
-.divider {
-  width: 100px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #00d4ff, transparent);
-  margin: 20px auto;
-  animation: fadeInUp 1.8s ease-out;
-}
-</style>
+# Hi, I'm Antono!
 
-<h1 class="animated-title">Hi, I'm Antono!</h1>
+---
 
-<div class="divider"></div>
+**Full-Stack Developer** | West Java, Indonesia 🇮🇩
 
-<p class="animated-subtitle">Full-Stack Developer</p>
-<p class="animated-subtitle">West Java, Indonesia 🇮🇩</p>
+*"Building the future with code..."*
 
-<div class="typing-effect">Building the future with code...</div>
+---
 
-<div class="items-section">
-<p>🤖 AI-powered applications & agents</p>
-<p>🌐 Web applications with modern tech stacks</p>
-<p>📱 Responsive & beautiful UIs</p>
-<p>🔧 Automation tools & scripts</p>
-</div>
+**I build:**
 
-<div class="quote-box">
-"Code is poetry written for machines, but should read like prose for humans."
-</div>
+- 🤖 AI-powered applications & agents
+- 🌐 Web applications with modern tech stacks
+- 📱 Responsive & beautiful UIs
+- 🔧 Automation tools & scripts
+
+> *"Code is poetry written for machines, but should read like prose for humans."*
 
 </div>
 
@@ -123,6 +52,7 @@
 ## 🌱 What I'm Learning
 
 Currently expanding my skills in:
+
 - **AI & Machine Learning** - LangChain, vector databases, prompt engineering
 - **System Design** - Building scalable distributed systems
 - **Cloud Architecture** - AWS/GCP best practices
