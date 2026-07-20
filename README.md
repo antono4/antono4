@@ -2,31 +2,14 @@
 
 <div align="center">
 
-![Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Antono&fontSize=80&fontAlignY=35&desc=Full-Stack%20Developer%20|%20AI%20Enthusiast%20|%20Building%20the%20Future&descAlignY=60&descSize=20&animation=fadeIn)
+![Lombok Island Banner](https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=1200&h=400&fit=crop)
+
+</div>
 
 <h3 align="center">
   <img src="https://komarev.com/ghpvc/?username=antono4&style=flat-square&color=blue" alt="Profile Views" />
   <img src="https://img.shields.io/github/followers/antono4?style=flat-square&color=green" alt="Followers" />
 </h3>
-
-</div>
-
-## 🎮 Super Mario Bros! 🎮
-
-<div align="center">
-
-<!-- Mario Jumping Animation -->
-<img src="https://media.giphy.com/media/KmWN2G4P3iBIeSXb1v/giphy.gif" alt="Mario Jumping" width="120" />
-
-<!-- Mario Running -->
-<img src="https://media.giphy.com/media/2fD4Nl1n3x7uNU8x7Y/giphy.gif" alt="Mario Running" width="120" />
-
-<!-- Mario Star Power -->
-<img src="https://media.giphy.com/media/3oriO6aNSTVP4QfER2/giphy.gif" alt="Mario Star" width="120" />
-
-</div>
-
----
 
 ## 👋 Hi, I'm Antono!
 
@@ -114,21 +97,12 @@ Currently expanding my skills in:
   <img src="https://img.shields.io/badge/Following-20-orange?style=flat-square" alt="Following" />
 </p>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&count_private=true&include_all_commits=true" alt="GitHub Stats" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&layout=compact&langs_count=10" alt="Top Languages" />
-</p>
-
 ---
 
 ⭐ From [antono4](https://github.com/antono4) with ❤️
 
 <div align="center">
 
-<!-- Mario & Luigi at the end -->
-<img src="https://media.giphy.com/media/l0HlPystfePnAI3G8/giphy.gif" alt="Mario and Luigi" width="200" />
+![Lombok Beach](https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&h=300&fit=crop)
 
 </div>
