@@ -17,12 +17,32 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  75% { transform: rotate(-20deg); }
+}
+@keyframes rainbow {
+  0% { color: #ff6b6b; }
+  25% { color: #ffd93d; }
+  50% { color: #6bcb77; }
+  75% { color: #4d96ff; }
+  100% { color: #ff6b6b; }
+}
 .animated-text {
   animation: fadeInUp 1s ease-out, glow 2s ease-in-out infinite;
   color: white;
   font-size: 2.5em;
   font-weight: bold;
   margin: 20px 0;
+}
+.wave {
+  animation: wave 1s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+.rainbow {
+  animation: rainbow 3s linear infinite;
 }
 .animated-sub {
   animation: fadeInUp 1.5s ease-out;
@@ -56,7 +76,7 @@
 }
 </style>
 
-<h1 class="animated-text">👋 Hi, I'm Antono!</h1>
+<h1 class="animated-text"><span class="wave">👋</span> <span class="rainbow">Hi, I'm Antono!</span></h1>
 
 <h2 class="animated-sub">Full-Stack Developer from West Java, Indonesia 🇮🇩</h2>
 
