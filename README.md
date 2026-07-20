@@ -16,25 +16,14 @@
 
 <div align="center">
 
-<!-- Mario Running Animation -->
-<img src="https://i.imgur.com/WtQWL8L.gif" alt="Mario Running" width="80" height="80" />
-<img src="https://i.imgur.com/WtQWL8L.gif" alt="Mario Running" width="80" height="80" />
-<img src="https://i.imgur.com/WtQWL8L.gif" alt="Mario Running" width="80" height="80" />
+<!-- Mario Jumping Animation -->
+<img src="https://media.giphy.com/media/KmWN2G4P3iBIeSXb1v/giphy.gif" alt="Mario Jumping" width="120" />
 
-<!-- Luigi Running Animation -->
-<img src="https://i.imgur.com/8XuUk4L.gif" alt="Luigi Running" width="80" height="80" />
-<img src="https://i.imgur.com/8XuUk4L.gif" alt="Luigi Running" width="80" height="80" />
-<img src="https://i.imgur.com/8XuUk4L.gif" alt="Luigi Running" width="80" height="80" />
-
-</div>
-
-<div align="center">
-
-<!-- Mario Jumping -->
-<img src="https://media.giphy.com/media/8vtJiZf1Djj4A/giphy.gif" alt="Mario Jumping" width="100" />
+<!-- Mario Running -->
+<img src="https://media.giphy.com/media/2fD4Nl1n3x7uNU8x7Y/giphy.gif" alt="Mario Running" width="120" />
 
 <!-- Mario Star Power -->
-<img src="https://media.giphy.com/media/l378AEZceMwWboAQE/giphy.gif" alt="Mario Star" width="100" />
+<img src="https://media.giphy.com/media/3oriO6aNSTVP4QfER2/giphy.gif" alt="Mario Star" width="120" />
 
 </div>
 
@@ -142,7 +131,7 @@ Currently expanding my skills in:
 
 <div align="center">
 
-<!-- Mario and Luigi Side by Side -->
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2V1YnF5OW1nMnJ2dGN2NGJhMHBtbzJ6ZXozeGNpM3NtbXN3ZW1tYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/giphy.gif" alt="Mario & Luigi" width="150" />
+<!-- Mario & Luigi at the end -->
+<img src="https://media.giphy.com/media/l0HlPystfePnAI3G8/giphy.gif" alt="Mario and Luigi" width="200" />
 
 </div>
