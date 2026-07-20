@@ -2,19 +2,68 @@
 
 <div align="center">
 
-![Background](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2FmbnlsemNoNGt6NzFqeHFxM3VyOXpkemdmZHdxMjJ3MjVuMXJsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8SzmrGqs6oD7i/giphy.gif)
+<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2FmbnlsemNoNGt6NzFqeHFxM3VyOXpkemdmZHdxMjJ3MjVuMXJsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8SzmrGqs6oD7i/giphy.gif" alt="Background" width="100%" />
 
-# 👋 Hi, I'm Antono!
+<style>
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073; }
+  50% { text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6; }
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animated-text {
+  animation: fadeInUp 1s ease-out, glow 2s ease-in-out infinite;
+  color: white;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.animated-sub {
+  animation: fadeInUp 1.5s ease-out;
+  color: white;
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+.emoji-bounce {
+  display: inline-block;
+  animation: bounce 1s ease-in-out infinite;
+}
+.emoji-bounce:nth-child(2) { animation-delay: 0.1s; }
+.emoji-bounce:nth-child(3) { animation-delay: 0.2s; }
+.emoji-bounce:nth-child(4) { animation-delay: 0.3s; }
+.quote {
+  font-style: italic;
+  color: #f0f0f0;
+  animation: fadeInUp 2s ease-out;
+  background: rgba(0,0,0,0.3);
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+</style>
 
-**Full-Stack Developer** from **West Java, Indonesia** 🇮🇩
+<h1 class="animated-text">👋 Hi, I'm Antono!</h1>
 
-I love building:
-- 🤖 AI-powered applications & agents
-- 🌐 Web applications with modern tech stacks
-- 📱 Responsive & beautiful UIs
-- 🔧 Automation tools & scripts
+<h2 class="animated-sub">Full-Stack Developer from West Java, Indonesia 🇮🇩</h2>
 
-> *"Code is poetry written for machines, but should read like prose for humans."*
+<h3>I love building:</h3>
+<p>
+<span class="emoji-bounce">🤖</span> AI-powered applications & agents<br>
+<span class="emoji-bounce">🌐</span> Web applications with modern tech stacks<br>
+<span class="emoji-bounce">📱</span> Responsive & beautiful UIs<br>
+<span class="emoji-bounce">🔧</span> Automation tools & scripts
+</p>
+
+<div class="quote">
+"Code is poetry written for machines, but should read like prose for humans."
+</div>
 
 </div>
 
