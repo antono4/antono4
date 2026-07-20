@@ -2,18 +2,11 @@
 
 <div align="center">
 
-<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2p0eHl3aWVlcGp1bTc2MnJhYTd2Mm1xMHg2ZmRzc2FidHBwNzZhYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4EpcpKOOz2Pclj44/giphy.gif" alt="Background" width="100%" />
+![Background](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2FmbnlsemNoNGt6NzFqeHFxM3VyOXpkemdmZHdxMjJ3MjVuMXJsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8SzmrGqs6oD7i/giphy.gif)
 
-</div>
+# 👋 Hi, I'm Antono!
 
-<h3 align="center">
-  <img src="https://komarev.com/ghpvc/?username=antono4&style=flat-square&color=blue" alt="Profile Views" />
-  <img src="https://img.shields.io/github/followers/antono4?style=flat-square&color=green" alt="Followers" />
-</h3>
-
-## 👋 Hi, I'm Antono!
-
-Passionate **Full-Stack Developer** from **West Java, Indonesia** 🇮🇩 with a strong focus on building AI-powered applications and modern web solutions.
+**Full-Stack Developer** from **West Java, Indonesia** 🇮🇩
 
 I love building:
 - 🤖 AI-powered applications & agents
@@ -22,6 +15,8 @@ I love building:
 - 🔧 Automation tools & scripts
 
 > *"Code is poetry written for machines, but should read like prose for humans."*
+
+</div>
 
 ## 📬 Connect With Me
 
