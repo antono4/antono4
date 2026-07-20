@@ -12,31 +12,33 @@
 
 </div>
 
-## 🎮 Mario & Luigi Speedrun Mode! 🎮
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=3000&pause=500&color=FF0000&background=FFFFFF00&center=true&vCenter=true&multiline=true&width=500&height=60&lines=It's-a-me,%20Antono!;Time%20to%20speedrun%20through%20some%20code!;Powered%20by%20Python,%20FastAPI%20&%20AI" alt="Mario Typing Animation" />
-</p>
-
-```
-    ██████╗ ██╗     ██╗████████╗ ██████╗██╗  ██╗    ██╗  ██╗██╗   ██╗███╗   ██╗████████╗
-   ██╔════╝ ██║     ██║╚══██╔══╝██╔════╝██║  ██║    ██║  ██║██║   ██║████╗  ██║╚══██╔══╝
-   ██║  ███╗██║     ██║   ██║   ██║     ███████║    ███████║██║   ██║██╔██╗ ██║   ██║   
-   ██║   ██║██║     ██║   ██║   ██║     ██╔══██║    ██╔══██║██║   ██║██║╚██╗██║   ██║   
-   ╚██████╔╝███████╗██║   ██║   ╚██████╗██║  ██║    ██║  ██║╚██████╔╝██║ ╚████║   ██║   
-    ╚═════╝ ╚══════╝╚═╝   ╚═╝    ╚═════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   
-                                                                                            
-```
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" alt="Mario Running Animation" width="100%" />
-</p>
+## 🎮 Super Mario Bros! 🎮
 
 <div align="center">
 
-![Mario Jump](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2V1YnF5OW1nMnJ2dGN2NGJhMHBtbzJ6ZXozeGNpM3NtbXN3ZW1tYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8d6JcVZKrNWx2/giphy.gif)
+<!-- Mario Running Animation -->
+<img src="https://i.imgur.com/WtQWL8L.gif" alt="Mario Running" width="80" height="80" />
+<img src="https://i.imgur.com/WtQWL8L.gif" alt="Mario Running" width="80" height="80" />
+<img src="https://i.imgur.com/WtQWL8L.gif" alt="Mario Running" width="80" height="80" />
+
+<!-- Luigi Running Animation -->
+<img src="https://i.imgur.com/8XuUk4L.gif" alt="Luigi Running" width="80" height="80" />
+<img src="https://i.imgur.com/8XuUk4L.gif" alt="Luigi Running" width="80" height="80" />
+<img src="https://i.imgur.com/8XuUk4L.gif" alt="Luigi Running" width="80" height="80" />
 
 </div>
+
+<div align="center">
+
+<!-- Mario Jumping -->
+<img src="https://media.giphy.com/media/8vtJiZf1Djj4A/giphy.gif" alt="Mario Jumping" width="100" />
+
+<!-- Mario Star Power -->
+<img src="https://media.giphy.com/media/l378AEZceMwWboAQE/giphy.gif" alt="Mario Star" width="100" />
+
+</div>
+
+---
 
 ## 👋 Hi, I'm Antono!
 
@@ -138,11 +140,9 @@ Currently expanding my skills in:
 
 ⭐ From [antono4](https://github.com/antono4) with ❤️
 
-```
-    ██╗    ██╗██╗███╗   ██╗███╗   ██╗███████╗██████╗ ██╗    ██████╗  ██████╗ ██╗  ██╗███████╗████████╗
-    ██║    ██║██║████╗  ██║████╗  ██║██╔════╝██╔══██╗██║    ██╔══██╗██╔═══██╗╚██╗██╔╝██╔════╝╚══██╔══╝
-    ██║ █╗ ██║██║██╔██╗ ██║██╔██╗ ██║█████╗  ██████╔╝██║    ██████╔╝██║   ██║ ╚███╔╝ █████╗     ██║   
-    ██║███╗██║██║██║╚██╗██║██║╚██╗██║██╔══╝  ██╔══██╗██║    ██╔══██╗██║   ██║ ██╔██╗ ██╔══╝     ██║   
-    ╚███╔███╔╝██║██║ ╚████║██║ ╚████║███████╗██║  ██║██║    ██║  ██║╚██████╔╝██╔╝ ██╗███████╗   ██║   
-     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝   ╚═╝   
-```
+<div align="center">
+
+<!-- Mario and Luigi Side by Side -->
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2V1YnF5OW1nMnJ2dGN2NGJhMHBtbzJ6ZXozeGNpM3NtbXN3ZW1tYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/giphy.gif" alt="Mario & Luigi" width="150" />
+
+</div>
