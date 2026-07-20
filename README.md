@@ -33,6 +33,8 @@
 .emoji-bounce {
   display: inline-block;
   animation: bounce 1s ease-in-out infinite;
+  color: white;
+  font-size: 1.2em;
 }
 .emoji-bounce:nth-child(2) { animation-delay: 0.1s; }
 .emoji-bounce:nth-child(3) { animation-delay: 0.2s; }
@@ -47,19 +49,25 @@
   margin: 20px auto;
   max-width: 600px;
 }
+.items-list {
+  animation: fadeInUp 1.8s ease-out;
+  color: white;
+  line-height: 2;
+}
 </style>
 
 <h1 class="animated-text">👋 Hi, I'm Antono!</h1>
 
 <h2 class="animated-sub">Full-Stack Developer from West Java, Indonesia 🇮🇩</h2>
 
-<h3>I love building:</h3>
-<p>
+<h3 class="animated-sub">I love building:</h3>
+
+<div class="items-list">
 <span class="emoji-bounce">🤖</span> AI-powered applications & agents<br>
 <span class="emoji-bounce">🌐</span> Web applications with modern tech stacks<br>
 <span class="emoji-bounce">📱</span> Responsive & beautiful UIs<br>
 <span class="emoji-bounce">🔧</span> Automation tools & scripts
-</p>
+</div>
 
 <div class="quote">
 "Code is poetry written for machines, but should read like prose for humans."
