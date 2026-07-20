@@ -7,7 +7,6 @@
 <h3 align="center">
   <img src="https://komarev.com/ghpvc/?username=antono4&style=flat-square&color=blue" alt="Profile Views" />
   <img src="https://img.shields.io/github/followers/antono4?style=flat-square&color=green" alt="Followers" />
-  <img src="https://img.shields.io/badge/GitHub%20Stars-1.2k-blue?style=flat-square" alt="Stars" />
 </h3>
 
 </div>
@@ -109,18 +108,18 @@ Currently expanding my skills in:
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats-jade-gamma.vercel.app/api?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&count_private=true&include_all_commits=true" alt="GitHub Stats" height="180px" />
-  <img src="https://github-readme-stats-jade-gamma.vercel.app/api/top-langs/?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&layout=compact&langs_count=10" alt="Top Languages" height="180px" />
+  <img src="https://img.shields.io/badge/Repos-297-blue?style=flat-square" alt="Repositories" />
+  <img src="https://img.shields.io/badge/Stars-1.2k-yellow?style=flat-square" alt="Stars" />
+  <img src="https://img.shields.io/badge/Followers-4-green?style=flat-square" alt="Followers" />
+  <img src="https://img.shields.io/badge/Following-20-orange?style=flat-square" alt="Following" />
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=antono4&theme=midnight-purple&background=0d1117" alt="GitHub Streak" />
+  <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&count_private=true&include_all_commits=true" alt="GitHub Stats" />
 </p>
 
-## 🏆 GitHub Achievements
-
 <p align="center">
-  <img src="https://github-profile-trophy-ochre.vercel.app/?username=antono4&theme=radical" alt="GitHub Trophies" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=midnight-purple&show_icons=true&hide_border=false&layout=compact&langs_count=10" alt="Top Languages" />
 </p>
 
 ---
