@@ -1,207 +1,92 @@
-<!-- GitHub Profile README - @antono4 -->
-
 <div align="center">
 
-<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2FmbnlsemNoNGt6NzFqeHFxM3VyOXpkemdmZHdxMjJ3MjVuMXJsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8SzmrGqs6oD7i/giphy.gif" alt="Background" width="100%" />
+<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2FmbnlsemNoNGt6NzFqeHFxM3VyOXpkemdmZHdxMjJ3MjVuMXJsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8SzmrGqs6oD7i/giphy.gif" alt="Background" width="100%" style="border-radius: 10px;"/>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!--                    MODERN PROFILE CARD                          -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
 
-body { font-family: 'Poppins', sans-serif; }
 
-@keyframes slideIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(0, 212, 255, 0.6); }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 
-.hero-title {
-  animation: slideIn 0.8s ease-out;
-  font-size: 3rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin: 20px 0;
-}
-.hero-subtitle {
-  animation: slideIn 1s ease-out;
-  color: rgba(255,255,255,0.95);
-  font-size: 1.3rem;
-  font-weight: 300;
-}
-.tagline {
-  animation: slideIn 1.2s ease-out;
-  font-size: 1.1rem;
-  color: #00d4ff;
-  font-weight: 400;
-}
-.card {
-  animation: slideIn 1.4s ease-out, glow 3s ease-in-out infinite;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 25px 30px;
-  margin: 20px auto;
-  max-width: 600px;
-  border: 1px solid rgba(255,255,255,0.2);
-}
-.card-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 15px;
-}
-.skill-badge {
-  display: inline-block;
-  padding: 8px 16px;
-  margin: 5px;
-  border-radius: 25px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: transform 0.3s ease;
-}
-.skill-badge:hover {
-  transform: scale(1.1);
-}
-.skill-python { background: linear-gradient(135deg, #3776ab, #ffd43b); color: #000; }
-.skill-js { background: #f7df1e; color: #000; }
-.skill-ts { background: #3178c6; color: #fff; }
-.skill-go { background: #00add8; color: #fff; }
-.skill-rust { background: #000; color: #fff; }
-.skill-react { background: #61dafb; color: #000; }
-.skill-vue { background: #42b883; color: #fff; }
-.skill-fastapi { background: #009688; color: #fff; }
-.skill-docker { background: #2496ed; color: #fff; }
+### 👋 Hi, I'm **Antono**
 
-.social-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  margin: 8px;
-  border-radius: 30px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-.social-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
+> *"I craft digital experiences where science meets creativity"* 🔬⚡
 
-.stat-card {
-  display: inline-block;
-  background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
-  border-radius: 15px;
-  padding: 15px 25px;
-  margin: 8px;
-  min-width: 100px;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-.stat-number {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #00d4ff;
-}
-.stat-label {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.7);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+A passionate **Fullstack Developer** & **AI Enthusiast** from **West Java, Indonesia** 🇮🇩. I transform complex problems into elegant solutions through code.
 
-.quote-card {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
-  border-left: 4px solid #00d4ff;
-  padding: 20px;
-  border-radius: 0 15px 15px 0;
-  margin: 20px auto;
-  max-width: 550px;
-  font-style: italic;
-  color: rgba(255,255,255,0.9);
-}
-</style>
+<!-- Social Links -->
+<p align="center">
+  <a href="https://github.com/antono4" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://linkedin.com/in/antono4" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="https://twitter.com/antono4" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter">
+  </a>
+  <a href="mailto:antonockr1@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+  </a>
+  <a href="https://antono4.github.io" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-222?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio">
+  </a>
+</p>
 
-<h1 class="hero-title">👋 Hi, I'm Antono!</h1>
+</div>
 
-<p class="hero-subtitle">Full-Stack Developer | West Java, Indonesia 🇮🇩</p>
+---
 
-<p class="tagline">✨ Building the future with code...</p>
+## 🎯 What I Build
 
-<div class="card">
-  <div class="card-title">💼 What I Build</div>
+<div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 16px; padding: 20px; margin: 15px 0; text-align: center;">
   <p>🤖 AI-powered applications & agents</p>
   <p>🌐 Web applications with modern tech stacks</p>
   <p>📱 Responsive & beautiful UIs</p>
   <p>🔧 Automation tools & scripts</p>
 </div>
 
-<div class="card">
-  <div class="card-title">🎯 Currently Focused On</div>
-  <p>🚀 AI Agents & LLM-powered applications</p>
-  <p>🌟 Open Source Contributions</p>
-  <p>📚 Technical Writing & Tutorials</p>
-  <p>🔍 Exploring AI/ML technologies</p>
-</div>
-
-<div class="quote-card">
-  "Code is poetry written for machines, but should read like prose for humans."
-</div>
-
-</div>
-
 ---
 
-## 🔗 Connect With Me
+## 🛠️ Tech Arsenal
 
-<p align="center">
-  <a href="https://antono4.github.io" target="_blank" class="social-btn" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white;">🌐 Portfolio</a>
-  <a href="mailto:antonockr1@gmail.com" target="_blank" class="social-btn" style="background: #ea4335; color: white;">📧 Email</a>
-  <a href="https://linkedin.com/in/antono4" target="_blank" class="social-btn" style="background: #0077b5; color: white;">💼 LinkedIn</a>
-  <a href="https://twitter.com/antono4_dev" target="_blank" class="social-btn" style="background: #000; color: white;">🐦 X/Twitter</a>
-</p>
+### 💻 Languages
+<div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 16px; padding: 20px; margin: 15px 0; text-align: center;">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java"/>
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go"/>
+  <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust"/>
+</div>
 
----
+### ⚛️ Frontend
+<div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 16px; padding: 20px; margin: 15px 0; text-align: center;">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
+  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="Vue.js"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
+  <img src="https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="SCSS"/>
+</div>
 
-## 🛠️ Tech Stack
+### ⚙️ Backend & AI
+<div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 16px; padding: 20px; margin: 15px 0; text-align: center;">
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/LangChain-FFFF00?style=for-the-badge&logo=chainlink&logoColor=black" alt="LangChain"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis"/>
+</div>
 
-<div align="center">
-
-<span class="skill-badge skill-python">🐍 Python</span>
-<span class="skill-badge skill-js">📜 JavaScript</span>
-<span class="skill-badge skill-ts">📘 TypeScript</span>
-<span class="skill-badge">🐘 PHP</span>
-<span class="skill-badge skill-go">🔵 Go</span>
-<span class="skill-badge skill-rust">🦀 Rust</span>
-
-<span class="skill-badge skill-react">⚛️ React</span>
-<span class="skill-badge skill-vue">💚 Vue.js</span>
-<span class="skill-badge">🎨 Tailwind CSS</span>
-
-<span class="skill-badge skill-fastapi">⚡ FastAPI</span>
-<span class="skill-badge">🟢 Node.js</span>
-<span class="skill-badge">🔗 LangChain</span>
-
-<span class="skill-badge skill-docker">🐳 Docker</span>
-<span class="skill-badge">☁️ AWS</span>
-<span class="skill-badge">📊 PostgreSQL</span>
-
+### 🐳 DevOps & Tools
+<div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 16px; padding: 20px; margin: 15px 0; text-align: center;">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
+  <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=black" alt="AWS"/>
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"/>
 </div>
 
 ---
@@ -209,33 +94,45 @@ body { font-family: 'Poppins', sans-serif; }
 ## 📊 GitHub Stats
 
 <p align="center">
-
-<span class="stat-card">
-  <div class="stat-number">297</div>
-  <div class="stat-label">Repos</div>
-</span>
-
-<span class="stat-card">
-  <div class="stat-number">1.2k</div>
-  <div class="stat-label">Stars</div>
-</span>
-
-<span class="stat-card">
-  <div class="stat-number">4</div>
-  <div class="stat-label">Followers</div>
-</span>
-
-<span class="stat-card">
-  <div class="stat-number">20</div>
-  <div class="stat-label">Following</div>
-</span>
-
+  <img src="https://img.shields.io/badge/Repos-297-blue?style=for-the-badge" alt="Repositories" />
+  <img src="https://img.shields.io/badge/Stars-1.2k-yellow?style=for-the-badge" alt="Stars" />
+  <img src="https://img.shields.io/badge/Followers-4-green?style=for-the-badge" alt="Followers" />
+  <img src="https://img.shields.io/badge/Following-20-orange?style=for-the-badge" alt="Following" />
 </p>
+
+---
+
+## 📈 Activity
+
+![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=github_dark&area=true&hide_border=true&bg_color=0D1117&color=58A6FF&line=58A6FF&point=58A6FF&area_color=1F6FEB)
+
+---
+
+## 💡 Fun Facts
+
+<div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 20px; padding: 30px; margin: 20px 0;">
+
+| 🧪 | Fullstack Developer passionate about AI |
+| :--- | :--- |
+| ☕ | Powered by coffee and curiosity |
+| 🌙 | Night owl coder |
+| 🎮 | Gaming enthusiast |
+| 📚 | Always learning something new |
+
+</div>
 
 ---
 
 <div align="center">
 
-⭐ From [antono4](https://github.com/antono4) with ❤️
+![Profile Views](https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=for-the-badge&label=Profile+Views)
+
+**Made with ❤️ by [antono4](https://github.com/antono4)**
+
+⭐️ From West Java, Indonesia 🇮🇩
+
+---
+
+🚀 *Let's build something amazing together!*
 
 </div>
