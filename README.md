@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Lombok Island Banner](https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=1200&h=400&fit=crop)
+<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2p0eHl3aWVlcGp1bTc2MnJhYTd2Mm1xMHg2ZmRzc2FidHBwNzZhYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4EpcpKOOz2Pclj44/giphy.gif" alt="Background" width="100%" />
 
 </div>
 
@@ -100,9 +100,3 @@ Currently expanding my skills in:
 ---
 
 ⭐ From [antono4](https://github.com/antono4) with ❤️
-
-<div align="center">
-
-![Lombok Beach](https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&h=300&fit=crop)
-
-</div>
