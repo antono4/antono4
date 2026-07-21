@@ -1,18 +1,12 @@
 <div align="center">
-
-<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2FmbnlsemNoNGt6NzFqeHFxM3VyOXpkemdmZHdxMjJ3MjVuMXJsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8SzmrGqs6oD7i/giphy.gif" alt="Background" width="100%" style="border-radius: 10px;"/>
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--                    MODERN PROFILE CARD                          -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2FmbnlsemNoNGt6NzFqeHFxM3VyOXpkemdmZHdxMjJ3MjVuMXJsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8SzmrGqs6oD7i/giphy.gif" alt="Background" width="100%" style="border-radius: 10px;"/>
 
 ### 👋 Hi, I'm **Antono**
 
 > *"I craft digital experiences where science meets creativity"* 🔬⚡
 
-A passionate **Fullstack Developer** & **AI Enthusiast** from **West Java, Indonesia** 🇮🇩. I transform complex problems into elegant solutions through code.
+A passionate **Fullstack Developer** & **AI Enthusiast** from **West Java, Indonesia** 🇮🇩. 
+I transform complex problems into elegant solutions through code.
 
 <!-- Social Links -->
 <p align="center">
@@ -32,7 +26,6 @@ A passionate **Fullstack Developer** & **AI Enthusiast** from **West Java, Indon
     <img src="https://img.shields.io/badge/Portfolio-222?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio">
   </a>
 </p>
-
 </div>
 
 ---
@@ -40,10 +33,10 @@ A passionate **Fullstack Developer** & **AI Enthusiast** from **West Java, Indon
 ## 🎯 What I Build
 
 <div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 16px; padding: 20px; margin: 15px 0; text-align: center;">
-  <p>🤖 AI-powered applications & agents</p>
-  <p>🌐 Web applications with modern tech stacks</p>
-  <p>📱 Responsive & beautiful UIs</p>
-  <p>🔧 Automation tools & scripts</p>
+  🤖 AI-powered applications & agents<br>
+  🌐 Web applications with modern tech stacks<br>
+  📱 Responsive & beautiful UIs<br>
+  🔧 Automation tools & scripts
 </div>
 
 ---
@@ -94,10 +87,8 @@ A passionate **Fullstack Developer** & **AI Enthusiast** from **West Java, Indon
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Repos-297-blue?style=for-the-badge" alt="Repositories" />
-  <img src="https://img.shields.io/badge/Stars-1.2k-yellow?style=for-the-badge" alt="Stars" />
-  <img src="https://img.shields.io/badge/Followers-4-green?style=for-the-badge" alt="Followers" />
-  <img src="https://img.shields.io/badge/Following-20-orange?style=for-the-badge" alt="Following" />
+  <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=radical&show_icons=true&hide_border=true&bg_color=0D1117" alt="GitHub Stats"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=radical&layout=compact&hide_border=true&bg_color=0D1117" alt="Top Languages"/>
 </p>
 
 ---
@@ -111,28 +102,25 @@ A passionate **Fullstack Developer** & **AI Enthusiast** from **West Java, Indon
 ## 💡 Fun Facts
 
 <div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 20px; padding: 30px; margin: 20px 0;">
-
+| | |
+|:---:|:---|
 | 🧪 | Fullstack Developer passionate about AI |
-| :--- | :--- |
 | ☕ | Powered by coffee and curiosity |
 | 🌙 | Night owl coder |
 | 🎮 | Gaming enthusiast |
 | 📚 | Always learning something new |
-
 </div>
 
 ---
 
 <div align="center">
-
-![Profile Views](https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=for-the-badge&label=Profile+Views)
-
-**Made with ❤️ by [antono4](https://github.com/antono4)**
-
-⭐️ From West Java, Indonesia 🇮🇩
-
----
-
-🚀 *Let's build something amazing together!*
-
+  ![Profile Views](https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=for-the-badge&label=Profile+Views)
+  
+  **Made with ❤️ by [antono4](https://github.com/antono4)**
+  
+  ⭐️ From West Java, Indonesia 🇮🇩
+  
+  ---
+  
+  🚀 *Let's build something amazing together!*
 </div>
