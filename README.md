@@ -1,32 +1,39 @@
 <div align="center">
   <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2FmbnlsemNoNGt6NzFqeHFxM3VyOXpkemdmZHdxMjJ3MjVuMXJsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8SzmrGqs6oD7i/giphy.gif" alt="Background" width="100%" style="border-radius: 10px;"/>
+</div>
 
 ### 👋 Hi, I'm **Antono**
 
 > *"I craft digital experiences where science meets creativity"* 🔬⚡
 
-A passionate **Fullstack Developer** & **AI Enthusiast** from **West Java, Indonesia** 🇮🇩. 
+Passionate **Fullstack Developer** & **AI Enthusiast** from **West Java, Indonesia** 🇮🇩. 
 I transform complex problems into elegant solutions through code.
 
-<!-- Social Links -->
 <p align="center">
   <a href="https://github.com/antono4" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
   </a>
   <a href="https://linkedin.com/in/antono4" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
   <a href="https://twitter.com/antono4" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"/>
   </a>
   <a href="mailto:antonockr1@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
   </a>
   <a href="https://antono4.github.io" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-222?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio">
+    <img src="https://img.shields.io/badge/Portfolio-222?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/>
   </a>
 </p>
-</div>
+
+---
+
+### 🔥 GitHub Streak
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=antono4&theme=radical&background=0D1117&stroke=58A6FF&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF&sideNums=58A6FF&currStreakNum=58A6FF&sideLabels=58A6FF" alt="GitHub Streak"/>
+</p>
 
 ---
 
@@ -84,7 +91,57 @@ I transform complex problems into elegant solutions through code.
 
 ---
 
-## 📊 GitHub Stats
+## ⭐ Pinned Repositories
+
+**Don't miss it!** Check out my <a href="https://github.com/antono4/Open-Mind-AI" target="_blank">**OPEN MIND AI**</a> - An open-source AI assistant without token limitations!
+
+<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+  <a href="https://github.com/antono4/MacFolio" target="_blank">
+    <div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 16px; padding: 15px; margin: 5px; width: 300px; height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none;">
+      <span style="font-size: 16px; font-weight: 700; color: #58A6FF; margin-bottom: 8px;">MacFolio</span>
+      <div style="font-size: 12px; color: #8b949e; margin-bottom: 10px;">Trade your portfolio with style</div>
+      <div style="display: flex; gap: 5px;">
+        <span style="background: #3FBEE0; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #000;">JS</span>
+        <span style="background: #3EBE93; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #000;">Vue</span>
+        <span style="background: #31BE31; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #000;">CSS</span>
+      </div>
+    </div>
+  </a>
+  <a href="https://github.com/antono4/3D-Neon-Lightbulb" target="_blank">
+    <div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 16px; padding: 15px; margin: 5px; width: 300px; height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none;">
+      <span style="font-size: 16px; font-weight: 700; color: #58A6FF; margin-bottom: 8px;">3D-Neon-Lightbulb</span>
+      <div style="font-size: 12px; color: #8b949e; margin-bottom: 10px;">Creative 3D visual effects</div>
+      <div style="display: flex; gap: 5px;">
+        <span style="background: #E34F26; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #fff;">HTML</span>
+        <span style="background: #31BE31; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #000;">CSS</span>
+      </div>
+    </div>
+  </a>
+  <a href="https://github.com/antono4/premium-food-app" target="_blank">
+    <div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 16px; padding: 15px; margin: 5px; width: 300px; height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none;">
+      <span style="font-size: 16px; font-weight: 700; color: #58A6FF; margin-bottom: 8px;">premium-food-app</span>
+      <div style="font-size: 12px; color: #8b949e; margin-bottom: 10px;">Premium food ordering app</div>
+      <div style="display: flex; gap: 5px;">
+        <span style="background: #3776AB; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #fff;">Python</span>
+        <span style="background: #31BE31; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #000;">Flask</span>
+      </div>
+    </div>
+  </a>
+  <a href="https://github.com/antono4/Invoices-Dashboard-UI" target="_blank">
+    <div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 16px; padding: 15px; margin: 5px; width: 300px; height: 150px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none;">
+      <span style="font-size: 16px; font-weight: 700; color: #58A6FF; margin-bottom: 8px;">Invoices Dashboard</span>
+      <div style="font-size: 12px; color: #8b949e; margin-bottom: 10px;">Track all your transactions</div>
+      <div style="display: flex; gap: 5px;">
+        <span style="background: #3776AB; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #fff;">Python</span>
+        <span style="background: #F7DF1E; padding: 4px 10px; border-radius: 12px; font-size: 11px; color: #000;">GUI</span>
+      </div>
+    </div>
+  </a>
+</div>
+
+---
+
+## 🏆 GitHub Stats & Traffic
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=radical&show_icons=true&hide_border=true&bg_color=0D1117" alt="GitHub Stats"/>
@@ -93,9 +150,17 @@ I transform complex problems into elegant solutions through code.
 
 ---
 
-## 📈 Activity
+## 📈 Contribution Graph
 
 ![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=github_dark&area=true&hide_border=true&bg_color=0D1117&color=58A6FF&line=58A6FF&point=58A6FF&area_color=1F6FEB)
+
+---
+
+## 🐍 Snake Contribution Game
+
+Want to see something cool? Your contributions become a snake animation!
+
+![Snake Animation](https://raw.githubusercontent.com/antono4/antono4/output/github-contribution-grid-snake-dark.svg)
 
 ---
 
@@ -114,13 +179,14 @@ I transform complex problems into elegant solutions through code.
 ---
 
 <div align="center">
-  ![Profile Views](https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=for-the-badge&label=Profile+Views)
-  
-  **Made with ❤️ by [antono4](https://github.com/antono4)**
-  
-  ⭐️ From West Java, Indonesia 🇮🇩
-  
-  ---
-  
-  🚀 *Let's build something amazing together!*
+
+![Profile Views](https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=for-the-badge&label=Profile+Views)
+
+**Made with ❤️ by [antono4](https://github.com/antono4)**
+
+⭐️ From West Java, Indonesia 🇮🇩
+
+---
+
+🚀 *Let's build something amazing together!*
 </div>
