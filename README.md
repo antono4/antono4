@@ -1,7 +1,7 @@
 # 👋 Hi, I'm **Antono**
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=flat-square&label=VISITORS" alt="Visitors"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=header&text=Welcome%20to%20my%20Profile&fontSize=30&fontColor=fff" alt="Animated Header"/>
 </p>
 
 > *"I craft digital experiences where science meets creativity"* 🔬⚡
