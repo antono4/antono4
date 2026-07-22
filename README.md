@@ -1,7 +1,7 @@
 
-<!-- Animated Profile Card Header -->
+<!-- Animated Stats Header -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/antono4/antono4/output/profile-summary-card-output/radical/redirect/profile-summary-card.png" width="900" alt="Profile Summary"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=radical&show_icons=true&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=FFFFFF" alt="GitHub Stats" width="500"/>
 </p>
 
 <h1 align="center">
