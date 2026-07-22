@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2FmbnlsemNoNGt6NzFqeHFxM3VyOXpkemdmZHdxMjJ3MjVuMXJsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8SzmrGqs6oD7i/giphy.gif" alt="Background" width="100%" style="border-radius: 10px;"/>
-</div>
+
 
 ### 👋 Hi, I'm **Antono**
 
