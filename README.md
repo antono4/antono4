@@ -1,7 +1,7 @@
 # 👋 Hi, I'm **Antono**
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=antono4&theme=radical&no-frame=false&no-bg=true&title=Experience,Commits,Repositories,Ranking" alt="Trophy"/>
+  <img src="https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=flat-square&label=VISITORS" alt="Visitors"/>
 </p>
 
 > *"I craft digital experiences where science meets creativity"* 🔬⚡
