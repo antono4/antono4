@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=wave&color=58A6FF&height=80&text=Hi,%20I'm%20Antono&fontSize=40&fontAlign=50&fontAlignY=50" alt="Animated Text"/>
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzBmdXN5NjV5Z3p1OHlhN3kzZmRzOHo4eWQ1Nmx6ZnJ1OXBzY3E3YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oriT0S1kErKMMiF7m/giphy.gif" width="200" alt="Developer Animation"/>
 </p>
 
 > *"I craft digital experiences where science meets creativity"* 🔬⚡
