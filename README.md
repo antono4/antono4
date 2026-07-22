@@ -6,6 +6,8 @@
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzBmdXN5NjV5Z3p1OHlhN3kzZmRzOHo4eWQ1Nmx6ZnJ1OXBzY3E3YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oriT0S1kErKMMiF7m/giphy.gif" width="200" alt="Developer Animation"/>
 </p>
 
+<h1 align="center">Hi 👋, I'm Antono</h1>
+
 > *"I craft digital experiences where science meets creativity"* 🔬⚡
 
 **Fullstack Developer** & **AI Enthusiast** based in **West Java, Indonesia** 🇮🇩  
