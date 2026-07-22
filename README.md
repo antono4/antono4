@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Welcome%20to%20my%20Profile&fontSize=30&fontColor=fff" alt="Animated Header"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Welcome%20to%20my%20Profile&fontSize=30&fontColor=fff" alt="Animated Header"/>
 </p>
 
 <p align="center">
@@ -8,9 +8,7 @@
 
 <h1 align="center">Hi 👋, I'm Antono</h1>
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=egg&text=Antono&fontAlign=50&fontAlignY=50&color=gradient" height="100" alt="Logo"/>
-</p>
+
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-909a-72a636a26436.gif" width="200" alt="Blink"/>
