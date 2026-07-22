@@ -8,10 +8,17 @@
 
 <h1 align="center">Hi 👋, I'm Antono</h1>
 
-> *"I craft digital experiences where science meets creativity"* 🔬⚡
+<p align="center">
+  <i>"I craft digital experiences where science meets creativity"</i> 🔬⚡
+</p>
 
-**Fullstack Developer** & **AI Enthusiast** based in **West Java, Indonesia** 🇮🇩  
-Transforming complex problems into elegant solutions through code.
+<p align="center">
+  <b>Fullstack Developer</b> & <b>AI Enthusiast</b> based in <b>West Java, Indonesia</b> 🇮🇩
+</p>
+
+<p align="center">
+  Transforming complex problems into elegant solutions through code.
+</p>
 
 ---
 
