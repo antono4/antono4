@@ -1,7 +1,7 @@
 # 👋 Hi, I'm **Antono**
 
 <p align="center">
-  <img src="https://readme-typing-svg.demowebapis.com/?font=Fira+Code&size=22&duration=4000&pause=1000&color=f75c7e&vCenter=true&width=500&height=60&lines=Fullstack+Developer+%F0%9F%92%BB;AI+Enthusiast+%F0%9F%94%97;Building+innovative+solutions)" alt="Typing SVG"/>
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=22&duration=4000&pause=1000&color=f75c7e&center=true&width=500&height=60&lines=Fullstack+Developer+%F0%9F%92%BB;AI+Enthusiast+%F0%9F%94%97;Building+innovative+solutions)" alt="Typing SVG"/>
 </p>
 
 > *"I craft digital experiences where science meets creativity"* 🔬⚡
