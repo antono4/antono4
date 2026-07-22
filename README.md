@@ -1,7 +1,9 @@
-# 👋 Hi, I'm **Antono**
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=header&text=Welcome%20to%20my%20Profile&fontSize=30&fontColor=fff" alt="Animated Header"/>
+</p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=header&text=Welcome%20to%20my%20Profile&fontSize=30&fontColor=fff" alt="Animated Header"/>
+  <img src="https://readme-typing-svg.denholmia.com/?font=Fira+Code&size=28&duration=3000&pause=500&color=58A6FF&center=true&width=350&height=50&lines=Hi,%20I'm%20Antono" alt="Typing Animation"/>
 </p>
 
 > *"I craft digital experiences where science meets creativity"* 🔬⚡
