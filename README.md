@@ -18,11 +18,6 @@
   I transform complex problems into elegant solutions through code.
 </p>
 
-<!-- Animated wave -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Platane/sink/output/sink.svg" alt="Wave" width="200"/>
-</p>
-
 <!-- Social Links -->
 <p align="center">
   <a href="https://github.com/antono4" target="_blank">
