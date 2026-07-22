@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.denholmia.com/?font=Fira+Code&size=28&duration=3000&pause=500&color=58A6FF&center=true&width=350&height=50&lines=Hi,%20I'm%20Antono" alt="Typing Animation"/>
+  <img src="https://capsule-render.vercel.app/api?type=wave&color=58A6FF&height=80&text=Hi,%20I'm%20Antono&fontSize=40&fontAlign=50&fontAlignY=50" alt="Animated Text"/>
 </p>
 
 > *"I craft digital experiences where science meets creativity"* 🔬⚡
