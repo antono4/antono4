@@ -138,13 +138,6 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 ---
 
-## 📈 Activity Graph
-
-<div align="center">
-
-<a href="https://github.com/antono4">
-  <img src="https://raw.githubusercontent.com/ritesh-0309/ritesh-0309/output/github-snake.svg" alt="Snake animation" width="400">
-</a>
 
 </div>
 
