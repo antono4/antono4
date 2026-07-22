@@ -1,8 +1,13 @@
 
-<h1 align="center">👋 Hi, I'm <strong>Antono</strong></h1>
+<!-- Animated Header -->
+<h1 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&color=58A6FF&background=0D111700&center=true&vCenter=true&width=435&lines=%F0%9F%91%8B+Hi%2C+I'm+Antono" alt="Typing SVG" />
+  </a>
+</h1>
 
 <p align="center">
-  <em>"I craft digital experiences where science meets creativity"</em> 🔬⚡
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=2000&pause=2000&color=FFFFFF&background=0D111700&center=true&vCenter=true&width=600&lines=%22I+craft+digital+experiences+where+science+meets+creativity%22+%F0%9F%94%AC%E2%9A%A1" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -11,6 +16,11 @@
 
 <p align="center">
   I transform complex problems into elegant solutions through code.
+</p>
+
+<!-- Animated wave -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Platane/sink/output/sink.svg" alt="Wave" width="200"/>
 </p>
 
 <!-- Social Links -->
