@@ -37,14 +37,6 @@
 
 ---
 
-## 🎯 Quick Stats
-
-<p align="center">
-
-  <img src="https://streak-stats.demolab.com?user=antono4&theme=dark&hide_border=true&exclude_days=Sun%2CMon%2CTue%2CWed%2CThu%2CFri%2CSat&type=png" alt="GitHub Streak" width="32%"/>
-</p>
-
----
 
 ## 🛠️ Tech Arsenal
 
