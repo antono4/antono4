@@ -1,14 +1,9 @@
 
-<!-- Animated Badge Header -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=16&pause=3000&color=58A6FF&background=0D111700&lines=%F0%9F%8C%9F+Fullstack+Developer+%7C+%F0%9F%9B%A0+AI+Enthusiast+%7C+%F0%9F%87%AE%F0%9F%87%B9+Open+Source+Enthusiast" alt="Badges" />
-</p>
+<div align="center">
 
-<h1 align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&color=58A6FF&background=0D111700&center=true&vCenter=true&width=435&lines=%F0%9F%91%8B+Hi%2C+I'm+Antono" alt="Typing SVG" />
-  </a>
-</h1>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Antono&fontSize=50&fontAlignY=30&animation=twinkling&fontColor=gradient&desc=Full%20Stack%20Developer%20|%20Open%20Source%20Enthusiast&descSize=16&descAlignY=51" width="100%"/>
+
+</div>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=2000&pause=2000&color=FFFFFF&background=0D111700&center=true&vCenter=true&width=600&lines=%22I+craft+digital+experiences+where+science+meets+creativity%22+%F0%9F%94%AC%E2%9A%A1" alt="Typing SVG" />
