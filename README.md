@@ -9,6 +9,14 @@
 <h1 align="center">Hi 👋, I'm Antono</h1>
 
 <p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=egg&text=Antono&fontAlign=50&fontAlignY=50&color=gradient" height="100" alt="Logo"/>
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-909a-72a636a26436.gif" width="200" alt="Blink"/>
+</p>
+
+<p align="center">
   <i>"I craft digital experiences where science meets creativity"</i> 🔬⚡
 </p>
 
