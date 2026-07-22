@@ -21,17 +21,6 @@ Transforming complex problems into elegant solutions through code.
 
 ---
 
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.demomfer99.now.sh/?user=antono4&theme=radical&background=0D1117&stroke=58A6FF&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF&sideNums=58A6FF&currStreakNum=58A6FF&sideLabels=58A6FF" alt="GitHub Streak"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.demomfer99.now.sh/api?username=antono4&theme=radical&show_icons=true&hide_border=true&bg_color=0D1117" alt="GitHub Stats"/>
-  <img src="https://github-readme-stats.demomfer99.now.sh/api/top-langs/?username=antono4&theme=radical&layout=compact&hide_border=true&bg_color=0D1117" alt="Top Languages"/>
-</p>
-
 ---
 
 ## 🎯 What I Do
