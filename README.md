@@ -92,15 +92,6 @@ A passionate **Fullstack Developer** & **Computational Chemist** from **Indonesi
 
 </div>
 
----
-
-## 🏆 Achievements
-
-<div style="background: linear-gradient(145deg, #161B22, #0D1117); border: 1px solid #30363D; border-radius: 20px; padding: 25px; margin: 20px 0; text-align: center;">
-
-[![Trophy](https://github-profile-trophy.vercel.app/?username=antono4&theme=onedark&margin-w=15&margin-h=15)](https://github.com/antono4)
-
-</div>
 
 ---
 
