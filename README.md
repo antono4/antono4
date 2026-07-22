@@ -1,10 +1,8 @@
-
-
-### 👋 Hi, I'm **Antono**
+# 👋 Hi, I'm **Antono**
 
 > *"I craft digital experiences where science meets creativity"* 🔬⚡
 
-Passionate **Fullstack Developer** & **AI Enthusiast** from **West Java, Indonesia** 🇮🇩. 
+Passionate **Fullstack Developer** & **AI Enthusiast** from **West Java, Indonesia** 🇮🇩.
 I transform complex problems into elegant solutions through code.
 
 <p align="center">
@@ -91,7 +89,7 @@ I transform complex problems into elegant solutions through code.
 
 ## ⭐ Pinned Repositories
 
-**Don't miss it!** Check out my <a href="https://github.com/antono4/Open-Mind-AI" target="_blank">**OPEN MIND AI**</a> - An open-source AI assistant without token limitations!
+**Don't miss it!** Check out my [OPEN MIND AI](https://github.com/antono4/Open-Mind-AI) - An open-source AI assistant without token limitations!
 
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
   <a href="https://github.com/antono4/MacFolio" target="_blank">
