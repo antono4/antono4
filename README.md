@@ -1,7 +1,7 @@
 
-<!-- Animated Stats Header -->
+<!-- Animated Badge Header -->
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=radical&show_icons=true&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=FFFFFF" alt="GitHub Stats" width="500"/>
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=16&pause=3000&color=58A6FF&background=0D111700&lines=%F0%9F%8C%9F+Fullstack+Developer+%7C+%F0%9F%9B%A0+AI+Enthusiast+%7C+%F0%9F%87%AE%F0%9F%87%B9+Open+Source+Enthusiast" alt="Badges" />
 </p>
 
 <h1 align="center">
