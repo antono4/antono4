@@ -1,3 +1,8 @@
+# 👋 Welcome to My Profile
+
+*A passionate Fullstack Developer & Computational Chemist crafting digital experiences*
+
+---
 <div align="center">
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
