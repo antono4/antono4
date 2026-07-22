@@ -123,6 +123,14 @@ Transforming complex problems into elegant solutions through code.
 
 ---
 
+## 🐍 Snake Animation
+
+<p align="center">
+  <img src="https://github.com/antono4/antono4/raw/output/github-contribution-grid-snake-dark.svg" alt="Snake Animation"/>
+</p>
+
+---
+
 ## 💡 About Me
 
 | | |
