@@ -1,183 +1,181 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Welcome%20to%20my%20Profile&fontSize=40&fontColor=fff" alt="Animated Header"/>
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzBmdXN5NjV5Z3p1OHlhN3kzZmRzOHo4eWQ1Nmx6ZnJ1OXBzY3E3YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oriT0S1kErKMMiF7m/giphy.gif" width="200" alt="Developer Animation"/>
-</p>
-
-<h1 align="center">Hi 👋, I'm Antono</h1>
-
-
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-909a-72a636a26436.gif" width="200" alt="Blink"/>
-</p>
-
-<p align="center">
-  <i>"I craft digital experiences where science meets creativity"</i> 🔬⚡
-</p>
-
-<p align="center">
-  <b>Fullstack Developer</b> & <b>AI Enthusiast</b> based in <b>West Java, Indonesia</b> 🇮🇩
-</p>
-
-<p align="center">
-  Transforming complex problems into elegant solutions through code.
-</p>
+![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1000&color=f75c7e&vCenter=true&width=500&height=60&lines=Fullstack+Developer+%F0%9F%92%BB;Computational+Chemist+%F0%9F%91%8C;Building+innovative+solutions)
 
 ---
 
-## 🔗 Connect with Me
+### 👋 Hi, I'm Antono
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/antono4)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/antono4)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/antono4)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:antonockr1@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-222?style=for-the-badge&logo=google-chrome&logoColor=white)](https://antono4.github.io)
+A passionate **Fullstack Developer** from Indonesia with a background in **Computational Chemistry**. I love building products that combine scientific precision with modern technology.
+
+<p align="center">
+  <a href="https://github.com/antono4" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://linkedin.com/in/antono4" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="mailto:antono4@example.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+  </a>
+</p>
+
+</div>
 
 ---
 
+## 📊 GitHub Stats
+
+<div align="center">
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=Antono4&date_format=j%20M%5B%20Y%5D&mode=weekly&background=0D1117&border=30363D&stroke=58A6FF&ring=58A6FF&fire=58A6FF&currStreakNum=58A6FF&sideNums=58A6FF&currStreakLabel=58A6FF&sideLabels=58A6FF&nextDuelMsg=58A6FF&background=0D1117)](https://git.io/streak-stats)
+
+</div>
+
+<div align="center">
+
+![GitHub Stats](https://raw.githubusercontent.com/Antono4/github-stats-transparent/output/generated/overview.svg)
+![GitHub Languages](https://raw.githubusercontent.com/Antono4/github-stats-transparent/output/generated/languages.svg)
+
+</div>
+
 ---
 
-## 🎯 What I Do
+## 📅 Contributions in the Last Year
 
-- 🤖 **AI & Machine Learning** — Building intelligent applications with LangChain and modern AI tools
-- 🌐 **Web Development** — Creating responsive, modern web applications
-- 📱 **UI/UX Design** — Crafting beautiful and intuitive interfaces
-- 🔧 **Automation** — Streamlining workflows with custom tools and scripts
+<div align="center">
+
+[![ Contributor's GitHub Activity Graph](https://github.com/antono4/antono4/raw/output/github-contribution-grid-snake.svg)](https://github.com/antono4/antono4)
+
+</div>
+
+<p align="center">
+
+![Contribution Calendar](https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=github_dark&area=true&hide_border=true&bg_color=0D1117&color=58A6FF&line=58A6FF&point=58A6FF&area_color=1F6FEB)
+
+</p>
+
+<div align="center">
+
+| Total Contributions | This Year | This Month |
+|:---:|:---:|:---:|
+| ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=antono4&show_icons=true&theme=transparent&bg_color=0D1117&text_color=58A6FF&border_color=30363D&hide_rank=false) | ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=antono4&show_icons=true&theme=transparent&bg_color=0D1117&text_color=58A6FF&border_color=30363D&custom_title=This+Year+Contributions) | ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=antono4&show_icons=true&theme=transparent&bg_color=0D1117&text_color=58A6FF&border_color=30363D&custom_title=This+Month+Contributions) |
+
+</div>
 
 ---
 
-## 🛠️ Tech Stack
+## 🏆 Achievements
 
-### Programming Languages
+<div align="center">
+
+[![Profile Trophy](https://github-profile-trophy.vercel.app/?username=antono4&theme=onedark&margin-w=15&margin-h=15)](https://github.com/antono4)
+
+</div>
+
+---
+
+## 💻 Tech Stack
+
+### Languages & Frameworks
+
+<p align="center">
+
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+</p>
 
 ### Frontend
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
-### Backend & AI
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+<p align="center">
+
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white)
+
+</p>
+
+### Backend & Databases
+
+<p align="center">
+
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-FFFF00?style=for-the-badge&logo=chainlink&logoColor=black)
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+
+</p>
 
 ### DevOps & Tools
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
+<p align="center">
+
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=black)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
----
+</p>
 
-## ⭐ Featured Projects
+### Styling & Libraries
 
-> 🚀 Check out **[Open Mind AI](https://github.com/antono4/Open-Mind-AI)** — An open-source AI assistant without token limitations!
+<p align="center">
 
-<table>
-<tr>
-<td width="50%">
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![Styled Components](https://img.shields.io/badge/Styled_Components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white)
+![Redux](https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white)
+![RxJS](https://img.shields.io/badge/RxJS-B7178C?style=for-the-badge&logo=reactivex&logoColor=white)
 
-### [MacFolio](https://github.com/antono4/MacFolio)
-*Portfolio trading platform with modern UI*
-
-![JavaScript](https://img.shields.io/badge/-JS-yellow?style=flat-square&logo=javascript)
-![Vue](https://img.shields.io/badge/-Vue.js-green?style=flat-square&logo=vuedotjs)
-![CSS](https://img.shields.io/badge/-CSS-blue?style=flat-square&logo=css3)
-
-</td>
-<td width="50%">
-
-### [3D-Neon-Lightbulb](https://github.com/antono4/3D-Neon-Lightbulb)
-*Creative 3D visual effects showcase*
-
-![HTML](https://img.shields.io/badge/-HTML-orange?style=flat-square&logo=html5)
-![CSS](https://img.shields.io/badge/-CSS-blue?style=flat-square&logo=css3)
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### [Premium Food App](https://github.com/antono4/premium-food-app)
-*Premium food ordering application*
-
-![Python](https://img.shields.io/badge/-Python-blue?style=flat-square&logo=python)
-![Flask](https://img.shields.io/badge/-Flask-green?style=flat-square)
-
-</td>
-<td width="50%">
-
-### [Invoices Dashboard](https://github.com/antono4/Invoices-Dashboard-UI)
-*Transaction tracking dashboard*
-
-![Python](https://img.shields.io/badge/-Python-blue?style=flat-square&logo=python)
-![GUI](https://img.shields.io/badge/-GUI-yellow?style=flat-square)
-
-</td>
-</tr>
-</table>
+</p>
 
 ---
 
 ## 📈 Activity Graph
 
-![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=github_dark&area=true&hide_border=true&bg_color=0D1117&color=58A6FF&line=58A6FF&point=58A6FF&area_color=1F6FEB)
+<div align="center">
+
+<a href="https://github.com/antono4">
+  <img src="https://raw.githubusercontent.com/ritesh-0309/ritesh-0309/output/github-snake.svg" alt="Snake animation" width="400">
+</a>
+
+</div>
 
 ---
 
-## 🐍 Snake Animation
+## 📝 Latest Blog Posts
+
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
+---
+
+## 🤝 Connect With Me
 
 <p align="center">
-  <img src="https://github.com/antono4/antono4/raw/output/github-contribution-grid-snake-dark.svg" alt="Snake Animation"/>
+
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/antono4)
+[![Stack Overflow](https://img.shields.io/badge/Stack_Overflow-F58025?style=for-the-badge&logo=stackoverflow&logoColor=white)](https://stackoverflow.com/users/antono4)
+
 </p>
 
 ---
 
-## 💡 About Me
+<div align="center">
 
-| | |
-|:---:|:---|
-| 🧪 | Fullstack Developer passionate about AI |
-| ☕ | Fueled by coffee and curiosity |
-| 🌙 | Night owl coder |
-| 🎮 | Gaming enthusiast |
-| 📚 | Always learning something new |
+![Profile Views](https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=for-the-badge&label=Profile+Views)
 
----
+<p>
 
-## 📫 Get in Touch
+⭐️ From [antono4](https://github.com/antono4)
 
-I'm always open to discussing new projects, creative ideas, or opportunities to collaborate.
-
-- **Email:** [antonockr1@gmail.com](mailto:antonockr1@gmail.com)
-- **LinkedIn:** [antono4](https://linkedin.com/in/antono4)
-- **GitHub:** [antono4](https://github.com/antono4)
-
----
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=for-the-badge&label=Profile+Views" alt="Profile Views"/>
 </p>
 
-<p align="center">
-  <strong>Made with ❤️ by <a href="https://github.com/antono4">antono4</a></strong> · ⭐ From West Java, Indonesia 🇮🇩
-</p>
-
-<p align="center">
-  🚀 *Let's build something amazing together!*
-</p>
+</div>
