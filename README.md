@@ -9,13 +9,19 @@
 <!--                    MODERN PROFILE CARD                          -->
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
+<h1 align="center">👋 Hi, I'm <strong>Antono</strong></h1>
 
+<p align="center">
+  <em>"I craft digital experiences where science meets creativity"</em> 🔬⚡
+</p>
 
-### 👋 Hi, I'm **Antono**
+<p align="center">
+  A passionate <strong>Fullstack Developer</strong> & <strong>Computational Chemist</strong> from <strong>Indonesia</strong> 🇮🇩. 
+</p>
 
-> *"I craft digital experiences where science meets creativity"* 🔬⚡
-
-A passionate **Fullstack Developer** & **Computational Chemist** from **Indonesia** 🇮🇩. I transform complex problems into elegant solutions through code.
+<p align="center">
+  I transform complex problems into elegant solutions through code.
+</p>
 
 <!-- Social Links -->
 <p align="center">
