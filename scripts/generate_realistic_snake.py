@@ -6,8 +6,9 @@ from datetime import datetime, timedelta
 USERNAME = "antono4"
 OUTPUT_FILE = "../output/snake.gif"
 
+# Green theme colors for snake
 COLORS = {
-    0: "#0d1117", 1: "#12c2e9", 2: "#00d4ff", 3: "#c471ed", 4: "#f64f59", 5: "#064e85",
+    0: "#0d1117", 1: "#22c55e", 2: "#16a34a", 3: "#15803d", 4: "#f64f59", 5: "#064e85",
 }
 
 def get_contributions(username):
@@ -76,18 +77,22 @@ def generate_frames(contributions, num_frames=50, cell_size=15, gap=2):
                 thickness_ratio = 1.0 - (abs(i - body_length/2) / body_length) * 0.5
                 size = max(3, int((cell_size // 2 - 1) * thickness_ratio))
                 
-                # Gradient body color
+                # Gradient body color - Green shades
                 if i < 20:
-                    r, g, b = 18, 194, 233
+                    # Bright green near head
+                    r, g, b = 34, 197, 94
                 elif i < 40:
+                    # Transition to dark green
                     t = (i - 20) / 20
-                    r, g, b = int(18 + (196-18)*t), int(194 + (113-194)*t), int(233 + (237-233)*t)
+                    r, g, b = int(34 + (21-34)*t), int(197 + (128-197)*t), int(94 + (71-94)*t)
                 elif i < 60:
+                    # Dark green to forest green
                     t = (i - 40) / 20
-                    r, g, b = int(196 + (246-196)*t), int(113 + (79-113)*t), int(237 + (89-237)*t)
+                    r, g, b = int(21 + (18-21)*t), int(128 + (99-128)*t), int(71 + (54-71)*t)
                 else:
+                    # Tail fading
                     t = (i - 60) / 30
-                    r, g, b = int(246 + (6-246)*t), int(79 + (78-79)*t), int(89 + (133-89)*t)
+                    r, g, b = int(18 + (10-18)*t), int(99 + (60-99)*t), int(54 + (40-54)*t)
                 
                 alpha = max(100, 255 - (i - 50) * 3) if i > 50 else 255
                 draw.ellipse([x-size, y-size, x+size, y+size], fill=(r, g, b, alpha))
@@ -102,10 +107,10 @@ def generate_frames(contributions, num_frames=50, cell_size=15, gap=2):
             hs = cell_size // 2 + 4
             
             # Shadow
-            draw.ellipse([hx-hs+2, hy-hs+4, hx+hs+2, hy+hs+4], fill=(0, 60, 100, 200))
-            # Head
-            draw.ellipse([hx-hs, hy-hs, hx+hs, hy+hs], fill=(18, 194, 233, 255))
-            draw.ellipse([hx-hs//2, hy-hs//2, hx+hs//2, hy+hs//2], fill=(0, 150, 200, 255))
+            draw.ellipse([hx-hs+2, hy-hs+4, hx+hs+2, hy+hs+4], fill=(0, 80, 40, 200))
+            # Head - Green
+            draw.ellipse([hx-hs, hy-hs, hx+hs, hy+hs], fill=(34, 197, 94, 255))
+            draw.ellipse([hx-hs//2, hy-hs//2, hx+hs//2, hy+hs//2], fill=(21, 160, 70, 255))
             
             # Eyes with vertical pupils
             for ex in [hx-5, hx+3]:
