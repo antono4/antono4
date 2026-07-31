@@ -94,9 +94,16 @@
 
 <div style="background: linear-gradient(145deg, #1a1f29, #0d1117); border-radius: 20px; padding: 30px; margin: 20px 0; box-shadow: 0 10px 40px rgba(0,0,0,0.3), 0 0 15px rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.2);">
 
-![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=github_dark&area=true&hide_border=true&bg_color=0D1117&color=58A6FF&line=58A6FF&point=58A6FF&area_color=1F6FEB)
+<!-- 3D Contribution Graph -->
+<h3 align="center" style="color: #58a6ff; text-shadow: 0 0 10px rgba(88,166,255,0.5); margin-bottom: 20px;">🏙️ 3D Contribution City</h3>
+<div align="center" style="perspective: 1000px; margin-bottom: 30px;">
+  <div style="transform: rotateX(15deg) rotateZ(-5deg); transform-style: preserve-3d; transition: transform 0.3s ease;">
+    <img src="https://raw.githubusercontent.com/antono4/antono4/output/github-contribution-grid-snake-dark.svg" alt="3D Contribution" style="border-radius: 15px; box-shadow: 0 25px 50px rgba(0,0,0,0.5), 0 0 30px rgba(88,166,255,0.3); border: 2px solid rgba(88,166,255,0.3);">
+  </div>
+</div>
 
 <!-- Snake Animation with 3D effect -->
+<h3 align="center" style="color: #58a6ff; text-shadow: 0 0 10px rgba(88,166,255,0.5); margin-bottom: 20px;">🐍 Snake Animation</h3>
 <div align="center" style="margin-top: 20px; perspective: 1000px;">
   <div style="transform: rotateX(10deg); transform-style: preserve-3d; transition: transform 0.3s ease;">
     <picture>
@@ -105,6 +112,19 @@
       <img alt="GitHub Contribution Grid Snake" src="https://raw.githubusercontent.com/antono4/antono4/output/github-contribution-grid-snake.svg" style="border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.2);">
     </picture>
   </div>
+</div>
+
+<!-- Stats Cards with 3D Effect -->
+<div align="center" style="margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+
+  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 15px; padding: 20px 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.4), 0 0 15px rgba(88,166,255,0.2); border: 1px solid rgba(88,166,255,0.2); transform: translateZ(20px);">
+    <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=midnight-purple&show_icons=true&hide_border=true&title_color=58a6ff&text_color=ffffff&bg_color=0d1117" alt="GitHub Stats" />
+  </div>
+
+  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 15px; padding: 20px 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.4), 0 0 15px rgba(88,166,255,0.2); border: 1px solid rgba(88,166,255,0.2); transform: translateZ(20px);">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=antono4&theme=midnight-purple&hide_border=true&background=0d1117&stroke=58a6ff&ring=58a6ff&fire=58a6ff&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=ffffff&sideLabels=ffffff&dates=ffffff" alt="GitHub Streak" />
+  </div>
+
 </div>
 
 </div>
