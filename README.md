@@ -209,3 +209,18 @@
 <p align="center">
   🚀 *Let's build something amazing together!*
 </p>
+
+# Pull Shark Badge
+Commit untuk PR pertama
+
+# Commit 2
+Commit kedua
+
+# Commit 3
+Commit ketiga
+
+# Pair Programming
+Commit dengan co-author untuk Pair Extraordinaire badge 👥
+
+## Pair Programming Feature
+Co-authored commit for Pair Extraordinaire
