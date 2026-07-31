@@ -11,14 +11,13 @@ import math
 USERNAME = "antono4"
 OUTPUT_FILE = "../output/snake.gif"
 
-# Original colors for contribution grid (blue/cyan theme)
+# GitHub exact contribution colors (dark mode)
 CONTRIB_COLORS = {
-    0: "#161b22",      # No contribution - dark
-    1: "#0e4429",      # Level 1 - dark green
-    2: "#006d32",      # Level 2 - green
-    3: "#26a641",      # Level 3 - bright green
-    4: "#39d353",      # Level 4 - brightest green
-    5: "#ffffff",      # Level 5 - white (highest)
+    0: "#161b22",      # No contribution
+    1: "#0e4429",      # Level 1 (darkest green)
+    2: "#006d32",      # Level 2 (dark green)
+    3: "#26a641",      # Level 3 (medium green)
+    4: "#39d353",      # Level 4 (bright green)
 }
 
 def get_contributions(username):
@@ -79,7 +78,8 @@ def generate_frames(contributions, num_frames=60, cell_size=15, gap=2):
                 current_date = start_date + timedelta(weeks=week, days=day)
                 date_str = current_date.strftime('%Y-%m-%d')
                 count = contrib_by_date.get(date_str, 0)
-                level = min(5, count // 4) if count > 0 else 0
+                # GitHub level calculation: 1-3=1, 4-6=2, 7-9=3, 10+=4
+                level = min(4, (count + 2) // 3) if count > 0 else 0
                 x = week * (cell_size + gap) + 25
                 y = day * (cell_size + gap) + 50
                 color = hex_to_rgba(CONTRIB_COLORS.get(level, CONTRIB_COLORS[0]))
