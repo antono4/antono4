@@ -13,7 +13,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate SVG Assets (3D Snake & Contribution Graph)
+      # Generate Realistic GIF Snake Animation using Platane/snk
+      - name: Generate Realistic Snake Animation (GIF)
+        uses: Platane/snk@v3
+        with:
+          github_user_name: antono4
+          outputs: |
+            output/snake.gif?color_snake=%2312c2e9&color_dots=%23c471ed,%23f64f59,%2300d4ff,%2312c2e9,%23064e85&color_background=%230d1117
+
+      # Generate 3D Contribution Graph
+      - name: Generate 3D Contribution Graph
         uses: saeedata/github-contributions-svg@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -23,7 +32,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/
+          git add output/ assets/
           git diff --staged --quiet \
             && echo "No changes." \
             || git commit -m "chore: regenerate README assets [skip ci]" && git push
