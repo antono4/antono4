@@ -16,7 +16,9 @@ jobs:
         id: snake
         with:
           github_user_name: antono4
-          svg_path: output/github-contribution-grid-snake-dark.svg
+          outputs: |
+            output/github-contribution-grid-snake-dark.svg?palette=github-dark
+            output/github-contribution-grid-snake-ocean.svg?color_snake=%2312c2e9&color_dots=%23c471ed,%23f64f59,%2300d4ff,%2312c2e9,%23064e85
 
       - name: Push to GitHub
         uses: EndBug/add-and-commit@v9.1.4
