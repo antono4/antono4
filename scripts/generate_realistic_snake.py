@@ -53,11 +53,11 @@ def draw_3d_ellipse(draw, cx, cy, rx, ry, color, shadow_offset=2):
     highlight_color = (min(255, color[0]+60), min(255, color[1]+60), min(255, color[2]+60), 200)
     draw.ellipse([cx-rx//2, cy-ry//2, cx-rx//4, cy-ry//4], fill=highlight_color)
 
-def generate_frames(contributions, num_frames=60, cell_size=15, gap=2):
-    from PIL import Image, ImageDraw, ImageFilter
+def generate_frames(contributions, num_frames=60, cell_size=11, gap=3):
+    from PIL import Image, ImageDraw
     
-    width = 53 * (cell_size + gap) + 50
-    height = 7 * (cell_size + gap) + 100
+    width = 53 * (cell_size + gap) + 30
+    height = 7 * (cell_size + gap) + 80
     
     frames = []
     path = create_snake_path()
@@ -69,10 +69,10 @@ def generate_frames(contributions, num_frames=60, cell_size=15, gap=2):
     start_date = datetime.strptime(contributions['contributions'][0]['date'], '%Y-%m-%d')
     
     for frame_idx in range(num_frames):
-        frame = Image.new('RGBA', (width, height), (13, 17, 23, 255))
+        frame = Image.new('RGBA', (width, height), (0, 0, 0, 0))
         draw = ImageDraw.Draw(frame)
         
-        # Draw contribution grid with 3D effect
+        # Draw contribution grid - exact GitHub style (no extra effects)
         for week in range(53):
             for day in range(7):
                 current_date = start_date + timedelta(weeks=week, days=day)
@@ -80,15 +80,12 @@ def generate_frames(contributions, num_frames=60, cell_size=15, gap=2):
                 count = contrib_by_date.get(date_str, 0)
                 # GitHub level calculation: 1-3=1, 4-6=2, 7-9=3, 10+=4
                 level = min(4, (count + 2) // 3) if count > 0 else 0
-                x = week * (cell_size + gap) + 25
-                y = day * (cell_size + gap) + 50
+                x = week * (cell_size + gap) + 15
+                y = day * (cell_size + gap) + 40
                 color = hex_to_rgba(CONTRIB_COLORS.get(level, CONTRIB_COLORS[0]))
                 
-                # 3D cell effect - lighter top edge
-                draw.rounded_rectangle([x, y, x + cell_size - 1, y + cell_size - 1], radius=3, fill=color)
-                # Top highlight
-                highlight = (min(255, color[0]+30), min(255, color[1]+30), min(255, color[2]+30), 100)
-                draw.line([x+2, y+1, x+cell_size-3, y+1], fill=highlight, width=1)
+                # Simple rounded square like GitHub
+                draw.rounded_rectangle([x, y, x + cell_size, y + cell_size], radius=2, fill=color)
         
         # Calculate snake position
         snake_progress = int((frame_idx / num_frames) * len(path))
@@ -99,8 +96,8 @@ def generate_frames(contributions, num_frames=60, cell_size=15, gap=2):
             idx = snake_progress - i - 1
             if 0 <= idx < len(path):
                 week, day = path[idx]
-                cx = week * (cell_size + gap) + 25 + cell_size // 2
-                cy = day * (cell_size + gap) + 50 + cell_size // 2
+                cx = week * (cell_size + gap) + 15 + cell_size // 2
+                cy = day * (cell_size + gap) + 40 + cell_size // 2
                 
                 # Thickness varies - thicker in middle
                 center_ratio = abs(i - body_length/2) / (body_length/2) if body_length > 0 else 1
@@ -142,9 +139,9 @@ def generate_frames(contributions, num_frames=60, cell_size=15, gap=2):
         # Draw 3D Snake Head
         if 0 < snake_progress <= len(path):
             week, day = path[snake_progress - 1]
-            hx = week * (cell_size + gap) + 25 + cell_size // 2
-            hy = day * (cell_size + gap) + 50 + cell_size // 2
-            hs = cell_size // 2 + 5
+            hx = week * (cell_size + gap) + 15 + cell_size // 2
+            hy = day * (cell_size + gap) + 40 + cell_size // 2
+            hs = cell_size // 2 + 4
             
             # Deep shadow for 3D effect
             draw.ellipse([hx-hs+3, hy-hs+5, hx+hs+3, hy+hs+5], fill=(20, 15, 10, 220))
