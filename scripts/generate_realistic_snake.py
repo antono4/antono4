@@ -1,14 +1,24 @@
 #!/usr/bin/env python3
-"""Realistic Snake Animation Generator"""
+"""
+Realistic 3D Snake Animation Generator
+- Green contribution grid
+- 3D realistic snake with shadows and highlights
+"""
 import requests
 from datetime import datetime, timedelta
+import math
 
 USERNAME = "antono4"
 OUTPUT_FILE = "../output/snake.gif"
 
-# Green theme colors for snake
-COLORS = {
-    0: "#0d1117", 1: "#22c55e", 2: "#16a34a", 3: "#15803d", 4: "#f64f59", 5: "#064e85",
+# Green theme colors for contribution grid
+CONTRIB_COLORS = {
+    0: "#1a1a2e",      # No contribution - dark blue
+    1: "#22c55e",      # Level 1 - bright green
+    2: "#16a34a",      # Level 2 - green
+    3: "#15803d",      # Level 3 - dark green
+    4: "#14532d",      # Level 4 - darker green
+    5: "#052e16",      # Level 5 - darkest green
 }
 
 def get_contributions(username):
@@ -18,7 +28,7 @@ def get_contributions(username):
         return response.json()
     return None
 
-def create_realistic_snake_path():
+def create_snake_path():
     path = []
     for week in range(53):
         if week % 2 == 0:
@@ -33,14 +43,25 @@ def hex_to_rgba(hex_color):
     hex_color = hex_color.lstrip('#')
     return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4)) + (255,)
 
-def generate_frames(contributions, num_frames=50, cell_size=15, gap=2):
-    from PIL import Image, ImageDraw
+def draw_3d_ellipse(draw, cx, cy, rx, ry, color, shadow_offset=2):
+    """Draw a 3D-looking ellipse with gradient effect"""
+    # Shadow
+    shadow_color = (max(0, color[0]//3), max(0, color[1]//3), max(0, color[2]//3), 180)
+    draw.ellipse([cx-rx+shadow_offset, cy-ry+shadow_offset, cx+rx+shadow_offset, cy+ry+shadow_offset], fill=shadow_color)
+    # Main ellipse
+    draw.ellipse([cx-rx, cy-ry, cx+rx, cy+ry], fill=color)
+    # Highlight
+    highlight_color = (min(255, color[0]+60), min(255, color[1]+60), min(255, color[2]+60), 200)
+    draw.ellipse([cx-rx//2, cy-ry//2, cx-rx//4, cy-ry//4], fill=highlight_color)
+
+def generate_frames(contributions, num_frames=60, cell_size=15, gap=2):
+    from PIL import Image, ImageDraw, ImageFilter
     
-    width = 53 * (cell_size + gap) + 40
-    height = 7 * (cell_size + gap) + 80
+    width = 53 * (cell_size + gap) + 50
+    height = 7 * (cell_size + gap) + 100
     
     frames = []
-    path = create_realistic_snake_path()
+    path = create_snake_path()
     
     contrib_by_date = {}
     for day in contributions.get('contributions', []):
@@ -52,80 +73,125 @@ def generate_frames(contributions, num_frames=50, cell_size=15, gap=2):
         frame = Image.new('RGBA', (width, height), (13, 17, 23, 255))
         draw = ImageDraw.Draw(frame)
         
-        # Draw contribution grid
+        # Draw contribution grid with 3D effect
         for week in range(53):
             for day in range(7):
                 current_date = start_date + timedelta(weeks=week, days=day)
                 date_str = current_date.strftime('%Y-%m-%d')
                 count = contrib_by_date.get(date_str, 0)
                 level = min(5, count // 4) if count > 0 else 0
-                x = week * (cell_size + gap) + 20
-                y = day * (cell_size + gap) + 40
-                color = COLORS.get(level, COLORS[0])
-                draw.rounded_rectangle([x, y, x + cell_size - 1, y + cell_size - 1], radius=3, fill=hex_to_rgba(color))
+                x = week * (cell_size + gap) + 25
+                y = day * (cell_size + gap) + 50
+                color = hex_to_rgba(CONTRIB_COLORS.get(level, CONTRIB_COLORS[0]))
+                
+                # 3D cell effect - lighter top edge
+                draw.rounded_rectangle([x, y, x + cell_size - 1, y + cell_size - 1], radius=3, fill=color)
+                # Top highlight
+                highlight = (min(255, color[0]+30), min(255, color[1]+30), min(255, color[2]+30), 100)
+                draw.line([x+2, y+1, x+cell_size-3, y+1], fill=highlight, width=1)
         
-        # Snake animation
+        # Calculate snake position
         snake_progress = int((frame_idx / num_frames) * len(path))
-        body_length = min(snake_progress, 90)
+        body_length = min(snake_progress, 100)
         
+        # Draw snake body with 3D effect
         for i in range(body_length):
             idx = snake_progress - i - 1
             if 0 <= idx < len(path):
                 week, day = path[idx]
-                x = week * (cell_size + gap) + 20 + cell_size // 2
-                y = day * (cell_size + gap) + 40 + cell_size // 2
-                thickness_ratio = 1.0 - (abs(i - body_length/2) / body_length) * 0.5
-                size = max(3, int((cell_size // 2 - 1) * thickness_ratio))
+                cx = week * (cell_size + gap) + 25 + cell_size // 2
+                cy = day * (cell_size + gap) + 50 + cell_size // 2
                 
-                # Gradient body color - Green shades
-                if i < 20:
-                    # Bright green near head
-                    r, g, b = 34, 197, 94
-                elif i < 40:
-                    # Transition to dark green
-                    t = (i - 20) / 20
-                    r, g, b = int(34 + (21-34)*t), int(197 + (128-197)*t), int(94 + (71-94)*t)
-                elif i < 60:
-                    # Dark green to forest green
-                    t = (i - 40) / 20
-                    r, g, b = int(21 + (18-21)*t), int(128 + (99-128)*t), int(71 + (54-71)*t)
+                # Thickness varies - thicker in middle
+                center_ratio = abs(i - body_length/2) / (body_length/2) if body_length > 0 else 1
+                thickness = max(3, int((cell_size // 2) * (1 - center_ratio * 0.4)))
+                
+                # Snake body color gradient - natural snake colors
+                if i < 25:
+                    # Near head - bright
+                    r, g, b = 210, 180, 140  # Tan/beige
+                elif i < 50:
+                    t = (i - 25) / 25
+                    r, g, b = int(210 + (180-210)*t), int(180 + (140-180)*t), int(140 + (100-140)*t)
+                elif i < 75:
+                    t = (i - 50) / 25
+                    r, g, b = int(180 + (120-180)*t), int(140 + (80-140)*t), int(100 + (60-100)*t)
                 else:
-                    # Tail fading
-                    t = (i - 60) / 30
-                    r, g, b = int(18 + (10-18)*t), int(99 + (60-99)*t), int(54 + (40-54)*t)
+                    t = (i - 75) / 25
+                    r, g, b = int(120 + (80-120)*t), int(80 + (50-80)*t), int(60 + (40-60)*t)
                 
-                alpha = max(100, 255 - (i - 50) * 3) if i > 50 else 255
-                draw.ellipse([x-size, y-size, x+size, y+size], fill=(r, g, b, alpha))
-                if i < 50:
-                    draw.ellipse([x-size+2, y-size+2, x-size+max(1,size//2), y-size+max(1,size//2)], fill=(255,255,255,60))
+                alpha = max(80, 255 - (i - 60) * 4) if i > 60 else 255
+                body_color = (r, g, b, alpha)
+                
+                # 3D body segment
+                shadow = (max(0, r//3), max(0, g//3), max(0, b//3), alpha)
+                draw.ellipse([cx-thickness+2, cy-thickness+3, cx+thickness+2, cy+thickness+3], fill=shadow)
+                draw.ellipse([cx-thickness, cy-thickness, cx+thickness, cy+thickness], fill=body_color)
+                
+                # Scale pattern / shine
+                if i % 4 == 0 and i < 70:
+                    shine = (min(255, r+50), min(255, g+50), min(255, b+50), 150)
+                    draw.ellipse([cx-thickness//2+1, cy-thickness//2+1, cx+thickness//4, cy+thickness//4], fill=shine)
+                
+                # Body pattern stripes
+                if i % 8 < 4 and i < 80:
+                    stripe_alpha = 40
+                    stripe_color = (r//2, g//2, b//2, stripe_alpha)
+                    draw.ellipse([cx-thickness//2, cy-thickness//2, cx+thickness//2, cy+thickness//2], fill=stripe_color)
         
-        # Realistic snake head
+        # Draw 3D Snake Head
         if 0 < snake_progress <= len(path):
             week, day = path[snake_progress - 1]
-            hx = week * (cell_size + gap) + 20 + cell_size // 2
-            hy = day * (cell_size + gap) + 40 + cell_size // 2
-            hs = cell_size // 2 + 4
+            hx = week * (cell_size + gap) + 25 + cell_size // 2
+            hy = day * (cell_size + gap) + 50 + cell_size // 2
+            hs = cell_size // 2 + 5
             
-            # Shadow
-            draw.ellipse([hx-hs+2, hy-hs+4, hx+hs+2, hy+hs+4], fill=(0, 80, 40, 200))
-            # Head - Green
-            draw.ellipse([hx-hs, hy-hs, hx+hs, hy+hs], fill=(34, 197, 94, 255))
-            draw.ellipse([hx-hs//2, hy-hs//2, hx+hs//2, hy+hs//2], fill=(21, 160, 70, 255))
+            # Deep shadow for 3D effect
+            draw.ellipse([hx-hs+3, hy-hs+5, hx+hs+3, hy+hs+5], fill=(20, 15, 10, 220))
+            # Medium shadow
+            draw.ellipse([hx-hs+2, hy-hs+4, hx+hs+2, hy+hs+4], fill=(60, 45, 30, 200))
             
-            # Eyes with vertical pupils
-            for ex in [hx-5, hx+3]:
-                draw.ellipse([ex-2, hy-6, ex+1, hy-2], fill=(0, 50, 80))  # Socket
-                draw.ellipse([ex-1, hy-5, ex, hy-3], fill=(20, 20, 20))  # Pupil
-                draw.ellipse([ex-1, hy-5, ex, hy-4], fill=(255,255,255,150))  # Shine
+            # Head base - tan color
+            head_base = (210, 180, 140, 255)
+            draw.ellipse([hx-hs, hy-hs, hx+hs, hy+hs], fill=head_base)
             
-            # Forked tongue
-            tongue_out = frame_idx % 15 < 10
-            if tongue_out:
-                tl = frame_idx % 15
-                draw.line([hx, hy+hs, hx, hy+hs+tl], fill=(220, 50, 50), width=2)
-                if tl > 4:
-                    draw.line([hx, hy+hs+tl, hx-3, hy+hs+tl+4], fill=(220, 50, 50), width=1)
-                    draw.line([hx, hy+hs+tl, hx+3, hy+hs+tl+4], fill=(220, 50, 50), width=1)
+            # Head pattern (scales)
+            draw.ellipse([hx-hs//2, hy-hs//2, hx+hs//2, hy+hs//2], fill=(190, 160, 120, 255))
+            
+            # Scale details around head
+            for angle in range(0, 360, 60):
+                sx = hx + int(math.cos(math.radians(angle)) * hs * 0.6)
+                sy = hy + int(math.sin(math.radians(angle)) * hs * 0.6)
+                draw.ellipse([sx-2, sy-2, sx+2, sy+2], fill=(170, 140, 100, 200))
+            
+            # Eyes with 3D depth
+            eye_positions = [(hx - 6, hy - 4), (hx + 4, hy - 4)]
+            for ex, ey in eye_positions:
+                # Eye socket (deep shadow)
+                draw.ellipse([ex-4, ey-6, ex+2, ey-1], fill=(30, 20, 10, 255))
+                # Eye white/outer
+                draw.ellipse([ex-3, ey-5, ex+1, ey-2], fill=(220, 200, 150, 255))
+                # Iris
+                draw.ellipse([ex-2, ey-4, ex, ey-2], fill=(139, 90, 43, 255))
+                # Vertical pupil
+                draw.ellipse([ex-1, ey-4, ex, ey-3], fill=(0, 0, 0, 255))
+                # Eye shine
+                draw.point([ex-1, ey-4], fill=(255, 255, 255, 200))
+            
+            # Nostrils
+            draw.ellipse([hx-3, hy+2, hx-1, hy+4], fill=(80, 60, 40, 255))
+            draw.ellipse([hx+1, hy+2, hx+3, hy+4], fill=(80, 60, 40, 255))
+            
+            # Forked tongue with animation
+            tongue_frame = frame_idx % 20
+            if tongue_frame < 14:
+                tongue_len = min(12, tongue_frame)
+                # Tongue base (red)
+                draw.line([hx, hy+hs, hx, hy+hs+tongue_len], fill=(220, 50, 50), width=2)
+                # Forked tongue
+                if tongue_len > 5:
+                    draw.line([hx, hy+hs+tongue_len, hx-4, hy+hs+tongue_len+5], fill=(220, 50, 50), width=1)
+                    draw.line([hx, hy+hs+tongue_len, hx+4, hy+hs+tongue_len+5], fill=(220, 50, 50), width=1)
         
         frames.append(frame)
     
@@ -138,11 +204,11 @@ def main():
         print("Failed!")
         return
     
-    print("Generating frames...")
-    frames = generate_frames(contributions, num_frames=50)
+    print("Generating 60 frames with 3D snake...")
+    frames = generate_frames(contributions, num_frames=60)
     
     print("Saving...")
-    frames[0].save(OUTPUT_FILE, save_all=True, append_images=frames[1:], duration=80, loop=0)
+    frames[0].save(OUTPUT_FILE, save_all=True, append_images=frames[1:], duration=70, loop=0, optimize=True)
     print("Done!")
 
 if __name__ == "__main__":
