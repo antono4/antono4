@@ -65,6 +65,9 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 [![Trophy](https://github-profile-trophy.vercel.app/?username=antono4&theme=onedark&margin-w=15&margin-h=15)](https://github.com/antono4)
 
+<div align="center">
+
+
 </div>
 
 ---
@@ -152,7 +155,7 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 <div align="center">
 
-![Profile Views](https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=for-the-badge&label=Profile+Views)
+**Made with ❤️ by [antono4](https://github.com/antono4)**
 
 ⭐️ From [antono4](https://github.com/antono4)
 
