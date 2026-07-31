@@ -1,4 +1,4 @@
-name: Generate Snake Animation
+name: Generate Snake Animation & 3D Graph
 
 on:
   schedule:
@@ -8,20 +8,22 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v4.4.0
+      - uses: actions/checkout@v4
 
-      - name: Generate Snake Animation
-        uses: Platane/snk@v3
-        id: snake
+      - name: Generate SVG Assets (3D Snake & Contribution Graph)
+        uses: saeedata/github-contributions-svg@v1
         with:
-          github_user_name: antono4
-          outputs: |
-            output/github-contribution-grid-snake-dark.svg?palette=github-dark
-            output/github-contribution-grid-snake-ocean.svg?color_snake=%2312c2e9&color_dots=%23c471ed,%23f64f59,%2300d4ff,%2312c2e9,%23064e85
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          username: antono4
 
-      - name: Push to GitHub
-        uses: EndBug/add-and-commit@v9.1.4
-        with:
-          add: output/
-          message: "Generate snake animation"
+      - name: Commit and push updated assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/
+          git diff --staged --quiet \
+            && echo "No changes." \
+            || git commit -m "chore: regenerate README assets [skip ci]" && git push
