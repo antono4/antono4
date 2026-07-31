@@ -210,3 +210,6 @@ Commit ketiga
 
 # Pair Programming
 Commit dengan co-author untuk Pair Extraordinaire badge 👥
+
+## Feature 2
+Another feature for achievements
