@@ -9,17 +9,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      
+      - uses: actions/checkout@v4.4.0
+
       - name: Generate Snake Animation
         uses: Platane/snk@v3
         id: snake
         with:
           github_user_name: antono4
-          svg_path: output/github-contribution-grid-snake-dark.svg
-      
+          svg_path: output/github-contribution-grid-snake.svg
+
       - name: Push to GitHub
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v9.1.4
         with:
           add: output/
           message: "Generate snake animation"
