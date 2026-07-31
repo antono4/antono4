@@ -95,7 +95,7 @@
 <div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   
   <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 15px; padding: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.4), 0 0 15px rgba(88,166,255,0.2); border: 1px solid rgba(88,166,255,0.2);">
-    <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/trophies.svg" alt="GitHub Trophies" style="max-width: 100%; height: auto;">
+    <img src="https://github-profile-trophy.vercel.app/api/vnt/antono4/?username=antono4&theme=onedark&column=4&margin-w=15&margin-h=15" alt="GitHub Trophies" style="max-width: 100%; height: auto;">
   </div>
 
 </div>
