@@ -1,0 +1,33 @@
+name: Auto Update README
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+
+      - name: Configure Git
+        run: |
+          git config user.name "antono4"
+          git config user.email "antonockr1@gmail.com"
+
+      - name: Update README with timestamp
+        run: |
+          git pull --rebase origin ${ github.ref_name }
+          export TZ="Asia/Jakarta"
+          TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S %Z")
+          if [ -f README.md ]; then
+            echo "Last updated: $TIMESTAMP" >> README.md
+          fi
+          git add README.md 2>/dev/null || true
+          git commit -m "Auto update at $(date +'%Y-%m-%d %H:%M:%S') WIB" || echo "No changes"
+          git push origin ${ github.ref_name }
