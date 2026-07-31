@@ -11,14 +11,14 @@ import math
 USERNAME = "antono4"
 OUTPUT_FILE = "../output/snake.gif"
 
-# Green theme colors for contribution grid
+# Original colors for contribution grid (blue/cyan theme)
 CONTRIB_COLORS = {
-    0: "#1a1a2e",      # No contribution - dark blue
-    1: "#22c55e",      # Level 1 - bright green
-    2: "#16a34a",      # Level 2 - green
-    3: "#15803d",      # Level 3 - dark green
-    4: "#14532d",      # Level 4 - darker green
-    5: "#052e16",      # Level 5 - darkest green
+    0: "#161b22",      # No contribution - dark
+    1: "#0e4429",      # Level 1 - dark green
+    2: "#006d32",      # Level 2 - green
+    3: "#26a641",      # Level 3 - bright green
+    4: "#39d353",      # Level 4 - brightest green
+    5: "#ffffff",      # Level 5 - white (highest)
 }
 
 def get_contributions(username):
