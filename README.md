@@ -210,3 +210,17 @@
   🚀 *Let's build something amazing together!*
 </p>
 
+# Pull Shark Badge
+Commit untuk PR pertama
+
+# Commit 2
+Commit kedua
+
+# Commit 3
+Commit ketiga
+
+# Pair Programming
+Commit dengan co-author untuk Pair Extraordinaire badge 👥
+
+# Galaxy Brain
+PR with discussions for Galaxy Brain badge 🧠
