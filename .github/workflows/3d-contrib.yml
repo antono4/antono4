@@ -19,21 +19,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Download gitblock settings
+        run: curl -sL "https://raw.githubusercontent.com/yoshi389111/github-profile-3d-contrib/main/sample-settings/gitblock.json" -o gitblock.json
+
       - name: Generate 3D Contribution SVG
-        uses: yoshi389111/github-profile-3d-contrib@main
+        uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: gitblock.json
 
       - name: Prepare output
         run: |
           mkdir -p assets
-          ls -la profile-3d-contrib/ 2>/dev/null || echo "Checking output..."
-          # Copy all generated files
-          if [ -d "profile-3d-contrib" ]; then
-            cp profile-3d-contrib/*.svg assets/ 2>/dev/null || true
-          fi
-          ls -la assets/ 2>/dev/null || true
+          cp profile-3d-contrib/profile-custom-gitblock.svg assets/contrib-3d.svg 2>/dev/null || \
+          cp profile-3d-contrib/profile-gitblock.svg assets/contrib-3d.svg 2>/dev/null || \
+          cp profile-3d-contrib/profile-green.svg assets/contrib-3d.svg 2>/dev/null || true
+          ls -la profile-3d-contrib/ 2>/dev/null || echo "No profile-3d-contrib folder"
 
       - name: Configure Git
         run: |
