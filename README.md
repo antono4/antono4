@@ -143,7 +143,8 @@
 
 ## 💡 Fun Facts
 
-<div style="background: linear-gradient(145deg, #1a1f29, #0d1117); border-radius: 20px; padding: 30px; margin: 20px 0; box-shadow: 0 10px 40px rgba(0,0,0,0.3), 0 0 15px rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.2);">
+<div style="background: linear-gradient(145deg, #1a1f29, #0d1117); border-radius: 20px; padding: 30px; margin: 20px 0; box-shadow: 0 10px 40px rgba(0,0,0,0.3), 0 0 15px rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.2); perspective: 1000px;">
+  <div style="transform: rotateX(5deg); transform-style: preserve-3d; transition: transform 0.3s ease;">
 
 | 🧪 | Former computational chemist turned software engineer |
 | :--- | :--- |
@@ -152,6 +153,7 @@
 | 🎮 | Gaming enthusiast |
 | 📚 | Always learning something new |
 
+  </div>
 </div>
 
 ---
