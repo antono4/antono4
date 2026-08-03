@@ -21,17 +21,19 @@ jobs:
 
       - name: Generate 3D Contribution SVG
         uses: yoshi389111/github-profile-3d-contrib@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          gh_username: ${{ github.repository_owner }}
-          option_type: 4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
 
       - name: Prepare output
         run: |
           mkdir -p assets
-          cp profile-3d-contrib/profile-gitblock.svg assets/contrib-3d.svg 2>/dev/null || \
-          cp profile-3d-contrib/profile-green.svg assets/contrib-3d.svg 2>/dev/null || true
-          ls -la profile-3d-contrib/ 2>/dev/null || echo "No profile-3d-contrib folder"
+          ls -la profile-3d-contrib/ 2>/dev/null || echo "Checking output..."
+          # Copy all generated files
+          if [ -d "profile-3d-contrib" ]; then
+            cp profile-3d-contrib/*.svg assets/ 2>/dev/null || true
+          fi
+          ls -la assets/ 2>/dev/null || true
 
       - name: Configure Git
         run: |
@@ -41,6 +43,6 @@ jobs:
       - name: Commit and push
         run: |
           git pull --rebase origin ${{ github.ref_name }}
-          git add assets/contrib-3d.svg
+          git add assets/
           git commit -m "Update 3D contribution SVG at $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes"
           git push origin ${{ github.ref_name }}
