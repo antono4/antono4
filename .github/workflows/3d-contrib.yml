@@ -44,9 +44,18 @@ jobs:
 
       - name: Commit and push
         run: |
-          git stash
-          git pull --rebase origin ${{ github.ref_name }}
-          git stash pop || true
+          # Stage the generated assets
           git add assets/
-          git commit -m "Update 3D contribution SVG at $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
-          git push origin ${{ github.ref_name }}
+          
+          # Commit if there are changes
+          if ! git diff --staged --quiet; then
+            # Stash any remaining unstaged changes, pull latest, pop stash, then commit and push
+            git stash -u
+            git pull --rebase origin ${{ github.ref_name }}
+            git stash pop || true
+            git add assets/
+            git commit -m "Update 3D contribution SVG at $(date +'%Y-%m-%d %H:%M:%S')"
+            git push origin ${{ github.ref_name }}
+          else
+            echo "No changes to commit"
+          fi
