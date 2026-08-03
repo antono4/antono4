@@ -44,7 +44,9 @@ jobs:
 
       - name: Commit and push
         run: |
+          git stash
           git pull --rebase origin ${{ github.ref_name }}
+          git stash pop || true
           git add assets/
-          git commit -m "Update 3D contribution SVG at $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes"
+          git commit -m "Update 3D contribution SVG at $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
           git push origin ${{ github.ref_name }}
