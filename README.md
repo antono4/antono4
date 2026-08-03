@@ -130,6 +130,13 @@
   </div>
 </div>
 
+<h3 align="center" style="color: #58a6ff; text-shadow: 0 0 10px rgba(88,166,255,0.5); margin-bottom: 20px;">GitHub Activity Graph</h3>
+<div align="center" style="margin-top: 20px; perspective: 1000px;">
+  <div style="transform: rotateX(5deg); transform-style: preserve-3d; transition: transform 0.3s ease;">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=dracula" alt="GitHub Activity Graph" style="border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.2); max-width: 100%; height: auto;">
+  </div>
+</div>
+
 </div>
 
 ---
