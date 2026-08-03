@@ -4,6 +4,9 @@ permissions:
   contents: write
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '*/30 * * * *'
   workflow_dispatch:
@@ -21,12 +24,12 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           gh_username: ${{ github.repository_owner }}
-          option_type: 1
+          option_type: 4
 
       - name: Prepare output
         run: |
           mkdir -p assets
-          cp profile-3d-contrib/profile-green-animate.svg assets/contrib-3d.svg 2>/dev/null || \
+          cp profile-3d-contrib/profile-gitblock.svg assets/contrib-3d.svg 2>/dev/null || \
           cp profile-3d-contrib/profile-green.svg assets/contrib-3d.svg 2>/dev/null || true
           ls -la profile-3d-contrib/ 2>/dev/null || echo "No profile-3d-contrib folder"
 
