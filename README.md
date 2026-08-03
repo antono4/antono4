@@ -126,7 +126,7 @@
 <h3 align="center" style="color: #58a6ff; text-shadow: 0 0 10px rgba(88,166,255,0.5); margin-bottom: 20px;">Snake Animation</h3>
 <div align="center" style="margin-top: 20px; perspective: 1000px;">
   <div style="transform: rotateX(5deg); transform-style: preserve-3d; transition: transform 0.3s ease;">
-    <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/snake.svg" alt="Snake Animation" style="border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.2); max-width: 100%; height: auto;">
+    <img src="https://raw.githubusercontent.com/antono4/antono4/refs/heads/main/assets/snake.svg" alt="Snake Animation" style="border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.2); max-width: 100%; height: auto;">
   </div>
 </div>
 
