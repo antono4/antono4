@@ -131,18 +131,18 @@
 
 <div align="center" style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap;">
 
-  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.15); border: 1px solid rgba(88,166,255,0.2); min-width: 300px;">
-    <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=radical&hide_border=true&bg_color=1a1f29&title_color=58A6FF&text_color=8b949e&icon_color=58A6FF&show_icons=true&include_all_commits=true" alt="GitHub Stats" style="width: 100%;"/>
+  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.15); border: 1px solid rgba(88,166,255,0.2);">
+    <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg" alt="GitHub Stats" style="max-width: 100%; height: auto;"/>
   </div>
 
-  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.15); border: 1px solid rgba(88,166,255,0.2); min-width: 300px;">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=antono4&theme=radical&hide_border=true&background=1a1f29&stroke=58A6FF&fire=FFA657&ring=58A6FF" alt="GitHub Streak" style="width: 100%;"/>
+  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.15); border: 1px solid rgba(88,166,255,0.2);">
+    <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg" alt="GitHub Streak" style="max-width: 100%; height: auto;"/>
   </div>
 
 </div>
 
 <div align="center" style="margin-top: 30px;">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=radical&hide_border=true&bg_color=1a1f29&title_color=58A6FF&text_color=8b949e&layout=compact" alt="Top Languages" style="max-width: 600px;"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg" alt="Top Languages" style="max-width: 600px; height: auto;"/>
 </div>
 
 </div>
@@ -173,7 +173,7 @@
   📈 Activity Graph
 </h3>
 <div align="center" style="transform: perspective(1000px) rotateX(5deg); transform-style: preserve-3d;">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=radical&hide_border=true&bg_color=1a1f29&color=58A6FF&line=58A6FF&point=7EE787&area=true" alt="GitHub Activity Graph" style="border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 25px rgba(88,166,255,0.2); max-width: 100%;"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=default&hide_border=true&bg_color=1a1f29&color=58A6FF&line=58A6FF&point=7EE787&area=true" alt="GitHub Activity Graph" style="border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 25px rgba(88,166,255,0.2); max-width: 100%;"/>
 </div>
 
 </div>
