@@ -35,11 +35,40 @@
 
 ## 🚀 About Me
 
-<div style="background: linear-gradient(145deg, #161b22, #0d1117); border-radius: 24px; padding: 45px 35px; margin: 25px 0; box-shadow: 0 10px 80px rgba(0,0,0,0.5), 0 0 60px rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.15);">
+<div style="background: linear-gradient(145deg, #161b22, #0d1117); border-radius: 24px; padding: 45px 35px; margin: 25px 0; box-shadow: 0 10px 80px rgba(0,0,0,0.5), 0 0 60px rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.15); position: relative; overflow: hidden;">
+
+<!-- Animated Background Effects -->
+<div style="position: absolute; top: -100px; left: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(122,162,247,0.15) 0%, transparent 70%); animation: pulse-glow 4s ease-in-out infinite;"></div>
+<div style="position: absolute; bottom: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(187,154,247,0.1) 0%, transparent 70%); animation: pulse-glow 5s ease-in-out infinite reverse;"></div>
+<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px; height: 500px; background: radial-gradient(circle, rgba(224,175,104,0.05) 0%, transparent 50%); animation: rotate-glow 10s linear infinite;"></div>
+
+<!-- Floating Particles -->
+<div style="position: absolute; top: 15%; left: 20%; width: 8px; height: 8px; background: #7AA2F7; border-radius: 50%; opacity: 0.7; animation: float-particle 8s ease-in-out infinite;"></div>
+<div style="position: absolute; top: 70%; left: 15%; width: 6px; height: 6px; background: #BB9AF7; border-radius: 50%; opacity: 0.6; animation: float-particle 6s ease-in-out infinite reverse;"></div>
+<div style="position: absolute; top: 30%; right: 20%; width: 5px; height: 5px; background: #E0AF68; border-radius: 50%; opacity: 0.5; animation: float-particle 7s ease-in-out infinite;"></div>
+<div style="position: absolute; bottom: 25%; right: 25%; width: 7px; height: 7px; background: #9ECE6A; border-radius: 50%; opacity: 0.6; animation: float-particle 9s ease-in-out infinite reverse;"></div>
+<div style="position: absolute; top: 45%; left: 8%; width: 4px; height: 4px; background: #F7768E; border-radius: 50%; opacity: 0.5; animation: float-particle 5s ease-in-out infinite;"></div>
+
+<style>
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+@keyframes rotate-glow {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes float-particle {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(10px, -20px) scale(1.2); }
+  50% { transform: translate(-5px, -30px) scale(0.8); }
+  75% { transform: translate(-15px, -10px) scale(1.1); }
+}
+</style>
 
 <!-- Profile Header -->
-<div align="center" style="margin-bottom: 30px;">
-
+<div align="center" style="position: relative; z-index: 1; margin-bottom: 30px;">
+  
   <!-- Avatar/Logo Area -->
   <div style="position: relative; display: inline-block; margin-bottom: 25px;">
     <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #7AA2F7, #BB9AF7, #E0AF68); padding: 4px; box-shadow: 0 10px 40px rgba(122,162,247,0.4), 0 0 60px rgba(187,154,247,0.2);">
@@ -50,21 +79,65 @@
     <!-- Online Indicator -->
     <div style="position: absolute; bottom: 8px; right: 8px; width: 20px; height: 20px; background: #9ECE6A; border-radius: 50%; border: 3px solid #0d1117; box-shadow: 0 0 15px rgba(158,206,106,0.6);"></div>
   </div>
-
+  
   <!-- Name with Glow -->
   <h2 style="background: linear-gradient(120deg, #7AA2F7, #BB9AF7, #E0AF68, #9ECE6A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 2em; font-weight: 700; margin: 0 0 15px 0; text-shadow: 0 0 40px rgba(122,162,247,0.3);">Antono</h2>
-
+  
   <!-- Title Badges -->
   <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;">
     <span style="background: linear-gradient(135deg, rgba(122,162,247,0.2), rgba(122,162,247,0.1)); border: 1px solid rgba(122,162,247,0.3); padding: 8px 18px; border-radius: 25px; color: #7AA2F7; font-weight: 600; font-size: 0.9em;">🎯 Full-Stack Developer</span>
     <span style="background: linear-gradient(135deg, rgba(158,206,106,0.2), rgba(158,206,106,0.1)); border: 1px solid rgba(158,206,106,0.3); padding: 8px 18px; border-radius: 25px; color: #9ECE6A; font-weight: 600; font-size: 0.9em;">🤖 AI Enthusiast</span>
     <span style="background: linear-gradient(135deg, rgba(224,175,104,0.2), rgba(224,175,104,0.1)); border: 1px solid rgba(224,175,104,0.3); padding: 8px 18px; border-radius: 25px; color: #E0AF68; font-weight: 600; font-size: 0.9em;">🔬 Computational Chemist</span>
   </div>
-
+  
   <!-- Location -->
   <p style="color: #8b949e; font-size: 1.1em; margin: 0;">
     🇮🇩 Based in <strong style="color: #7AA2F7;">West Java, Indonesia</strong>
   </p>
+  
+</div>
+
+<!-- Divider with Animation -->
+<div style="width: 200px; height: 3px; background: linear-gradient(90deg, transparent, #7AA2F7, #BB9AF7, #E0AF68, #9ECE6A, transparent); margin: 30px auto; border-radius: 2px;"></div>
+
+<!-- Bio Section -->
+<div style="position: relative; z-index: 1; text-align: center; margin-bottom: 35px;">
+  <p style="color: #c9d1d9; font-size: 1.15em; line-height: 1.8; max-width: 700px; margin: 0 auto;">
+    Transforming <span style="color: #7AA2F7; font-weight: 600;">complex problems</span> into <span style="color: #9ECE6A; font-weight: 600;">elegant solutions</span> through code. 
+    I believe in building tools that <span style="color: #E0AF68; font-weight: 600;">matter</span> and create <span style="color: #BB9AF7; font-weight: 600;">impact</span>.
+  </p>
+</div>
+
+<!-- Stats Cards -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; position: relative; z-index: 1; max-width: 600px; margin: 0 auto;">
+
+  <!-- Repos -->
+  <div style="background: linear-gradient(145deg, rgba(122,162,247,0.15), rgba(122,162,247,0.05)); border: 1px solid rgba(122,162,247,0.2); border-radius: 16px; padding: 25px 20px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;" onmouseover="this.style.transform='translateY(-8px) scale(1.05)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.4), 0 0 30px rgba(122,162,247,0.3)';this.style.borderColor='rgba(122,162,247,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='none';this.style.borderColor='rgba(122,162,247,0.2)'">
+    <div style="font-size: 2.2em; margin-bottom: 8px;">📚</div>
+    <div style="color: #7AA2F7; font-size: 1.8em; font-weight: 700; line-height: 1;">327+</div>
+    <div style="color: #8b949e; font-size: 0.85em; margin-top: 5px;">Repositories</div>
+  </div>
+
+  <!-- Stars -->
+  <div style="background: linear-gradient(145deg, rgba(224,175,104,0.15), rgba(224,175,104,0.05)); border: 1px solid rgba(224,175,104,0.2); border-radius: 16px; padding: 25px 20px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;" onmouseover="this.style.transform='translateY(-8px) scale(1.05)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.4), 0 0 30px rgba(224,175,104,0.3)';this.style.borderColor='rgba(224,175,104,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='none';this.style.borderColor='rgba(224,175,104,0.2)'">
+    <div style="font-size: 2.2em; margin-bottom: 8px;">⭐</div>
+    <div style="color: #E0AF68; font-size: 1.8em; font-weight: 700; line-height: 1;">166</div>
+    <div style="color: #8b949e; font-size: 0.85em; margin-top: 5px;">Total Stars</div>
+  </div>
+
+  <!-- Commits -->
+  <div style="background: linear-gradient(145deg, rgba(158,206,106,0.15), rgba(158,206,106,0.05)); border: 1px solid rgba(158,206,106,0.2); border-radius: 16px; padding: 25px 20px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;" onmouseover="this.style.transform='translateY(-8px) scale(1.05)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.4), 0 0 30px rgba(158,206,106,0.3)';this.style.borderColor='rgba(158,206,106,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='none';this.style.borderColor='rgba(158,206,106,0.2)'">
+    <div style="font-size: 2.2em; margin-bottom: 8px;">🚀</div>
+    <div style="color: #9ECE6A; font-size: 1.8em; font-weight: 700; line-height: 1;">1K+</div>
+    <div style="color: #8b949e; font-size: 0.85em; margin-top: 5px;">Commits</div>
+  </div>
+
+  <!-- Followers -->
+  <div style="background: linear-gradient(145deg, rgba(187,154,247,0.15), rgba(187,154,247,0.05)); border: 1px solid rgba(187,154,247,0.2); border-radius: 16px; padding: 25px 20px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default;" onmouseover="this.style.transform='translateY(-8px) scale(1.05)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.4), 0 0 30px rgba(187,154,247,0.3)';this.style.borderColor='rgba(187,154,247,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='none';this.style.borderColor='rgba(187,154,247,0.2)'">
+    <div style="font-size: 2.2em; margin-bottom: 8px;">💜</div>
+    <div style="color: #BB9AF7; font-size: 1.8em; font-weight: 700; line-height: 1;">4</div>
+    <div style="color: #8b949e; font-size: 0.85em; margin-top: 5px;">Followers</div>
+  </div>
 
 </div>
 
@@ -147,16 +220,26 @@
 
 ## 📊 GitHub Statistics
 
+<div style="background: linear-gradient(145deg, #161b22, #0d1117); border-radius: 24px; padding: 40px 30px; margin: 25px 0; box-shadow: 0 10px 60px rgba(0,0,0,0.4), 0 0 50px rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); position: relative; overflow: hidden;">
 
-
-
+<!-- Animated Background Glow -->
+<div style="position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 400px; height: 200px; background: radial-gradient(ellipse, rgba(88,166,255,0.15) 0%, transparent 70%); animation: pulse 4s ease-in-out infinite;"></div>
 
 <!-- Floating Particles -->
 <div style="position: absolute; top: 20%; left: 10%; width: 6px; height: 6px; background: #7AA2F7; border-radius: 50%; opacity: 0.6; animation: float 6s ease-in-out infinite;"></div>
 <div style="position: absolute; top: 60%; right: 15%; width: 4px; height: 4px; background: #E0AF68; border-radius: 50%; opacity: 0.5; animation: float 8s ease-in-out infinite reverse;"></div>
 <div style="position: absolute; top: 40%; left: 80%; width: 5px; height: 5px; background: #9ECE6A; border-radius: 50%; opacity: 0.4; animation: float 7s ease-in-out infinite;"></div>
 
-
+<style>
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+  50% { opacity: 0.8; transform: translateX(-50%) scale(1.1); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+</style>
 
 <h3 align="center" style="color: #58A6FF; margin-bottom: 35px; font-size: 1.5em; position: relative;">
   <span style="background: linear-gradient(120deg, #7AA2F7, #BB9AF7, #E0AF68); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">✨ My GitHub Journey ✨</span>
