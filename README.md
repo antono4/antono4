@@ -92,43 +92,6 @@
 
 </div>
 
-<!-- Stats Cards Grid -->
-<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 700px; margin: 0 auto;">
-
-  <!-- Repos -->
-  <div style="background: linear-gradient(145deg, rgba(122,162,247,0.1), rgba(122,162,247,0.02)); border: 1px solid rgba(122,162,247,0.15); border-radius: 20px; padding: 28px 16px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 20px 40px rgba(122,162,247,0.2), 0 0 50px rgba(122,162,247,0.1)';this.style.borderColor='rgba(122,162,247,0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(122,162,247,0.15)'">
-    <div style="font-size: 2.5em; margin-bottom: 12px; filter: drop-shadow(0 0 10px rgba(122,162,247,0.5));">📚</div>
-    <div style="font-size: 2.2em; font-weight: 800; background: linear-gradient(135deg, #7AA2F7, #89B4FA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 8px;">327+</div>
-    <div style="color: #6e7681; font-size: 0.8em; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Repositories</div>
-  </div>
-
-  <!-- Stars -->
-  <div style="background: linear-gradient(145deg, rgba(224,175,104,0.1), rgba(224,175,104,0.02)); border: 1px solid rgba(224,175,104,0.15); border-radius: 20px; padding: 28px 16px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 20px 40px rgba(224,175,104,0.2), 0 0 50px rgba(224,175,104,0.1)';this.style.borderColor='rgba(224,175,104,0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(224,175,104,0.15)'">
-    <div style="font-size: 2.5em; margin-bottom: 12px; filter: drop-shadow(0 0 10px rgba(224,175,104,0.5));">⭐</div>
-    <div style="font-size: 2.2em; font-weight: 800; background: linear-gradient(135deg, #E0AF68, #F7C87F); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 8px;">166</div>
-    <div style="color: #6e7681; font-size: 0.8em; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Total Stars</div>
-  </div>
-
-  <!-- Commits -->
-  <div style="background: linear-gradient(145deg, rgba(158,206,106,0.1), rgba(158,206,106,0.02)); border: 1px solid rgba(158,206,106,0.15); border-radius: 20px; padding: 28px 16px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 20px 40px rgba(158,206,106,0.2), 0 0 50px rgba(158,206,106,0.1)';this.style.borderColor='rgba(158,206,106,0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(158,206,106,0.15)'">
-    <div style="font-size: 2.5em; margin-bottom: 12px; filter: drop-shadow(0 0 10px rgba(158,206,106,0.5));">🚀</div>
-    <div style="font-size: 2.2em; font-weight: 800; background: linear-gradient(135deg, #9ECE6A, #B5E47A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 8px;">1K+</div>
-    <div style="color: #6e7681; font-size: 0.8em; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Commits</div>
-  </div>
-
-  <!-- Followers -->
-  <div style="background: linear-gradient(145deg, rgba(187,154,247,0.1), rgba(187,154,247,0.02)); border: 1px solid rgba(187,154,247,0.15); border-radius: 20px; padding: 28px 16px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 20px 40px rgba(187,154,247,0.2), 0 0 50px rgba(187,154,247,0.1)';this.style.borderColor='rgba(187,154,247,0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(187,154,247,0.15)'">
-    <div style="font-size: 2.5em; margin-bottom: 12px; filter: drop-shadow(0 0 10px rgba(187,154,247,0.5));">💜</div>
-    <div style="font-size: 2.2em; font-weight: 800; background: linear-gradient(135deg, #BB9AF7, #D4B8FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 8px;">4</div>
-    <div style="color: #6e7681; font-size: 0.8em; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Followers</div>
-  </div>
-
-</div>
-
-</div>
-
----
-
 ## 🛠️ Tech Arsenal
 
 <div style="background: linear-gradient(145deg, #1a1f29, #0d1117); border-radius: 24px; padding: 35px; margin: 25px 0; box-shadow: 0 10px 50px rgba(88,166,255,0.15), 0 0 30px rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.2);">
