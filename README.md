@@ -131,18 +131,18 @@
 
 <div align="center" style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap;">
 
-  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.15); border: 1px solid rgba(88,166,255,0.2); min-width: 300px;">
-    <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=default&hide_border=true&&icon_color=58A6FF&show_icons=true&include_all_commits=true" alt="GitHub Stats" style="width: 100%;"/>
+  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.15); border: 1px solid rgba(88,166,255,0.2);">
+    <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg" alt="GitHub Stats" style="max-width: 100%; height: auto;"/>
   </div>
 
-  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.15); border: 1px solid rgba(88,166,255,0.2); min-width: 300px;">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=antono4&theme=default&hide_border=true&background=1a1f29&stroke=58A6FF&fire=FFA657&ring=58A6FF" alt="GitHub Streak" style="width: 100%;"/>
+  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.15); border: 1px solid rgba(88,166,255,0.2);">
+    <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg" alt="GitHub Streak" style="max-width: 100%; height: auto;"/>
   </div>
 
 </div>
 
 <div align="center" style="margin-top: 30px;">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=default&hide_border=true&&layout=compact" alt="Top Languages" style="max-width: 600px;"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg" alt="Top Languages" style="max-width: 600px; height: auto;"/>
 </div>
 
 </div>
