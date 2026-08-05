@@ -171,17 +171,17 @@
   <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
     <div style="background: linear-gradient(135deg, #7AA2F7, #BB9AF7); width: 55px; height: 55px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5em; box-shadow: 0 4px 20px rgba(122,162,247,0.4);">🤖</div>
     <div>
-      <h4 style="color: #7AA2F7; margin: 0; font-size: 1.5em;">Open Mind AI</h4>
+      <h4 style="color: #7AA2F7; margin: 0; font-size: 1.5em;">AI Content Generator</h4>
       <span style="background: linear-gradient(135deg, #E0AF68, #F7768E); padding: 4px 12px; border-radius: 12px; font-size: 0.75em; color: #0d1117; font-weight: 600;">⭐ Featured</span>
     </div>
   </div>
-  <p style="color: #8b949e; margin: 0 0 20px 0; font-size: 1em; line-height: 1.6;">An open-source AI assistant pushing the boundaries of what's possible. Built with passion and cutting-edge technology to help developers worldwide.</p>
+  <p style="color: #8b949e; margin: 0 0 20px 0; font-size: 1em; line-height: 1.6;">AI-powered content generator for social media, blogs, and marketing. Built with FastAPI, LangChain, and modern AI models.</p>
   <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px;">
     <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-    <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"/>
+    <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
     <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI"/>
   </div>
-  <a href="https://github.com/antono4/Open-Mind-AI" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #7AA2F7, #BB9AF7); color: #0d1117; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">View Project →</a>
+  <a href="https://github.com/antono4/ai-content-generator" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #7AA2F7, #BB9AF7); color: #0d1117; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">View Project →</a>
 </div>
 
 <!-- Project Cards Grid -->
@@ -192,8 +192,8 @@
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
       <div style="background: linear-gradient(135deg, #7AA2F7, #89B4FA); width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4em; box-shadow: 0 4px 15px rgba(122,162,247,0.3);">📈</div>
       <div style="display: flex; gap: 8px;">
-        <span style="background: rgba(224,175,104,0.15); color: #E0AF68; padding: 4px 10px; border-radius: 10px; font-size: 0.8em; font-weight: 600;">⭐ 45</span>
-        <span style="background: rgba(122,162,247,0.15); color: #7AA2F7; padding: 4px 10px; border-radius: 10px; font-size: 0.8em; font-weight: 600;">🍴 12</span>
+        <span style="background: rgba(224,175,104,0.15); color: #E0AF68; padding: 4px 10px; border-radius: 10px; font-size: 0.8em; font-weight: 600;">⭐ 0</span>
+        <span style="background: rgba(122,162,247,0.15); color: #7AA2F7; padding: 4px 10px; border-radius: 10px; font-size: 0.8em; font-weight: 600;">🍴 0</span>
       </div>
     </div>
     <h4 style="color: #7AA2F7; margin: 0 0 8px 0; font-size: 1.2em;">MacFolio</h4>
@@ -210,8 +210,8 @@
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
       <div style="background: linear-gradient(135deg, #9ECE6A, #B5E47A); width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4em; box-shadow: 0 4px 15px rgba(158,206,106,0.3);">💡</div>
       <div style="display: flex; gap: 8px;">
-        <span style="background: rgba(224,175,104,0.15); color: #E0AF68; padding: 4px 10px; border-radius: 10px; font-size: 0.8em; font-weight: 600;">⭐ 28</span>
-        <span style="background: rgba(158,206,106,0.15); color: #9ECE6A; padding: 4px 10px; border-radius: 10px; font-size: 0.8em; font-weight: 600;">🍴 5</span>
+        <span style="background: rgba(224,175,104,0.15); color: #E0AF68; padding: 4px 10px; border-radius: 10px; font-size: 0.8em; font-weight: 600;">⭐ 0</span>
+        <span style="background: rgba(158,206,106,0.15); color: #9ECE6A; padding: 4px 10px; border-radius: 10px; font-size: 0.8em; font-weight: 600;">🍴 0</span>
       </div>
     </div>
     <h4 style="color: #9ECE6A; margin: 0 0 8px 0; font-size: 1.2em;">3D-Neon-Lightbulb</h4>
