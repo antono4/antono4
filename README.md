@@ -160,32 +160,71 @@
 
 ## ⭐ Featured Projects
 
-<div style="background: linear-gradient(145deg, #1a1f29, #0d1117); border-radius: 20px; padding: 30px; margin: 20px 0; box-shadow: 0 10px 40px rgba(0,0,0,0.3), 0 0 15px rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.2);">
+<div style="background: linear-gradient(145deg, #161b22, #0d1117); border-radius: 24px; padding: 40px 30px; margin: 25px 0; box-shadow: 0 10px 60px rgba(0,0,0,0.4), 0 0 50px rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15);">
 
-> 🚀 Check out **[Open Mind AI](https://github.com/antono4/Open-Mind-AI)** — An open-source AI assistant!
+<h3 align="center" style="margin-bottom: 35px; font-size: 1.5em;">
+  <span style="background: linear-gradient(120deg, #E0AF68, #F7768E, #BB9AF7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">🚀 Featured Projects 🚀</span>
+</h3>
 
-<table>
-<tr>
-<td width="50%">
+<!-- Featured Project Highlight -->
+<div style="background: linear-gradient(135deg, rgba(122,162,247,0.08), rgba(187,154,247,0.05)); border-radius: 20px; padding: 30px; margin-bottom: 30px; border: 1px solid rgba(122,162,247,0.2);">
+  <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+    <div style="background: linear-gradient(135deg, #7AA2F7, #BB9AF7); width: 55px; height: 55px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5em; box-shadow: 0 4px 20px rgba(122,162,247,0.4);">🤖</div>
+    <div>
+      <h4 style="color: #7AA2F7; margin: 0; font-size: 1.5em;">Open Mind AI</h4>
+      <span style="background: linear-gradient(135deg, #E0AF68, #F7768E); padding: 4px 12px; border-radius: 12px; font-size: 0.75em; color: #0d1117; font-weight: 600;">⭐ Featured</span>
+    </div>
+  </div>
+  <p style="color: #8b949e; margin: 0 0 20px 0; font-size: 1em; line-height: 1.6;">An open-source AI assistant pushing the boundaries of what's possible. Built with passion and cutting-edge technology to help developers worldwide.</p>
+  <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px;">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+    <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"/>
+    <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI"/>
+  </div>
+  <a href="https://github.com/antono4/Open-Mind-AI" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #7AA2F7, #BB9AF7); color: #0d1117; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">View Project →</a>
+</div>
 
-### [MacFolio](https://github.com/antono4/MacFolio)
-*Portfolio trading platform*
+<!-- Project Cards Grid -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
 
-![JavaScript](https://img.shields.io/badge/-JS-yellow?style=flat-square&logo=javascript)
-![Vue](https://img.shields.io/badge/-Vue.js-green?style=flat-square&logo=vuedotjs)
+  <!-- Project 1: MacFolio -->
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.9), rgba(22,27,34,0.95)); border-radius: 16px; padding: 24px; border: 1px solid rgba(122,162,247,0.15); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)';this.style.borderColor='rgba(122,162,247,0.4)';this.style.boxShadow='0 20px 40px rgba(0,0,0,0.3), 0 0 30px rgba(122,162,247,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='rgba(122,162,247,0.15)';this.style.boxShadow='none'">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <div style="background: linear-gradient(135deg, #7AA2F7, #89B4FA); width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4em; box-shadow: 0 4px 15px rgba(122,162,247,0.3);">📈</div>
+      <div style="display: flex; gap: 8px;">
+        <span style="background: rgba(224,175,104,0.15); color: #E0AF68; padding: 4px 10px; border-radius: 10px; font-size: 0.8em; font-weight: 600;">⭐ 45</span>
+        <span style="background: rgba(122,162,247,0.15); color: #7AA2F7; padding: 4px 10px; border-radius: 10px; font-size: 0.8em; font-weight: 600;">🍴 12</span>
+      </div>
+    </div>
+    <h4 style="color: #7AA2F7; margin: 0 0 8px 0; font-size: 1.2em;">MacFolio</h4>
+    <p style="color: #8b949e; margin: 0 0 16px 0; font-size: 0.9em; line-height: 1.5;">Portfolio trading platform with real-time analytics and advanced charting features for traders.</p>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+      <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue.js"/>
+    </div>
+    <a href="https://github.com/antono4/MacFolio" style="color: #7AA2F7; text-decoration: none; font-weight: 500; font-size: 0.9em;">View Repository →</a>
+  </div>
 
-</td>
-<td width="50%">
+  <!-- Project 2: 3D-Neon-Lightbulb -->
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.9), rgba(22,27,34,0.95)); border-radius: 16px; padding: 24px; border: 1px solid rgba(158,206,106,0.15); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)';this.style.borderColor='rgba(158,206,106,0.4)';this.style.boxShadow='0 20px 40px rgba(0,0,0,0.3), 0 0 30px rgba(158,206,106,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='rgba(158,206,106,0.15)';this.style.boxShadow='none'">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <div style="background: linear-gradient(135deg, #9ECE6A, #B5E47A); width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4em; box-shadow: 0 4px 15px rgba(158,206,106,0.3);">💡</div>
+      <div style="display: flex; gap: 8px;">
+        <span style="background: rgba(224,175,104,0.15); color: #E0AF68; padding: 4px 10px; border-radius: 10px; font-size: 0.8em; font-weight: 600;">⭐ 28</span>
+        <span style="background: rgba(158,206,106,0.15); color: #9ECE6A; padding: 4px 10px; border-radius: 10px; font-size: 0.8em; font-weight: 600;">🍴 5</span>
+      </div>
+    </div>
+    <h4 style="color: #9ECE6A; margin: 0 0 8px 0; font-size: 1.2em;">3D-Neon-Lightbulb</h4>
+    <p style="color: #8b949e; margin: 0 0 16px 0; font-size: 0.9em; line-height: 1.5;">Creative 3D visual effects and animations showcasing the beauty of neon light aesthetics.</p>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+      <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
+      <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3"/>
+      <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=three.js&logoColor=white" alt="Three.js"/>
+    </div>
+    <a href="https://github.com/antono4/3D-Neon-Lightbulb" style="color: #9ECE6A; text-decoration: none; font-weight: 500; font-size: 0.9em;">View Repository →</a>
+  </div>
 
-### [3D-Neon-Lightbulb](https://github.com/antono4/3D-Neon-Lightbulb)
-*Creative 3D visual effects*
-
-![HTML](https://img.shields.io/badge/-HTML-orange?style=flat-square&logo=html5)
-![CSS](https://img.shields.io/badge/-CSS-blue?style=flat-square&logo=css3)
-
-</td>
-</tr>
-</table>
+</div>
 
 </div>
 
