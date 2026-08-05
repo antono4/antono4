@@ -171,26 +171,16 @@
 
 ## 📊 GitHub Statistics
 
-<div style="background: linear-gradient(145deg, #161b22, #0d1117); border-radius: 24px; padding: 40px 30px; margin: 25px 0; box-shadow: 0 10px 60px rgba(0,0,0,0.4), 0 0 50px rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); position: relative; overflow: hidden;">
 
-<!-- Animated Background Glow -->
-<div style="position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 400px; height: 200px; background: radial-gradient(ellipse, rgba(88,166,255,0.15) 0%, transparent 70%); animation: pulse 4s ease-in-out infinite;"></div>
+
+
 
 <!-- Floating Particles -->
 <div style="position: absolute; top: 20%; left: 10%; width: 6px; height: 6px; background: #7AA2F7; border-radius: 50%; opacity: 0.6; animation: float 6s ease-in-out infinite;"></div>
 <div style="position: absolute; top: 60%; right: 15%; width: 4px; height: 4px; background: #E0AF68; border-radius: 50%; opacity: 0.5; animation: float 8s ease-in-out infinite reverse;"></div>
 <div style="position: absolute; top: 40%; left: 80%; width: 5px; height: 5px; background: #9ECE6A; border-radius: 50%; opacity: 0.4; animation: float 7s ease-in-out infinite;"></div>
 
-<style>
-@keyframes pulse {
-  0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
-  50% { opacity: 0.8; transform: translateX(-50%) scale(1.1); }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(180deg); }
-}
-</style>
+
 
 <h3 align="center" style="color: #58A6FF; margin-bottom: 35px; font-size: 1.5em; position: relative;">
   <span style="background: linear-gradient(120deg, #7AA2F7, #BB9AF7, #E0AF68); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">✨ My GitHub Journey ✨</span>
