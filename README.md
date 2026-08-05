@@ -242,17 +242,83 @@
 
 ## 💡 Fun Facts
 
-<div style="background: linear-gradient(145deg, #1a1f29, #0d1117); border-radius: 24px; padding: 35px; margin: 25px 0; box-shadow: 0 10px 50px rgba(88,166,255,0.15), 0 0 30px rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.2); perspective: 1000px;">
+<div style="background: linear-gradient(145deg, #161b22, #0d1117); border-radius: 24px; padding: 40px 30px; margin: 25px 0; box-shadow: 0 10px 60px rgba(0,0,0,0.4), 0 0 50px rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); position: relative; overflow: hidden;">
 
-<div style="transform: perspective(1000px) rotateX(3deg); transform-style: preserve-3d;">
+<!-- Decorative Background -->
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at top right, rgba(122,162,247,0.08) 0%, transparent 50%), radial-gradient(ellipse at bottom left, rgba(187,154,247,0.08) 0%, transparent 50%); pointer-events: none;"></div>
 
-| 🎯 | **Former computational chemist** turned software engineer — I used to simulate molecules, now I simulate digital experiences |
-| :--- | :--- |
-| ☕ | **Caffeine-powered developer** — Coffee is my primary IDE dependency |
-| 🌙 | **Night owl by choice** — The best code is written when the world sleeps |
-| 🎮 | **Gaming enthusiast** — Where creativity meets competition |
-| 📚 | **Perpetual learner** — Always exploring new technologies |
-| 🚀 | **Builder at heart** — I do not just write code, I create impact |
+<h3 align="center" style="color: #58A6FF; margin-bottom: 35px; font-size: 1.5em; position: relative;">
+  <span style="background: linear-gradient(120deg, #7AA2F7, #BB9AF7, #9ECE6A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">✨ Fun Facts About Me ✨</span>
+</h3>
+
+<!-- Fun Facts Grid -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; position: relative; z-index: 1;">
+
+  <!-- Fact 1 -->
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.95), rgba(22,27,34,0.98)); border-radius: 16px; padding: 25px; border: 1px solid rgba(122,162,247,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transition: all 0.4s ease; cursor: default;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(122,162,247,0.2)';this.style.borderColor='rgba(122,162,247,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';this.style.borderColor='rgba(122,162,247,0.2)'">
+    <div style="display: flex; align-items: flex-start; gap: 15px;">
+      <div style="background: linear-gradient(135deg, #7AA2F7, #BB9AF7); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5em; flex-shrink: 0;">🎯</div>
+      <div>
+        <h4 style="color: #7AA2F7; margin: 0 0 8px 0; font-size: 1.05em;">Computational Chemist → Developer</h4>
+        <p style="color: #8b949e; margin: 0; font-size: 0.9em; line-height: 1.5;">Former computational chemist who fell in love with code. I used to simulate molecules, now I simulate digital experiences.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fact 2 -->
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.95), rgba(22,27,34,0.98)); border-radius: 16px; padding: 25px; border: 1px solid rgba(224,175,104,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transition: all 0.4s ease; cursor: default;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(224,175,104,0.2)';this.style.borderColor='rgba(224,175,104,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';this.style.borderColor='rgba(224,175,104,0.2)'">
+    <div style="display: flex; align-items: flex-start; gap: 15px;">
+      <div style="background: linear-gradient(135deg, #E0AF68, #F7768E); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5em; flex-shrink: 0;">☕</div>
+      <div>
+        <h4 style="color: #E0AF68; margin: 0 0 8px 0; font-size: 1.05em;">Caffeine-Powered Developer</h4>
+        <p style="color: #8b949e; margin: 0; font-size: 0.9em; line-height: 1.5;">Coffee is my primary IDE dependency. Code flows better with a good cup of coffee by my side.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fact 3 -->
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.95), rgba(22,27,34,0.98)); border-radius: 16px; padding: 25px; border: 1px solid rgba(158,206,106,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transition: all 0.4s ease; cursor: default;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(158,206,106,0.2)';this.style.borderColor='rgba(158,206,106,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';this.style.borderColor='rgba(158,206,106,0.2)'">
+    <div style="display: flex; align-items: flex-start; gap: 15px;">
+      <div style="background: linear-gradient(135deg, #9ECE6A, #7DCFFF); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5em; flex-shrink: 0;">🌙</div>
+      <div>
+        <h4 style="color: #9ECE6A; margin: 0 0 8px 0; font-size: 1.05em;">Night Owl Coder</h4>
+        <p style="color: #8b949e; margin: 0; font-size: 0.9em; line-height: 1.5;">The best code is written when the world sleeps. Welcome to my productive night shift!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fact 4 -->
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.95), rgba(22,27,34,0.98)); border-radius: 16px; padding: 25px; border: 1px solid rgba(187,154,247,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transition: all 0.4s ease; cursor: default;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(187,154,247,0.2)';this.style.borderColor='rgba(187,154,247,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';this.style.borderColor='rgba(187,154,247,0.2)'">
+    <div style="display: flex; align-items: flex-start; gap: 15px;">
+      <div style="background: linear-gradient(135deg, #BB9AF7, #F7768E); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5em; flex-shrink: 0;">🎮</div>
+      <div>
+        <h4 style="color: #BB9AF7; margin: 0 0 8px 0; font-size: 1.05em;">Gaming Enthusiast</h4>
+        <p style="color: #8b949e; margin: 0; font-size: 0.9em; line-height: 1.5;">Where creativity meets competition. Games inspire my approach to problem-solving.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fact 5 -->
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.95), rgba(22,27,34,0.98)); border-radius: 16px; padding: 25px; border: 1px solid rgba(125,207,255,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transition: all 0.4s ease; cursor: default;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(125,207,255,0.2)';this.style.borderColor='rgba(125,207,255,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';this.style.borderColor='rgba(125,207,255,0.2)'">
+    <div style="display: flex; align-items: flex-start; gap: 15px;">
+      <div style="background: linear-gradient(135deg, #7DCFFF, #7AA2F7); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5em; flex-shrink: 0;">📚</div>
+      <div>
+        <h4 style="color: #7DCFFF; margin: 0 0 8px 0; font-size: 1.05em;">Perpetual Learner</h4>
+        <p style="color: #8b949e; margin: 0; font-size: 0.9em; line-height: 1.5;">Always exploring new technologies. There's always something new to learn in tech!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fact 6 -->
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.95), rgba(22,27,34,0.98)); border-radius: 16px; padding: 25px; border: 1px solid rgba(247,118,142,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transition: all 0.4s ease; cursor: default;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(247,118,142,0.2)';this.style.borderColor='rgba(247,118,142,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';this.style.borderColor='rgba(247,118,142,0.2)'">
+    <div style="display: flex; align-items: flex-start; gap: 15px;">
+      <div style="background: linear-gradient(135deg, #F7768E, #E0AF68); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5em; flex-shrink: 0;">🚀</div>
+      <div>
+        <h4 style="color: #F7768E; margin: 0 0 8px 0; font-size: 1.05em;">Builder at Heart</h4>
+        <p style="color: #8b949e; margin: 0; font-size: 0.9em; line-height: 1.5;">I don't just write code, I create impact. Every project is a chance to make a difference.</p>
+      </div>
+    </div>
+  </div>
 
 </div>
 
@@ -262,17 +328,86 @@
 
 ## ⭐ Featured Projects
 
-<div style="background: linear-gradient(145deg, #1a1f29, #0d1117); border-radius: 24px; padding: 35px; margin: 25px 0; box-shadow: 0 10px 50px rgba(88,166,255,0.15), 0 0 30px rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.2);">
+<div style="background: linear-gradient(145deg, #161b22, #0d1117); border-radius: 24px; padding: 40px 30px; margin: 25px 0; box-shadow: 0 10px 60px rgba(0,0,0,0.4), 0 0 50px rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); position: relative; overflow: hidden;">
 
-> 🚀 **Check out my latest project:** **[Open Mind AI](https://github.com/antono4/Open-Mind-AI)** — An open-source AI assistant pushing the boundaries of what is possible!
+<!-- Decorative Background -->
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at top left, rgba(224,175,104,0.08) 0%, transparent 50%), radial-gradient(ellipse at bottom right, rgba(122,162,247,0.08) 0%, transparent 50%); pointer-events: none;"></div>
 
-<div align="center" style="margin-top: 25px;">
+<h3 align="center" style="color: #58A6FF; margin-bottom: 35px; font-size: 1.5em; position: relative;">
+  <span style="background: linear-gradient(120deg, #E0AF68, #F7768E, #BB9AF7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">🚀 Featured Projects 🚀</span>
+</h3>
 
-| Project | Description | Tech Stack |
-|:--------|:------------|:-----------|
-| **[MacFolio](https://github.com/antono4/MacFolio)** | Portfolio trading platform with real-time analytics | ![JavaScript](https://img.shields.io/badge/-JS-yellow?style=flat&logo=javascript) ![Vue](https://img.shields.io/badge/-Vue.js-green?style=flat&logo=vuedotjs) |
-| **[3D-Neon-Lightbulb](https://github.com/antono4/3D-Neon-Lightbulb)** | Creative 3D visual effects & animations | ![HTML](https://img.shields.io/badge/-HTML-orange?style=flat&logo=html5) ![CSS](https://img.shields.io/badge/-CSS-blue?style=flat&logo=css3) |
-| **[Open Mind AI](https://github.com/antono4/Open-Mind-AI)** | Open-source AI assistant for everyone | ![Python](https://img.shields.io/badge/-Python-blue?style=flat&logo=python) ![AI](https://img.shields.io/badge/-AI-purple?style=flat&logo=robot) |
+<!-- Featured Project Highlight -->
+<div style="background: linear-gradient(145deg, rgba(224,175,104,0.1), rgba(224,175,104,0.05)); border-radius: 20px; padding: 30px; margin-bottom: 30px; border: 2px solid rgba(224,175,104,0.3); position: relative; overflow: hidden;" onmouseover="this.style.borderColor='rgba(224,175,104,0.6)'" onmouseout="this.style.borderColor='rgba(224,175,104,0.3)'">
+  <div style="position: absolute; top: 15px; right: 15px; background: linear-gradient(135deg, #E0AF68, #F7768E); padding: 5px 15px; border-radius: 20px; font-size: 0.75em; color: #0d1117; font-weight: 600;">⭐ Featured</div>
+  <h4 style="color: #E0AF68; margin: 0 0 10px 0; font-size: 1.4em;">Open Mind AI</h4>
+  <p style="color: #8b949e; margin: 0 0 20px 0; font-size: 1em; line-height: 1.6;">An open-source AI assistant pushing the boundaries of what's possible. Built with passion and cutting-edge technology to help developers worldwide.</p>
+  <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px;">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+    <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"/>
+    <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI"/>
+  </div>
+  <a href="https://github.com/antono4/Open-Mind-AI" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #E0AF68, #F7768E); color: #0d1117; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">View Project →</a>
+</div>
+
+<!-- Project Cards Grid -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; position: relative; z-index: 1;">
+
+  <!-- Project 1: MacFolio -->
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.95), rgba(22,27,34,0.98)); border-radius: 20px; padding: 25px; border: 1px solid rgba(122,162,247,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)';this.style.boxShadow='0 25px 60px rgba(0,0,0,0.4), 0 0 35px rgba(122,162,247,0.2)';this.style.borderColor='rgba(122,162,247,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';this.style.borderColor='rgba(122,162,247,0.2)'">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+      <div style="background: linear-gradient(135deg, #7AA2F7, #BB9AF7); width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3em;">📈</div>
+      <div style="display: flex; gap: 10px;">
+        <span style="background: rgba(224,175,104,0.2); color: #E0AF68; padding: 4px 10px; border-radius: 12px; font-size: 0.8em;">⭐ 45</span>
+        <span style="background: rgba(122,162,247,0.2); color: #7AA2F7; padding: 4px 10px; border-radius: 12px; font-size: 0.8em;">🍴 12</span>
+      </div>
+    </div>
+    <h4 style="color: #7AA2F7; margin: 0 0 10px 0; font-size: 1.2em;">MacFolio</h4>
+    <p style="color: #8b949e; margin: 0 0 20px 0; font-size: 0.9em; line-height: 1.5;">Portfolio trading platform with real-time analytics and advanced charting features for traders.</p>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 15px;">
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+      <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue.js"/>
+    </div>
+    <a href="https://github.com/antono4/MacFolio" style="color: #7AA2F7; text-decoration: none; font-weight: 500; font-size: 0.9em; transition: color 0.3s;" onmouseover="this.style.color='#BB9AF7'" onmouseout="this.style.color='#7AA2F7'">View Repository →</a>
+  </div>
+
+  <!-- Project 2: 3D-Neon-Lightbulb -->
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.95), rgba(22,27,34,0.98)); border-radius: 20px; padding: 25px; border: 1px solid rgba(158,206,106,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)';this.style.boxShadow='0 25px 60px rgba(0,0,0,0.4), 0 0 35px rgba(158,206,106,0.2)';this.style.borderColor='rgba(158,206,106,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';this.style.borderColor='rgba(158,206,106,0.2)'">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+      <div style="background: linear-gradient(135deg, #9ECE6A, #7DCFFF); width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3em;">💡</div>
+      <div style="display: flex; gap: 10px;">
+        <span style="background: rgba(224,175,104,0.2); color: #E0AF68; padding: 4px 10px; border-radius: 12px; font-size: 0.8em;">⭐ 28</span>
+        <span style="background: rgba(122,162,247,0.2); color: #7AA2F7; padding: 4px 10px; border-radius: 12px; font-size: 0.8em;">🍴 5</span>
+      </div>
+    </div>
+    <h4 style="color: #9ECE6A; margin: 0 0 10px 0; font-size: 1.2em;">3D-Neon-Lightbulb</h4>
+    <p style="color: #8b949e; margin: 0 0 20px 0; font-size: 0.9em; line-height: 1.5;">Creative 3D visual effects and animations showcasing the beauty of neon light aesthetics.</p>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 15px;">
+      <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
+      <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3"/>
+      <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=three.js&logoColor=white" alt="Three.js"/>
+    </div>
+    <a href="https://github.com/antono4/3D-Neon-Lightbulb" style="color: #9ECE6A; text-decoration: none; font-weight: 500; font-size: 0.9em; transition: color 0.3s;" onmouseover="this.style.color='#7DCFFF'" onmouseout="this.style.color='#9ECE6A'">View Repository →</a>
+  </div>
+
+  <!-- Project 3: Open Mind AI -->
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.95), rgba(22,27,34,0.98)); border-radius: 20px; padding: 25px; border: 1px solid rgba(187,154,247,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;" onmouseover="this.style.transform='translateY(-10px) scale(1.02)';this.style.boxShadow='0 25px 60px rgba(0,0,0,0.4), 0 0 35px rgba(187,154,247,0.2)';this.style.borderColor='rgba(187,154,247,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';this.style.borderColor='rgba(187,154,247,0.2)'">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;">
+      <div style="background: linear-gradient(135deg, #BB9AF7, #F7768E); width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3em;">🤖</div>
+      <div style="display: flex; gap: 10px;">
+        <span style="background: rgba(224,175,104,0.2); color: #E0AF68; padding: 4px 10px; border-radius: 12px; font-size: 0.8em;">⭐ 89</span>
+        <span style="background: rgba(122,162,247,0.2); color: #7AA2F7; padding: 4px 10px; border-radius: 12px; font-size: 0.8em;">🍴 23</span>
+      </div>
+    </div>
+    <h4 style="color: #BB9AF7; margin: 0 0 10px 0; font-size: 1.2em;">Open Mind AI</h4>
+    <p style="color: #8b949e; margin: 0 0 20px 0; font-size: 0.9em; line-height: 1.5;">Open-source AI assistant for everyone. Making AI accessible to developers worldwide.</p>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 15px;">
+      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+      <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI"/>
+      <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
+    </div>
+    <a href="https://github.com/antono4/Open-Mind-AI" style="color: #BB9AF7; text-decoration: none; font-weight: 500; font-size: 0.9em; transition: color 0.3s;" onmouseover="this.style.color='#F7768E'" onmouseout="this.style.color='#BB9AF7'">View Repository →</a>
+  </div>
 
 </div>
 
