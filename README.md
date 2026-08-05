@@ -141,9 +141,29 @@
 
 </div>
 
+<!-- Divider -->
+<div style="width: 200px; height: 3px; background: linear-gradient(90deg, transparent, #7AA2F7, #BB9AF7, #E0AF68, #9ECE6A, transparent); margin: 30px auto; border-radius: 2px;"></div>
+
+<!-- Bio Section -->
+<div align="center" style="margin-bottom: 35px;">
+  <p style="color: #c9d1d9; font-size: 1.15em; line-height: 1.8; max-width: 700px; margin: 0 auto;">
+    Transforming <span style="color: #7AA2F7; font-weight: 600;">complex problems</span> into <span style="color: #9ECE6A; font-weight: 600;">elegant solutions</span> through code.
+    I believe in building tools that <span style="color: #E0AF68; font-weight: 600;">matter</span> and create <span style="color: #BB9AF7; font-weight: 600;">impact</span>.
+  </p>
 </div>
 
----
+<!-- Stats Cards with SVG Badges -->
+<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 30px 0;">
+  
+  <img src="https://img.shields.io/badge/Repos-327%2B-7AA2F7?style=for-the-badge&logo=github&logoColor=white" alt="Repositories"/>
+  
+  <img src="https://img.shields.io/badge/Stars-166-F7DF1E?style=for-the-badge&logo=starship&logoColor=black" alt="GitHub Stars"/>
+  
+  <img src="https://img.shields.io/badge/Commits-1K%2B-9ECE6A?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  
+  <img src="https://img.shields.io/badge/Followers-4-BB9AF7?style=for-the-badge&logo=github&logoColor=white" alt="Followers"/>
+
+</div>
 
 ## 🛠️ Tech Arsenal
 
@@ -490,35 +510,53 @@
 
 ## 🗺️ Currently Exploring
 
-<div style="background: linear-gradient(145deg, #1a1f29, #0d1117); border-radius: 24px; padding: 35px; margin: 25px 0; box-shadow: 0 10px 50px rgba(88,166,255,0.15), 0 0 30px rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.2);">
+<div style="background: linear-gradient(145deg, #161b22, #0d1117); border-radius: 24px; padding: 40px 30px; margin: 25px 0; box-shadow: 0 10px 60px rgba(0,0,0,0.4), 0 0 50px rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); position: relative; overflow: hidden;">
 
-<div align="center">
+<div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(158,206,106,0.1) 0%, transparent 70%); animation: pulse 5s ease-in-out infinite;"></div>
+<div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(122,162,247,0.1) 0%, transparent 70%); animation: pulse 4s ease-in-out infinite reverse;"></div>
 
-<p style="color: #8b949e; font-size: 1.1em; margin-bottom: 25px;">
+<style>
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+</style>
+
+<h3 align="center" style="color: #58A6FF; margin-bottom: 15px; font-size: 1.5em; position: relative;">
+  <span style="background: linear-gradient(120deg, #9ECE6A, #7DCFFF, #BB9AF7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">🗺️ Currently Exploring 🗺️</span>
+</h3>
+
+<p align="center" style="color: #8b949e; font-size: 1.1em; margin-bottom: 30px;">
   🌱 <em>Always learning, always building...</em>
 </p>
 
-<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  
-  <div style="background: linear-gradient(135deg, rgba(88,166,255,0.15), rgba(88,166,255,0.05)); padding: 15px 25px; border-radius: 12px; border: 1px solid rgba(88,166,255,0.3);">
-    🤖 <strong style="color: #58A6FF;">AI/ML</strong>
-  </div>
-  
-  <div style="background: linear-gradient(135deg, rgba(126,231,135,0.15), rgba(126,231,135,0.05)); padding: 15px 25px; border-radius: 12px; border: 1px solid rgba(126,231,135,0.3);">
-    🔮 <strong style="color: #7EE787;">LLMs & NLP</strong>
-  </div>
-  
-  <div style="background: linear-gradient(135deg, rgba(255,166,87,0.15), rgba(255,166,87,0.05)); padding: 15px 25px; border-radius: 12px; border: 1px solid rgba(255,166,87,0.3);">
-    ⚡ <strong style="color: #FFA657;">Performance Optimization</strong>
-  </div>
-  
-  <div style="background: linear-gradient(135deg, rgba(188,140,255,0.15), rgba(188,140,255,0.05)); padding: 15px 25px; border-radius: 12px; border: 1px solid rgba(188,140,255,0.3);">
-    🏗️ <strong style="color: #BC8CFF;">System Design</strong>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; position: relative; z-index: 1;">
+
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.95), rgba(22,27,34,0.98)); border-radius: 16px; padding: 25px; border: 1px solid rgba(122,162,247,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center; transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(122,162,247,0.2)';this.style.borderColor='rgba(122,162,247,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';this.style.borderColor='rgba(122,162,247,0.2)'">
+    <div style="font-size: 2.5em; margin-bottom: 12px;">🤖</div>
+    <h4 style="color: #7AA2F7; margin: 0 0 8px 0; font-size: 1.1em;">AI/ML</h4>
+    <p style="color: #8b949e; margin: 0; font-size: 0.85em;">Machine Learning & Deep Learning</p>
   </div>
 
-</div>
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.95), rgba(22,27,34,0.98)); border-radius: 16px; padding: 25px; border: 1px solid rgba(187,154,247,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center; transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(187,154,247,0.2)';this.style.borderColor='rgba(187,154,247,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';this.style.borderColor='rgba(187,154,247,0.2)'">
+    <div style="font-size: 2.5em; margin-bottom: 12px;">🔮</div>
+    <h4 style="color: #BB9AF7; margin: 0 0 8px 0; font-size: 1.1em;">LLMs & NLP</h4>
+    <p style="color: #8b949e; margin: 0; font-size: 0.85em;">Large Language Models</p>
+  </div>
 
-</div>
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.95), rgba(22,27,34,0.98)); border-radius: 16px; padding: 25px; border: 1px solid rgba(224,175,104,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center; transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(224,175,104,0.2)';this.style.borderColor='rgba(224,175,104,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';this.style.borderColor='rgba(224,175,104,0.2)'">
+    <div style="font-size: 2.5em; margin-bottom: 12px;">⚡</div>
+    <h4 style="color: #E0AF68; margin: 0 0 8px 0; font-size: 1.1em;">Performance</h4>
+    <p style="color: #8b949e; margin: 0; font-size: 0.85em;">Optimization & Speed</p>
+  </div>
+
+  <div style="background: linear-gradient(145deg, rgba(33,38,45,0.95), rgba(22,27,34,0.98)); border-radius: 16px; padding: 25px; border: 1px solid rgba(158,206,106,0.2); box-shadow: 0 8px 32px rgba(0,0,0,0.3); text-align: center; transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)';this.style.boxShadow='0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(158,206,106,0.2)';this.style.borderColor='rgba(158,206,106,0.5)'" onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3)';this.style.borderColor='rgba(158,206,106,0.2)'">
+    <div style="font-size: 2.5em; margin-bottom: 12px;">🏗️</div>
+    <h4 style="color: #9ECE6A; margin: 0 0 8px 0; font-size: 1.1em;">System Design</h4>
+    <p style="color: #8b949e; margin: 0; font-size: 0.85em;">Architecture & Scalability</p>
+  </div>
+
+  </div>
 
 </div>
 
@@ -526,31 +564,61 @@
 
 ## 📫 Get in Touch
 
-<div style="background: linear-gradient(145deg, #1a1f29, #0d1117); border-radius: 24px; padding: 35px; margin: 25px 0; box-shadow: 0 10px 50px rgba(88,166,255,0.15), 0 0 30px rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.2);">
+<div style="background: linear-gradient(145deg, #161b22, #0d1117); border-radius: 24px; padding: 40px 30px; margin: 25px 0; box-shadow: 0 10px 60px rgba(0,0,0,0.4), 0 0 50px rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.15); position: relative; overflow: hidden;">
 
-<p align="center" style="color: #8b949e; margin-bottom: 25px; font-size: 1.1em;">
-  💬 <em>Let us connect and build something amazing together!</em>
+<div style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(122,162,247,0.1) 0%, transparent 70%); animation: pulse 4s ease-in-out infinite;"></div>
+<div style="position: absolute; bottom: -50px; right: -50px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(187,154,247,0.1) 0%, transparent 70%); animation: pulse 5s ease-in-out infinite reverse;"></div>
+
+<style>
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+</style>
+
+<h3 align="center" style="color: #58A6FF; margin-bottom: 15px; font-size: 1.5em; position: relative;">
+  <span style="background: linear-gradient(120deg, #7AA2F7, #BB9AF7, #E0AF68); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700;">📫 Get in Touch 📫</span>
+</h3>
+
+<p align="center" style="color: #8b949e; font-size: 1.1em; margin-bottom: 35px; position: relative; z-index: 1;">
+  💬 <em>Let's connect and build something amazing together!</em>
 </p>
 
-<p align="center">
-  <a href="mailto:antonockr1@gmail.com" style="text-decoration: none;">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white&style=flat-square" alt="Email" style="box-shadow: 0 4px 20px rgba(234,67,53,0.35); transition: transform 0.2s;"/>
+<div align="center" style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; position: relative; z-index: 1;">
+
+  <a href="mailto:antonockr1@gmail.com" style="text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.1)'" onmouseout="this.style.transform='translateY(0) scale(1)'">
+    <div style="background: linear-gradient(145deg, rgba(234,67,53,0.2), rgba(234,67,53,0.1)); border: 2px solid rgba(234,67,53,0.3); border-radius: 16px; padding: 20px 30px; display: flex; align-items: center; gap: 12px; transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(234,67,53,0.2);">
+      <span style="font-size: 1.5em;">📧</span>
+      <span style="color: #EA4335; font-weight: 600; font-size: 1em;">Email</span>
+    </div>
   </a>
-  <a href="https://linkedin.com/in/antono4" style="text-decoration: none;">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&style=flat-square" alt="LinkedIn" style="box-shadow: 0 4px 20px rgba(10,102,194,0.35); transition: transform 0.2s;"/>
+
+  <a href="https://linkedin.com/in/antono4" style="text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.1)'" onmouseout="this.style.transform='translateY(0) scale(1)'">
+    <div style="background: linear-gradient(145deg, rgba(10,102,194,0.2), rgba(10,102,194,0.1)); border: 2px solid rgba(10,102,194,0.3); border-radius: 16px; padding: 20px 30px; display: flex; align-items: center; gap: 12px; transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(10,102,194,0.2);">
+      <span style="font-size: 1.5em;">💼</span>
+      <span style="color: #0A66C2; font-weight: 600; font-size: 1em;">LinkedIn</span>
+    </div>
   </a>
-  <a href="https://github.com/antono4" style="text-decoration: none;">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&style=flat-square" alt="GitHub" style="box-shadow: 0 4px 20px rgba(255,255,255,0.1); transition: transform 0.2s;"/>
+
+  <a href="https://github.com/antono4" style="text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.1)'" onmouseout="this.style.transform='translateY(0) scale(1)'">
+    <div style="background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); border: 2px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 20px 30px; display: flex; align-items: center; gap: 12px; transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(255,255,255,0.1);">
+      <span style="font-size: 1.5em;">🐙</span>
+      <span style="color: #ffffff; font-weight: 600; font-size: 1em;">GitHub</span>
+    </div>
   </a>
-  <a href="https://twitter.com/antono4" style="text-decoration: none;">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white&style=flat-square" alt="Twitter" style="box-shadow: 0 4px 20px rgba(29,161,242,0.35); transition: transform 0.2s;"/>
+
+  <a href="https://twitter.com/antono4" style="text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-8px) scale(1.1)'" onmouseout="this.style.transform='translateY(0) scale(1)'">
+    <div style="background: linear-gradient(145deg, rgba(29,161,242,0.2), rgba(29,161,242,0.1)); border: 2px solid rgba(29,161,242,0.3); border-radius: 16px; padding: 20px 30px; display: flex; align-items: center; gap: 12px; transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(29,161,242,0.2);">
+      <span style="font-size: 1.5em;">🐦</span>
+      <span style="color: #1DA1F2; font-weight: 600; font-size: 1em;">Twitter</span>
+    </div>
   </a>
-</p>
 
 </div>
 
----
+</div>
 
+<!-- Footer -->
 <p align="center" style="margin: 40px 0 20px;">
   <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=30&section=footer" width="100%" alt="Footer"/>
 </p>
@@ -558,16 +626,12 @@
 <p align="center" style="color: #8b949e; font-size: 0.95em;">
   Made with 
   <span style="color: #FF6B6B; font-size: 1.2em;">❤️</span> 
-  by <strong style="color: #58A6FF;"><a href="https://github.com/antono4" style="color: #58A6FF; text-decoration: none;">antono4</a></strong> 
+  by <strong style="color: #7AA2F7;"><a href="https://github.com/antono4" style="color: #7AA2F7; text-decoration: none;">antono4</a></strong> 
   · 🌏 From Indonesia 🇮🇩
 </p>
 
-<p align="center" style="color: #58A6FF; font-size: 1.1em; margin-top: 15px;">
+<p align="center" style="color: #7AA2F7; font-size: 1.1em; margin-top: 15px;">
   ✨ <em>"Code is poetry written for machines, art for humans"</em> ✨
-</p>
-
-<p align="center" style="margin-bottom: 30px;">
-  <img src="https://img.shields.io/badge/Messages-Welcome-58A6FF?style=flat-square&color=58A6FF" alt="Welcome"/>
 </p>
 
 </div>
