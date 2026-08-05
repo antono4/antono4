@@ -79,12 +79,24 @@
   </p>
 </div>
 
-<!-- Stats Cards -->
+<!-- Stats Cards with SVG Badges -->
+<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 30px 0;">
+  
+  <img src="https://img.shields.io/badge/Repos-327%2B-7AA2F7?style=for-the-badge&logo=github&logoColor=white" alt="Repositories"/>
+  
+  <img src="https://img.shields.io/badge/Stars-166-F7DF1E?style=for-the-badge&logo=starship&logoColor=black" alt="GitHub Stars"/>
+  
+  <img src="https://img.shields.io/badge/Commits-1K%2B-9ECE6A?style=for-the-badge&logo=git&logoColor=white" alt="Commits"/>
+  
+  <img src="https://img.shields.io/badge/Followers-4-BB9AF7?style=for-the-badge&logo=github&logoColor=white" alt="Followers"/>
+
+</div>
+
+<!-- Stats Cards Grid -->
 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 700px; margin: 0 auto;">
 
   <!-- Repos -->
   <div style="background: linear-gradient(145deg, rgba(122,162,247,0.1), rgba(122,162,247,0.02)); border: 1px solid rgba(122,162,247,0.15); border-radius: 20px; padding: 28px 16px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 20px 40px rgba(122,162,247,0.2), 0 0 50px rgba(122,162,247,0.1)';this.style.borderColor='rgba(122,162,247,0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(122,162,247,0.15)'">
-    <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(122,162,247,0.08) 0%, transparent 50%); opacity: 0; transition: opacity 0.4s; pointer-events: none;" id="repo-glow"></div>
     <div style="font-size: 2.5em; margin-bottom: 12px; filter: drop-shadow(0 0 10px rgba(122,162,247,0.5));">📚</div>
     <div style="font-size: 2.2em; font-weight: 800; background: linear-gradient(135deg, #7AA2F7, #89B4FA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; margin-bottom: 8px;">327+</div>
     <div style="color: #6e7681; font-size: 0.8em; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Repositories</div>
