@@ -129,20 +129,36 @@
 
 <div style="background: linear-gradient(145deg, #1a1f29, #0d1117); border-radius: 24px; padding: 35px; margin: 25px 0; box-shadow: 0 10px 50px rgba(88,166,255,0.15), 0 0 30px rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.2);">
 
-<div align="center" style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap;">
+<h3 align="center" style="color: #58A6FF; margin-bottom: 30px; font-size: 1.4em;">
+  <span style="background: linear-gradient(120deg, #58A6FF, #79C0FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">📈 My GitHub Journey</span>
+</h3>
 
-  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.15); border: 1px solid rgba(88,166,255,0.2);">
-    <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg" alt="GitHub Stats" style="max-width: 100%; height: auto;"/>
+<div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 25px;">
+
+  <!-- Stats Card -->
+  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 20px rgba(88,166,255,0.1); border: 1px solid rgba(88,166,255,0.2); min-width: 280px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.4), 0 0 30px rgba(88,166,255,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3), 0 0 20px rgba(88,166,255,0.1)'">
+    <h4 align="center" style="color: #7AA2F7; margin: 0 0 15px 0; font-size: 1em;">📊 Overview</h4>
+    <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg" alt="GitHub Stats" style="width: 100%; border-radius: 8px;"/>
   </div>
 
-  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.4), 0 0 20px rgba(88,166,255,0.15); border: 1px solid rgba(88,166,255,0.2);">
-    <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg" alt="GitHub Streak" style="max-width: 100%; height: auto;"/>
+  <!-- Streak Card -->
+  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 20px rgba(255,166,87,0.1); border: 1px solid rgba(255,166,87,0.2); min-width: 280px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.4), 0 0 30px rgba(255,166,87,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3), 0 0 20px rgba(255,166,87,0.1)'">
+    <h4 align="center" style="color: #E0AF68; margin: 0 0 15px 0; font-size: 1em;">🔥 Contribution Streak</h4>
+    <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg" alt="GitHub Streak" style="width: 100%; border-radius: 8px;"/>
+  </div>
+
+  <!-- Trophy Card -->
+  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 20px rgba(126,231,135,0.1); border: 1px solid rgba(126,231,135,0.2); min-width: 280px; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 15px 40px rgba(0,0,0,0.4), 0 0 30px rgba(126,231,135,0.2)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 32px rgba(0,0,0,0.3), 0 0 20px rgba(126,231,135,0.1)'">
+    <h4 align="center" style="color: #9ECE6A; margin: 0 0 15px 0; font-size: 1em;">🏆 Achievements</h4>
+    <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/trophies.svg" alt="Trophies" style="width: 100%; border-radius: 8px;"/>
   </div>
 
 </div>
 
-<div align="center" style="margin-top: 30px;">
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg" alt="Top Languages" style="max-width: 600px; height: auto;"/>
+<!-- Top Languages -->
+<div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 16px; padding: 25px; box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 20px rgba(188,140,255,0.1); border: 1px solid rgba(188,140,255,0.2); margin-top: 10px;">
+  <h4 align="center" style="color: #BB9AF7; margin: 0 0 20px 0; font-size: 1.1em;">💻 Top Languages</h4>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg" alt="Top Languages" style="width: 100%; max-width: 500px; display: block; margin: 0 auto; border-radius: 8px;"/>
 </div>
 
 </div>
