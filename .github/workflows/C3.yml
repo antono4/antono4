@@ -1,0 +1,153 @@
+name: C3 - Auto Generate README
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+    inputs:
+      force_regenerate:
+        description: 'Force regenerate README'
+        required: false
+        default: 'false'
+
+jobs:
+  generate-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Analyze repository structure
+        id: analyze
+        run: |
+          echo "repo_name=$(basename ${{ github.repository }})" >> $GITHUB_OUTPUT
+
+          if [ -f "package.json" ]; then
+            echo "has_package_json=true" >> $GITHUB_OUTPUT
+            echo "project_name=$(cat package.json | jq -r '.name // "Untitled Project"')" >> $GITHUB_OUTPUT
+            echo "project_description=$(cat package.json | jq -r '.description // ""')" >> $GITHUB_OUTPUT
+            echo "has_npm=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_package_json=false" >> $GITHUB_OUTPUT
+            echo "project_name=$(basename ${{ github.repository }})" >> $GITHUB_OUTPUT
+          fi
+
+          if [ -f "requirements.txt" ] || [ -f "setup.py" ] || [ -f "pyproject.toml" ]; then
+            echo "has_python=true" >> $GITHUB_OUTPUT
+          fi
+
+          if [ -f "Dockerfile" ]; then echo "has_docker=true" >> $GITHUB_OUTPUT; fi
+          if [ -f "docker-compose.yml" ] || [ -f "docker-compose.yaml" ]; then echo "has_docker_compose=true" >> $GITHUB_OUTPUT; fi
+          if [ -f ".env.example" ]; then echo "has_env_example=true" >> $GITHUB_OUTPUT; fi
+
+          if ls *.html *.htm 2>/dev/null | head -1 | grep -q .; then echo "tech_html=true" >> $GITHUB_OUTPUT; fi
+          if ls *.css *.scss *.sass 2>/dev/null | head -1 | grep -q .; then echo "tech_css=true" >> $GITHUB_OUTPUT; fi
+          if ls *.py 2>/dev/null | head -1 | grep -q .; then echo "tech_python=true" >> $GITHUB_OUTPUT; fi
+          if ls *.js *.jsx *.ts *.tsx 2>/dev/null | head -1 | grep -q .; then echo "tech_js=true" >> $GITHUB_OUTPUT; fi
+          if ls *.java 2>/dev/null | head -1 | grep -q .; then echo "tech_java=true" >> $GITHUB_OUTPUT; fi
+          if ls *.go 2>/dev/null | head -1 | grep -q .; then echo "tech_go=true" >> $GITHUB_OUTPUT; fi
+          if ls *.php 2>/dev/null | head -1 | grep -q .; then echo "tech_php=true" >> $GITHUB_OUTPUT; fi
+
+          echo "file_count=$(find . -type f -not -path '*/node_modules/*' -not -path '*/.git/*' -not -path '*/dist/*' -not -path '*/build/*' | wc -l)" >> $GITHUB_OUTPUT
+
+      - name: Generate README content
+        id: generate
+        run: |
+          REPO_NAME="${{ steps.analyze.outputs.project_name }}"
+          DESCRIPTION="${{ steps.analyze.outputs.project_description }}"
+          FILE_COUNT="${{ steps.analyze.outputs.file_count }}"
+
+          TECH_STACK=""
+          [ "${{ steps.analyze.outputs.has_npm }}" = "true" ] && TECH_STACK="${TECH_STACK}Node.js, "
+          [ "${{ steps.analyze.outputs.tech_python }}" = "true" ] && TECH_STACK="${TECH_STACK}Python, "
+          [ "${{ steps.analyze.outputs.tech_html }}" = "true" ] && TECH_STACK="${TECH_STACK}HTML, "
+          [ "${{ steps.analyze.outputs.tech_css }}" = "true" ] && TECH_STACK="${TECH_STACK}CSS, "
+          [ "${{ steps.analyze.outputs.tech_js }}" = "true" ] && TECH_STACK="${TECH_STACK}JavaScript, "
+          [ "${{ steps.analyze.outputs.tech_java }}" = "true" ] && TECH_STACK="${TECH_STACK}Java, "
+          [ "${{ steps.analyze.outputs.tech_go }}" = "true" ] && TECH_STACK="${TECH_STACK}Go, "
+          [ "${{ steps.analyze.outputs.tech_php }}" = "true" ] && TECH_STACK="${TECH_STACK}PHP, "
+          [ "${{ steps.analyze.outputs.has_docker }}" = "true" ] && TECH_STACK="${TECH_STACK}Docker, "
+          TECH_STACK="${TECH_STACK%, }"
+
+          export TZ="Asia/Jakarta"
+          TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S %Z")
+
+          cat > README.md << EOF
+# $REPO_NAME
+
+$DESCRIPTION
+
+## 📋 Overview
+
+This repository contains **$FILE_COUNT files** and is built with the following technologies:
+
+$TECH_STACK
+
+## 🚀 Quick Start
+
+${{ steps.analyze.outputs.has_npm == 'true' && '```bash
+npm install
+npm run dev
+npm run build
+```' || '' }}
+
+${{ steps.analyze.outputs.has_python == 'true' && '```bash
+pip install -r requirements.txt
+python main.py
+```' || '' }}
+
+${{ steps.analyze.outputs.tech_php == 'true' && '```bash
+php -S localhost:8000
+```' || '' }}
+
+## ✨ Features
+
+${{ steps.analyze.outputs.has_docker == 'true' && '- 🐳 Docker support
+' || '' }}${{ steps.analyze.outputs.has_env_example == 'true' && '- 🔧 Environment config included
+' || '' }}- 📝 Auto-generated documentation
+
+## 🛠️ Technologies
+
+$TECH_STACK
+
+## 📄 License
+
+MIT License
+
+---
+*Last updated: $TIMESTAMP*
+EOF
+          echo "readme_generated=true" >> $GITHUB_OUTPUT
+
+      - name: Configure Git
+        run: |
+          git config user.name "antono4"
+          git config user.email "antonockr1@gmail.com"
+
+      - name: Commit and push README
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git pull --rebase origin ${{ github.ref_name }}
+          git add README.md
+
+          if git diff --staged --quiet; then
+            echo "No changes to README"
+          else
+            export TZ="Asia/Jakarta"
+            COMMIT_MSG="docs: Auto-generate README at $(date +'%Y-%m-%d %H:%M:%S') WIB"
+            git commit -m "$COMMIT_MSG"
+            git push origin ${{ github.ref_name }}
+            echo "README updated!"
+          fi
