@@ -137,7 +137,9 @@
 </div>
 
 <div align="center" style="margin-top: 20px;">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=radical&hide_border=true&layout=compact" alt="Top Languages" />
+  <div style="background: linear-gradient(145deg, #21262d, #161b22); border-radius: 15px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.4), 0 0 15px rgba(88,166,255,0.2); border: 1px solid rgba(88,166,255,0.2);">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=transparent&hide_border=true&layout=compact" alt="Top Languages" style="border-radius: 10px;">
+  </div>
 </div>
 
 </div>
