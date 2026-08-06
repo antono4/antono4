@@ -41,7 +41,9 @@
 ## 🏆 GitHub Trophies
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=antono4&theme=radical&no-frame=false&no-bg=true&margin-w=4" alt="GitHub Trophies"/>
+  <a href="https://github.com/antono4" target="_blank">
+    <img src="https://github-profile-trophy.vercel.app/api/v1/antono4" alt="GitHub Trophies" />
+  </a>
 </p>
 
 ---
