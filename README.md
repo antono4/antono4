@@ -41,8 +41,17 @@
 ## 🏆 GitHub Trophies
 
 <p align="center">
+  <img src="https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png" alt="Pull Shark" title="Pull Shark - 2+ merged PRs" style="width:50px;height:50px;border-radius:8px;" />
+  <img src="https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png" alt="Pull Shark" title="Pull Shark - 2+ merged PRs" style="width:50px;height:50px;border-radius:8px;" />
+  <img src="https://github.githubassets.com/assets/yolo-default-be0bbff04951.png" alt="YOLO" title="YOLO - Merged a PR on the same day it was opened" style="width:50px;height:50px;border-radius:8px;" />
+  <img src="https://github.githubassets.com/assets/quickdraw-default--light-8f798b35341a.png" alt="Quickdraw" title="Quickdraw - Merged a PR within 5 minutes of opening" style="width:50px;height:50px;border-radius:8px;" />
+</p>
+
+<p align="center">
   <a href="https://github.com/antono4" target="_blank">
-    <img src="https://github-profile-trophy.vercel.app/api/v1/antono4" alt="GitHub Trophies" />
+    <img src="https://img.shields.io/github/achievements/antono4/pull-shark?style=for-the-badge&logo=github" alt="Pull Shark" />
+    <img src="https://img.shields.io/github/achievements/antono4/yolo?style=for-the-badge&logo=github" alt="YOLO" />
+    <img src="https://img.shields.io/github/achievements/antono4/quickdraw?style=for-the-badge&logo=github" alt="Quickdraw" />
   </a>
 </p>
 
