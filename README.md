@@ -25,10 +25,23 @@
 
 ## 🚀 About Me
 
+| | |
+|:---|:---|
 | 🧪 | **Fullstack Developer** & **Computational Chemist** from **Indonesia** 🇮🇩 |
-|:---:|:---|
-| 💻 | I transform complex problems into elegant solutions through code. |
-| 🎯 | Building innovative products with modern tech stack |
+| 💻 | Passionate about building scalable web applications and solving complex problems |
+| 🔬 | Background in Computational Chemistry with expertise in molecular modeling |
+| 🤖 | Enthusiast of AI/ML technologies and their applications in real-world solutions |
+| ☕ | When not coding, you'll find me exploring new technologies or enjoying a good coffee |
+
+---
+
+## 🎯 What I Do
+
+- 💼 Building end-to-end web applications with modern tech stack
+- 🔧 Developing RESTful APIs and microservices architecture
+- 📊 Creating data-driven solutions and analytics dashboards
+- 🤖 Integrating AI/ML models into production applications
+- 🚀 Optimizing performance and improving user experience
 
 ---
 
