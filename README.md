@@ -47,10 +47,7 @@
 
 ## 📊 GitHub Stats
 
-![GitHub Stats](https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg)
-![GitHub Streak](https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg)
-![Top Languages](https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg)
-![GitHub Trophies](https://raw.githubusercontent.com/antono4/antono4/main/assets/trophies.svg)
+![GitHub Stats](https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg) ![GitHub Streak](https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg) ![Top Languages](https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg)
 
 ---
 
