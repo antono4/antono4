@@ -1,153 +1,36 @@
-<div align="center">
+# Hi there, I'm Antono ğŸ‘‹
 
-![Profile Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Antono&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=gradient&desc=Full%20Stack%20Developer%20%7C%20AI%20Enthusiast&descSize=18&descAlignY=55)
+![](https://github.com/1999AZZAR/1999AZZAR/blob/readme/resources/img/waving.gif)
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=2000&pause=2000&color=FFFFFF&background=0D111700&center=true&vCenter=true&width=600&lines=%22I+craft+digital+experiences%22+%F0%9F%94%AC" alt="Typing SVG" />
-</p>
+### ğŸš€ Full-Stack Developer | AI Enthusiast | Building Tools That Matter
 
-<p align="center">
-  <a href="https://github.com/antono4" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-  <a href="https://linkedin.com/in/antono4" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://twitter.com/antono4" target="_blank"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"/></a>
-  <a href="mailto:antonockr1@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=for-the-badge&label=Profile+Views" alt="Profile Views"/>
-  <img src="https://img.shields.io/github/followers/antono4?style=for-the-badge&logo=github&logoColor=white" alt="Followers"/>
-  <img src="https://img.shields.io/github/stars/antono4?style=for-the-badge&logo=github&logoColor=yellow" alt="Stars"/>
-</p>
-
-</div>
+![Snake Animation](https://github.com/antono4/antono4/blob/output/github-snake-dark.svg)
 
 ---
 
-## ğŸš€ About Me
+## ğŸ“« Connect With Me
 
-| | |
-|:---|:---|
-| ğŸ§ª | **Fullstack Developer** & **Computational Chemist** from **Indonesia** ğŸ‡®ğŸ‡© |
-| ğŸ’» | Passionate about building scalable web applications and solving complex problems |
-| ğŸ”¬ | Background in Computational Chemistry with expertise in molecular modeling |
-| ğŸ¤– | Enthusiast of AI/ML technologies and their applications in real-world solutions |
-| â˜• | When not coding, you'll find me exploring new technologies or enjoying a good coffee |
-
----
-
-## ğŸ¯ What I Do
-
-- ğŸ’¼ Building end-to-end web applications with modern tech stack
-- ğŸ”§ Developing RESTful APIs and microservices architecture
-- ğŸ“Š Creating data-driven solutions and analytics dashboards
-- ğŸ¤– Integrating AI/ML models into production applications
-- ğŸš€ Optimizing performance and improving user experience
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/antono4)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/antono4)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/antono4)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:antonockr1@gmail.com)
+[![Website](https://img.shields.io/badge/Website-FF5722?style=for-the-badge&logo=google-chrome&logOColor=white)](https://antono4.github.io)
 
 ---
 
 ## ğŸ“Š GitHub Stats
 
-![GitHub Stats](https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg) ![GitHub Streak](https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg) ![Top Languages](https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg)
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=antono4&theme=dark&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://github.com/antono4)
+
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=antono4&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117)](https://github.com/antono4)
 
 ---
 
-## ğŸ› ï¸ Tech Arsenal
+## âš™ï¸ Technologies I Use
 
-### ğŸ’» Languages
-<p align="center">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP"/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go"/>
-</p>
-
-### âš›ï¸ Frontend
-<p align="center">
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
-  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="Vue.js"/>
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
-</p>
-
-### âš™ï¸ Backend & Database
-<p align="center">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
-  <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" alt="NestJS"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
-</p>
-
-### ğŸ³ DevOps & Cloud
-<p align="center">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions"/>
-  <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=black" alt="AWS"/>
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
-</p>
+![](https://skillicons.dev/icons?i=javascript,typescript,python,go,php,react,nextjs,vue,tailwind`css,nodejs,nestjs,express,mongodb,postgress,docker,aws,linux,git,github&theme=dark&perline=10)
 
 ---
 
-## ğŸ™ï¸ Contribution Activity
-
-![3D Contribution](https://raw.githubusercontent.com/antono4/antono4/main/assets/contrib-3d.svg)
-
-![Snake Animation](https://raw.githubusercontent.com/antono4/antono4/main/assets/snake.svg)
-
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=dracula&hide_border=true&area=true)
-
----
-
-## ğŸ’¡ Fun Facts
-
-| | |
-|:---:|:---|
-| ğŸ§ª | Former computational chemist turned software engineer |
-| â˜• | Powered by coffee and curiosity |
-| ğŸŒ™ | Night owl coder |
-| ğŸ® | Gaming enthusiast |
-| ğŸ“š | Always learning something new |
-
----
-
-## â­ Featured Projects
-
-### ğŸš€ Featured Projects ğŸš€
-
-#### ğŸ¤– AI Content Generator
-â­ Featured
-
-AI-powered content generator for social media, blogs, and marketing. Built with FastAPI, LangChain, and modern AI models.
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
-  <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI"/>
-</p>
-
-**[View Project â†’](https://github.com/antono4/ai-content-generator)**
-
----
-
-### ğŸ“‚ Other Projects
-
-| Project | Description | Tech Stack |
-|:---|:---|:---|
-| ğŸ“ˆ **MacFolio** | Portfolio trading platform with real-time analytics | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white) |
-| ğŸ’¡ **3D-Neon-Lightbulb** | Creative 3D visual effects and neon aesthetics | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) ![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=three.js&logoColor=white) |
-
----
-
-## ğŸ“« Get in Touch
-
-<p align="center">
-  <a href="mailto:antonockr1@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-  <a href="https://linkedin.com/in/antono4"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://github.com/antono4"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-</p>
-
----
-
-<p align="center">
-  <strong>â­ From Indonesia ğŸ‡®ğŸ‡© with â¤ï¸</strong>
-</p>
+## ğŸ‘‡]\İÛÛšX][ÛœÈ<'äaÂ‚ˆVÑÚ]XˆXİ]š]HÜ˜\JÎ‹ËÙÚ]X‹\™XYYKXXİ]š]KYÜ˜\™\˜Ù[˜\ÙÜ˜\İ\Ù\›˜[YOX[Û›Í	˜™×ØÛÛÜLLLMÉ˜ÛÛÜMPÑPÉ›[™OMPÑPÉœÚ[Q‘‘‘‘‘‰šYWØ›Ü™\]YJB‚‹KKB‚ˆÈÈ<'ãæ{î#ÈÑÛÛšX][ÛˆÚ]B‚ˆV×JÎ‹ËÜ˜]Ë™Ú]X\Ù\˜ÛÛ[˜ÛÛKØ[Û›ÍØ[Û›ÍÛX\İ\‹Ü›Ùš[KLÙXÛÛšX‹Ü›Ùš[K[šYÚYÜ™Y[‹œİ™ÊB‚‹KKB‚ˆÈÈ<'ä¨H[ˆ˜XİÂ‚Ÿ<'éêˆ›Ü›Y\ˆÛÛ\]][Û˜[Ú[Z\İ\›™YÛÙØ\™H[™Ú[™Y\ˆŸKH_KK_Ÿ8¦%HİÙ\™YHÛÙ™™YH[™İ\š[ÜÚ]HŸ<'ã&HšYÚİÛÛÙ\ˆŸ<'ã«ˆØ[Z[™È[\ÚX\İŸ<'äæˆ[Ø^\ÈX\›š[™ÈÛÛY][™È™]È‚‹KKB‚ˆÈÈ«d™X]\™Y›Ú™XİÂ‚ˆ<'æ ÚXÚÈİ]
+Š–ÓÜ[ˆZ[™RWJÎ‹ËÙÚ]X‹˜ÛÛKØ[Û›ÍÓÜ[‹SZ[™PRJJŠˆ8 %[ˆÜ[‹\Ûİ\˜ÙHRH\ÜÚ\İ[B‚‹KKB‚ŠŠ–b­  From Indonesia â‡®ğŸ‡š with â¤ï¸*+
