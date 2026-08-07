@@ -108,8 +108,6 @@
 
 </div>
 
-</div>
-
 ---
 
 ## 🏙️ Contribution Activity
