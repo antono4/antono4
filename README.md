@@ -35,13 +35,13 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=github_dark_dimmed&hide_border=true&show_icons=true&include_all_commits=true&count_private=true" alt="GitHub Stats" width="48%"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=antono4&theme=github-dark-dimmed&hide_border=true" alt="GitHub Streak" width="48%"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg" alt="GitHub Stats" width="45%"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg" alt="GitHub Streak" width="45%"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=github_dark_dimmed&hide_border=true&layout=compact&langs_count=8" alt="Top Languages" width="48%"/>
-  <img src="https://github-profile-trophy.vercel.app/?username=antono4&theme=matrix&no-frame=true&no-bg=true&margin-w=15" alt="Trophies" width="48%"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg" alt="Top Languages" width="45%"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/trophies.svg" alt="Trophies" width="45%"/>
 </p>
 
 ---
@@ -88,8 +88,6 @@
 ![3D Contribution](https://raw.githubusercontent.com/antono4/antono4/refs/heads/main/assets/contrib-3d.svg)
 
 ![Snake Animation](https://raw.githubusercontent.com/antono4/antono4/refs/heads/main/assets/snake.svg)
-
-[![Antono's GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=github-dark-dimmed&hide_border=true&area=true)](https://github.com/antono4/antono4)
 
 ---
 
