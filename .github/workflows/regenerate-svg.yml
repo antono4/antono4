@@ -1,4 +1,4 @@
-name: Regenerate 3D Contribution SVG Every 5 Minutes
+name: Regenerate Contribution SVG Every 5 Minutes
 
 on:
   schedule:
@@ -39,14 +39,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cat > generate-contrib.js << 'EOF'
+          cat > generate-contrib.js << 'ENDSCRIPT'
           const { GraphQLClient, gql } = require('graphql-request');
           
           const endpoint = 'https://api.github.com/graphql';
           const token = process.env.GITHUB_TOKEN;
           const client = new GraphQLClient(endpoint, {
             headers: {
-              authorization: `Bearer ${token}`,
+              authorization: 'Bearer ' + token,
             },
           });
           
@@ -65,15 +65,7 @@ jobs:
                       }
                     }
                   }
-                }
-                contributionsCollection(from: null, to: null) {
                   commitContributionsByRepository(maxRepositories: 100) {
-                    repository {
-                      name
-                      owner {
-                        login
-                      }
-                    }
                     contributions {
                       totalCount
                     }
@@ -106,218 +98,163 @@ jobs:
           `;
           
           async function generateSVG() {
-            const data = await client.request(query, { username: USERNAME });
-            const user = data.user;
-            const calendar = user.contributionsCollection.contributionCalendar;
-            
-            // Extract weekly contribution data
-            const weeks = calendar.weeks;
-            
-            // Get stats
-            const totalContributions = calendar.totalContributions;
-            const commits = user.contributionsCollection.commitContributionsByRepository
-              .reduce((sum, r) => sum + r.contributions.totalCount, 0);
-            const issues = user.contributionsCollection.issueContributions.totalCount;
-            const prs = user.contributionsCollection.pullRequestContributions.totalCount;
-            const reviews = user.contributionsCollection.pullRequestReviewContributions.totalCount;
-            const repos = user.contributionsCollection.repositoryContributions.totalCount;
-            
-            // Get languages
-            const reposWithLang = user.repositories.nodes.filter(r => r.primaryLanguage);
-            const langCounts = {};
-            reposWithLang.forEach(r => {
-              const lang = r.primaryLanguage.name;
-              if (!langCounts[lang]) langCounts[lang] = { count: 0, color: r.primaryLanguage.color };
-              langCounts[lang].count += 1;
-            });
-            const topLangs = Object.entries(langCounts)
-              .sort((a, b) => b[1].count - a[1].count)
-              .slice(0, 6);
-            
-            // Get date range
-            const firstDay = weeks[0].contributionDays[0].date;
-            const lastDay = weeks[weeks.length - 1].contributionDays[weeks[weeks.length - 1].contributionDays.length - 1].date;
-            
-            // Generate pattern data for isometric grid
-            const contributions = [];
-            weeks.forEach((week, weekIndex) => {
-              week.contributionDays.forEach((day, dayIndex) => {
-                if (day.contributionCount > 0) {
-                  contributions.push({
-                    week: weekIndex,
-                    day: dayIndex,
-                    count: day.contributionCount
-                  });
-                }
+            try {
+              const data = await client.request(query, { username: USERNAME });
+              const user = data.user;
+              const calendar = user.contributionsCollection.contributionCalendar;
+              
+              const weeks = calendar.weeks;
+              const totalContributions = calendar.totalContributions;
+              const commits = user.contributionsCollection.commitContributionsByRepository.reduce((sum, r) => sum + r.contributions.totalCount, 0);
+              const issues = user.contributionsCollection.issueContributions.totalCount;
+              const prs = user.contributionsCollection.pullRequestContributions.totalCount;
+              const reviews = user.contributionsCollection.pullRequestReviewContributions.totalCount;
+              
+              // Get languages
+              const reposWithLang = user.repositories.nodes.filter(r => r.primaryLanguage);
+              const langCounts = {};
+              reposWithLang.forEach(r => {
+                const lang = r.primaryLanguage.name;
+                if (!langCounts[lang]) langCounts[lang] = { count: 0, color: r.primaryLanguage.color };
+                langCounts[lang].count += 1;
               });
-            });
-            
-            // Generate SVG with isometric 3D blocks
-            const svg = generateIsometricSVG({
-              contributions,
-              weeks,
-              totalContributions,
-              commits,
-              issues,
-              prs,
-              reviews,
-              repos,
-              topLangs,
-              firstDay,
-              lastDay
-            });
-            
-            // Write to file
-            const fs = require('fs');
-            fs.writeFileSync('assets/contrib-3d.svg', svg);
-            console.log('SVG generated successfully!');
-            console.log(`Total contributions: ${totalContributions}`);
+              const topLangs = Object.entries(langCounts).sort((a, b) => b[1].count - a[1].count).slice(0, 6);
+              
+              const firstDay = weeks[0].contributionDays[0].date;
+              const lastDay = weeks[weeks.length - 1].contributionDays[weeks[weeks.length - 1].contributionDays.length - 1].date;
+              
+              // Generate 3D isometric SVG
+              const svg = generateIsometricSVG({
+                weeks,
+                totalContributions,
+                commits,
+                issues,
+                prs,
+                reviews,
+                topLangs,
+                firstDay,
+                lastDay
+              });
+              
+              const fs = require('fs');
+              fs.writeFileSync('assets/contrib-3d.svg', svg);
+              console.log('SVG generated successfully!');
+              console.log('Total contributions:', totalContributions);
+            } catch (err) {
+              console.error('Error generating SVG:', err.message);
+              process.exit(1);
+            }
           }
           
-          function generateIsometricSVG({ contributions, weeks, totalContributions, commits, issues, prs, reviews, repos, topLangs, firstDay, lastDay }) {
+          function generateIsometricSVG({ weeks, totalContributions, commits, issues, prs, reviews, topLangs, firstDay, lastDay }) {
+            // Dracula theme colors
+            const colors = {
+              bg: '#282a36',
+              text: '#f8f8f2',
+              textMuted: '#6272a4',
+            };
+            
             const width = 1280;
             const height = 850;
-            const blockSize = 32;
-            const blockHeight = 4.62;
             
             // Calculate max contribution for scaling
-            const maxContrib = Math.max(...contributions.map(c => c.count), 1);
+            const dayContribs = [];
+            weeks.forEach((week) => {
+              week.contributionDays.forEach((day) => {
+                dayContribs.push(day.contributionCount);
+              });
+            });
+            const maxDaily = Math.max(...dayContribs, 1);
             
-            // Generate patterns for each contribution level
+            // Generate patterns for contribution levels
             let patterns = '';
             const levels = [
-              { bg: '#f8f8f8', fg: '#aaaaaa', name: '0' },
-              { bg: '#9be9a8', fg: '#40c463', name: '1' },
-              { bg: '#40c463', fg: '#30a14e', name: '2' },
-              { bg: '#216e39', fg: '#26a641', name: '3' },
-              { bg: '#40a02b', fg: '#2ea043', name: '4' }
+              { name: '0', top: '#f8f8f8', left: 'rgb(174, 174, 174)', right: 'rgb(207, 207, 207)' },
+              { name: '1', top: '#9be9a8', left: 'rgb(64, 194, 99)', right: 'rgb(104, 214, 143)' },
+              { name: '2', top: '#40c463', left: 'rgb(48, 161, 78)', right: 'rgb(85, 187, 120)' },
+              { name: '3', top: '#216e39', left: 'rgb(33, 110, 57)', right: 'rgb(65, 138, 94)' },
+              { name: '4', top: '#40a02b', left: 'rgb(46, 160, 67)', right: 'rgb(78, 176, 99)' }
             ];
             
-            levels.forEach((level, i) => {
-              patterns += `
-            <pattern id="pattern_${level.name}_top" x="0" y="0" width="32" height="16" patternUnits="userSpaceOnUse">
-              <rect x="0" y="0" width="32" height="16" class="cont-top-bg-${level.name}"></rect>
-            </pattern>
-            <pattern id="pattern_${level.name}_left" x="0" y="0" width="32" height="16" patternUnits="userSpaceOnUse">
-              <rect x="0" y="0" width="32" height="16" class="cont-left-bg-${level.name}"></rect>
-            </pattern>
-            <pattern id="pattern_${level.name}_right" x="0" y="0" width="32" height="16" patternUnits="userSpaceOnUse">
-              <rect x="0" y="0" width="32" height="16" class="cont-right-bg-${level.name}"></rect>
-            </pattern>`;
+            levels.forEach((level) => {
+              patterns += '<pattern id="pattern_' + level.name + '_top" x="0" y="0" width="32" height="16" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="32" height="16" fill="' + level.top + '"/></pattern>';
+              patterns += '<pattern id="pattern_' + level.name + '_left" x="0" y="0" width="32" height="16" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="32" height="16" fill="' + level.left + '"/></pattern>';
+              patterns += '<pattern id="pattern_' + level.name + '_right" x="0" y="0" width="32" height="16" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="32" height="16" fill="' + level.right + '"/></pattern>';
             });
             
             // Generate isometric blocks
             let blocks = '';
-            const maxRows = 7; // Days per week
             const startX = 140;
-            const startY = 154.18;
+            const startY = 154;
             const xStep = 20;
-            const yStep = 11.62;
+            const yStep = 12;
             
             weeks.forEach((week, weekIndex) => {
               week.contributionDays.forEach((day, dayIndex) => {
-                const x = startX + (maxRows - 1 - dayIndex) * xStep + weekIndex * xStep;
+                const x = startX + (6 - dayIndex) * xStep + weekIndex * xStep;
                 const y = startY + weekIndex * yStep;
-                const contribLevel = day.contributionCount === 0 ? 0 : 
-                  day.contributionCount <= 1 ? 1 :
-                  day.contributionCount <= 3 ? 2 :
-                  day.contributionCount <= 6 ? 3 : 4;
                 
-                const blockHeight = 4.62 + (contribLevel * 80);
+                let contribLevel = 0;
+                if (day.contributionCount > 0) {
+                  const ratio = day.contributionCount / maxDaily;
+                  if (ratio > 0.75) contribLevel = 4;
+                  else if (ratio > 0.5) contribLevel = 3;
+                  else if (ratio > 0.25) contribLevel = 2;
+                  else contribLevel = 1;
+                }
                 
-                blocks += `
-            <g transform="translate(${x} ${y})">
-              <rect stroke="none" x="0" y="0" width="32" height="32" transform="skewY(-30) skewX(40.89) scale(0.56 0.65)" fill="url(#pattern_${contribLevel}_top)"></rect>
-              <rect stroke="none" x="0" y="0" width="32" height="${blockHeight}" transform="skewY(30) scale(0.56 0.65)" fill="url(#pattern_${contribLevel}_left)"></rect>
-              <rect stroke="none" x="0" y="0" width="32" height="${blockHeight}" transform="translate(18 10.39) skewY(-30) scale(0.56 0.65)" fill="url(#pattern_${contribLevel}_right)"></rect>
-            </g>`;
+                const blockHeight = 4.62 + contribLevel * 60;
+                
+                blocks += '<g transform="translate(' + x + ' ' + y + ')">';
+                blocks += '<rect x="0" y="0" width="32" height="32" transform="skewY(-30) skewX(40.89) scale(0.56 0.65)" fill="url(#pattern_' + contribLevel + '_top)"/>';
+                blocks += '<rect x="0" y="0" width="32" height="' + blockHeight + '" transform="skewY(30) scale(0.56 0.65)" fill="url(#pattern_' + contribLevel + '_left)"/>';
+                blocks += '<rect x="0" y="0" width="32" height="' + blockHeight + '" transform="translate(18 10.39) skewY(-30) scale(0.56 0.65)" fill="url(#pattern_' + contribLevel + '_right)"/>';
+                blocks += '</g>';
               });
             });
             
-            // Language chart colors
-            const langColors = {
-              'HTML': '#e34c26',
-              'TypeScript': '#3178c6',
-              'JavaScript': '#f1e05a',
-              'Python': '#3572A5',
-              'PHP': '#4F5D95',
-              'other': '#444444'
-            };
-            
-            // Generate language bars
+            // Language bars
             let langBars = '';
-            let piePaths = '';
-            const langColors2 = ['#e34c26', '#3178c6', '#f1e05a', '#3572A5', '#4F5D95', '#444444'];
-            
+            const langColors = ['#e34c26', '#3178c6', '#f1e05a', '#3572A5', '#4F5D95', '#444444'];
             topLangs.forEach((lang, i) => {
-              const [name, data] = lang;
-              const barHeight = (i + 1) * 32;
-              langBars += `
-              <rect x="0" y="${37.9 + i * 32.5}" width="21.67" height="21.67" fill="${data.color || langColors2[i % langColors2.length]}" class="stroke-bg" stroke-width="1px"></rect>
-              <text dominant-baseline="middle" x="26" y="${48.75 + i * 32.5}" class="fill-fg" font-size="21.67px">${name}</text>`;
+              const name = lang[0];
+              const data = lang[1];
+              langBars += '<rect x="0" y="' + (37 + i * 33) + '" width="22" height="22" fill="' + (data.color || langColors[i]) + '"/>';
+              langBars += '<text x="28" y="' + (48 + i * 33) + '" fill="' + colors.text + '" font-size="18">' + name + '</text>';
             });
             
-            // Stats for display
             const displayTotal = totalContributions.toLocaleString();
             
-            return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
-          <style>
-            * { font-family: "Ubuntu", "Helvetica", "Arial", sans-serif; }
-            .fill-fg { fill: #00000f; }
-            .stroke-fg { stroke: #00000f; }
-            .fill-bg { fill: #ffffff; }
-            .stroke-bg { stroke: #ffffff; }
-            .fill-strong { fill: #111133; }
-            .fill-weak { fill: gray; }
-            .stroke-weak { stroke: gray; }
-            .cont-top-bg-0 { fill: #f8f8f8; }
-            .cont-top-bg-1 { fill: #9be9a8; }
-            .cont-top-bg-2 { fill: #40c463; }
-            .cont-top-bg-3 { fill: #216e39; }
-            .cont-top-bg-4 { fill: #40a02b; }
-            .cont-left-bg-0 { fill: rgb(174, 174, 174); }
-            .cont-left-bg-1 { fill: rgb(64, 194, 99); }
-            .cont-left-bg-2 { fill: rgb(48, 161, 78); }
-            .cont-left-bg-3 { fill: rgb(33, 110, 57); }
-            .cont-left-bg-4 { fill: rgb(46, 160, 67); }
-            .cont-right-bg-0 { fill: rgb(207, 207, 207); }
-            .cont-right-bg-1 { fill: rgb(104, 214, 143); }
-            .cont-right-bg-2 { fill: rgb(85, 187, 120); }
-            .cont-right-bg-3 { fill: rgb(65, 138, 94); }
-            .cont-right-bg-4 { fill: rgb(78, 176, 99); }
-          </style>
-          <defs>
-            ${patterns}
-          </defs>
-          <rect x="0" y="0" width="${width}" height="${height}" class="fill-bg"></rect>
-          ${blocks}
-          <g>
-            <text style="font-size: 32px; font-weight: bold;" x="384" y="830" text-anchor="end" class="fill-strong">${displayTotal}</text>
-            <text style="font-size: 24px;" x="394" y="830" text-anchor="start" class="fill-fg">contributions</text>
-            <text style="font-size: 32px; font-weight: bold;" x="650" y="830" text-anchor="start" class="fill-fg">${issues}</text>
-            <text style="font-size: 32px; font-weight: bold;" x="772" y="830" text-anchor="start" class="fill-fg">${reviews}</text>
-            <text style="font-size: 16px;" x="1260" y="20" dominant-baseline="hanging" text-anchor="end" class="fill-weak">${firstDay} / ${lastDay}</text>
-          </g>
-          <g transform="translate(40, 520)">
-            <g transform="translate(273, 0)">
-              ${langBars}
-            </g>
-          </g>
-          </svg>`;
+            return '<svg xmlns="http://www.w3.org/2000/svg" width="' + width + '" height="' + height + '" viewBox="0 0 ' + width + ' ' + height + '">' +
+              '<style>* { font-family: "Segoe UI", "Ubuntu", sans-serif; }</style>' +
+              '<defs>' + patterns + '</defs>' +
+              '<rect x="0" y="0" width="' + width + '" height="' + height + '" fill="' + colors.bg + '"/>' +
+              blocks +
+              '<text x="60" y="30" fill="' + colors.text + '" font-size="20" font-weight="bold">' + USERNAME + "'s GitHub Activity</text>" +
+              '<text x="400" y="830" fill="' + colors.text + '" font-size="28" font-weight="bold" text-anchor="end">' + displayTotal + '</text>' +
+              '<text x="410" y="830" fill="' + colors.textMuted + '" font-size="18">contributions</text>' +
+              '<text x="1240" y="20" fill="' + colors.textMuted + '" font-size="14" text-anchor="end">' + firstDay + ' / ' + lastDay + '</text>' +
+              '<g transform="translate(40, 520)"><g transform="translate(250, 0)">' + langBars + '</g></g>' +
+              '</svg>';
           }
           
-          generateSVG().catch(console.error);
-          EOF
+          generateSVG();
+          ENDSCRIPT
           
           node generate-contrib.js
+          
+          echo "--- Generated SVG ---"
+          head -3 assets/contrib-3d.svg
+          echo "..."
+          echo "File size: $(wc -c < assets/contrib-3d.svg) bytes"
 
       - name: Commit and push
         run: |
-          git add assets/contrib-3d.svg
+          git add assets/contrib-3d.svg .github/workflows/regenerate-svg.yml
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: regenerate contrib-3d.svg with latest data [skip ci]"
+            git commit -m "fix: regenerate contrib-3d.svg with correct GraphQL query [skip ci]"
             git push
             echo "SVG updated successfully!"
           fi
