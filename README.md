@@ -90,9 +90,9 @@
 
 ## 🏙️ Contribution Activity
 
-![3D Contribution](https://raw.githubusercontent.com/antono4/antono4/refs/heads/main/assets/contrib-3d.svg)
+![3D Contribution](https://raw.githubusercontent.com/antono4/antono4/main/assets/contrib-3d.svg)
 
-![Snake Animation](https://raw.githubusercontent.com/antono4/antono4/refs/heads/main/assets/snake.svg)
+![Snake Animation](https://raw.githubusercontent.com/antono4/antono4/main/assets/snake.svg)
 
 ![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=dracula&hide_border=true&area=true)
 
