@@ -1,4 +1,4 @@
-name: Regenerate 3D Contribution SVG Every 5 Minutes
+name: Regenerate Contribution SVG Every 5 Minutes
 
 on:
   schedule:
@@ -39,7 +39,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cat > generate-contrib.js << 'EOF'
+          cat > generate-contrib.js << 'EOFJS'
           const { GraphQLClient, gql } = require('graphql-request');
           
           const endpoint = 'https://api.github.com/graphql';
@@ -66,41 +66,6 @@ jobs:
                     }
                   }
                 }
-                contributionsCollection(from: null, to: null) {
-                  commitContributionsByRepository(maxRepositories: 100) {
-                    repository {
-                      name
-                      owner {
-                        login
-                      }
-                    }
-                    contributions {
-                      totalCount
-                    }
-                  }
-                  issueContributions(first: 100) {
-                    totalCount
-                  }
-                  pullRequestContributions(first: 100) {
-                    totalCount
-                  }
-                  pullRequestReviewContributions(first: 100) {
-                    totalCount
-                  }
-                  repositoryContributions(first: 100) {
-                    totalCount
-                  }
-                }
-                repositories(first: 100, orderBy: {field: STARGAZERS, direction: DESC}) {
-                  nodes {
-                    name
-                    stargazerCount
-                    primaryLanguage {
-                      name
-                      color
-                    }
-                  }
-                }
               }
             }
           `;
@@ -110,204 +75,153 @@ jobs:
             const user = data.user;
             const calendar = user.contributionsCollection.contributionCalendar;
             
-            // Extract weekly contribution data
             const weeks = calendar.weeks;
-            
-            // Get stats
             const totalContributions = calendar.totalContributions;
-            const commits = user.contributionsCollection.commitContributionsByRepository
-              .reduce((sum, r) => sum + r.contributions.totalCount, 0);
-            const issues = user.contributionsCollection.issueContributions.totalCount;
-            const prs = user.contributionsCollection.pullRequestContributions.totalCount;
-            const reviews = user.contributionsCollection.pullRequestReviewContributions.totalCount;
-            const repos = user.contributionsCollection.repositoryContributions.totalCount;
-            
-            // Get languages
-            const reposWithLang = user.repositories.nodes.filter(r => r.primaryLanguage);
-            const langCounts = {};
-            reposWithLang.forEach(r => {
-              const lang = r.primaryLanguage.name;
-              if (!langCounts[lang]) langCounts[lang] = { count: 0, color: r.primaryLanguage.color };
-              langCounts[lang].count += 1;
-            });
-            const topLangs = Object.entries(langCounts)
-              .sort((a, b) => b[1].count - a[1].count)
-              .slice(0, 6);
-            
-            // Get date range
             const firstDay = weeks[0].contributionDays[0].date;
             const lastDay = weeks[weeks.length - 1].contributionDays[weeks[weeks.length - 1].contributionDays.length - 1].date;
             
-            // Generate pattern data for isometric grid
-            const contributions = [];
-            weeks.forEach((week, weekIndex) => {
-              week.contributionDays.forEach((day, dayIndex) => {
-                if (day.contributionCount > 0) {
-                  contributions.push({
-                    week: weekIndex,
-                    day: dayIndex,
-                    count: day.contributionCount
-                  });
-                }
-              });
-            });
-            
-            // Generate SVG with isometric 3D blocks
-            const svg = generateIsometricSVG({
-              contributions,
+            // Generate activity graph SVG (GitHub Activity Graph style)
+            const svg = generateActivityGraphSVG({
               weeks,
               totalContributions,
-              commits,
-              issues,
-              prs,
-              reviews,
-              repos,
-              topLangs,
               firstDay,
               lastDay
             });
             
-            // Write to file
             const fs = require('fs');
             fs.writeFileSync('assets/contrib-3d.svg', svg);
             console.log('SVG generated successfully!');
             console.log(`Total contributions: ${totalContributions}`);
           }
           
-          function generateIsometricSVG({ contributions, weeks, totalContributions, commits, issues, prs, reviews, repos, topLangs, firstDay, lastDay }) {
+          function generateActivityGraphSVG({ weeks, totalContributions, firstDay, lastDay }) {
+            // Dracula theme colors
+            const colors = {
+              bg: '#282a36',
+              text: '#f8f8f2',
+              textMuted: '#6272a4',
+              line: '#44475a',
+              area: '#50fa7b',
+              dot: '#8be9fd'
+            };
+            
             const width = 1280;
-            const height = 850;
-            const blockSize = 32;
-            const blockHeight = 4.62;
+            const height = 300;
+            const padding = { top: 40, right: 40, bottom: 60, left: 60 };
+            const graphWidth = width - padding.left - padding.right;
+            const graphHeight = height - padding.top - padding.bottom;
             
-            // Calculate max contribution for scaling
-            const maxContrib = Math.max(...contributions.map(c => c.count), 1);
+            // Extract daily contributions
+            const dailyData = [];
+            let maxContrib = 0;
+            let totalDaily = 0;
             
-            // Generate patterns for each contribution level
-            let patterns = '';
-            const levels = [
-              { bg: '#f8f8f8', fg: '#aaaaaa', name: '0' },
-              { bg: '#9be9a8', fg: '#40c463', name: '1' },
-              { bg: '#40c463', fg: '#30a14e', name: '2' },
-              { bg: '#216e39', fg: '#26a641', name: '3' },
-              { bg: '#40a02b', fg: '#2ea043', name: '4' }
-            ];
-            
-            levels.forEach((level, i) => {
-              patterns += `
-            <pattern id="pattern_${level.name}_top" x="0" y="0" width="32" height="16" patternUnits="userSpaceOnUse">
-              <rect x="0" y="0" width="32" height="16" class="cont-top-bg-${level.name}"></rect>
-            </pattern>
-            <pattern id="pattern_${level.name}_left" x="0" y="0" width="32" height="16" patternUnits="userSpaceOnUse">
-              <rect x="0" y="0" width="32" height="16" class="cont-left-bg-${level.name}"></rect>
-            </pattern>
-            <pattern id="pattern_${level.name}_right" x="0" y="0" width="32" height="16" patternUnits="userSpaceOnUse">
-              <rect x="0" y="0" width="32" height="16" class="cont-right-bg-${level.name}"></rect>
-            </pattern>`;
-            });
-            
-            // Generate isometric blocks
-            let blocks = '';
-            const maxRows = 7; // Days per week
-            const startX = 140;
-            const startY = 154.18;
-            const xStep = 20;
-            const yStep = 11.62;
-            
-            weeks.forEach((week, weekIndex) => {
-              week.contributionDays.forEach((day, dayIndex) => {
-                const x = startX + (maxRows - 1 - dayIndex) * xStep + weekIndex * xStep;
-                const y = startY + weekIndex * yStep;
-                const contribLevel = day.contributionCount === 0 ? 0 : 
-                  day.contributionCount <= 1 ? 1 :
-                  day.contributionCount <= 3 ? 2 :
-                  day.contributionCount <= 6 ? 3 : 4;
-                
-                const blockHeight = 4.62 + (contribLevel * 80);
-                
-                blocks += `
-            <g transform="translate(${x} ${y})">
-              <rect stroke="none" x="0" y="0" width="32" height="32" transform="skewY(-30) skewX(40.89) scale(0.56 0.65)" fill="url(#pattern_${contribLevel}_top)"></rect>
-              <rect stroke="none" x="0" y="0" width="32" height="${blockHeight}" transform="skewY(30) scale(0.56 0.65)" fill="url(#pattern_${contribLevel}_left)"></rect>
-              <rect stroke="none" x="0" y="0" width="32" height="${blockHeight}" transform="translate(18 10.39) skewY(-30) scale(0.56 0.65)" fill="url(#pattern_${contribLevel}_right)"></rect>
-            </g>`;
+            weeks.forEach((week) => {
+              week.contributionDays.forEach((day) => {
+                if (day.contributionCount > 0) {
+                  dailyData.push({
+                    count: day.contributionCount,
+                    date: day.date
+                  });
+                  maxContrib = Math.max(maxContrib, day.contributionCount);
+                  totalDaily += day.contributionCount;
+                }
               });
             });
             
-            // Language chart colors
-            const langColors = {
-              'HTML': '#e34c26',
-              'TypeScript': '#3178c6',
-              'JavaScript': '#f1e05a',
-              'Python': '#3572A5',
-              'PHP': '#4F5D95',
-              'other': '#444444'
-            };
+            if (maxContrib === 0) maxContrib = 1;
             
-            // Generate language bars
-            let langBars = '';
-            let piePaths = '';
-            const langColors2 = ['#e34c26', '#3178c6', '#f1e05a', '#3572A5', '#4F5D95', '#444444'];
+            // Generate area path
+            let areaPath = `M ${padding.left} ${height - padding.bottom}`;
+            let linePath = '';
             
-            topLangs.forEach((lang, i) => {
-              const [name, data] = lang;
-              const barHeight = (i + 1) * 32;
-              langBars += `
-              <rect x="0" y="${37.9 + i * 32.5}" width="21.67" height="21.67" fill="${data.color || langColors2[i % langColors2.length]}" class="stroke-bg" stroke-width="1px"></rect>
-              <text dominant-baseline="middle" x="26" y="${48.75 + i * 32.5}" class="fill-fg" font-size="21.67px">${name}</text>`;
+            dailyData.forEach((day, i) => {
+              const x = padding.left + (i / (dailyData.length - 1 || 1)) * graphWidth;
+              const y = height - padding.bottom - (day.count / maxContrib) * graphHeight;
+              
+              if (i === 0) {
+                areaPath += ` L ${x} ${y}`;
+                linePath = `M ${x} ${y}`;
+              } else {
+                areaPath += ` L ${x} ${y}`;
+                linePath += ` L ${x} ${y}`;
+              }
             });
             
-            // Stats for display
+            // Close area path
+            if (dailyData.length > 0) {
+              const lastX = padding.left + graphWidth;
+              areaPath += ` L ${lastX} ${height - padding.bottom} Z`;
+            }
+            
+            // Generate month labels
+            const months = [];
+            let currentMonth = '';
+            weeks.forEach((week, weekIndex) => {
+              const firstDayOfWeek = week.contributionDays[0];
+              if (firstDayOfWeek && firstDayOfWeek.date) {
+                const month = firstDayOfWeek.date.substring(0, 7);
+                if (month !== currentMonth) {
+                  currentMonth = month;
+                  const x = padding.left + (weekIndex / weeks.length) * graphWidth;
+                  months.push({ month: month.substring(5), x });
+                }
+              }
+            });
+            
+            // Stats
             const displayTotal = totalContributions.toLocaleString();
             
             return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
           <style>
-            * { font-family: "Ubuntu", "Helvetica", "Arial", sans-serif; }
-            .fill-fg { fill: #00000f; }
-            .stroke-fg { stroke: #00000f; }
-            .fill-bg { fill: #ffffff; }
-            .stroke-bg { stroke: #ffffff; }
-            .fill-strong { fill: #111133; }
-            .fill-weak { fill: gray; }
-            .stroke-weak { stroke: gray; }
-            .cont-top-bg-0 { fill: #f8f8f8; }
-            .cont-top-bg-1 { fill: #9be9a8; }
-            .cont-top-bg-2 { fill: #40c463; }
-            .cont-top-bg-3 { fill: #216e39; }
-            .cont-top-bg-4 { fill: #40a02b; }
-            .cont-left-bg-0 { fill: rgb(174, 174, 174); }
-            .cont-left-bg-1 { fill: rgb(64, 194, 99); }
-            .cont-left-bg-2 { fill: rgb(48, 161, 78); }
-            .cont-left-bg-3 { fill: rgb(33, 110, 57); }
-            .cont-left-bg-4 { fill: rgb(46, 160, 67); }
-            .cont-right-bg-0 { fill: rgb(207, 207, 207); }
-            .cont-right-bg-1 { fill: rgb(104, 214, 143); }
-            .cont-right-bg-2 { fill: rgb(85, 187, 120); }
-            .cont-right-bg-3 { fill: rgb(65, 138, 94); }
-            .cont-right-bg-4 { fill: rgb(78, 176, 99); }
+            * { font-family: 'Segoe UI', 'Ubuntu', sans-serif; }
           </style>
           <defs>
-            ${patterns}
+            <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="${colors.area}" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="${colors.area}" stop-opacity="0"/>
+            </linearGradient>
           </defs>
-          <rect x="0" y="0" width="${width}" height="${height}" class="fill-bg"></rect>
-          ${blocks}
-          <g>
-            <text style="font-size: 32px; font-weight: bold;" x="384" y="830" text-anchor="end" class="fill-strong">${displayTotal}</text>
-            <text style="font-size: 24px;" x="394" y="830" text-anchor="start" class="fill-fg">contributions</text>
-            <text style="font-size: 32px; font-weight: bold;" x="650" y="830" text-anchor="start" class="fill-fg">${issues}</text>
-            <text style="font-size: 32px; font-weight: bold;" x="772" y="830" text-anchor="start" class="fill-fg">${reviews}</text>
-            <text style="font-size: 16px;" x="1260" y="20" dominant-baseline="hanging" text-anchor="end" class="fill-weak">${firstDay} / ${lastDay}</text>
-          </g>
-          <g transform="translate(40, 520)">
-            <g transform="translate(273, 0)">
-              ${langBars}
-            </g>
-          </g>
+          
+          <!-- Background -->
+          <rect x="0" y="0" width="${width}" height="${height}" fill="${colors.bg}" rx="8"/>
+          
+          <!-- Title -->
+          <text x="${padding.left}" y="30" fill="${colors.text}" font-size="18" font-weight="bold">${USERNAME}'s GitHub Activity</text>
+          <text x="${width - padding.right}" y="30" fill="${colors.textMuted}" font-size="14" text-anchor="end">${displayTotal} contributions in the last year</text>
+          
+          <!-- Grid lines -->
+          <line x1="${padding.left}" y1="${padding.top}" x2="${padding.left}" y2="${height - padding.bottom}" stroke="${colors.line}" stroke-width="1"/>
+          <line x1="${padding.left}" y1="${height - padding.bottom}" x2="${width - padding.right}" y2="${height - padding.bottom}" stroke="${colors.line}" stroke-width="1"/>
+          
+          <!-- Y-axis labels -->
+          <text x="${padding.left - 10}" y="${padding.top}" fill="${colors.textMuted}" font-size="12" text-anchor="end" dominant-baseline="middle">${maxContrib}</text>
+          <text x="${padding.left - 10}" y="${height - padding.bottom}" fill="${colors.textMuted}" font-size="12" text-anchor="end" dominant-baseline="middle">0</text>
+          
+          <!-- Area fill -->
+          ${dailyData.length > 0 ? `<path d="${areaPath}" fill="url(#areaGradient)"/>` : ''}
+          
+          <!-- Line -->
+          ${dailyData.length > 0 ? `<path d="${linePath}" fill="none" stroke="${colors.area}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>` : ''}
+          
+          <!-- Month labels -->
+          ${months.map(m => `<text x="${m.x}" y="${height - padding.bottom + 20}" fill="${colors.textMuted}" font-size="12" text-anchor="middle">${m.month}</text>`).join('')}
+          
+          <!-- Date range -->
+          <text x="${width - padding.right}" y="${height - 15}" fill="${colors.textMuted}" font-size="11" text-anchor="end">${firstDay} / ${lastDay}</text>
+          
+          <!-- Legend dots on the line -->
+          ${dailyData.length > 0 ? dailyData.filter((_, i) => i % Math.max(1, Math.floor(dailyData.length / 20)) === 0 || i === dailyData.length - 1).map((day, i, arr) => {
+            const idx = dailyData.indexOf(day);
+            const x = padding.left + (idx / (dailyData.length - 1 || 1)) * graphWidth;
+            const y = height - padding.bottom - (day.count / maxContrib) * graphHeight;
+            return `<circle cx="${x}" cy="${y}" r="4" fill="${colors.dot}"/>`;
+          }).join('') : ''}
           </svg>`;
           }
           
           generateSVG().catch(console.error);
-          EOF
+          EOFJS
           
           node generate-contrib.js
 
