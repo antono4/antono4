@@ -25,15 +25,24 @@
 
 ## 🚀 About Me
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=github_dark_dimmed&hide_border=true&show_icons=true&include_all_commits=true&count_private=true" alt="GitHub Stats" width="45%" style="display:inline-block;vertical-align:middle;"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=antono4&theme=github-dark-dimmed&hide_border=true" alt="GitHub Streak" width="45%" style="display:inline-block;vertical-align:middle;"/>
-</p>
-
 | 🧪 | **Fullstack Developer** & **Computational Chemist** from **Indonesia** 🇮🇩 |
 |:---:|:---|
 | 💻 | I transform complex problems into elegant solutions through code. |
 | 🎯 | Building innovative products with modern tech stack |
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=antono4&theme=github_dark_dimmed&hide_border=true&show_icons=true&include_all_commits=true&count_private=true" alt="GitHub Stats" width="48%"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=antono4&theme=github-dark-dimmed&hide_border=true" alt="GitHub Streak" width="48%"/>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=github_dark_dimmed&hide_border=true&layout=compact&langs_count=8" alt="Top Languages" width="48%"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=antono4&theme=matrix&no-frame=true&no-bg=true&margin-w=15" alt="Trophies" width="48%"/>
+</p>
 
 ---
 
@@ -70,15 +79,6 @@
   <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions"/>
   <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=black" alt="AWS"/>
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
-</p>
-
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=antono4&theme=github_dark_dimmed&hide_border=true&layout=compact&langs_count=8" alt="Top Languages" width="48%"/>
-  <img src="https://github-profile-trophy.vercel.app/?username=antono4&theme=matrix&no-frame=true&no-bg=true&margin-w=15" alt="Trophies" width="48%"/>
 </p>
 
 ---
@@ -145,8 +145,4 @@ AI-powered content generator for social media, blogs, and marketing. Built with 
 
 <p align="center">
   <strong>⭐ From Indonesia 🇮🇩 with ❤️</strong>
-</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=transparent&color=gradient&customColorList=6,11,20&height=50&section=footer&text=Let's%20build%20something%20amazing%20together!" alt="Footer"/>
 </p>
