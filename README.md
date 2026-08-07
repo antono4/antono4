@@ -34,15 +34,10 @@
 
 ## 📊 GitHub Stats
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg" alt="GitHub Stats" width="45%"/>
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg" alt="GitHub Streak" width="45%"/>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg" alt="Top Languages" width="45%"/>
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/trophies.svg" alt="Trophies" width="45%"/>
-</p>
+![GitHub Stats](https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg)
+![GitHub Streak](https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg)
+![Top Languages](https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg)
+![GitHub Trophies](https://raw.githubusercontent.com/antono4/antono4/main/assets/trophies.svg)
 
 ---
 
