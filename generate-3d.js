@@ -93,16 +93,17 @@ function generateCity3D({ weeks, totalContributions, firstDay, lastDay }) {
                     level === 2 ? colors.building2 :
                     level === 3 ? colors.building3 : colors.building4;
 
-      blocks += '<g transform="translate(' + x + ',' + y + ')">';
-      blocks += '<polygon points="0,' + (-bh) + ' ' + (blockWidth/2) + ',' + (-bh-6) + ' ' + blockWidth + ',' + (-bh) + ' ' + (blockWidth/2) + ',' + (-bh+6) + '" fill="' + color + '" opacity="0.9"/>';
-      blocks += '<polygon points="0,' + (-bh) + ' 0,0 ' + (blockWidth/2) + ',' + (blockDepth/2) + ' ' + (blockWidth/2) + ',' + (-bh+6) + '" fill="' + adjustColor(color, -30) + '"/>';
-      blocks += '<polygon points="' + blockWidth + ',' + (-bh) + ' ' + blockWidth + ',0 ' + (blockWidth/2) + ',' + (blockDepth/2) + ' ' + (blockWidth/2) + ',' + (-bh+6) + '" fill="' + adjustColor(color, -15) + '"/>';
-      
+      // Minified SVG attributes - no quotes for numbers, compact format
+      blocks += `<g transform="translate(${x},${y})">`;
+      blocks += `<polygon points="0,${-bh} ${blockWidth/2},${-bh-6} ${blockWidth},${-bh} ${blockWidth/2},${-bh+6}" fill="${color}" opacity="0.9"/>`;
+      blocks += `<polygon points="0,${-bh} 0,0 ${blockWidth/2},${blockDepth/2} ${blockWidth/2},${-bh+6}" fill="${adjustColor(color, -30)}"/>`;
+      blocks += `<polygon points="${blockWidth},${-bh} ${blockWidth},0 ${blockWidth/2},${blockDepth/2} ${blockWidth/2},${-bh+6}" fill="${adjustColor(color, -15)}"/>`;
+
       if (level >= 2) {
         for (let w = 0; w < 2; w++) {
           for (let h = 0; h < level; h++) {
             const wy = -bh + 10 + h * 15;
-            blocks += '<rect x="' + (2 + w * 5) + '" y="' + wy + '" width="3" height="5" fill="' + colors.window + '" rx="1"/>';
+            blocks += `<rect x="${2 + w * 5}" y="${wy}" width="3" height="5" fill="${colors.window}" rx="1"/>`;
           }
         }
       }
@@ -116,37 +117,13 @@ function generateCity3D({ weeks, totalContributions, firstDay, lastDay }) {
     const sy = Math.floor(Math.random() * (height - 200));
     const size = Math.random() * 2 + 0.5;
     const opacity = Math.random() * 0.5 + 0.3;
-    stars += '<circle cx="' + sx + '" cy="' + sy + '" r="' + size + '" fill="#ffffff" opacity="' + opacity + '"/>';
+    stars += `<circle cx="${sx}" cy="${sy}" r="${size}" fill="#fff" opacity="${opacity}"/>`;
   }
 
   const displayTotal = totalContributions.toLocaleString();
 
-  return '<svg xmlns="http://www.w3.org/2000/svg" width="' + width + '" height="' + height + '" viewBox="0 0 ' + width + ' ' + height + '">' +
-'<defs>' +
-'<linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#0a0a1a"/><stop offset="100%" stop-color="#1a1a3a"/></linearGradient>' +
-'<linearGradient id="groundGradient" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#1a1a2e"/><stop offset="100%" stop-color="#0d0d1a"/></linearGradient>' +
-'<filter id="glow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
-'<filter id="shadow"><feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/></filter>' +
-'</defs>' +
-'<rect width="' + width + '" height="' + height + '" fill="url(#skyGradient)"/>' +
-stars +
-'<circle cx="1100" cy="100" r="40" fill="#f5f5dc" opacity="0.9"/>' +
-'<circle cx="1115" cy="90" r="8" fill="#e0e0c0" opacity="0.5"/>' +
-'<circle cx="1095" cy="105" r="5" fill="#e0e0c0" opacity="0.4"/>' +
-'<g filter="url(#shadow)">' + blocks + '</g>' +
-'<rect x="0" y="' + (height - 100) + '" width="' + width + '" height="100" fill="url(#groundGradient)"/>' +
-'<rect x="0" y="' + (height - 100) + '" width="' + width + '" height="2" fill="#333355"/>' +
-'<text x="50" y="50" fill="' + colors.text + '" font-family="Segoe UI, Arial" font-size="28" font-weight="bold">' + USERNAME + "'s Contribution City</text>" +
-'<text x="50" y="80" fill="' + colors.textMuted + '" font-family="Segoe UI, Arial" font-size="16">' + firstDay + ' → ' + lastDay + '</text>' +
-'<g transform="translate(50, ' + (height - 60) + ')"><rect x="0" y="0" width="200" height="50" rx="8" fill="#ffffff10"/>' +
-'<text x="100" y="25" fill="' + colors.text + '" font-family="Segoe UI, Arial" font-size="24" font-weight="bold" text-anchor="middle" filter="url(#glow)">' + displayTotal + '</text>' +
-'<text x="100" y="42" fill="' + colors.textMuted + '" font-family="Segoe UI, Arial" font-size="12" text-anchor="middle">contributions</text></g>' +
-'<g transform="translate(' + (width - 200) + ', ' + (height - 60) + ')"><rect x="0" y="0" width="180" height="50" rx="8" fill="#ffffff10"/>' +
-'<rect x="10" y="15" width="15" height="15" fill="' + colors.building0 + '"/><text x="30" y="27" fill="' + colors.textMuted + '" font-size="10">None</text>' +
-'<rect x="60" y="15" width="15" height="15" fill="' + colors.building1 + '"/><text x="80" y="27" fill="' + colors.textMuted + '" font-size="10">Low</text>' +
-'<rect x="110" y="15" width="15" height="15" fill="' + colors.building2 + '"/><text x="130" y="27" fill="' + colors.textMuted + '" font-size="10">Med</text>' +
-'<rect x="155" y="15" width="15" height="15" fill="' + colors.building4 + '"/><text x="175" y="27" fill="' + colors.textMuted + '" font-size="10">High</text></g>' +
-'</svg>';
+  // Minified SVG output - following ImgBot optimization patterns
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><defs><linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#0a0a1a"/><stop offset="100%" stop-color="#1a1a3a"/></linearGradient><linearGradient id="groundGradient" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#1a1a2e"/><stop offset="100%" stop-color="#0d0d1a"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="shadow"><feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/></filter></defs><rect width="${width}" height="${height}" fill="url(#skyGradient)"/>${stars}<circle cx="1100" cy="100" r="40" fill="#f5f5dc" opacity="0.9"/><circle cx="1115" cy="90" r="8" fill="#e0e0c0" opacity="0.5"/><circle cx="1095" cy="105" r="5" fill="#e0e0c0" opacity="0.4"/><g filter="url(#shadow)">${blocks}</g><rect x="0" y="${height - 100}" width="${width}" height="100" fill="url(#groundGradient)"/><rect x="0" y="${height - 100}" width="${width}" height="2" fill="#333355"/><text x="50" y="50" fill="${colors.text}" font-family="Segoe UI,Arial" font-size="28" font-weight="bold">${USERNAME}'s Contribution City</text><text x="50" y="80" fill="${colors.textMuted}" font-family="Segoe UI,Arial" font-size="16">${firstDay} → ${lastDay}</text><g transform="translate(50,${height - 60})"><rect x="0" y="0" width="200" height="50" rx="8" fill="#ffffff10"/><text x="100" y="25" fill="${colors.text}" font-family="Segoe UI,Arial" font-size="24" font-weight="bold" text-anchor="middle" filter="url(#glow)">${displayTotal}</text><text x="100" y="42" fill="${colors.textMuted}" font-family="Segoe UI,Arial" font-size="12" text-anchor="middle">contributions</text></g><g transform="translate(${width - 200},${height - 60})"><rect x="0" y="0" width="180" height="50" rx="8" fill="#ffffff10"/><rect x="10" y="15" width="15" height="15" fill="${colors.building0}"/><text x="30" y="27" fill="${colors.textMuted}" font-size="10">None</text><rect x="60" y="15" width="15" height="15" fill="${colors.building1}"/><text x="80" y="27" fill="${colors.textMuted}" font-size="10">Low</text><rect x="110" y="15" width="15" height="15" fill="${colors.building2}"/><text x="130" y="27" fill="${colors.textMuted}" font-size="10">Med</text><rect x="155" y="15" width="15" height="15" fill="${colors.building4}"/><text x="175" y="27" fill="${colors.textMuted}" font-size="10">High</text></g></svg>`;
 }
 
 function adjustColor(hex, amount) {
