@@ -106,16 +106,19 @@
 
 ## 🏙️ Contribution Activity
 
-
-
-<p align="center"><strong>3D Profile Contrib</strong></p>
+<p align="center"><strong>3D Contribution City — GitBlock</strong></p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/profile-3d-contrib/profile-night-green.svg" alt="3D Profile Contrib" width="100%"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/profile-3d-contrib/profile-gitblock.svg" alt="antono4 3D contribution graph — GitBlock theme" width="100%"/>
+</p>
+
+<p align="center"><strong>3D Contribution City — Night Green</strong></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/profile-3d-contrib/profile-night-green.svg" alt="antono4 3D contribution graph — Night Green theme" width="100%"/>
 </p>
 
 <p align="center"><strong>Snake Animation</strong></p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/antono4/antono4/refs/heads/main/assets/snake.svg" alt="Snake Animation" width="100%"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/snake.svg" alt="Snake Animation" width="100%"/>
 </p>
 
 <p align="center"><strong>GitHub Activity Graph</strong></p>
