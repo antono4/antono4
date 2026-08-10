@@ -106,10 +106,7 @@
 
 ## 🏙️ Contribution Activity
 
-<p align="center"><strong>3D Contribution City</strong></p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/antono4/antono4/refs/heads/main/assets/contrib-3d.svg" alt="3D Contribution City" width="100%"/>
-</p>
+
 
 <p align="center"><strong>3D Profile Contrib</strong></p>
 <p align="center">
