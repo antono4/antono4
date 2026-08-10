@@ -44,7 +44,7 @@ jobs:
           node .github/scripts/generate-3d.js
 
       - name: Generate snake animation SVG
-        uses: Platane/snek@main
+        uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
