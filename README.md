@@ -111,10 +111,7 @@
   <img src="https://raw.githubusercontent.com/antono4/antono4/main/profile-3d-contrib/profile-gitblock.svg" alt="antono4 3D contribution graph — GitBlock theme" width="100%"/>
 </p>
 
-<p align="center"><strong>3D Contribution City — Night Green</strong></p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/profile-3d-contrib/profile-night-green.svg" alt="antono4 3D contribution graph — Night Green theme" width="100%"/>
-</p>
+
 
 <p align="center"><strong>Snake Animation</strong></p>
 <p align="center">
