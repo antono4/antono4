@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>antono4 — 3D Contribution Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#070a10;
+    --ink-2:#0d1320;
+    --panel:rgba(255,255,255,.04);
+    --panel-bd:rgba(255,255,255,.09);
+    --line:rgba(255,255,255,.06);
+    --fg:#e9edf5;
+    --muted:#8a93a6;
+    --weak:#5a6275;
+    --accent:#3fb950;      /* github green */
+    --accent-2:#58a6ff;    /* github blue */
+    --accent-3:#f2cc60;   /* gitblock yellow */
+    --accent-4:#a371f7;    /* gitblock purple */
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--ink);color:var(--fg);font-family:"JetBrains Mono",ui-monospace,monospace;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{
+    min-height:100vh;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(63,185,80,.10), transparent 60%),
+      radial-gradient(900px 500px at -10% 30%, rgba(88,166,255,.10), transparent 55%),
+      linear-gradient(180deg,#070a10 0%, #0a0f18 100%);
+  }
+  /* isometric blueprint grid */
+  .grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:48px 48px;
+    mask-image:radial-gradient(ellipse 80% 60% at 50% 40%, #000 40%, transparent 100%);
+  }
+  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.035;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  .wrap{position:relative;z-index:2;max-width:1320px;margin:0 auto;padding:34px 28px 80px}
+
+  /* ---- topbar ---- */
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+    border:1px solid var(--panel-bd);border-radius:16px;padding:14px 20px;
+    background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+    backdrop-filter:blur(10px);
+  }
+  .brand{display:flex;align-items:center;gap:14px}
+  .mark{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-family:"Fraunces",serif;font-weight:700;font-size:20px;
+    background:conic-gradient(from 210deg at 50% 50%, #3fb950,#58a6ff,#a371f7,#f2cc60,#3fb950);
+    color:#070a10;box-shadow:0 0 0 1px rgba(255,255,255,.14), 0 8px 30px rgba(63,185,80,.25);
+  }
+  .brand .who{font-family:"Fraunces",serif;font-weight:600;font-size:22px;letter-spacing:.2px}
+  .brand .who span{color:var(--accent)}
+  .brand .sub{font-size:11px;color:var(--muted);letter-spacing:.22em;text-transform:uppercase;margin-top:2px}
+
+  .theme{display:flex;gap:6px;padding:5px;border:1px solid var(--panel-bd);border-radius:12px;background:rgba(0,0,0,.25)}
+  .theme button{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--muted);
+    background:transparent;border:0;cursor:pointer;padding:8px 14px;border-radius:8px;transition:.25s;text-transform:uppercase}
+  .theme button:hover{color:var(--fg)}
+  .theme button.on{color:#070a10;background:var(--fg)}
+  .live{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(63,185,80,.6);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(63,185,80,.55)}70%{box-shadow:0 0 0 10px rgba(63,185,80,0)}100%{box-shadow:0 0 0 0 rgba(63,185,80,0)}}
+
+  /* ---- hero headline ---- */
+  .hero{margin:46px 0 26px;display:grid;grid-template-columns:1.4fr .9fr;gap:30px;align-items:end}
+  .kicker{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent-2);margin-bottom:14px}
+  h1{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(38px,6vw,82px);line-height:.96;letter-spacing:-.02em}
+  h1 em{font-style:italic;font-weight:600;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  h1 .big{display:block;font-weight:900;font-size:1.18em}
+  .lede{color:var(--muted);font-size:13.5px;line-height:1.7;max-width:46ch}
+  .lede b{color:var(--fg);font-weight:500}
+
+  /* ---- stat rail ---- */
+  .stats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:26px}
+  .stat{border:1px solid var(--panel-bd);border-radius:14px;padding:16px 16px 18px;background:var(--panel);position:relative;overflow:hidden}
+  .stat::after{content:"";position:absolute;inset:auto -20% -60% -20%;height:120px;background:radial-gradient(closest-side,var(--c,var(--accent-2)),transparent);opacity:.16;filter:blur(8px)}
+  .stat .lbl{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .stat .val{font-family:"Fraunces",serif;font-weight:600;font-size:30px;margin-top:8px;line-height:1}
+  .stat .val small{font-size:14px;color:var(--muted);font-weight:400;margin-left:3px}
+  .stat .note{font-size:10.5px;color:var(--weak);margin-top:6px;letter-spacing:.04em}
+
+  /* ---- exhibit frame ---- */
+  .exhibit{position:relative;border:1px solid var(--panel-bd);border-radius:22px;overflow:hidden;
+    background:
+      linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.015));
+    box-shadow:0 40px 120px -30px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.06);
+  }
+  .exhibit .bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    padding:13px 20px;border-bottom:1px solid var(--panel-bd);background:rgba(0,0,0,.2)}
+  .exhibit .ttl{font-family:"Fraunces",serif;font-weight:500;font-size:18px}
+  .exhibit .ttl span{color:var(--muted);font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:400;margin-left:10px;letter-spacing:.1em}
+  .legend{display:flex;gap:14px;flex-wrap:wrap}
+  .legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+  .legend span{font-size:11px;color:var(--muted);letter-spacing:.06em}
+  .frame{padding:18px;transition:background .5s}
+  .frame.light{background:repeating-linear-gradient(45deg,#fff 0 22px,#f6f8fb 22px 44px)}
+  .frame.dark{background:#00000f}
+  .frame img{width:100%;height:auto;display:block;border-radius:10px;box-shadow:0 30px 80px -25px rgba(0,0,0,.7)}
+  .frame img.swap{opacity:0;transform:translateY(8px) scale(.995)}
+
+  /* ---- lower grid ---- */
+  .lower{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:22px}
+  .card{border:1px solid var(--panel-bd);border-radius:18px;background:var(--panel);overflow:hidden}
+  .card h3{font-family:"Fraunces",serif;font-weight:500;font-size:17px;padding:16px 20px;border-bottom:1px solid var(--panel-bd);display:flex;justify-content:space-between;align-items:center}
+  .card h3 span{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase}
+  .card .body{padding:18px 20px}
+
+  /* languages */
+  .lang{display:grid;grid-template-columns:130px 1fr 70px;gap:11px 14px;align-items:center}
+  .lang .nm{font-size:12.5px;display:flex;align-items:center;gap:9px}
+  .lang .nm i{width:10px;height:10px;border-radius:3px;flex:none}
+  .track{height:8px;border-radius:6px;background:rgba(255,255,255,.07);overflow:hidden}
+  .track > i{display:block;height:100%;border-radius:6px;transform-origin:left;animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both}
+  .lang .pct{font-size:11px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+  @keyframes grow{from{transform:scaleX(0)}}
+
+  /* radar / radar list */
+  .radarlist{display:grid;gap:14px}
+  .rrow{display:grid;grid-template-columns:84px 1fr 70px;align-items:center;gap:12px}
+  .rrow .rlbl{font-size:12px;color:var(--muted);letter-spacing:.04em}
+  .rrow .rbar{height:9px;border-radius:6px;background:rgba(255,255,255,.07);overflow:hidden}
+  .rrow .rbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent-2),var(--accent));border-radius:6px;transform-origin:left;animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both}
+  .rrow .rval{font-size:12px;text-align:right;font-variant-numeric:tabular-nums;color:var(--fg)}
+
+  footer{margin-top:46px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--weak);font-size:11px;letter-spacing:.08em}
+  footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+  footer a:hover{color:var(--fg)}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(14px);animation:rv .7s cubic-bezier(.2,.8,.2,1) forwards}
+  @keyframes rv{to{opacity:1;transform:none}}
+
+  @media (max-width:980px){
+    .hero{grid-template-columns:1fr}
+    .stats{grid-template-columns:repeat(3,1fr)}
+    .lower{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .wrap{padding:22px 16px 60px}
+  }
+</style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="grain"></div>
+
+  <div class="wrap">
+    <!-- topbar -->
+    <header class="topbar rv" style="animation-delay:.0s">
+      <div class="brand">
+        <div class="mark">a</div>
+        <div>
+          <div class="who">antono<span>4</span></div>
+          <div class="sub">3D Contribution Studio</div>
+        </div>
+      </div>
+      <div class="theme" role="tablist" aria-label="Theme">
+        <button data-theme="gitblock" class="on">GitBlock</button>
+        <button data-theme="night-green">Night&nbsp;Green</button>
+      </div>
+      <div class="live"><span class="dot"></span> Auto-update · 5 min</div>
+    </header>
+
+    <!-- hero -->
+    <section class="hero">
+      <div class="rv" style="animation-delay:.08s">
+        <div class="kicker">Isometric contribution city · 2025 — 2026</div>
+        <h1>A year of code,<br><em>built as a city.</em><span class="big">39,900</span></h1>
+      </div>
+      <p class="lede rv" style="animation-delay:.18s">
+        Setiap kotak adalah satu hari kontribusi GitHub <b>antono4</b>, direnderkan sebagai blok isometrik 3D bertema
+        <b>GitBlock</b> — piksel-bitmap berwarna per level aktivitas. Diperbarui otomatis tiap 5 menit langsung dari
+        kalender kontribusi terbaru. Dibangun dengan tool resmi
+        <b>yoshi389111/github-profile-3d-contrib</b>.
+      </p>
+    </section>
+
+    <!-- stats -->
+    <section class="stats" aria-label="Key stats">
+      <div class="stat rv" style="--c:var(--accent);animation-delay:.22s"><div class="lbl">Contributions</div><div class="val">39.9<small>K</small></div><div class="note">total periode</div></div>
+      <div class="stat rv" style="--c:var(--accent-2);animation-delay:.27s"><div class="lbl">Commits</div><div class="val">39,186</div><div class="note">98% aktivitas</div></div>
+      <div class="stat rv" style="--c:var(--accent-3);animation-delay:.32s"><div class="lbl">Pull Requests</div><div class="val">330</div><div class="note">+ 16 issues</div></div>
+      <div class="stat rv" style="--c:var(--accent-4);animation-delay:.37s"><div class="lbl">Reviews</div><div class="val">2</div><div class="note">pull request</div></div>
+      <div class="stat rv" style="--c:var(--accent-2);animation-delay:.42s"><div class="lbl">Repositories</div><div class="val">101</div><div class="note">owner</div></div>
+      <div class="stat rv" style="--c:var(--accent-3);animation-delay:.47s"><div class="lbl">★ / ⑂</div><div class="val">60<small> / 2</small></div><div class="note">stars / forks</div></div>
+    </section>
+
+    <!-- exhibit -->
+    <section class="exhibit rv" style="animation-delay:.55s">
+      <div class="bar">
+        <div class="ttl">3D Contribution Graph <span id="period">2025-08-10 / 2026-08-10</span></div>
+        <div class="legend">
+          <span><i style="background:#cfcccc"></i>None</span>
+          <span><i style="background:hsl(125,52%,50%)"></i>L1</span>
+          <span><i style="background:hsl(242,100%,65%)"></i>L2</span>
+          <span><i style="background:hsl(48,100%,50%)"></i>L3</span>
+          <span><i style="background:#a371f7"></i>L4</span>
+        </div>
+      </div>
+      <div class="frame light" id="frame">
+        <img id="svg" src="https://raw.githubusercontent.com/antono4/antono4/main/profile-3d-contrib/profile-gitblock.svg" alt="antono4 3D contribution graph — GitBlock theme">
+      </div>
+    </section>
+
+    <!-- lower -->
+    <section class="lower">
+      <div class="card rv" style="animation-delay:.62s">
+        <h3>Top Languages <span>by commits</span></h3>
+        <div class="body">
+          <div class="lang" id="langs"></div>
+        </div>
+      </div>
+      <div class="card rv" style="animation-delay:.68s">
+        <h3>Contribution Mix <span>radar · log scale</span></h3>
+        <div class="body">
+          <div class="radarlist" id="radar"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>Data kontribusi © GitHub · dirender via <a href="https://github.com/yoshi389111/github-profile-3d-contrib" target="_blank" rel="noopener">yoshi389111/github-profile-3d-contrib</a></div>
+      <div>antono4 / antono4 · profile-3d-contrib · <a href="https://github.com/antono4/antono4" target="_blank" rel="noopener">repo</a></div>
+    </footer>
+  </div>
+
+<script>
+  // language data extracted from the SVG (commit contributions by repository)
+  const LANGS=[
+    {n:"HTML",      c:"#e34c26", v:17075},
+    {n:"TypeScript",c:"#3178c6", v:4287},
+    {n:"Python",    c:"#3572A5", v:1654},
+    {n:"JavaScript",c:"#f1e05a", v:1444},
+    {n:"PHP",       c:"#4F5D95", v:1361},
+    {n:"other",     c:"#444444", v:13365},
+  ];
+  const MAXL=Math.max(...LANGS.map(x=>x.v));
+  document.getElementById('langs').innerHTML=LANGS.map(l=>`
+    <div class="nm"><i style="background:${l.c}"></i>${l.n}</div>
+    <div class="track"><i style="width:${(l.v/MAXL*100).toFixed(1)}%;background:${l.c}"></i></div>
+    <div class="pct">${l.v.toLocaleString()}</div>`).join('');
+
+  // radar (contribution mix) — log-ish normalized to max
+  const RAD=[
+    {l:"Commit", v:39186},
+    {l:"Repo",   v:101},
+    {l:"PullReq",v:330},
+    {l:"Issue",  v:16},
+    {l:"Review", v:2},
+  ];
+  const MAXR=Math.log10(RAD[0].v);
+  document.getElementById('radar').innerHTML=RAD.map((r,i)=>{
+    const w=Math.max(6,Math.log10(r.v)/MAXR*100);
+    return `<div class="rrow">
+      <div class="rlbl">${r.l}</div>
+      <div class="rbar"><i style="width:${w}%;animation-delay:${.8+i*.1}s"></i></div>
+      <div class="rval">${r.v.toLocaleString()}</div></div>`;
+  }).join('');
+
+  // theme switcher (gitblock light ↔ night-green dark)
+  const frame=document.getElementById('frame');
+  const img=document.getElementById('svg');
+  const URLS={
+    'gitblock':   'https://raw.githubusercontent.com/antono4/antono4/main/profile-3d-contrib/profile-gitblock.svg',
+    'night-green':'https://raw.githubusercontent.com/antono4/antono4/main/profile-3d-contrib/profile-night-green.svg'
+  };
+  document.querySelectorAll('.theme button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('.theme button').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      const t=b.dataset.theme;
+      img.classList.add('swap');
+      setTimeout(()=>{
+        img.src=URLS[t];
+        frame.classList.toggle('light', t==='gitblock');
+        frame.classList.toggle('dark', t==='night-green');
+        img.onload=()=>img.classList.remove('swap');
+      },260);
+    });
+  });
+
+  // refresh the SVG src every 5 minutes (mirror the workflow cadence)
+  setInterval(()=>{
+    const t=img.src.split('?')[0];
+    img.src=t+'?v='+Date.now();
+  },5*60*1000);
+</script>
+</body>
+</html>
