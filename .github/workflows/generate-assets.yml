@@ -1,0 +1,62 @@
+name: Generate Profile Assets
+
+on:
+  schedule:
+    # Once daily at 00:00 UTC — frequent enough to stay current without
+    # spamming the commit history (the old setup ran 3 jobs every 5 minutes).
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/generate-assets.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Generate 3D contribution city SVG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm install graphql-request graphql --no-save
+          node .github/scripts/generate-3d.js
+
+      - name: Generate snake animation SVG
+        uses: Platane/snek@main
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/snake.svg?palette=github-dark
+
+      - name: Commit and push
+        run: |
+          git add assets/contrib-3d.svg assets/snake.svg
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: regenerate profile SVG assets [skip ci]"
+            git push
+            echo "SVG assets updated"
+          fi
