@@ -1,11 +1,15 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Antono&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=gradient&desc=Full%20Stack%20Developer%20%7C%20AI%20Enthusiast&descSize=18&descAlignY=55" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Antono&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=ffffff&desc=Full%20Stack%20Developer%20%7C%20AI%20Enthusiast&descSize=18&descAlignY=55" width="100%"/>
 
 </div>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=2000&pause=2000&color=FFFFFF&background=0D111700&center=true&vCenter=true&width=600&lines=%22I+craft+digital+experiences%22+%F0%9F%94%AC" alt="Typing SVG" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=2000&pause=2000&color=FFFFFF&background=0D111700&center=true&vCenter=true&width=600&lines=%22I+craft+digital+experiences%22+%F0%9F%94%AC" />
+    <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=2000&pause=2000&color=0D1117&background=FFFFFF00&center=true&vCenter=true&width=600&lines=%22I+craft+digital+experiences%22+%F0%9F%94%AC" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=2000&pause=2000&color=0D1117&background=FFFFFF00&center=true&vCenter=true&width=600&lines=%22I+craft+digital+experiences%22+%F0%9F%94%AC" alt="Typing SVG" />
+  </picture>
 </p>
 
 <p align="center">
@@ -36,7 +40,7 @@
 <table><tr><td>
 
 <p align="center">
-  <strong>Fullstack Developer</strong> &amp; <strong>Computational Chemist</strong> from <strong>Indonesia</strong> 🇮🇩
+  <strong>Full-Stack Developer</strong> &amp; <strong>AI Enthusiast</strong> from <strong>Indonesia</strong> 🇮🇩
 </p>
 
 <p align="center">
@@ -81,7 +85,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
   <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions"/>
-  <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=black" alt="AWS"/>
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge" alt="AWS"/>
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
 </p>
 
@@ -110,8 +114,6 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/antono4/antono4/main/profile-3d-contrib/profile-gitblock.svg" alt="antono4 3D contribution graph — GitBlock theme" width="100%"/>
 </p>
-
-
 
 <p align="center"><strong>Snake Animation</strong></p>
 <p align="center">
@@ -238,4 +240,3 @@ Creative 3D visual effects and animations showcasing the beauty of neon light ae
 <p align="center">
   🚀 <em>Let's build something amazing together!</em>
 </p>
-
