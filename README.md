@@ -142,31 +142,30 @@
 ## ⭐ Featured Projects
 
 <table>
-<tr><td align="center">
+<tr>
+<td align="center" width="50%">
 
-🤖 **AI Content Generator**
+### 🤖 AI Content Generator
 
-<em>AI-powered content generator for social media, blogs, and marketing. Built with FastAPI, LangChain, and modern AI models.</em>
+AI-powered content generator for social media, blogs, and marketing. Built with FastAPI, LangChain, and modern AI models.
 
 <p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
-  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI"/>
 </p>
 
 <p>
   <a href="https://github.com/antono4/ai-content-generator">
-    <img src="https://img.shields.io/badge/View_Project-7AA2F7?style=for-the-badge&logo=github&logoColor=white" alt="View Project"/>
+    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository"/>
   </a>
-  <img src="https://img.shields.io/github/stars/antono4/ai-content-generator?style=for-the-badge&color=yellow&label=%E2%AD%90" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/antono4/ai-content-generator?style=for-the-badge&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
+</p>
+<p>
+  <img src="https://img.shields.io/github/stars/antono4/ai-content-generator?style=flat-square&color=yellow&label=⭐" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/antono4/ai-content-generator?style=flat-square&color=blue&label=🍴" alt="Forks"/>
 </p>
 
-</td></tr>
-</table>
-
-<table>
-<tr>
+</td>
 <td align="center" width="50%">
 
 ### 📈 MacFolio
@@ -189,6 +188,8 @@ Portfolio trading platform with real-time analytics and advanced charting featur
 </p>
 
 </td>
+</tr>
+<tr>
 <td align="center" width="50%">
 
 ### 💡 3D-Neon-Lightbulb
@@ -233,6 +234,30 @@ Mini autonomous coding agent inspired by Devin — built with HTML.
 <p>
   <img src="https://img.shields.io/github/stars/antono4/MiniDevin?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars"/>
   <img src="https://img.shields.io/github/forks/antono4/MiniDevin?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
+</p>
+
+</td>
+<td align="center" width="50%">
+
+### 🤖 MiniDevin
+
+Mini autonomous coding agent inspired by Devin — built with HTML.
+
+<p>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
+</p>
+
+<p>
+  <a href="https://antono4.github.io/MiniDevin/">
+    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo"/>
+  </a>
+  <a href="https://github.com/antono4/MiniDevin">
+    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository"/>
+  </a>
+</p>
+<p>
+  <img src="https://img.shields.io/github/stars/antono4/MiniDevin?style=flat-square&color=yellow&label=⭐" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/antono4/MiniDevin?style=flat-square&color=blue&label=🍴" alt="Forks"/>
 </p>
 
 </td>
