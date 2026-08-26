@@ -36,12 +36,15 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Generate 3D contribution city SVG
+      - name: Generate 3D contribution city SVG and activity graphs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install graphql-request graphql --no-save
           node .github/scripts/generate-3d.js
+          node .github/scripts/generate-activity-graph.js
+          ACTIVITY_GRAPH_THEME=github-dark OUTPUT_PATH=assets/activity-graph-dark.svg \
+            node .github/scripts/generate-activity-graph.js
 
       - name: Generate snake animation SVG
         uses: Platane/snk@v3
@@ -52,7 +55,7 @@ jobs:
 
       - name: Commit and push
         run: |
-          git add assets/contrib-3d.svg assets/snake.svg
+          git add assets/contrib-3d.svg assets/snake.svg assets/activity-graph.svg assets/activity-graph-dark.svg
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
