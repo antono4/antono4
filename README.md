@@ -122,7 +122,7 @@
 
 <p align="center"><strong>GitHub Activity Graph</strong></p>
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=dracula" alt="GitHub Activity Graph" width="100%"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/activity-graph.svg" alt="GitHub Activity Graph" width="100%"/>
 </p>
 
 ---
