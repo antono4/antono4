@@ -158,8 +158,8 @@
   <a href="https://github.com/antono4/ai-content-generator">
     <img src="https://img.shields.io/badge/View_Project-7AA2F7?style=for-the-badge&logo=github&logoColor=white" alt="View Project"/>
   </a>
-  <img src="https://img.shields.io/github/stars/antono4/ai-content-generator?style=for-the-badge&color=yellow&label=⭐" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/antono4/ai-content-generator?style=for-the-badge&color=blue&label=🍴" alt="Forks"/>
+  <img src="https://img.shields.io/github/stars/antono4/ai-content-generator?style=for-the-badge&color=yellow&label=%E2%AD%90" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/antono4/ai-content-generator?style=for-the-badge&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
 </p>
 
 </td></tr>
@@ -184,8 +184,8 @@ Portfolio trading platform with real-time analytics and advanced charting featur
   </a>
 </p>
 <p>
-  <img src="https://img.shields.io/github/stars/antono4/MacFolio?style=flat-square&color=yellow&label=⭐" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/antono4/MacFolio?style=flat-square&color=blue&label=🍴" alt="Forks"/>
+  <img src="https://img.shields.io/github/stars/antono4/MacFolio?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/antono4/MacFolio?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
 </p>
 
 </td>
@@ -207,8 +207,8 @@ Creative 3D visual effects and animations showcasing the beauty of neon light ae
   </a>
 </p>
 <p>
-  <img src="https://img.shields.io/github/stars/antono4/3D-Neon-Lightbulb?style=flat-square&color=yellow&label=⭐" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/antono4/3D-Neon-Lightbulb?style=flat-square&color=blue&label=🍴" alt="Forks"/>
+  <img src="https://img.shields.io/github/stars/antono4/3D-Neon-Lightbulb?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/antono4/3D-Neon-Lightbulb?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
 </p>
 
 </td>
