@@ -51,7 +51,7 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 <p align="center">
 
-![Contribution Calendar](https://github-readme-activity-graph.vercel.app/graph?username=antono4&theme=github_dark&area=true&hide_border=true&bg_color=0D1117&color=58A6FF&line=58A6FF&point=58A6FF&area_color=1F6FEB)
+![Contribution Calendar](https://raw.githubusercontent.com/antono4/antono4/main/assets/activity-graph-dark.svg)
 
 </p>
 
