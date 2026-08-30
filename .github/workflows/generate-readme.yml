@@ -1,0 +1,254 @@
+name: Auto Generate README
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/generate-readme.yml'
+      - 'index.html'
+      - 'README.md'
+  workflow_dispatch:
+    inputs:
+      force_regenerate:
+        description: 'Paksa generate ulang README'
+        required: false
+        default: 'true'
+
+concurrency:
+  group: generate-readme
+  cancel-in-progress: false
+
+jobs:
+  generate-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Analyze repository structure
+        id: analyze
+        run: |
+          export TZ="Asia/Jakarta"
+
+          mkdir -p /tmp/subs
+          : > /tmp/subs/list.txt
+          rm -f /tmp/exts.txt
+
+          # Nama repo & owner
+          REPO_FULL="${{ github.repository }}"
+          OWNER=$(echo "$REPO_FULL" | cut -d'/' -f1)
+          REPO=$(echo "$REPO_FULL" | cut -d'/' -f2)
+          echo "owner=$OWNER" >> $GITHUB_OUTPUT
+          echo "repo=$REPO" >> $GITHUB_OUTPUT
+          # Pages URL: user repo -> user.github.io, lainnya -> user.github.io/repo
+          if [ "$REPO" = "$OWNER.github.io" ]; then
+            echo "pages_url=https://${OWNER}.github.io/" >> $GITHUB_OUTPUT
+          else
+            echo "pages_url=https://${OWNER}.github.io/${REPO}/" >> $GITHUB_OUTPUT
+          fi
+
+          # Ambil nama & role dari <title> dan <h1> index.html root
+          TITLE="Project"
+          ROLE=""
+          if [ -f index.html ]; then
+            TITLE=$(grep -oP '(?<=<title>).*?(?=</title>)' index.html | head -1 | sed 's/[[:space:]]*$//')
+            ROLE=$(grep -oP '(?<=<h1>).*?(?=</h1>)' index.html | head -1 | sed 's/<[^>]*>//g' | sed 's/[[:space:]]*$//')
+            [ -z "$ROLE" ] && ROLE="$TITLE"
+            # Coba ambil deskripsi/role dari <p> di hero section
+            HERO_P=$(grep -oP '(?<=<p>).*?(?=</p>)' index.html | head -1 | sed 's/<[^>]*>//g' | sed 's/[[:space:]]*$//')
+            [ -n "$HERO_P" ] && ROLE="$HERO_P"
+          fi
+          echo "site_title=$TITLE" >> $GITHUB_OUTPUT
+          echo "site_role=$ROLE" >> $GITHUB_OUTPUT
+
+          # Hitung jumlah file & bahasa utama
+          FILE_COUNT=$(find . -type f \
+            -not -path '*/.git/*' -not -path '*/node_modules/*' \
+            -not -path '*/dist/*' -not -path '*/build/*' | wc -l)
+          echo "file_count=$FILE_COUNT" >> $GITHUB_OUTPUT
+
+          # Ekstensi yang ada di repo (menentukan tech stack)
+          TECH=""
+          find . -type f -not -path '*/.git/*' | sed 's/.*\.//' | sort -u > /tmp/exts.txt
+          if grep -qiE '^html$' /tmp/exts.txt; then TECH="${TECH}HTML, "; fi
+          if grep -qiE '^css$' /tmp/exts.txt; then TECH="${TECH}CSS, "; fi
+          if grep -qiE '^scss$' /tmp/exts.txt; then TECH="${TECH}SCSS, "; fi
+          if grep -qiE '^js$' /tmp/exts.txt; then TECH="${TECH}JavaScript, "; fi
+          if grep -qiE '^php$' /tmp/exts.txt; then TECH="${TECH}PHP, "; fi
+          if grep -qiE '^py$' /tmp/exts.txt; then TECH="${TECH}Python, "; fi
+          if grep -qiE '^(jsx|tsx)$' /tmp/exts.txt; then TECH="${TECH}React, "; fi
+          TECH="${TECH%, }"
+          [ -z "$TECH" ] && TECH="HTML, CSS, JavaScript"
+          echo "tech_stack=$TECH" >> $GITHUB_OUTPUT
+
+          # Daftar sub-proyek (folder dengan index.html di dalamnya, bukan root)
+          # Beserta deskripsi singkat (dari heading README atau <title> index.html)
+          : > /tmp/subs_table.txt
+          for d in */; do
+            d="${d%/}"
+            if [ -f "$d/index.html" ]; then
+              echo "$d" >> /tmp/subs/list.txt
+              DESC=""
+              if [ -f "$d/README.md" ]; then
+                DESC=$(grep -vE '^[[:space:]]*$' "$d/README.md" \
+                  | sed 's/<[^>]*>//g; s/^[[:space:]]*//; s/[[:space:]]*$//' \
+                  | grep -vE '^!\[|^\[!\[|badge|shields\.io|img\.shields|Live Demo|Demo Scr' \
+                  | grep -E '^#|^[A-Za-z]' \
+                  | head -1 \
+                  | sed 's/^#* *//; s/[[:space:]]*$//')
+              fi
+              if [ -z "$DESC" ] && [ -f "$d/index.html" ]; then
+                DESC=$(grep -oP '(?<=<title>).*?(?=</title>)' "$d/index.html" | head -1 | sed 's/[[:space:]]*$//')
+              fi
+              [ -z "$DESC" ] && DESC="$d"
+              echo "${d}|${DESC}" >> /tmp/subs_table.txt
+            fi
+          done
+          echo "sub_count=$(wc -l < /tmp/subs/list.txt 2>/dev/null || echo 0)" >> $GITHUB_OUTPUT
+
+      - name: Generate README content
+        env:
+          OWNER: ${{ steps.analyze.outputs.owner }}
+          REPO: ${{ steps.analyze.outputs.repo }}
+          PAGES_URL: ${{ steps.analyze.outputs.pages_url }}
+          SITE_TITLE: ${{ steps.analyze.outputs.site_title }}
+          SITE_ROLE: ${{ steps.analyze.outputs.site_role }}
+          TECH_STACK: ${{ steps.analyze.outputs.tech_stack }}
+          FILE_COUNT: ${{ steps.analyze.outputs.file_count }}
+          SUB_COUNT: ${{ steps.analyze.outputs.sub_count }}
+        run: |
+          export TZ="Asia/Jakarta"
+          TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S %Z")
+
+          {
+            echo "<!-- README ini dihasilkan otomatis oleh workflow .github/workflows/generate-readme.yml -->"
+            echo "<!-- Jangan edit manual; perubahan akan ditim pada run berikutnya. -->"
+            echo ""
+            echo "<h1 align=\"center\">${SITE_TITLE} 👋</h1>"
+            echo ""
+            echo "<p align=\"center\">"
+            echo "  <strong>${SITE_ROLE}</strong>"
+            echo "</p>"
+            echo ""
+            echo "<p align=\"center\">"
+            echo "  <a href=\"https://github.com/${OWNER}/${REPO}\"><img alt=\"GitHub repo\" src=\"https://img.shields.io/badge/GitHub-${OWNER}/${REPO}-blue?logo=github\"></a>"
+            echo "  <a href=\"${PAGES_URL}\"><img alt=\"Live Demo\" src=\"https://img.shields.io/badge/Live%20Demo-Online-success?logo=githubpages\"></a>"
+            echo "  <img alt=\"Files\" src=\"https://img.shields.io/badge/Files-${FILE_COUNT}-informational\">"
+            echo "  <img alt=\"Updated\" src=\"https://img.shields.io/badge/Updated-${TIMESTAMP}-lightgrey\">"
+            echo "</p>"
+            echo ""
+            echo "---"
+            echo ""
+            echo "## 📖 Tentang"
+            echo ""
+            echo "Repository **\`${REPO}\`** adalah situs web pribadi / portofolio yang diterbitkan melalui **GitHub Pages**. Situs utama berada di [\`${PAGES_URL}\`](${PAGES_URL})."
+            echo ""
+            echo "## 🗂️ Struktur Proyek"
+            echo ""
+            echo '```'
+            echo "${REPO}/"
+            echo "├── index.html          # Halaman utama (landing / portofolio)"
+            echo "├── assets/             # Aset statis (css, js, img, vendor)"
+            echo "├── forms/               # Form handler (PHP)"
+
+            # Sub-proyek
+            if [ -s /tmp/subs_table.txt ]; then
+              while IFS='|' read -r sub desc; do
+                echo "└── ${sub}/              # ${desc}  ->  ${PAGES_URL}${sub}/"
+              done < /tmp/subs_table.txt
+            fi
+            echo '```'
+            echo ""
+
+            if [ "${SUB_COUNT}" -gt 0 ]; then
+              echo "## 🌐 Sub-Proyek / Demo"
+              echo ""
+              echo "Situs ini juga memuat beberapa sub-proyek (masing-masing punya \`index.html\` tersendiri):"
+              echo ""
+              echo "| Folder | Demo Live | Keterangan |"
+              echo "|--------|-----------|-----------|"
+              while IFS='|' read -r sub desc; do
+                echo "| [\`${sub}\`](./${sub}) | [${PAGES_URL}${sub}/](${PAGES_URL}${sub}/) | ${desc} |"
+              done < /tmp/subs_table.txt
+              echo ""
+            fi
+
+            echo "## 🛠️ Teknologi"
+            echo ""
+            echo "Berdasarkan isi repository, proyek ini menggunakan:"
+            echo ""
+            TECH_LIST=$(echo "${TECH_STACK}" | sed 's/, /, /g')
+            IFS=', ' read -ra ARR <<< "$TECH_LIST"
+            for t in "${ARR[@]}"; do
+              [ -n "$t" ] && echo "- \`$t\`"
+            done
+            echo ""
+            echo "> Total **${FILE_COUNT} file** terdeteksi di repository."
+            echo ""
+            echo "## 🚀 Menjalankan Secara Lokal"
+            echo ""
+            echo "Karena ini situs statis (HTML/CSS/JS/PHP), cukup buka \`index.html\` di browser, atau jalankan server lokal:"
+            echo ""
+            echo '```bash'
+            echo "# Tanpa dependency"
+            echo "python3 -m http.server 8000"
+            echo "# lalu buka http://localhost:8000"
+            echo ""
+            echo "# atau dengan PHP (untuk form handler di forms/)"
+            echo "php -S localhost:8000"
+            echo '```'
+            echo ""
+            echo "## 📬 Kontak"
+            echo ""
+            echo "- GitHub: [${OWNER}](https://github.com/${OWNER})"
+            echo "- Situs: [${PAGES_URL}](${PAGES_URL})"
+            echo ""
+            echo "## 📄 Lisensi"
+            echo ""
+            echo "Lihat berkas [\`LICENSE\`](./LICENSE) untuk informasi lisensi."
+            echo ""
+            echo "---"
+            echo ""
+            echo "<sub>README ini di-generate otomatis pada **${TIMESTAMP}** oleh GitHub Actions `.github/workflows/generate-readme.yml`.</sub>"
+          } > README.md
+
+          echo "=== Pratinjau README ==="
+          cat README.md
+
+      - name: Configure Git
+        run: |
+          git config user.name "antono4"
+          git config user.email "antonockr1@gmail.com"
+
+      - name: Commit and push README
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          export TZ="Asia/Jakarta"
+
+          # Stage dulu agar working tree bersih sebelum pull --rebase
+          git add README.md
+
+          if git diff --staged --quiet; then
+            echo "Tidak ada perubahan pada README."
+          else
+            git commit -m "docs: auto-generate README at $(date +'%Y-%m-%d %H:%M:%S') WIB"
+            # Pull --rebase aman karena perubahan sudah di-commit (tree bersih)
+            git pull --rebase origin ${{ github.ref_name }}
+            git push origin ${{ github.ref_name }}
+            echo "README berhasil diperbarui!"
+          fi
