@@ -2,22 +2,19 @@
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=22&duration=4000&pause=1000&color=f75c7e&vCenter=true&width=500&height=60&lines=Fullstack+Developer+%F0%9F%92%BB;Computational+Chemist+%F0%9F%91%8C;Building+innovative+solutions)
 
----
+# 👋 Hi, I'm Antono
 
-### 👋 Hi, I'm Antono
-
-A passionate **Fullstack Developer** from Indonesia with a background in **Computational Chemistry**. I love building products that combine scientific precision with modern technology.
+A passionate **Fullstack Developer** from Indonesia, with a background in **Computational Chemistry**. I love building products that combine scientific precision with modern technology.
 
 <p align="center">
+
   <a href="https://github.com/antono4" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
   <a href="https://linkedin.com/in/antono4" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
-  <a href="mailto:antono4@example.com" target="_blank">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-  </a>
+
 </p>
 
 </div>
@@ -30,36 +27,24 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 [![GitHub Streak](https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg)](https://git.io/streak-stats)
 
-</div>
-
-<div align="center">
-
 ![GitHub Stats](https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg)
-![GitHub Languages](https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg)
+![Top Languages](https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg)
 
 </div>
 
 ---
 
-## 📅 Contributions in the Last Year
-
-<div align="center">
-
-[![Contributor's GitHub Activity Graph](https://raw.githubusercontent.com/antono4/antono4/main/assets/snake.svg)](https://github.com/antono4/antono4)
-
-</div>
-
-<p align="center">
-
-![Contribution Calendar](https://raw.githubusercontent.com/antono4/antono4/main/assets/activity-graph-dark.svg)
-
-</p>
+## 📅 Contributions
 
 <div align="center">
 
 ### 🧊 3D Contribution Chart
 
 [![3D Contribution Chart](https://raw.githubusercontent.com/antono4/antono4/main/profile-3d-contrib/profile-night-green.svg)](https://github.com/antono4)
+
+![Contribution Calendar](https://raw.githubusercontent.com/antono4/antono4/main/assets/activity-graph-dark.svg)
+
+[![GitHub Contribution Graph](https://raw.githubusercontent.com/antono4/antono4/main/assets/snake.svg)](https://github.com/antono4/antono4)
 
 </div>
 
@@ -138,13 +123,6 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 ---
 
-## 📝 Latest Blog Posts
-
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
-
----
-
 ## 🤝 Connect With Me
 
 <p align="center">
@@ -159,10 +137,6 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 ![Profile Views](https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=for-the-badge&label=Profile+Views)
 
-<p>
-
 ⭐️ From [antono4](https://github.com/antono4)
-
-</p>
 
 </div>
