@@ -55,7 +55,13 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 </p>
 
+<div align="center">
 
+### 🧊 3D Contribution Chart
+
+[![3D Contribution Chart](https://raw.githubusercontent.com/antono4/antono4/main/profile-3d-contrib/profile-night-green.svg)](https://github.com/antono4)
+
+</div>
 
 ---
 
