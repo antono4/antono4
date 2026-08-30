@@ -1,6 +1,6 @@
 <div align="center">
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=4000&pause=1000&color=f75c7e&vCenter=true&width=500&height=60&lines=Fullstack+Developer+%F0%9F%92%BB;Computational+Chemist+%F0%9F%91%8C;Building+innovative+solutions)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=22&duration=4000&pause=1000&color=f75c7e&vCenter=true&width=500&height=60&lines=Fullstack+Developer+%F0%9F%92%BB;Computational+Chemist+%F0%9F%91%8C;Building+innovative+solutions)
 
 ---
 
@@ -28,14 +28,14 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 <div align="center">
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=Antono4&date_format=j%20M%5B%20Y%5D&mode=weekly&background=0D1117&border=30363D&stroke=58A6FF&ring=58A6FF&fire=58A6FF&currStreakNum=58A6FF&sideNums=58A6FF&currStreakLabel=58A6FF&sideLabels=58A6FF&nextDuelMsg=58A6FF&background=0D1117)](https://git.io/streak-stats)
+[![GitHub Streak](https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg)](https://git.io/streak-stats)
 
 </div>
 
 <div align="center">
 
-![GitHub Stats](https://raw.githubusercontent.com/Antono4/github-stats-transparent/output/generated/overview.svg)
-![GitHub Languages](https://raw.githubusercontent.com/Antono4/github-stats-transparent/output/generated/languages.svg)
+![GitHub Stats](https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg)
+![GitHub Languages](https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg)
 
 </div>
 
@@ -45,7 +45,7 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 <div align="center">
 
-[![ Contributor's GitHub Activity Graph](https://github.com/antono4/antono4/raw/output/github-contribution-grid-snake.svg)](https://github.com/antono4/antono4)
+[![Contributor's GitHub Activity Graph](https://raw.githubusercontent.com/antono4/antono4/main/assets/snake.svg)](https://github.com/antono4/antono4)
 
 </div>
 
@@ -55,13 +55,7 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 </p>
 
-<div align="center">
 
-| Total Contributions | This Year | This Month |
-|:---:|:---:|:---:|
-| ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=antono4&show_icons=true&theme=transparent&bg_color=0D1117&text_color=58A6FF&border_color=30363D&hide_rank=false) | ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=antono4&show_icons=true&theme=transparent&bg_color=0D1117&text_color=58A6FF&border_color=30363D&custom_title=This+Year+Contributions) | ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=antono4&show_icons=true&theme=transparent&bg_color=0D1117&text_color=58A6FF&border_color=30363D&custom_title=This+Month+Contributions) |
-
-</div>
 
 ---
 
@@ -69,7 +63,7 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 <div align="center">
 
-[![Profile Trophy](https://github-profile-trophy.vercel.app/?username=antono4&theme=onedark&margin-w=15&margin-h=15)](https://github.com/antono4)
+[![Profile Trophy](https://raw.githubusercontent.com/antono4/antono4/main/assets/trophies.svg)](https://github.com/antono4)
 
 </div>
 
@@ -138,11 +132,6 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 
 ---
 
-
-</div>
-
----
-
 ## 📝 Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
@@ -155,7 +144,6 @@ A passionate **Fullstack Developer** from Indonesia with a background in **Compu
 <p align="center">
 
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/antono4)
-[![Stack Overflow](https://img.shields.io/badge/Stack_Overflow-F58025?style=for-the-badge&logo=stackoverflow&logoColor=white)](https://stackoverflow.com/users/antono4)
 
 </p>
 
