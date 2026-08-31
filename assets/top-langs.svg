@@ -1,45 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
-  <style>
-    text { font-family: 'Segoe UI', Arial, sans-serif; }
-    .lang-name { fill: #f8f8f2; font-size: 14px; font-weight: 500; }
-    .lang-pct { fill: #6272a4; font-size: 12px; }
-    .bar-bg { fill: #44475a; rx: 4; }
-  </style>
-  
-  <rect width="400" height="200" fill="#282a36" rx="10"/>
-  
-  <text x="200" y="30" text-anchor="middle" fill="#8be9fd" font-size="16" font-weight="bold">Top Languages</text>
-  <line x1="50" y1="45" x2="350" y2="45" stroke="#44475a" stroke-width="1"/>
-  
-  <g transform="translate(50, 60)">
-    <text x="0" y="12" class="lang-name">HTML</text>
-    <text x="360" y="12" class="lang-pct">36.8%</text>
-    <rect x="0" y="18" width="330" height="10" class="bar-bg"/>
-    <rect x="0" y="18" width="121" height="10" fill="#e34c26" rx="4"/>
-    
-    <text x="0" y="42" class="lang-name">CSS</text>
-    <text x="360" y="42" class="lang-pct">13.8%</text>
-    <rect x="0" y="48" width="330" height="10" class="bar-bg"/>
-    <rect x="0" y="48" width="45" height="10" fill="#563d7c" rx="4"/>
-    
-    <text x="0" y="72" class="lang-name">SCSS</text>
-    <text x="360" y="72" class="lang-pct">10.3%</text>
-    <rect x="0" y="78" width="330" height="10" class="bar-bg"/>
-    <rect x="0" y="78" width="34" height="10" fill="#c6538c" rx="4"/>
-    
-    <text x="0" y="102" class="lang-name">TypeScript</text>
-    <text x="360" y="102" class="lang-pct">9.2%</text>
-    <rect x="0" y="108" width="330" height="10" class="bar-bg"/>
-    <rect x="0" y="108" width="30" height="10" fill="#3178c6" rx="4"/>
-    
-    <text x="0" y="132" class="lang-name">Python</text>
-    <text x="360" y="132" class="lang-pct">8.0%</text>
-    <rect x="0" y="138" width="330" height="10" class="bar-bg"/>
-    <rect x="0" y="138" width="26" height="10" fill="#3572A5" rx="4"/>
-    
-    <text x="0" y="162" class="lang-name">JavaScript</text>
-    <text x="360" y="162" class="lang-pct">8.0%</text>
-    <rect x="0" y="168" width="330" height="10" class="bar-bg"/>
-    <rect x="0" y="168" width="26" height="10" fill="#f7df1e" rx="4"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="412" height="288" viewBox="0 0 412 288">
+    <rect x="0.5" y="0.5" width="411" height="287" rx="12" fill="#1a1b27" stroke="#414868"/>
+    <text x="30" y="32" fill="#7aa2f7" font-size="15" font-weight="bold" font-family="monospace">Most Used Languages</text>
+    <text x="30" y="58" fill="#f8f8f2" font-size="13" font-family="monospace">HTML</text>
+    <text x="382" y="58" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">34%</text>
+    <rect x="30" y="64" width="119.68" height="6" rx="3" fill="#7aa2f7"/>
+    <text x="30" y="84" fill="#f8f8f2" font-size="13" font-family="monospace">Python</text>
+    <text x="382" y="84" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">12%</text>
+    <rect x="30" y="90" width="42.24" height="6" rx="3" fill="#7aa2f7"/>
+    <text x="30" y="110" fill="#f8f8f2" font-size="13" font-family="monospace">TypeScript</text>
+    <text x="382" y="110" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">11%</text>
+    <rect x="30" y="116" width="38.72" height="6" rx="3" fill="#7aa2f7"/>
+    <text x="30" y="136" fill="#f8f8f2" font-size="13" font-family="monospace">PHP</text>
+    <text x="382" y="136" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">10%</text>
+    <rect x="30" y="142" width="35.2" height="6" rx="3" fill="#7aa2f7"/>
+    <text x="30" y="162" fill="#f8f8f2" font-size="13" font-family="monospace">JavaScript</text>
+    <text x="382" y="162" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">9%</text>
+    <rect x="30" y="168" width="31.68" height="6" rx="3" fill="#7aa2f7"/>
+    <text x="30" y="188" fill="#f8f8f2" font-size="13" font-family="monospace">CSS</text>
+    <text x="382" y="188" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">7%</text>
+    <rect x="30" y="194" width="24.64" height="6" rx="3" fill="#7aa2f7"/>
+    <text x="30" y="214" fill="#f8f8f2" font-size="13" font-family="monospace">SCSS</text>
+    <text x="382" y="214" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">4%</text>
+    <rect x="30" y="220" width="14.08" height="6" rx="3" fill="#7aa2f7"/>
+    <text x="30" y="240" fill="#f8f8f2" font-size="13" font-family="monospace">Pascal</text>
+    <text x="382" y="240" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">3%</text>
+    <rect x="30" y="246" width="10.56" height="6" rx="3" fill="#7aa2f7"/>
 </svg>

@@ -1,13 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="125" viewBox="0 0 460 125">
-  <rect x="0.5" y="0.5" width="459" height="124" rx="6" fill="#1a1b27" stroke="#414868"/>
-  <text x="230" y="32" fill="#7aa2f7" font-size="15" font-weight="bold" font-family="monospace" text-anchor="middle">Contribution Streak</text>
-  <line x1="20" y1="42" x2="440" y2="42" stroke="#414868" stroke-width="1"/>
-  <text x="90" y="78" fill="#e0af68" font-size="28" font-weight="bold" font-family="monospace" text-anchor="middle">1,282</text>
-  <text x="90" y="100" fill="#a9b1d6" font-size="11" font-family="monospace" text-anchor="middle">Total Contributions</text>
-  <line x1="160" y1="50" x2="160" y2="105" stroke="#414868" stroke-width="1"/>
-  <text x="230" y="78" fill="#9ece6a" font-size="28" font-weight="bold" font-family="monospace" text-anchor="middle">5</text>
-  <text x="230" y="100" fill="#a9b1d6" font-size="11" font-family="monospace" text-anchor="middle">Current Streak</text>
-  <line x1="300" y1="50" x2="300" y2="105" stroke="#414868" stroke-width="1"/>
-  <text x="370" y="78" fill="#bb9af7" font-size="28" font-weight="bold" font-family="monospace" text-anchor="middle">7</text>
-  <text x="370" y="100" fill="#a9b1d6" font-size="11" font-family="monospace" text-anchor="middle">Longest Streak</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="152" viewBox="0 0 460 152">
+    <rect x="0.5" y="0.5" width="459" height="151" rx="12" fill="#1a1b27" stroke="#414868"/>
+    <text x="230" y="32" fill="#7aa2f7" font-size="15" font-weight="bold" font-family="monospace" text-anchor="middle">GitHub Contributions</text>
+    
+    <text x="230" y="62" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Repos Created (1 year): 176</text>
+    <text x="230" y="90" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Total Stars: 175</text>
+    <text x="230" y="118" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Total Forks: 8</text>
+    <text x="230" y="142" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Followers: 5</text>
+  </svg>

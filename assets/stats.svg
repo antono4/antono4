@@ -1,17 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="215" viewBox="0 0 460 215">
-  <rect x="0.5" y="0.5" width="459" height="214" rx="6" fill="#1a1b27" stroke="#414868"/>
-  <text x="230" y="32" fill="#7aa2f7" font-size="15" font-weight="bold" font-family="monospace" text-anchor="middle">Antono's GitHub Stats</text>
-  <line x1="20" y1="42" x2="440" y2="42" stroke="#414868" stroke-width="1"/>
-  <text x="30" y="80" fill="#a9b1d6" font-size="13" font-family="monospace">Stars</text>
-  <text x="215" y="80" fill="#e0af68" font-size="13" font-family="monospace" text-anchor="end" font-weight="bold">166</text>
-  <text x="250" y="80" fill="#a9b1d6" font-size="13" font-family="monospace">Commits (year)</text>
-  <text x="435" y="80" fill="#bb9af7" font-size="13" font-family="monospace" text-anchor="end" font-weight="bold">1,025</text>
-  <text x="30" y="120" fill="#a9b1d6" font-size="13" font-family="monospace">Pull Requests</text>
-  <text x="215" y="120" fill="#7dcfff" font-size="13" font-family="monospace" text-anchor="end" font-weight="bold">92</text>
-  <text x="250" y="120" fill="#a9b1d6" font-size="13" font-family="monospace">Issues</text>
-  <text x="435" y="120" fill="#f7768e" font-size="13" font-family="monospace" text-anchor="end" font-weight="bold">13</text>
-  <text x="30" y="160" fill="#a9b1d6" font-size="13" font-family="monospace">Repositories</text>
-  <text x="215" y="160" fill="#9ece6a" font-size="13" font-family="monospace" text-anchor="end" font-weight="bold">320</text>
-  <text x="250" y="160" fill="#a9b1d6" font-size="13" font-family="monospace">Followers</text>
-  <text x="435" y="160" fill="#7aa2f7" font-size="13" font-family="monospace" text-anchor="end" font-weight="bold">4</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="412" height="234" viewBox="0 0 412 234">
+    <rect x="0.5" y="0.5" width="411" height="233" rx="12" fill="#1a1b27" stroke="#414868"/>
+    <text x="206" y="38" fill="#7aa2f7" font-size="16" font-weight="bold" font-family="monospace" text-anchor="middle">antono4's GitHub Stats</text>
+    <text x="206" y="72" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Repositories: 358</text>
+    <text x="206" y="100" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Total Stars: 175</text>
+    <text x="206" y="128" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Total Forks: 8</text>
+    <text x="206" y="156" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Public Repos: 358</text>
+    <text x="206" y="184" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Followers: 5</text>
+    <text x="206" y="212" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Following: 24</text>
+  </svg>
