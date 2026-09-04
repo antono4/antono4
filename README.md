@@ -264,6 +264,58 @@ Curated showcase of all GitHub repositories, grouped by category.
 </p>
 
 </td>
+<td align="center" width="50%">
+
+### 🤖 MarbelAI v2.1
+
+AI assistant for kids — Marbel AI interactive chatbot with a fresh v2.1 experience.
+
+<p>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
+</p>
+
+<p>
+  <a href="https://antono4.github.io/MarbelAIv2.1/">
+    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo"/>
+  </a>
+  <a href="https://github.com/antono4/MarbelAIv2.1">
+    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository"/>
+  </a>
+</p>
+<p>
+  <img src="https://img.shields.io/github/stars/antono4/MarbelAIv2.1?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/antono4/MarbelAIv2.1?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
+</p>
+
+</td>
+</tr>
+<tr>
+<td align="center" width="100%">
+
+### 🎨 CITRA
+
+AI image generator — create stunning images with ease.
+
+<p>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
+</p>
+
+<p>
+  <a href="https://antono4.github.io/CITRA/">
+    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo"/>
+  </a>
+  <a href="https://github.com/antono4/CITRA">
+    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository"/>
+  </a>
+</p>
+<p>
+  <img src="https://img.shields.io/github/stars/antono4/CITRA?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars"/>
+  <img src="https://img.shields.io/github/forks/antono4/CITRA?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
+</p>
+
+</td>
 </tr>
 </table>
 
