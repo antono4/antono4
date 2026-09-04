@@ -156,6 +156,9 @@ AI-powered content generator for social media, blogs, and marketing. Built with 
 </p>
 
 <p>
+  <a href="https://antono4.github.io/ai-content-generator/">
+    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo"/>
+  </a>
   <a href="https://github.com/antono4/ai-content-generator">
     <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository"/>
   </a>
@@ -178,6 +181,9 @@ Portfolio trading platform with real-time analytics and advanced charting featur
 </p>
 
 <p>
+  <a href="https://antono4.github.io/MacFolio/">
+    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo"/>
+  </a>
   <a href="https://github.com/antono4/MacFolio">
     <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository"/>
   </a>
@@ -203,6 +209,9 @@ Creative 3D visual effects and animations showcasing the beauty of neon light ae
 </p>
 
 <p>
+  <a href="https://antono4.github.io/3D-Neon-Lightbulb/">
+    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo"/>
+  </a>
   <a href="https://github.com/antono4/3D-Neon-Lightbulb">
     <img src="https://img.shields.io/badge/View_Repository-9ECE6A?style=flat-square&logo=github" alt="View Repository"/>
   </a>
@@ -221,6 +230,7 @@ Mini autonomous coding agent inspired by Devin — built with HTML.
 
 <p>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
 </p>
 
 <p>
@@ -291,7 +301,7 @@ AI assistant for kids — Marbel AI interactive chatbot with a fresh v2.1 experi
 </td>
 </tr>
 <tr>
-<td align="center" width="100%">
+<td align="center" width="50%">
 
 ### 🎨 CITRA
 
@@ -313,6 +323,17 @@ AI image generator — create stunning images with ease.
 <p>
   <img src="https://img.shields.io/github/stars/antono4/CITRA?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars"/>
   <img src="https://img.shields.io/github/forks/antono4/CITRA?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
+</p>
+
+</td>
+<td align="center" width="50%">
+
+### 🔮 Coming Soon
+
+Something amazing is on the way — stay tuned!
+
+<p>
+  <img src="https://img.shields.io/badge/More_Coming_Soon-8B949E?style=flat-square" alt="Coming Soon"/>
 </p>
 
 </td>
