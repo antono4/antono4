@@ -6,7 +6,7 @@ on:
       - main
   schedule:
     # setiap 10 menit
-    - cron: "*/10 * * * *"
+    - cron: "2-59/10 * * * *"
 
 permissions:
   contents: write
