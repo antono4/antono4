@@ -5,14 +5,13 @@ on:
     branches:
       - main
   schedule:
-    # setiap 30 menit
-    - cron: "10-59/30 * * * *"
+    - cron: "0 0 * * *" # See https://crontab.guru/
 
 permissions:
   contents: write
 
 concurrency:
-  group: readme-updater
+  group: auto-commit
   cancel-in-progress: false
 
 jobs:
@@ -24,16 +23,11 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      - name: Modify last update
-        run: |
-          d=`date '+%Y-%m-%dT%H:%M:%SZ'`
-          echo $d > LAST_UPDATED
-
       - name: Commit changes
+        id: commit
         run: |
           git config --local user.email "73228642+antono4@users.noreply.github.com"
           git config --local user.name "antono4"
-          git add -A
 
           arr[0]="chore(bot): 😂 auto commit"
           arr[1]="chore(bot): 😱 auto commit"
@@ -47,12 +41,38 @@ jobs:
           arr[9]="chore(bot): 👻 auto commit"
 
           rand=$[$RANDOM % ${#arr[@]}]
+          echo "message=${arr[$rand]}" >> "$GITHUB_OUTPUT"
 
-          git commit -m "${arr[$rand]}"
+      - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: ${{ steps.commit.outputs.message }}
+        run: |
+          remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          branch="${{ github.ref_name }}"
 
-      - name: GitHub Push
-        uses: ad-m/github-push-action@master
-        with:
-          pull: true
-          directory: "."
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          for attempt in 1 2 3 4 5; do
+            # Selalu tulis di atas commit terbaru remote supaya tidak bentrok
+            git fetch --quiet "$remote" "$branch"
+            git reset --quiet --hard FETCH_HEAD
+
+            d=$(date '+%Y-%m-%dT%H:%M:%SZ')
+            echo "$d" > LAST_UPDATED
+            git add -A
+            if git diff --cached --quiet; then
+              echo "Tidak ada perubahan untuk di-commit"
+              exit 0
+            fi
+            git commit --quiet -m "$MESSAGE"
+
+            if git push --quiet "$remote" "HEAD:$branch"; then
+              echo "Push berhasil pada percobaan $attempt"
+              exit 0
+            fi
+
+            echo "Push ditolak (percobaan $attempt), menyinkron ulang..."
+            sleep "$((RANDOM % 5 + 2))"
+          done
+
+          echo "Push gagal setelah 5 percobaan" >&2
+          exit 1
