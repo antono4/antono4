@@ -5,14 +5,14 @@ on:
     branches:
       - main
   schedule:
-    # setiap 10 menit
-    - cron: "*/10 * * * *"
+    # setiap 30 menit
+    - cron: "10-59/30 * * * *"
 
 permissions:
   contents: write
 
 concurrency:
-  group: auto-commit
+  group: readme-updater
   cancel-in-progress: false
 
 jobs:
