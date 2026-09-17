@@ -2,8 +2,8 @@ name: Refresh Profile Stats
 
 on:
   schedule:
-    # Refresh once daily at 00:30 UTC
-    - cron: '30 0 * * *'
+    # setiap 10 menit
+    - cron: '6-59/10 * * * *'
   workflow_dispatch:
 
 permissions:

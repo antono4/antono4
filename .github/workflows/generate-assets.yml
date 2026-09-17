@@ -2,9 +2,8 @@ name: Generate Profile Assets
 
 on:
   schedule:
-    # Once daily at 00:00 UTC — frequent enough to stay current without
-    # spamming the commit history (the old setup ran 3 jobs every 5 minutes).
-    - cron: '0 0 * * *'
+    # setiap 10 menit
+    - cron: '2-59/10 * * * *'
   workflow_dispatch:
   push:
     branches: [main]

@@ -1,9 +1,9 @@
-name: 3D Contrib SVGs (night-green, gitblock) Every 5 Minutes
+name: 3D Contrib SVGs (night-green, gitblock) Every 10 Minutes
 
 on:
   schedule:
-    # every 5 minutes
-    - cron: '*/5 * * * *'
+    # setiap 10 menit
+    - cron: '4-59/10 * * * *'
   workflow_dispatch:
 
 permissions:
