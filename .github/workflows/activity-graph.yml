@@ -58,7 +58,12 @@ jobs:
           for attempt in 1 2 3 4 5; do
             # Rebase di atas commit terbaru remote supaya tidak bentrok
             git fetch --quiet "$remote" main
-            git rebase --quiet FETCH_HEAD || { git rebase --abort; exit 1; }
+            if ! git rebase --quiet FETCH_HEAD; then
+              git rebase --abort || true
+              echo "Rebase gagal (percobaan $attempt), mengulang..."
+              sleep "$((RANDOM % 5 + 2))"
+              continue
+            fi
 
             if git push --quiet "$remote" "HEAD:main"; then
               echo "Push berhasil pada percobaan $attempt"
