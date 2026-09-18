@@ -1,0 +1,73 @@
+name: Refresh Activity Graph Every 5 Minutes
+
+on:
+  schedule:
+    # setiap 5 menit
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: activity-graph-5min
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate activity graphs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm install graphql-request graphql --no-save
+          node .github/scripts/generate-activity-graph.js
+          ACTIVITY_GRAPH_THEME=github-dark OUTPUT_PATH=assets/activity-graph-dark.svg \
+            node .github/scripts/generate-activity-graph.js
+
+      - name: Commit and push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add assets/activity-graph.svg assets/activity-graph-dark.svg
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "chore: refresh activity graph [skip ci]"
+
+          remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          for attempt in 1 2 3 4 5; do
+            # Rebase di atas commit terbaru remote supaya tidak bentrok
+            git fetch --quiet "$remote" main
+            git rebase --quiet FETCH_HEAD || { git rebase --abort; exit 1; }
+
+            if git push --quiet "$remote" "HEAD:main"; then
+              echo "Push berhasil pada percobaan $attempt"
+              exit 0
+            fi
+
+            echo "Push ditolak (percobaan $attempt), menyinkron ulang..."
+            sleep "$((RANDOM % 5 + 2))"
+          done
+
+          echo "Push gagal setelah 5 percobaan" >&2
+          exit 1
