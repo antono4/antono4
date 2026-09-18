@@ -17,6 +17,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          ref: main
+          persist-credentials: false
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -36,12 +38,41 @@ jobs:
         run: node .github/scripts/generate-stats.mjs
 
       - name: Commit and push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git add assets/ stats.svg assets/top-langs.svg assets/streak.svg
+          git add assets/stats.svg assets/top-langs.svg assets/streak.svg
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            git commit -m "chore: refresh profile stats [skip ci]"
-            git push
-            echo "Profile stats updated"
+            exit 0
           fi
+
+          # Isinya deterministik dari API GitHub, jadi simpan dulu lalu tulis
+          # ulang di atas commit terbaru remote (menghindari konflik rebase).
+          mkdir -p /tmp/stats
+          cp assets/stats.svg assets/top-langs.svg assets/streak.svg /tmp/stats/
+
+          remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          for attempt in 1 2 3 4 5; do
+            git fetch --quiet "$remote" main
+            git reset --quiet --hard FETCH_HEAD
+            cp /tmp/stats/stats.svg /tmp/stats/top-langs.svg /tmp/stats/streak.svg assets/
+
+            git add assets/stats.svg assets/top-langs.svg assets/streak.svg
+            if git diff --staged --quiet; then
+              echo "Tidak ada perubahan untuk di-commit"
+              exit 0
+            fi
+            git commit --quiet -m "chore: refresh profile stats [skip ci]"
+
+            if git push --quiet "$remote" "HEAD:main"; then
+              echo "Push berhasil pada percobaan $attempt"
+              exit 0
+            fi
+
+            echo "Push ditolak (percobaan $attempt), menyinkron ulang..."
+            sleep "$((RANDOM % 5 + 2))"
+          done
+
+          echo "Push gagal setelah 5 percobaan" >&2
+          exit 1
