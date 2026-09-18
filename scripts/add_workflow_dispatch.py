@@ -9,6 +9,11 @@ Usage:
     python3 add_workflow_dispatch.py                    # open one PR per repo
 
 Never commits to a default branch: each repo gets its own branch and PR.
+
+A run of a few hundred PRs will hit GitHub's secondary rate limit on
+content-generating requests. Writes are therefore paced, retried on 403/429/5xx, and
+every completed repo is journalled to `--state-file`, so a rerun skips what already
+succeeded instead of starting over.
 """
 
 import argparse
@@ -17,12 +22,15 @@ import json
 import os
 import subprocess
 import sys
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 TARGET_FILE = ".github/workflows/autocommit.yml"
 BRANCH_NAME = "add-autocommit-workflow-dispatch"
 TRIGGER_LINE = "  workflow_dispatch:"
+MIN_SECONDS_BETWEEN_WRITES = 1.0
+MAX_ATTEMPTS = 5
 
 
 def parse_args():
@@ -35,7 +43,12 @@ def parse_args():
     p.add_argument("--include-archived", default=os.environ.get("INCLUDE_ARCHIVED", "false"))
     p.add_argument("--limit", type=int, default=int(os.environ.get("LIMIT") or 0),
                    help="Stop after this many repos (0 = no limit)")
-    p.add_argument("--workers", type=int, default=int(os.environ.get("WORKERS") or 6))
+    p.add_argument("--workers", type=int, default=int(os.environ.get("WORKERS") or 4))
+    p.add_argument("--min-write-interval", type=float,
+                   default=float(os.environ.get("MIN_WRITE_INTERVAL") or MIN_SECONDS_BETWEEN_WRITES),
+                   help="Minimum seconds between content-generating requests")
+    p.add_argument("--state-file", default=os.environ.get("STATE_FILE") or "",
+                   help="Journal of completed repos, so a rerun resumes instead of restarting")
     p.add_argument("--dry-run", default=os.environ.get("DRY_RUN", "false"))
     return p.parse_args()
 
@@ -44,16 +57,73 @@ def as_bool(value):
     return str(value).strip().lower() in {"1", "true", "yes", "on"}
 
 
-def gh(args, expect_json=True):
-    proc = subprocess.run(["gh", "api", *args], capture_output=True, text=True, timeout=120)
-    if proc.returncode != 0:
-        return False, (proc.stderr or proc.stdout).strip()
-    if not expect_json:
-        return True, proc.stdout
-    try:
-        return True, json.loads(proc.stdout or "null")
-    except json.JSONDecodeError:
-        return False, "bad json"
+class RateLimiter:
+    """Serialises write calls so they stay under GitHub's secondary rate limit."""
+
+    def __init__(self, min_interval):
+        self.min_interval = min_interval
+        self._lock = threading.Lock()
+        self._next_allowed = 0.0
+
+    def wait(self):
+        if self.min_interval <= 0:
+            return
+        with self._lock:
+            now = time.monotonic()
+            sleep_for = max(0.0, self._next_allowed - now)
+            self._next_allowed = max(now, self._next_allowed) + self.min_interval
+        if sleep_for:
+            time.sleep(sleep_for)
+
+
+def is_retryable(text):
+    """True for throttling and transient failures, which are worth another attempt.
+
+    A plain permission denial is not retryable — it will fail the same way every time —
+    so it is excluded before the generic 403 check.
+    """
+    lowered = (text or "").lower()
+    permanent = ("resource not accessible", "not accessible by integration", "bad credentials",
+                 "must have admin", "not found", "404")
+    if any(marker in lowered for marker in permanent) and "rate limit" not in lowered:
+        return False
+    return any(marker in lowered for marker in (
+        "secondary rate limit", "rate limit", "abuse", "429",
+        "500", "502", "503", "504", "timeout", "timed out", "connection reset",
+    ))
+
+
+def throttle_delay(attempt):
+    return min(60.0, 2.0 ** attempt)
+
+
+def gh(args, expect_json=True, limiter=None, retries=MAX_ATTEMPTS):
+    """Run `gh api`, pacing and retrying when a write is throttled or fails transiently."""
+    last = ""
+    for attempt in range(retries):
+        if limiter is not None:
+            limiter.wait()
+        try:
+            proc = subprocess.run(["gh", "api", *args], capture_output=True, text=True, timeout=180)
+        except subprocess.TimeoutExpired:
+            last = "timeout"
+            if attempt < retries - 1:
+                time.sleep(throttle_delay(attempt))
+                continue
+            return False, last
+        if proc.returncode == 0:
+            if not expect_json:
+                return True, proc.stdout
+            try:
+                return True, json.loads(proc.stdout or "null")
+            except json.JSONDecodeError:
+                return False, "bad json"
+        last = (proc.stderr or proc.stdout).strip()
+        if attempt < retries - 1 and is_retryable(last):
+            time.sleep(throttle_delay(attempt))
+            continue
+        return False, last
+    return False, last
 
 
 def add_trigger(text):
@@ -160,7 +230,7 @@ def get_default_branch(full, fallback):
     return fallback
 
 
-def open_pr(item, path, branch_name, dry_run):
+def open_pr(item, path, branch_name, dry_run, limiter):
     """Create the branch, commit the edit and open the PR for one repo."""
     repo = item["repo"]
     full = repo["full_name"]
@@ -168,15 +238,16 @@ def open_pr(item, path, branch_name, dry_run):
     if dry_run:
         return full, "dry_run", None
 
-    ok, ref = gh([f"/repos/{full}/git/ref/heads/{base_branch}"])
+    ok, ref = gh([f"/repos/{full}/git/ref/heads/{base_branch}"], limiter=limiter)
     if not ok or not isinstance(ref, dict):
         return full, "error", f"cannot read base ref: {ref}"
     base_sha = ref["object"]["sha"]
 
     ok, out = gh(["-X", "POST", f"/repos/{full}/git/refs",
                   "-f", f"ref=refs/heads/{branch_name}",
-                  "-f", f"sha={base_sha}"], expect_json=False)
+                  "-f", f"sha={base_sha}"], expect_json=False, limiter=limiter)
     if not ok:
+        # 422 means the branch is already there — that is fine, just push the commit.
         if "422" not in out and "already exists" not in out:
             return full, "error", f"cannot create branch: {out.splitlines()[0]}"
 
@@ -184,7 +255,7 @@ def open_pr(item, path, branch_name, dry_run):
                   "-f", "message=Add workflow_dispatch trigger to autocommit.yml",
                   "-f", f"content={base64.b64encode(item['new_text'].encode()).decode()}",
                   "-f", f"branch={branch_name}",
-                  "-f", f"sha={item['sha']}"], expect_json=False)
+                  "-f", f"sha={item['sha']}"], expect_json=False, limiter=limiter)
     if not ok:
         return full, "error", f"cannot commit: {out.splitlines()[0]}"
 
@@ -203,7 +274,7 @@ def open_pr(item, path, branch_name, dry_run):
                   "-f", f"title={title}",
                   "-f", f"head={branch_name}",
                   "-f", f"base={base_branch}",
-                  "-f", f"body={body}"], expect_json=False)
+                  "-f", f"body={body}"], expect_json=False, limiter=limiter)
     if not ok:
         if "already exists" in out:
             return full, "pr_exists", None
@@ -216,6 +287,25 @@ def open_pr(item, path, branch_name, dry_run):
     return full, "pr_opened", pr_url
 
 
+def load_state(path):
+    if not path or not os.path.exists(path):
+        return {}
+    try:
+        with open(path) as fh:
+            return json.load(fh)
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def save_state(path, state):
+    if not path:
+        return
+    tmp = f"{path}.tmp"
+    with open(tmp, "w") as fh:
+        json.dump(state, fh, indent=1, sort_keys=True)
+    os.replace(tmp, path)
+
+
 def main():
     args = parse_args()
     dry_run = as_bool(args.dry_run)
@@ -226,9 +316,17 @@ def main():
     print(f"{'would inspect' if dry_run else 'inspecting'} {len(repos)} repos "
           f"for {args.file}")
 
+    state = load_state(args.state_file)
+    already_done = {repo for repo, status in state.items()
+                    if status in ("pr_opened", "pr_exists")}
+    if already_done:
+        print(f"resuming: {len(already_done)} repo(s) already done in a previous run")
+
     plan, problems = [], []
     for i, repo in enumerate(repos, 1):
         full = repo["full_name"]
+        if full in already_done:
+            continue
         base = get_default_branch(full, repo["default_branch"])
         got = read_file(full, base, args.file)
         if got is None:
@@ -244,33 +342,44 @@ def main():
             continue
         if changed:
             plan.append({"full_name": full, "branch": base, "sha": sha,
-                         "new_text": new_text, "repo": repo})
+                         "new_text": new_text, "repo": repo, "changed": changed})
         if i % 100 == 0:
             print(f"  inspected {i}/{len(repos)}")
 
     print(f"\nneeds the trigger: {len(plan)}")
-    print(f"already had it / unreadable: {len(repos) - len(plan) - len(problems)}")
     if problems:
         print(f"problems: {len(problems)}")
         for full, why in problems[:20]:
             print(f"  {full}: {why}")
+    for full, why in problems:
+        state[full] = f"problem:{why}"
 
     if not plan:
+        save_state(args.state_file, state)
         print("nothing to do")
         return 0
 
-    print(f"\n{'DRY RUN - no changes will be made' if dry_run else 'opening PRs'}")
+    limiter = RateLimiter(args.min_write_interval)
+    print(f"\n{'DRY RUN - no changes will be made' if dry_run else 'opening PRs'} "
+          f"(workers={args.workers}, min interval between writes="
+          f"{args.min_write_interval}s)")
+
     results = []
     with ThreadPoolExecutor(max_workers=args.workers) as ex:
         futures = [
-            ex.submit(open_pr, item, args.file, args.branch, dry_run)
+            ex.submit(open_pr, item, args.file, args.branch, dry_run, limiter)
             for item in plan
         ]
         for i, fut in enumerate(as_completed(futures), 1):
-            results.append(fut.result())
+            result = fut.result()
+            results.append(result)
+            full, status, _ = result
+            state[full] = status
+            if i % 10 == 0 or status == "error":
+                save_state(args.state_file, state)
             if not dry_run and i % 25 == 0:
                 print(f"  processed {i}/{len(plan)}")
-                time.sleep(0.5)
+    save_state(args.state_file, state)
 
     tally = {}
     for full, status, detail in results:
@@ -281,15 +390,18 @@ def main():
 
     opened = [(f, d) for f, s, d in results if s == "pr_opened"]
     if opened:
-        print("\nPRs opened:")
+        print(f"\nPRs opened ({len(opened)}):")
         for full, url in sorted(opened):
             print(f"  {full}: {url}")
 
     failed = [(f, d) for f, s, d in results if s == "error"]
     if failed:
-        print("\nerrors:")
+        print(f"\nerrors ({len(failed)}) — rerun with the same --state-file to retry these:")
         for full, detail in failed[:30]:
             print(f"  {full}: {detail}")
+
+    if args.state_file:
+        print(f"\nstate journal: {args.state_file}")
 
     if os.environ.get("JSON_REPORT"):
         with open(os.environ["JSON_REPORT"], "w") as fh:
