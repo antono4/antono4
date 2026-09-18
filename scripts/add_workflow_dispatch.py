@@ -243,22 +243,61 @@ def open_pr(item, path, branch_name, dry_run, limiter):
         return full, "error", f"cannot read base ref: {ref}"
     base_sha = ref["object"]["sha"]
 
+    branch_exists = False
     ok, out = gh(["-X", "POST", f"/repos/{full}/git/refs",
                   "-f", f"ref=refs/heads/{branch_name}",
                   "-f", f"sha={base_sha}"], expect_json=False, limiter=limiter)
     if not ok:
-        # 422 means the branch is already there — that is fine, just push the commit.
-        if "422" not in out and "already exists" not in out:
+        if "422" in out or "already exists" in out:
+            branch_exists = True
+        else:
             return full, "error", f"cannot create branch: {out.splitlines()[0]}"
+
+    feature_sha = item["sha"]
+    new_text = item["new_text"]
+    if branch_exists:
+        # A previous run already created this branch. Re-read the file from it and edit
+        # the current revision — these files change often, so the revision the plan was
+        # built from may already be stale, and committing against a stale sha is a 409.
+        existing = read_file(full, branch_name, path)
+        if existing is None:
+            return full, "error", "cannot read file on existing branch"
+        text, feature_sha = existing
+        if "workflow_dispatch" in text:
+            # The branch already carries the edit; just make sure a PR is open.
+            return open_pull_request(full, path, branch_name, base_branch, limiter)
+        try:
+            new_text, changed = add_trigger(text)
+            if changed:
+                validate(text, new_text)
+        except ValueError as e:
+            return full, "error", f"transform failed on existing branch: {e}"
 
     ok, out = gh(["-X", "PUT", f"/repos/{full}/contents/{path}",
                   "-f", "message=Add workflow_dispatch trigger to autocommit.yml",
-                  "-f", f"content={base64.b64encode(item['new_text'].encode()).decode()}",
+                  "-f", f"content={base64.b64encode(new_text.encode()).decode()}",
                   "-f", f"branch={branch_name}",
-                  "-f", f"sha={item['sha']}"], expect_json=False, limiter=limiter)
+                  "-f", f"sha={feature_sha}"], expect_json=False, limiter=limiter)
     if not ok:
+        if "409" in out:
+            return full, "error", "conflict: file changed on the branch during rollout"
         return full, "error", f"cannot commit: {out.splitlines()[0]}"
 
+    return open_pull_request(full, path, branch_name, base_branch, limiter)
+
+
+def find_open_pr(full, branch_name, limiter):
+    """Return the html_url of the open PR for `branch_name`, if there is one."""
+    owner = full.split("/")[0]
+    ok, data = gh([f"/repos/{full}/pulls?state=open&head={owner}:{branch_name}&per_page=1"],
+                  limiter=limiter)
+    if ok and isinstance(data, list) and data:
+        return data[0].get("html_url")
+    return None
+
+
+def open_pull_request(full, path, branch_name, base_branch, limiter):
+    """Open the PR, tolerating one that is already open."""
     title = "Add workflow_dispatch trigger to autocommit.yml"
     body = (
         "`autocommit.yml` only declares `push` and `schedule` triggers, so it cannot be "
@@ -278,6 +317,12 @@ def open_pr(item, path, branch_name, dry_run, limiter):
     if not ok:
         if "already exists" in out:
             return full, "pr_exists", None
+        if "422" in out or "validation failed" in out.lower():
+            # GitHub reports an already-open PR for this branch as a bare 422, so look
+            # the existing PR up rather than treating it as a failure.
+            existing = find_open_pr(full, branch_name, limiter)
+            if existing:
+                return full, "pr_exists", existing
         return full, "error", f"cannot open PR: {out.splitlines()[0]}"
 
     try:
