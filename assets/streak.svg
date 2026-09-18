@@ -2,8 +2,8 @@
     <rect x="0.5" y="0.5" width="459" height="151" rx="12" fill="#1a1b27" stroke="#414868"/>
     <text x="230" y="32" fill="#7aa2f7" font-size="15" font-weight="bold" font-family="monospace" text-anchor="middle">GitHub Contributions</text>
     
-    <text x="230" y="62" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Repos Created (1 year): 176</text>
-    <text x="230" y="90" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Total Stars: 175</text>
+    <text x="230" y="62" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Repos Created (1 year): 210</text>
+    <text x="230" y="90" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Total Stars: 176</text>
     <text x="230" y="118" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Total Forks: 8</text>
     <text x="230" y="142" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Followers: 5</text>
   </svg>
