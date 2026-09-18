@@ -81,20 +81,54 @@ class RateLimiter:
         self._next_allowed = 0.0
         self._resume_at = 0.0
         self._secondary_strikes = 0
+        self.deadline = None
+        self.blocked = False
+
+    def note_secondary_limit(self, retry_after=None):
+        """Record a content-creation block and pause writers briefly.
+
+        Mass PR creation is inherently rate-limited by this anti-abuse measure, and
+        sleeping through it just extends the block. The run stops soon after (see
+        `blocked`); the pause only covers work already in flight.
+        """
+        with self._lock:
+            self._secondary_strikes += 1
+            strikes = self._secondary_strikes
+            self.blocked = True
+        delay = retry_after if retry_after else min(
+            300.0, self.SECONDARY_COOLDOWN_SECONDS * (2 ** (strikes - 1)))
+        with self._lock:
+            self._resume_at = max(self._resume_at, time.monotonic() + delay)
+        print(f"    content-creation block (strike {strikes}): pausing {delay:.0f}s, "
+              f"then stopping this run", flush=True)
+
+    def note_success(self):
+        """Reset the escalation once writes are flowing again."""
+        with self._lock:
+            self._secondary_strikes = 0
 
     def wait(self):
+        """Block until this writer may proceed, or until the run's deadline passes.
+
+        The deadline matters: a long cooldown must not park a run indefinitely, otherwise
+        `--max-run-minutes` cannot turn it into a resumable partial stop.
+        """
         while True:
             with self._lock:
                 now = time.monotonic()
+                if self.deadline is not None and now >= self.deadline:
+                    return
                 if self._resume_at > now:
                     sleep_for = self._resume_at - now
                 else:
                     sleep_for = max(0.0, self._next_allowed - now)
                     self._next_allowed = max(now, self._next_allowed) + self.min_interval
+                if self.deadline is not None:
+                    sleep_for = min(sleep_for, max(0.0, self.deadline - now))
             if sleep_for <= 0:
                 return
-            if sleep_for > 1:
-                print(f"    pacing: waiting {sleep_for:.0f}s")
+            if sleep_for > 2:
+                print(f"    pacing: waiting {sleep_for:.0f}s", flush=True)
             time.sleep(sleep_for)
 
     def note_headers(self, headers):
@@ -584,12 +618,14 @@ def main():
 
     limiter = RateLimiter(args.min_write_interval)
     deadline = (time.monotonic() + args.max_run_minutes * 60) if args.max_run_minutes else None
+    limiter.deadline = deadline
 
     print(f"\n{'DRY RUN - no changes will be made' if dry_run else 'opening PRs'} "
           f"(workers={args.workers}, min interval between writes="
           f"{args.min_write_interval}s)")
 
     results = []
+    stopped_early = False
     with ThreadPoolExecutor(max_workers=args.workers) as ex:
         futures = [
             ex.submit(open_pr, item, args.file, args.branch, dry_run, limiter, deadline)
@@ -603,7 +639,16 @@ def main():
             if i % 10 == 0 or status == "error":
                 save_state(args.state_file, state)
             if not dry_run and i % 25 == 0:
-                print(f"  processed {i}/{len(plan)}")
+                print(f"  processed {i}/{len(plan)}", flush=True)
+
+            # Once GitHub blocks content creation, continuing mostly produces more
+            # blocks. Cancel what is queued and resume in a later run.
+            if limiter.blocked and not stopped_early:
+                stopped_early = True
+                print("\nstopping early: content creation is blocked; "
+                      "queued work will resume on the next run", flush=True)
+                for other in futures:
+                    other.cancel()
     save_state(args.state_file, state)
 
     tally = {}
