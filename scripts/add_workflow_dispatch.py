@@ -39,7 +39,9 @@ def parse_args():
     p.add_argument("--file", default=os.environ.get("TARGET_FILE", TARGET_FILE))
     p.add_argument("--branch", default=os.environ.get("BRANCH_NAME", BRANCH_NAME))
     p.add_argument("--only-repos", default=os.environ.get("ONLY_REPOS") or "")
-    p.add_argument("--include-forks", default=os.environ.get("INCLUDE_FORKS", "true"))
+    p.add_argument("--include-forks", default=os.environ.get("INCLUDE_FORKS", "false"),
+                   help="Default off: autocommit.yml was deliberately removed from forks, "
+                        "so adding the trigger back there would contradict that.")
     p.add_argument("--include-archived", default=os.environ.get("INCLUDE_ARCHIVED", "false"))
     p.add_argument("--limit", type=int, default=int(os.environ.get("LIMIT") or 0),
                    help="Stop after this many repos (0 = no limit)")
