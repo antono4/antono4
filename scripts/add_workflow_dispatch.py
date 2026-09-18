@@ -32,10 +32,6 @@ TRIGGER_LINE = "  workflow_dispatch:"
 MIN_SECONDS_BETWEEN_WRITES = 1.0
 MAX_ATTEMPTS = 5
 
-# Rough number of REST calls one repo costs: read file, read base ref, create branch,
-# commit, open PR. Used to check the hourly budget before starting.
-API_CALLS_PER_REPO = 5
-
 
 def parse_args():
     p = argparse.ArgumentParser(description=__doc__)
@@ -53,6 +49,10 @@ def parse_args():
                    help="Minimum seconds between content-generating requests")
     p.add_argument("--state-file", default=os.environ.get("STATE_FILE") or "",
                    help="Journal of completed repos, so a rerun resumes instead of restarting")
+    p.add_argument("--max-run-minutes", type=float,
+                   default=float(os.environ.get("MAX_RUN_MINUTES") or 0),
+                   help="Turn the run into a clean partial success after this many minutes "
+                        "(0 = no limit). Progress is journalled either way.")
     p.add_argument("--dry-run", default=os.environ.get("DRY_RUN", "false"))
     return p.parse_args()
 
@@ -62,42 +62,102 @@ def as_bool(value):
 
 
 class RateLimiter:
-    """Serialises write calls so they stay under GitHub's secondary rate limit."""
+    """Paces write calls and holds all writers back when the hourly budget runs low.
+
+    GitHub's write limit is per hour, so once it is exhausted every writer must stop;
+    retrying individually just burns time. Tracking `x-ratelimit-remaining` from the
+    responses lets the whole run park until the window rolls over.
+    """
+
+    RESERVE = 25
 
     def __init__(self, min_interval):
         self.min_interval = min_interval
         self._lock = threading.Lock()
         self._next_allowed = 0.0
+        self._resume_at = 0.0
 
     def wait(self):
-        if self.min_interval <= 0:
-            return
-        with self._lock:
-            now = time.monotonic()
-            sleep_for = max(0.0, self._next_allowed - now)
-            self._next_allowed = max(now, self._next_allowed) + self.min_interval
-        if sleep_for:
+        while True:
+            with self._lock:
+                now = time.monotonic()
+                if self._resume_at > now:
+                    sleep_for = self._resume_at - now
+                else:
+                    sleep_for = max(0.0, self._next_allowed - now)
+                    self._next_allowed = max(now, self._next_allowed) + self.min_interval
+            if sleep_for <= 0:
+                return
+            if sleep_for > 1:
+                print(f"    rate limit guard: pausing {sleep_for:.0f}s")
             time.sleep(sleep_for)
 
+    def note_headers(self, headers):
+        """Park all writers until reset once the remaining budget gets close to zero."""
+        remaining = headers.get("x-ratelimit-remaining")
+        reset = headers.get("x-ratelimit-reset")
+        if remaining is None or reset is None:
+            return
+        try:
+            remaining_i, reset_f = int(remaining), float(reset)
+        except ValueError:
+            return
+        if remaining_i > self.RESERVE:
+            return
+        delay = max(0.0, reset_f - time.time()) + 5
+        with self._lock:
+            self._resume_at = max(self._resume_at, time.monotonic() + delay)
 
-def parse_rate_limit_reset(text, now=None):
-    """Seconds until the primary rate limit resets, parsed from GitHub's error body.
 
-    The primary limit is per hour, so a short backoff is useless — the only thing that
-    helps is waiting for the window to roll over.
+def run_gh(args):
+    """Run `gh api` and capture body plus headers, so rate-limit state is authoritative.
+
+    GitHub's error *body* includes the request timestamp, not the reset time, so parsing
+    the body gives a bogus answer. The `x-ratelimit-reset` header is the real one.
     """
-    import re
-    import datetime
-    match = re.search(r"(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) UTC", text or "")
-    if not match:
-        return None
-    reset = datetime.datetime.strptime(match.group(1), "%Y-%m-%d %H:%M:%S").replace(
-        tzinfo=datetime.timezone.utc)
-    now = now or datetime.datetime.now(datetime.timezone.utc)
-    return max(0.0, (reset - now).total_seconds())
+    proc = subprocess.run(["gh", "api", "-i", *args], capture_output=True, text=True,
+                          timeout=180)
+    raw = proc.stdout or ""
+    headers = {}
+    body = raw
+    if raw.startswith("HTTP/"):
+        parts = raw.split("\r\n\r\n", 1)
+        if len(parts) == 2:
+            head, body = parts
+            for line in head.splitlines():
+                if ":" in line:
+                    key, _, value = line.partition(":")
+                    headers[key.strip().lower()] = value.strip()
+    if proc.returncode != 0:
+        return False, (proc.stderr or body).strip(), headers
+    return True, body, headers
 
 
-def is_primary_rate_limit(text):
+def parse_rate_limit_reset(headers, text, now=None):
+    """Seconds until the rate limit resets, preferring the response header.
+
+    Falls back to any `Retry-After` value, and returns None when nothing usable is
+    present, so the caller uses normal backoff rather than guessing.
+    """
+    reset = headers.get("x-ratelimit-reset")
+    if reset:
+        try:
+            return max(0.0, float(reset) - time.time())
+        except ValueError:
+            pass
+    retry_after = headers.get("retry-after")
+    if retry_after:
+        try:
+            return max(0.0, float(retry_after))
+        except ValueError:
+            pass
+    return None
+
+
+def is_primary_rate_limit(headers, text):
+    """True when the core REST budget is what refused the call."""
+    if headers.get("x-ratelimit-remaining") == "0":
+        return True
     lowered = (text or "").lower()
     return "api rate limit exceeded" in lowered or "rate limit exceeded for user" in lowered
 
@@ -113,52 +173,68 @@ def is_retryable(text):
                  "must have admin")
     if any(marker in lowered for marker in permanent) and "rate limit" not in lowered:
         return False
-    if is_primary_rate_limit(text):
-        return True
     return any(marker in lowered for marker in (
         "secondary rate limit", "rate limit", "abuse", "429",
         "500", "502", "503", "504", "timeout", "timed out", "connection reset",
     ))
 
 
-def throttle_delay(attempt, text=""):
-    """Backoff for a retry. Waits out the primary rate-limit window when that is what hit."""
-    reset_in = parse_rate_limit_reset(text)
-    if reset_in is not None and is_primary_rate_limit(text):
-        # Add padding so the retry lands after the window really rolls over.
+def throttle_delay(attempt, headers, text):
+    """Backoff for a retry. Waits out the rate-limit window when that is what refused.
+
+    Only used when the caller gave no deadline. Otherwise `gh` waits until the window
+    rolls over itself, bounded by the deadline, so a run cannot sleep indefinitely.
+    """
+    reset_in = parse_rate_limit_reset(headers, text)
+    if reset_in is not None and is_primary_rate_limit(headers, text):
         return min(3700.0, reset_in + 5)
     return min(60.0, 2.0 ** attempt)
 
 
 def gh(args, expect_json=True, limiter=None, retries=MAX_ATTEMPTS, deadline=None):
-    """Run `gh api`, pacing and retrying when a write is throttled or fails transiently."""
+    """Run `gh api`, pacing and retrying when a write is throttled or fails transiently.
+
+    When the rate limit is exhausted and a deadline is set, this sleeps until the window
+    rolls over instead of retrying into a wall — but only if the reset falls inside the
+    deadline, otherwise it gives up so the run can be resumed later.
+    """
     last = ""
+    last_headers = {}
     for attempt in range(retries):
         if limiter is not None:
             limiter.wait()
         try:
-            proc = subprocess.run(["gh", "api", *args], capture_output=True, text=True, timeout=180)
+            ok, out, headers = run_gh(args)
         except subprocess.TimeoutExpired:
-            last = "timeout"
+            last, last_headers = "timeout", {}
             if attempt < retries - 1:
-                time.sleep(throttle_delay(attempt))
+                time.sleep(throttle_delay(attempt, last_headers, last))
                 continue
             return False, last
-        if proc.returncode == 0:
+        last_headers = headers
+        if limiter is not None:
+            limiter.note_headers(headers)
+        if ok:
             if not expect_json:
-                return True, proc.stdout
+                return True, out
             try:
-                return True, json.loads(proc.stdout or "null")
+                return True, json.loads(out or "null")
             except json.JSONDecodeError:
                 return False, "bad json"
-        last = (proc.stderr or proc.stdout).strip()
-        if attempt < retries - 1 and is_retryable(last):
-            delay = throttle_delay(attempt, last)
-            if deadline is not None and time.monotonic() + delay > deadline:
-                return False, f"rate_limited_and_out_of_time (waited would be {delay:.0f}s)"
-            time.sleep(delay)
-            continue
-        return False, last
+        last = (out or "").strip()
+        if attempt >= retries - 1 or not is_retryable(last):
+            return False, last
+
+        delay = throttle_delay(attempt, headers, last)
+        if deadline is not None:
+            if time.monotonic() + delay > deadline:
+                return False, f"rate_limited (next reset in {delay:.0f}s, beyond this run's deadline)"
+            sleep_for = delay
+        else:
+            sleep_for = delay
+        if sleep_for > 1:
+            print(f"    waiting {sleep_for:.0f}s for rate limit to reset")
+        time.sleep(sleep_for)
     return False, last
 
 
@@ -269,7 +345,7 @@ def get_default_branch(full, fallback):
     return "main"
 
 
-def open_pr(item, path, branch_name, dry_run, limiter):
+def open_pr(item, path, branch_name, dry_run, limiter, deadline):
     """Create the branch, commit the edit and open the PR for one repo."""
     repo = item["repo"]
     full = repo["full_name"]
@@ -277,7 +353,7 @@ def open_pr(item, path, branch_name, dry_run, limiter):
     if dry_run:
         return full, "dry_run", None
 
-    ok, ref = gh([f"/repos/{full}/git/ref/heads/{base_branch}"])
+    ok, ref = gh([f"/repos/{full}/git/ref/heads/{base_branch}"], deadline=deadline)
     if not ok or not isinstance(ref, dict):
         return full, "error", f"cannot read base ref: {ref}"
     base_sha = ref["object"]["sha"]
@@ -285,7 +361,7 @@ def open_pr(item, path, branch_name, dry_run, limiter):
     branch_exists = False
     ok, out = gh(["-X", "POST", f"/repos/{full}/git/refs",
                   "-f", f"ref=refs/heads/{branch_name}",
-                  "-f", f"sha={base_sha}"], expect_json=False, limiter=limiter)
+                  "-f", f"sha={base_sha}"], expect_json=False, limiter=limiter, deadline=deadline)
     if not ok:
         if "422" in out or "already exists" in out:
             branch_exists = True
@@ -304,7 +380,7 @@ def open_pr(item, path, branch_name, dry_run, limiter):
         text, feature_sha = existing
         if "workflow_dispatch" in text:
             # The branch already carries the edit; just make sure a PR is open.
-            return open_pull_request(full, path, branch_name, base_branch, limiter)
+            return open_pull_request(full, path, branch_name, base_branch, limiter, deadline)
         try:
             new_text, changed = add_trigger(text)
             if changed:
@@ -316,13 +392,13 @@ def open_pr(item, path, branch_name, dry_run, limiter):
                   "-f", "message=Add workflow_dispatch trigger to autocommit.yml",
                   "-f", f"content={base64.b64encode(new_text.encode()).decode()}",
                   "-f", f"branch={branch_name}",
-                  "-f", f"sha={feature_sha}"], expect_json=False, limiter=limiter)
+                  "-f", f"sha={feature_sha}"], expect_json=False, limiter=limiter, deadline=deadline)
     if not ok:
         if "409" in out:
             return full, "error", "conflict: file changed on the branch during rollout"
         return full, "error", f"cannot commit: {out.splitlines()[0]}"
 
-    return open_pull_request(full, path, branch_name, base_branch, limiter)
+    return open_pull_request(full, path, branch_name, base_branch, limiter, deadline)
 
 
 def find_open_pr(full, branch_name):
@@ -334,7 +410,7 @@ def find_open_pr(full, branch_name):
     return None
 
 
-def open_pull_request(full, path, branch_name, base_branch, limiter):
+def open_pull_request(full, path, branch_name, base_branch, limiter, deadline):
     """Open the PR, tolerating one that is already open."""
     title = "Add workflow_dispatch trigger to autocommit.yml"
     body = (
@@ -351,7 +427,7 @@ def open_pull_request(full, path, branch_name, base_branch, limiter):
                   "-f", f"title={title}",
                   "-f", f"head={branch_name}",
                   "-f", f"base={base_branch}",
-                  "-f", f"body={body}"], expect_json=False, limiter=limiter)
+                  "-f", f"body={body}"], expect_json=False, limiter=limiter, deadline=deadline)
     if not ok:
         if "already exists" in out:
             return full, "pr_exists", None
@@ -368,15 +444,6 @@ def open_pull_request(full, path, branch_name, base_branch, limiter):
     except json.JSONDecodeError:
         pr_url = None
     return full, "pr_opened", pr_url
-
-
-def rate_limit_budget():
-    """Return (remaining, reset_epoch) for the core REST limit."""
-    ok, data = gh(["/rate_limit"])
-    if ok and isinstance(data, dict):
-        core = data.get("resources", {}).get("core", {})
-        return core.get("remaining"), core.get("reset")
-    return None, None
 
 
 def load_state(path):
@@ -452,30 +519,16 @@ def main():
         return 0
 
     limiter = RateLimiter(args.min_write_interval)
-
-    # Each repo costs ~5 API calls (read file, base ref, create branch, commit, open PR).
-    # Refuse to start if the hourly budget cannot cover the plan, so a run fails cleanly
-    # up front instead of partway through.
-    remaining, reset = rate_limit_budget()
-    needed = len(plan) * API_CALLS_PER_REPO + 50
-    if remaining is not None and remaining < needed:
-        import datetime
-        reset_at = (datetime.datetime.fromtimestamp(reset, datetime.timezone.utc).isoformat()
-                    if reset else "unknown")
-        print(f"\nnot starting: needs about {needed} API calls but only {remaining} remain "
-              f"(limit resets at {reset_at}). Progress is journalled; rerun after the reset "
-              f"to resume from where this stopped.")
-        save_state(args.state_file, state)
-        return 1
+    deadline = (time.monotonic() + args.max_run_minutes * 60) if args.max_run_minutes else None
 
     print(f"\n{'DRY RUN - no changes will be made' if dry_run else 'opening PRs'} "
           f"(workers={args.workers}, min interval between writes="
-          f"{args.min_write_interval}s, api budget remaining={remaining})")
+          f"{args.min_write_interval}s)")
 
     results = []
     with ThreadPoolExecutor(max_workers=args.workers) as ex:
         futures = [
-            ex.submit(open_pr, item, args.file, args.branch, dry_run, limiter)
+            ex.submit(open_pr, item, args.file, args.branch, dry_run, limiter, deadline)
             for item in plan
         ]
         for i, fut in enumerate(as_completed(futures), 1):
