@@ -70,12 +70,17 @@ class RateLimiter:
     """
 
     RESERVE = 25
+    # A content-creation block is a temporary anti-abuse measure, not the hourly quota.
+    # GitHub does not publish how long it lasts and it escalates with repeat offences,
+    # so back off generously and let the whole run pause together.
+    SECONDARY_COOLDOWN_SECONDS = 90
 
     def __init__(self, min_interval):
         self.min_interval = min_interval
         self._lock = threading.Lock()
         self._next_allowed = 0.0
         self._resume_at = 0.0
+        self._secondary_strikes = 0
 
     def wait(self):
         while True:
@@ -89,7 +94,7 @@ class RateLimiter:
             if sleep_for <= 0:
                 return
             if sleep_for > 1:
-                print(f"    rate limit guard: pausing {sleep_for:.0f}s")
+                print(f"    pacing: waiting {sleep_for:.0f}s")
             time.sleep(sleep_for)
 
     def note_headers(self, headers):
@@ -108,29 +113,60 @@ class RateLimiter:
         with self._lock:
             self._resume_at = max(self._resume_at, time.monotonic() + delay)
 
+    def note_secondary_limit(self, retry_after=None):
+        """Pause every writer after a content-creation block, escalating on repeats."""
+        with self._lock:
+            self._secondary_strikes += 1
+            strikes = self._secondary_strikes
+        delay = retry_after if retry_after else min(
+            600.0, self.SECONDARY_COOLDOWN_SECONDS * (2 ** (strikes - 1)))
+        with self._lock:
+            self._resume_at = max(self._resume_at, time.monotonic() + delay)
+        print(f"    content-creation block (strike {strikes}): pausing {delay:.0f}s")
+
+    def note_success(self):
+        """Reset the escalation once writes are flowing again."""
+        with self._lock:
+            self._secondary_strikes = 0
+
 
 def run_gh(args):
     """Run `gh api` and capture body plus headers, so rate-limit state is authoritative.
 
     GitHub's error *body* includes the request timestamp, not the reset time, so parsing
     the body gives a bogus answer. The `x-ratelimit-reset` header is the real one.
+
+    Output is captured as bytes and decoded here: `text=True` would translate the CRLF
+    header terminator to LF, which breaks splitting headers from body.
     """
-    proc = subprocess.run(["gh", "api", "-i", *args], capture_output=True, text=True,
-                          timeout=180)
-    raw = proc.stdout or ""
-    headers = {}
-    body = raw
+    proc = subprocess.run(["gh", "api", "-i", *args], capture_output=True, timeout=180)
+    raw = (proc.stdout or b"").decode("utf-8", "replace")
+    stderr = (proc.stderr or b"").decode("utf-8", "replace")
+
+    headers, body = {}, raw
     if raw.startswith("HTTP/"):
-        parts = raw.split("\r\n\r\n", 1)
-        if len(parts) == 2:
-            head, body = parts
+        # Headers end at the first blank line; the body may contain blank lines too, so
+        # only the first split counts.
+        boundary = _header_boundary(raw)
+        if boundary is not None:
+            head, body = raw[:boundary], raw[boundary:]
             for line in head.splitlines():
-                if ":" in line:
-                    key, _, value = line.partition(":")
+                key, sep, value = line.partition(":")
+                if sep:
                     headers[key.strip().lower()] = value.strip()
+
     if proc.returncode != 0:
-        return False, (proc.stderr or body).strip(), headers
+        return False, (stderr or body).strip(), headers
     return True, body, headers
+
+
+def _header_boundary(raw):
+    """Index just past the blank line that ends the header block, or None."""
+    for marker in ("\r\n\r\n", "\n\n"):
+        idx = raw.find(marker)
+        if idx != -1:
+            return idx + len(marker)
+    return None
 
 
 def parse_rate_limit_reset(headers, text, now=None):
@@ -162,6 +198,12 @@ def is_primary_rate_limit(headers, text):
     return "api rate limit exceeded" in lowered or "rate limit exceeded for user" in lowered
 
 
+def is_secondary_rate_limit(text):
+    """True for the content-creation block, which is separate from the hourly quota."""
+    lowered = (text or "").lower()
+    return "secondary rate limit" in lowered or "content creation" in lowered
+
+
 def is_retryable(text):
     """True for throttling and transient failures, which are worth another attempt.
 
@@ -174,9 +216,20 @@ def is_retryable(text):
     if any(marker in lowered for marker in permanent) and "rate limit" not in lowered:
         return False
     return any(marker in lowered for marker in (
-        "secondary rate limit", "rate limit", "abuse", "429",
+        "secondary rate limit", "rate limit", "abuse", "429", "content creation",
         "500", "502", "503", "504", "timeout", "timed out", "connection reset",
     ))
+
+
+def parse_retry_after(headers):
+    """Seconds from a `Retry-After` header, or None when absent/unparseable."""
+    value = headers.get("retry-after")
+    if not value:
+        return None
+    try:
+        return max(0.0, float(value))
+    except ValueError:
+        return None
 
 
 def throttle_delay(attempt, headers, text):
@@ -215,6 +268,8 @@ def gh(args, expect_json=True, limiter=None, retries=MAX_ATTEMPTS, deadline=None
         if limiter is not None:
             limiter.note_headers(headers)
         if ok:
+            if limiter is not None:
+                limiter.note_success()
             if not expect_json:
                 return True, out
             try:
@@ -222,6 +277,13 @@ def gh(args, expect_json=True, limiter=None, retries=MAX_ATTEMPTS, deadline=None
             except json.JSONDecodeError:
                 return False, "bad json"
         last = (out or "").strip()
+
+        # A content-creation block is a temporary anti-abuse measure, not the hourly
+        # quota, and GitHub does not send a reset time for it. Pause every writer so the
+        # run backs off as a whole rather than each thread hammering independently.
+        if limiter is not None and is_secondary_rate_limit(last):
+            limiter.note_secondary_limit(retry_after=parse_retry_after(headers))
+
         if attempt >= retries - 1 or not is_retryable(last):
             return False, last
 
@@ -234,7 +296,9 @@ def gh(args, expect_json=True, limiter=None, retries=MAX_ATTEMPTS, deadline=None
             sleep_for = delay
         if sleep_for > 1:
             print(f"    waiting {sleep_for:.0f}s for rate limit to reset")
-        time.sleep(sleep_for)
+        # Capped so the limiter's shared gate is re-checked promptly: a cooldown recorded
+        # by another thread should hold this one back too.
+        time.sleep(min(sleep_for, 30.0))
     return False, last
 
 
