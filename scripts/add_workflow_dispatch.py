@@ -72,10 +72,9 @@ class RateLimiter:
     """
 
     RESERVE = 25
-    # A content-creation block is a temporary anti-abuse measure, not the hourly quota.
-    # GitHub does not publish how long it lasts and it escalates with repeat offences,
-    # so back off generously and let the whole run pause together.
-    SECONDARY_COOLDOWN_SECONDS = 90
+    # Brief pause after a content-creation block, just long enough that the next call
+    # does not land inside the block. The run stops rather than sleeping it out.
+    SECONDARY_PAUSE_SECONDS = 5.0
 
     def __init__(self, min_interval):
         self.min_interval = min_interval
@@ -87,22 +86,19 @@ class RateLimiter:
         self.blocked = False
 
     def note_secondary_limit(self, retry_after=None):
-        """Record a content-creation block and pause writers briefly.
+        """Record a content-creation block.
 
-        Mass PR creation is inherently rate-limited by this anti-abuse measure, and
-        sleeping through it just extends the block. The run stops soon after (see
-        `blocked`); the pause only covers work already in flight.
+        No cooldown is scheduled: mass PR creation is inherently limited by this
+        anti-abuse measure, and sleeping through it both fails to clear it and leaves
+        worker threads parked. The run stops instead and resumes later, so the pause is
+        kept short — just enough to avoid the next call landing inside the block.
         """
         with self._lock:
             self._secondary_strikes += 1
             strikes = self._secondary_strikes
             self.blocked = True
-        delay = retry_after if retry_after else min(
-            300.0, self.SECONDARY_COOLDOWN_SECONDS * (2 ** (strikes - 1)))
-        with self._lock:
-            self._resume_at = max(self._resume_at, time.monotonic() + delay)
-        print(f"    content-creation block (strike {strikes}): pausing {delay:.0f}s, "
-              f"then stopping this run", flush=True)
+            self._resume_at = max(self._resume_at, time.monotonic() + SECONDARY_PAUSE_SECONDS)
+        print(f"    content-creation block (strike {strikes}): stopping this run", flush=True)
 
     def note_success(self):
         """Reset the escalation once writes are flowing again."""
@@ -315,10 +311,13 @@ def gh(args, expect_json=True, limiter=None, retries=MAX_ATTEMPTS, deadline=None
         last = (out or "").strip()
 
         # A content-creation block is a temporary anti-abuse measure, not the hourly
-        # quota, and GitHub does not send a reset time for it. Pause every writer so the
-        # run backs off as a whole rather than each thread hammering independently.
-        if limiter is not None and is_secondary_rate_limit(last):
-            limiter.note_secondary_limit(retry_after=parse_retry_after(headers))
+        # quota, and GitHub sends no reset time for it. Retrying into it escalates the
+        # block, so fail immediately and let the caller stop the run; the remaining work
+        # is journalled and picked up by a later run.
+        if is_secondary_rate_limit(last):
+            if limiter is not None:
+                limiter.note_secondary_limit(retry_after=parse_retry_after(headers))
+            return False, last
 
         if attempt >= retries - 1 or not is_retryable(last):
             return False, last
