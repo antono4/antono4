@@ -5,8 +5,8 @@
     <text x="382" y="58" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">33%</text>
     <rect x="30" y="64" width="116.16" height="6" rx="3" fill="#7aa2f7"/>
     <text x="30" y="84" fill="#f8f8f2" font-size="13" font-family="monospace">Python</text>
-    <text x="382" y="84" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">12%</text>
-    <rect x="30" y="90" width="42.24" height="6" rx="3" fill="#7aa2f7"/>
+    <text x="382" y="84" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">13%</text>
+    <rect x="30" y="90" width="45.76" height="6" rx="3" fill="#7aa2f7"/>
     <text x="30" y="110" fill="#f8f8f2" font-size="13" font-family="monospace">TypeScript</text>
     <text x="382" y="110" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">12%</text>
     <rect x="30" y="116" width="42.24" height="6" rx="3" fill="#7aa2f7"/>
