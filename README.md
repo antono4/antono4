@@ -136,209 +136,209 @@
 ## ⭐ Featured Projects
 
 <table>
-  <tr>
-    <td align="center" width="50%">
+<tr>
+<td align="center" width="50%">
 
 ### 🤖 AI Content Generator
 
 AI-powered content generator for social media, blogs, and marketing. Built with FastAPI, LangChain, and modern AI models.
 
 <p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI" />
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
+<img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/ai-content-generator/" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
-  </a>
-  <a href="https://github.com/antono4/ai-content-generator" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
-  </a>
+<a href="https://antono4.github.io/ai-content-generator/" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
+</a>
+<a href="https://github.com/antono4/ai-content-generator" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
+</a>
 </p>
 
 <p>
-  <img src="https://img.shields.io/github/stars/antono4/ai-content-generator?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
-  <img src="https://img.shields.io/github/forks/antono4/ai-content-generator?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+<img src="https://img.shields.io/github/stars/antono4/ai-content-generator?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+<img src="https://img.shields.io/github/forks/antono4/ai-content-generator?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
 </p>
 
-    </td>
-    <td align="center" width="50%">
+</td>
+<td align="center" width="50%">
 
 ### 📈 MacFolio
 
 Portfolio trading platform with real-time analytics and advanced charting features for traders.
 
 <p>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue.js" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+<img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue.js" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/MacFolio/" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
-  </a>
-  <a href="https://github.com/antono4/MacFolio" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
-  </a>
+<a href="https://antono4.github.io/MacFolio/" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
+</a>
+<a href="https://github.com/antono4/MacFolio" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
+</a>
 </p>
 
 <p>
-  <img src="https://img.shields.io/github/stars/antono4/MacFolio?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
-  <img src="https://img.shields.io/github/forks/antono4/MacFolio?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+<img src="https://img.shields.io/github/stars/antono4/MacFolio?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+<img src="https://img.shields.io/github/forks/antono4/MacFolio?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
 </p>
 
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
 
 ### 💡 3D-Neon-Lightbulb
 
 Creative 3D visual effects and animations showcasing the beauty of neon light aesthetics.
 
 <p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=three.js&logoColor=white" alt="Three.js" />
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+<img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=three.js&logoColor=white" alt="Three.js" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/3D-Neon-Lightbulb/" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
-  </a>
-  <a href="https://github.com/antono4/3D-Neon-Lightbulb" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
-  </a>
+<a href="https://antono4.github.io/3D-Neon-Lightbulb/" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
+</a>
+<a href="https://github.com/antono4/3D-Neon-Lightbulb" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
+</a>
 </p>
 
 <p>
-  <img src="https://img.shields.io/github/stars/antono4/3D-Neon-Lightbulb?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
-  <img src="https://img.shields.io/github/forks/antono4/3D-Neon-Lightbulb?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+<img src="https://img.shields.io/github/stars/antono4/3D-Neon-Lightbulb?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+<img src="https://img.shields.io/github/forks/antono4/3D-Neon-Lightbulb?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
 </p>
 
-    </td>
-    <td align="center" width="50%">
+</td>
+<td align="center" width="50%">
 
 ### 🤖 MiniDevin
 
 Mini autonomous coding agent inspired by Devin — built with HTML.
 
 <p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+<img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/MiniDevin/" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
-  </a>
-  <a href="https://github.com/antono4/MiniDevin" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
-  </a>
+<a href="https://antono4.github.io/MiniDevin/" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
+</a>
+<a href="https://github.com/antono4/MiniDevin" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
+</a>
 </p>
 
 <p>
-  <img src="https://img.shields.io/github/stars/antono4/MiniDevin?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
-  <img src="https://img.shields.io/github/forks/antono4/MiniDevin?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+<img src="https://img.shields.io/github/stars/antono4/MiniDevin?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+<img src="https://img.shields.io/github/forks/antono4/MiniDevin?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
 </p>
 
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
 
 ### 🗂️ gruprepo
 
 Curated showcase of all GitHub repositories, grouped by category.
 
 <p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+<img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/gruprepo/" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
-  </a>
-  <a href="https://github.com/antono4/gruprepo" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
-  </a>
+<a href="https://antono4.github.io/gruprepo/" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
+</a>
+<a href="https://github.com/antono4/gruprepo" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
+</a>
 </p>
 
 <p>
-  <img src="https://img.shields.io/github/stars/antono4/gruprepo?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
-  <img src="https://img.shields.io/github/forks/antono4/gruprepo?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+<img src="https://img.shields.io/github/stars/antono4/gruprepo?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+<img src="https://img.shields.io/github/forks/antono4/gruprepo?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
 </p>
 
-    </td>
-    <td align="center" width="50%">
+</td>
+<td align="center" width="50%">
 
 ### 🤖 MarbelAI v2.1
 
 AI assistant for kids — Marbel AI interactive chatbot with a fresh v2.1 experience.
 
 <p>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+<img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/MarbelAIv2.1/" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
-  </a>
-  <a href="https://github.com/antono4/MarbelAIv2.1" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
-  </a>
+<a href="https://antono4.github.io/MarbelAIv2.1/" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
+</a>
+<a href="https://github.com/antono4/MarbelAIv2.1" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
+</a>
 </p>
 
 <p>
-  <img src="https://img.shields.io/github/stars/antono4/MarbelAIv2.1?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
-  <img src="https://img.shields.io/github/forks/antono4/MarbelAIv2.1?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+<img src="https://img.shields.io/github/stars/antono4/MarbelAIv2.1?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+<img src="https://img.shields.io/github/forks/antono4/MarbelAIv2.1?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
 </p>
 
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
 
 ### 🎨 CITRA
 
 AI image generator — create stunning images with ease.
 
 <p>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+<img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/CITRA/" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
-  </a>
-  <a href="https://github.com/antono4/CITRA" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
-  </a>
+<a href="https://antono4.github.io/CITRA/" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
+</a>
+<a href="https://github.com/antono4/CITRA" target="_blank" rel="noopener">
+<img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
+</a>
 </p>
 
 <p>
-  <img src="https://img.shields.io/github/stars/antono4/CITRA?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
-  <img src="https://img.shields.io/github/forks/antono4/CITRA?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+<img src="https://img.shields.io/github/stars/antono4/CITRA?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+<img src="https://img.shields.io/github/forks/antono4/CITRA?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
 </p>
 
-    </td>
-    <td align="center" width="50%">
+</td>
+<td align="center" width="50%">
 
 ### 🔮 Coming Soon
 
 Something amazing is on the way — stay tuned!
 
 <p>
-  <img src="https://img.shields.io/badge/More_Coming_Soon-8B949E?style=flat-square" alt="Coming Soon" />
+<img src="https://img.shields.io/badge/More_Coming_Soon-8B949E?style=flat-square" alt="Coming Soon" />
 </p>
 
-    </td>
-  </tr>
+</td>
+</tr>
 </table>
 
 ---
