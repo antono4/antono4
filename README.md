@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Antono&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=ffffff&desc=Full%20Stack%20Developer%20%7C%20AI%20Dev&descSize=18&descAlignY=55" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Antono&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=ffffff&desc=Full%20Stack%20Developer%20%7C%20AI%20Dev&descSize=18&descAlignY=55" width="100%" alt="Antono — Full Stack Developer | AI Dev" />
 
 </div>
 
@@ -13,97 +13,88 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/antono4" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  <a href="https://github.com/antono4" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
-  <a href="https://linkedin.com/in/antono4" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  <a href="https://linkedin.com/in/antono4" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <a href="https://twitter.com/antono4" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter">
+  <a href="https://twitter.com/antono4" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
   </a>
-  <a href="mailto:antonockr1@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+  <a href="mailto:antonockr1@gmail.com">
+    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=for-the-badge&label=Profile+Views" alt="Profile Views"/>
-  <img src="https://img.shields.io/github/followers/antono4?style=for-the-badge&logo=github&logoColor=white" alt="Followers"/>
-  <img src="https://img.shields.io/github/stars/antono4?style=for-the-badge&logo=github&logoColor=yellow" alt="Stars"/>
+  <img src="https://komarev.com/ghpvc/?username=antono4&color=58A6FF&style=for-the-badge&label=Profile+Views" alt="Profile Views" />
+  <img src="https://img.shields.io/github/followers/antono4?style=for-the-badge&logo=github&logoColor=white" alt="Followers" />
+  <img src="https://img.shields.io/github/stars/antono4?style=for-the-badge&logo=github&logoColor=yellow" alt="Stars" />
 </p>
 
 ---
 
 ## 🚀 About Me
 
-<table><tr><td>
-
 <p align="center">
-  <strong>Full-Stack Developer</strong> &amp; <strong>AI Enthusiast</strong> from <strong>Indonesia</strong> 🇮🇩
-</p>
-
-<p align="center">
+  <strong>Full-Stack Developer</strong> &amp; <strong>AI Enthusiast</strong> from <strong>Indonesia</strong> 🇮🇩<br />
   <em>I transform complex problems into elegant solutions through code.</em>
 </p>
-
-</td></tr></table>
 
 ---
 
 ## 🛠️ Tech Arsenal
 
-<table>
-<tr><td>
-
 <h3 align="center">💻 Languages</h3>
+
 <p align="center">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP"/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go" />
 </p>
 
 <h3 align="center">⚛️ Frontend</h3>
+
 <p align="center">
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
-  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="Vue.js"/>
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="Vue.js" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
 </p>
 
 <h3 align="center">⚙️ Backend &amp; Database</h3>
+
 <p align="center">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
-  <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" alt="NestJS"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" alt="NestJS" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
 </p>
 
 <h3 align="center">🐳 DevOps &amp; Cloud</h3>
-<p align="center">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions"/>
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge" alt="AWS"/>
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
-</p>
 
-</td></tr>
-</table>
+<p align="center">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
+</p>
 
 ---
 
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg" alt="GitHub Stats" width="48%"/>
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg" alt="GitHub Streak" width="48%"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg" alt="GitHub Stats" width="48%" />
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg" alt="GitHub Streak" width="48%" />
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg" alt="Top Languages" width="48%"/>
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/trophies.svg" alt="Trophies" width="48%"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg" alt="Top Languages" width="48%" />
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/trophies.svg" alt="Trophies" width="48%" />
 </p>
 
 ---
@@ -111,25 +102,28 @@
 ## 🏙️ Contribution Activity
 
 <p align="center"><strong>3D Contribution City — GitBlock</strong></p>
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/profile-3d-contrib/profile-gitblock.svg" alt="antono4 3D contribution graph — GitBlock theme" width="100%"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/profile-3d-contrib/profile-gitblock.svg" alt="antono4 3D contribution graph — GitBlock theme" width="100%" />
 </p>
 
 <p align="center"><strong>Snake Animation</strong></p>
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/snake.svg" alt="Snake Animation" width="100%"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/snake.svg" alt="Snake Animation" width="100%" />
 </p>
 
 <p align="center"><strong>GitHub Activity Graph</strong></p>
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/activity-graph.svg" alt="GitHub Activity Graph" width="100%"/>
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/activity-graph.svg" alt="GitHub Activity Graph" width="100%" />
 </p>
 
 ---
 
 ## 💡 Fun Facts
 
-| | |
+| Trait | Detail |
 | :---: | :--- |
 | 🧪 | Former computational chemist turned software engineer |
 | ☕ | Powered by coffee and curiosity |
@@ -142,202 +136,209 @@
 ## ⭐ Featured Projects
 
 <table>
-<tr>
-<td align="center" width="50%">
+  <tr>
+    <td align="center" width="50%">
 
 ### 🤖 AI Content Generator
 
 AI-powered content generator for social media, blogs, and marketing. Built with FastAPI, LangChain, and modern AI models.
 
 <p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
-  <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/ai-content-generator/">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo"/>
+  <a href="https://antono4.github.io/ai-content-generator/" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
   </a>
-  <a href="https://github.com/antono4/ai-content-generator">
-    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository"/>
+  <a href="https://github.com/antono4/ai-content-generator" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
   </a>
-</p>
-<p>
-  <img src="https://img.shields.io/github/stars/antono4/ai-content-generator?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/antono4/ai-content-generator?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
 </p>
 
-</td>
-<td align="center" width="50%">
+<p>
+  <img src="https://img.shields.io/github/stars/antono4/ai-content-generator?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+  <img src="https://img.shields.io/github/forks/antono4/ai-content-generator?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+</p>
+
+    </td>
+    <td align="center" width="50%">
 
 ### 📈 MacFolio
 
 Portfolio trading platform with real-time analytics and advanced charting features for traders.
 
 <p>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
-  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue.js"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue.js" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/MacFolio/">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo"/>
+  <a href="https://antono4.github.io/MacFolio/" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
   </a>
-  <a href="https://github.com/antono4/MacFolio">
-    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository"/>
+  <a href="https://github.com/antono4/MacFolio" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
   </a>
-</p>
-<p>
-  <img src="https://img.shields.io/github/stars/antono4/MacFolio?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/antono4/MacFolio?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
 </p>
 
-</td>
-</tr>
-<tr>
-<td align="center" width="50%">
+<p>
+  <img src="https://img.shields.io/github/stars/antono4/MacFolio?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+  <img src="https://img.shields.io/github/forks/antono4/MacFolio?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+</p>
+
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
 
 ### 💡 3D-Neon-Lightbulb
 
 Creative 3D visual effects and animations showcasing the beauty of neon light aesthetics.
 
 <p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3"/>
-  <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=three.js&logoColor=white" alt="Three.js"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=three.js&logoColor=white" alt="Three.js" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/3D-Neon-Lightbulb/">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo"/>
+  <a href="https://antono4.github.io/3D-Neon-Lightbulb/" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
   </a>
-  <a href="https://github.com/antono4/3D-Neon-Lightbulb">
-    <img src="https://img.shields.io/badge/View_Repository-9ECE6A?style=flat-square&logo=github" alt="View Repository"/>
+  <a href="https://github.com/antono4/3D-Neon-Lightbulb" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
   </a>
-</p>
-<p>
-  <img src="https://img.shields.io/github/stars/antono4/3D-Neon-Lightbulb?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/antono4/3D-Neon-Lightbulb?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
 </p>
 
-</td>
-<td align="center" width="50%">
+<p>
+  <img src="https://img.shields.io/github/stars/antono4/3D-Neon-Lightbulb?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+  <img src="https://img.shields.io/github/forks/antono4/3D-Neon-Lightbulb?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+</p>
+
+    </td>
+    <td align="center" width="50%">
 
 ### 🤖 MiniDevin
 
 Mini autonomous coding agent inspired by Devin — built with HTML.
 
 <p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
-  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/MiniDevin/">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo"/>
+  <a href="https://antono4.github.io/MiniDevin/" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
   </a>
-  <a href="https://github.com/antono4/MiniDevin">
-    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository"/>
+  <a href="https://github.com/antono4/MiniDevin" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
   </a>
-</p>
-<p>
-  <img src="https://img.shields.io/github/stars/antono4/MiniDevin?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/antono4/MiniDevin?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
 </p>
 
-</td>
-</tr>
-<tr>
-<td align="center" width="50%">
+<p>
+  <img src="https://img.shields.io/github/stars/antono4/MiniDevin?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+  <img src="https://img.shields.io/github/forks/antono4/MiniDevin?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+</p>
+
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
 
 ### 🗂️ gruprepo
 
 Curated showcase of all GitHub repositories, grouped by category.
 
 <p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5"/>
-  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/gruprepo/">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo"/>
+  <a href="https://antono4.github.io/gruprepo/" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
   </a>
-  <a href="https://github.com/antono4/gruprepo">
-    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository"/>
+  <a href="https://github.com/antono4/gruprepo" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
   </a>
-</p>
-<p>
-  <img src="https://img.shields.io/github/stars/antono4/gruprepo?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/antono4/gruprepo?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
 </p>
 
-</td>
-<td align="center" width="50%">
+<p>
+  <img src="https://img.shields.io/github/stars/antono4/gruprepo?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+  <img src="https://img.shields.io/github/forks/antono4/gruprepo?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+</p>
+
+    </td>
+    <td align="center" width="50%">
 
 ### 🤖 MarbelAI v2.1
 
 AI assistant for kids — Marbel AI interactive chatbot with a fresh v2.1 experience.
 
 <p>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
-  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/MarbelAIv2.1/">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo"/>
+  <a href="https://antono4.github.io/MarbelAIv2.1/" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
   </a>
-  <a href="https://github.com/antono4/MarbelAIv2.1">
-    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository"/>
+  <a href="https://github.com/antono4/MarbelAIv2.1" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
   </a>
-</p>
-<p>
-  <img src="https://img.shields.io/github/stars/antono4/MarbelAIv2.1?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/antono4/MarbelAIv2.1?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
 </p>
 
-</td>
-</tr>
-<tr>
-<td align="center" width="50%">
+<p>
+  <img src="https://img.shields.io/github/stars/antono4/MarbelAIv2.1?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+  <img src="https://img.shields.io/github/forks/antono4/MarbelAIv2.1?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+</p>
+
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
 
 ### 🎨 CITRA
 
 AI image generator — create stunning images with ease.
 
 <p>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"/>
-  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
 </p>
 
 <p>
-  <a href="https://antono4.github.io/CITRA/">
-    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo"/>
+  <a href="https://antono4.github.io/CITRA/" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages" alt="Live Demo" />
   </a>
-  <a href="https://github.com/antono4/CITRA">
-    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository"/>
+  <a href="https://github.com/antono4/CITRA" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/View_Repository-7AA2F7?style=flat-square&logo=github" alt="View Repository" />
   </a>
-</p>
-<p>
-  <img src="https://img.shields.io/github/stars/antono4/CITRA?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/antono4/CITRA?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks"/>
 </p>
 
-</td>
-<td align="center" width="50%">
+<p>
+  <img src="https://img.shields.io/github/stars/antono4/CITRA?style=flat-square&color=yellow&label=%E2%AD%90" alt="Stars" />
+  <img src="https://img.shields.io/github/forks/antono4/CITRA?style=flat-square&color=blue&label=%F0%9F%8D%B4" alt="Forks" />
+</p>
+
+    </td>
+    <td align="center" width="50%">
 
 ### 🔮 Coming Soon
 
 Something amazing is on the way — stay tuned!
 
 <p>
-  <img src="https://img.shields.io/badge/More_Coming_Soon-8B949E?style=flat-square" alt="Coming Soon"/>
+  <img src="https://img.shields.io/badge/More_Coming_Soon-8B949E?style=flat-square" alt="Coming Soon" />
 </p>
 
-</td>
-</tr>
+    </td>
+  </tr>
 </table>
 
 ---
@@ -346,13 +347,16 @@ Something amazing is on the way — stay tuned!
 
 <p align="center">
   <a href="mailto:antonockr1@gmail.com">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
-  <a href="https://linkedin.com/in/antono4">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  <a href="https://linkedin.com/in/antono4" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  <a href="https://github.com/antono4">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  <a href="https://github.com/antono4" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <a href="https://twitter.com/antono4" target="_blank" rel="noopener">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
   </a>
 </p>
 
