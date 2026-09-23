@@ -2,8 +2,8 @@
     <rect x="0.5" y="0.5" width="411" height="287" rx="12" fill="#1a1b27" stroke="#414868"/>
     <text x="30" y="32" fill="#7aa2f7" font-size="15" font-weight="bold" font-family="monospace">Most Used Languages</text>
     <text x="30" y="58" fill="#f8f8f2" font-size="13" font-family="monospace">HTML</text>
-    <text x="382" y="58" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">33%</text>
-    <rect x="30" y="64" width="116.16" height="6" rx="3" fill="#7aa2f7"/>
+    <text x="382" y="58" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">32%</text>
+    <rect x="30" y="64" width="112.64" height="6" rx="3" fill="#7aa2f7"/>
     <text x="30" y="84" fill="#f8f8f2" font-size="13" font-family="monospace">Python</text>
     <text x="382" y="84" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">12%</text>
     <rect x="30" y="90" width="42.24" height="6" rx="3" fill="#7aa2f7"/>
