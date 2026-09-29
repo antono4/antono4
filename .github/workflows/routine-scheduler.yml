@@ -1,0 +1,82 @@
+name: Routine Scheduler
+
+# Keeps every repo's routine workflows (snake, profile cards, 3D contrib, README
+# generators, autocommit, auto-update, C1/C2/C3) actually running. GitHub drops
+# scheduled runs under load and disables `schedule:` in repos that look inactive, so
+# this job re-dispatches anything that has gone quiet.
+
+on:
+  schedule:
+    # Offset from the :00/:10/... marks the routine crons use, so this reads the state
+    # those runs left behind rather than racing them.
+    - cron: '37 */2 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'stale = only quiet routines, all = every routine, report = no dispatch'
+        type: choice
+        options: [stale, all, report]
+        default: stale
+      staleness_minutes:
+        description: 'Override the staleness threshold for every routine in minutes (blank = built-in per-routine defaults)'
+        default: ''
+      routines:
+        description: 'Comma-separated workflow filenames (blank = the default set)'
+        default: ''
+      only_repos:
+        description: 'Comma-separated repo names to limit the run (blank = all repos)'
+        default: ''
+      dry_run:
+        description: 'List what would be dispatched without dispatching'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: routine-scheduler
+  cancel-in-progress: false
+
+jobs:
+  schedule-routines:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check scheduler token
+        env:
+          ROUTINE_PAT: ${{ secrets.ROUTINE_PAT }}
+        run: |
+          if [ -z "$ROUTINE_PAT" ]; then
+            echo "::error::Secret ROUTINE_PAT is not set. A token with 'repo' + 'workflow' scope is required to dispatch workflows in other repositories. The default GITHUB_TOKEN cannot do this."
+            exit 1
+          fi
+
+      - name: Run routine scheduler
+        env:
+          GH_TOKEN: ${{ secrets.ROUTINE_PAT }}
+          OWNER: ${{ github.repository_owner }}
+          MODE: ${{ inputs.mode || 'stale' }}
+          STALENESS_MINUTES: ${{ inputs.staleness_minutes }}
+          ROUTINES: ${{ inputs.routines }}
+          ONLY_REPOS: ${{ inputs.only_repos }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+          INCLUDE_FORKS: 'true'
+          INCLUDE_ARCHIVED: 'false'
+          MAX_DISPATCH: '300'
+          WORKERS: '8'
+          JSON_REPORT: routine-scheduler-report.json
+        run: python3 scripts/routine_scheduler.py
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: routine-scheduler-report
+          path: routine-scheduler-report.json
+          if-no-files-found: ignore
+          retention-days: 14

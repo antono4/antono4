@@ -14,6 +14,18 @@ const fetchJson = async (url) => {
   return res.json();
 };
 
+const gql = async (query, variables) => {
+  const res = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: { ...headers, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query, variables }),
+  });
+  if (!res.ok) throw new Error(`GraphQL ${res.status} ${res.statusText}`);
+  const json = await res.json();
+  if (json.errors) throw new Error(json.errors.map((e) => e.message).join('; '));
+  return json.data;
+};
+
 const escapeXml = (s) => String(s)
   .replace(/&/g, '&amp;')
   .replace(/</g, '&lt;')
@@ -37,6 +49,24 @@ async function fetchAllRepos() {
 async function main() {
   const user = await fetchJson(`https://api.github.com/users/${USERNAME}`);
   const repos = await fetchAllRepos();
+
+  const profile = await gql(
+    `query ($login: String!) {
+      user(login: $login) {
+        followers { totalCount }
+        repositories(privacy: PUBLIC, ownerAffiliations: OWNER) { totalCount }
+        pullRequests(states: MERGED) { totalCount }
+        issues { totalCount }
+        contributionsCollection {
+          totalCommitContributions
+          totalPullRequestContributions
+          totalIssueContributions
+        }
+      }
+    }`,
+    { login: USERNAME }
+  );
+  const p = profile.user;
   const totalStars = repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
   const forks = repos.reduce((sum, r) => sum + (r.forks_count || 0), 0);
   const yearMs =365 * 24 * 60 * 60 * 1000;
@@ -100,6 +130,54 @@ async function main() {
     <text x="230" y="142" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Followers: ${user.followers || 0}</text>
   </svg>`;
   fs.writeFileSync('assets/streak.svg', streak.trim() + '\n');
+
+  // --- trophies.svg ---
+  const starSum = repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
+  const compact = (n) => (n >= 1000 ? `${(n / 1000).toFixed(n >= 10000 ? 0 : 1)}K` : String(n));
+  const badges = [
+    { value: starSum, icon: '⭐', label: 'Stars', caption: 'Earned', color: '#bd93f9' },
+    { value: p.pullRequests.totalCount, icon: '🔀', label: 'PRs Merged', caption: 'Pull Requests', color: '#50fa7b' },
+    { value: p.issues.totalCount, icon: '📋', label: 'Issues', caption: 'Contributed', color: '#ff79c6' },
+    { value: p.repositories.totalCount, icon: '📦', label: 'Repos', caption: 'Public', color: '#8be9fd' },
+    { value: p.followers.totalCount, icon: '👥', label: 'Followers', caption: 'GitHub', color: '#ffb86c' },
+    { value: p.contributionsCollection.totalCommitContributions, icon: '🚀', label: 'Commits', caption: 'Last Year', color: '#ff5555' },
+  ];
+
+  const cardW = 100;
+  const gap = 20;
+  const startX = 60;
+  const rowH = 90;
+  let troW = startX * 2 + badges.length * cardW + (badges.length - 1) * gap;
+  let troH = 150;
+  let trophy = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="${troW}" height="${troH}" viewBox="0 0 ${troW} ${troH}">
+    <style>
+      text { font-family: 'Segoe UI', Arial, sans-serif; }
+      .title { fill: #8be9fd; font-size: 18px; font-weight: bold; }
+      .badge-text { fill: #f8f8f2; font-size: 11px; font-weight: 600; }
+      .badge-value { fill: #f1fa8c; font-size: 20px; font-weight: bold; }
+    </style>
+
+    <rect width="${troW}" height="${troH}" fill="#282a36" rx="12"/>
+    <text x="${troW / 2}" y="28" text-anchor="middle" class="title">🏆 GitHub Achievements</text>
+    <line x1="${startX - 10}" y1="40" x2="${troW - startX + 10}" y2="40" stroke="#44475a" stroke-width="1"/>
+
+    <g transform="translate(${startX}, 15)">`;
+
+  badges.forEach((b, i) => {
+    const x = i * (cardW + gap);
+    trophy += `
+      <rect x="${x}" y="40" width="${cardW}" height="${rowH}" fill="#3d3d5c" rx="8"/>
+      <text x="${x + cardW / 2}" y="70" text-anchor="middle" class="badge-value">${escapeXml(compact(b.value))}</text>
+      <text x="${x + cardW / 2}" y="92" text-anchor="middle" fill="${b.color}" font-size="16">${b.icon}</text>
+      <text x="${x + cardW / 2}" y="112" text-anchor="middle" class="badge-text">${escapeXml(b.label)}</text>
+      <text x="${x + cardW / 2}" y="125" text-anchor="middle" fill="#6272a4" font-size="9">${escapeXml(b.caption)}</text>`;
+  });
+
+  trophy += `
+    </g>
+  </svg>`;
+  fs.writeFileSync('assets/trophies.svg', trophy.trim() + '\n');
 
   console.log('Profile stats refreshed');
 }
