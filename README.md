@@ -89,12 +89,12 @@
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/stats.svg" alt="GitHub Stats" width="48%" />
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg" alt="GitHub Streak" width="48%" />
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/streak.svg" alt="Contribution Activity" width="48%" />
 </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/top-langs.svg" alt="Top Languages" width="48%" />
-  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/trophies.svg" alt="Trophies" width="48%" />
+  <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/trophies.svg" alt="Achievements" width="48%" />
 </p>
 
 ---

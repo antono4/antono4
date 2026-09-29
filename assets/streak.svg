@@ -1,9 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="152" viewBox="0 0 460 152">
-    <rect x="0.5" y="0.5" width="459" height="151" rx="12" fill="#1a1b27" stroke="#414868"/>
-    <text x="230" y="32" fill="#7aa2f7" font-size="15" font-weight="bold" font-family="monospace" text-anchor="middle">GitHub Contributions</text>
-    
-    <text x="230" y="62" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Repos Created (1 year): 220</text>
-    <text x="230" y="90" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Total Stars: 77</text>
-    <text x="230" y="118" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Total Forks: 6</text>
-    <text x="230" y="142" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Followers: 3</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="220" viewBox="0 0 495 220">
+  <rect x="0.5" y="0.5" width="494" height="219" rx="12" fill="#1a1b27" stroke="#414868"/>
+  <text x="247.5" y="36" fill="#7aa2f7" font-size="16" font-weight="bold" font-family="monospace" text-anchor="middle">Contribution Activity</text>
+  <line x1="24" y1="52" x2="471" y2="52" stroke="#414868" stroke-width="1" opacity="0.6"/>
+  <text x="40" y="88" fill="#a9b1d6" font-size="14" font-family="monospace">Repositories Created (1 year)</text>
+  <text x="455" y="88" fill="#f8f8f2" font-size="15" font-weight="bold" font-family="monospace" text-anchor="end">220</text>
+  <text x="40" y="122" fill="#a9b1d6" font-size="14" font-family="monospace">Commits (1 year)</text>
+  <text x="455" y="122" fill="#f8f8f2" font-size="15" font-weight="bold" font-family="monospace" text-anchor="end">426K</text>
+  <text x="40" y="156" fill="#a9b1d6" font-size="14" font-family="monospace">Merged Pull Requests</text>
+  <text x="455" y="156" fill="#f8f8f2" font-size="15" font-weight="bold" font-family="monospace" text-anchor="end">845</text>
+  <text x="40" y="190" fill="#a9b1d6" font-size="14" font-family="monospace">Issues Opened</text>
+  <text x="455" y="190" fill="#f8f8f2" font-size="15" font-weight="bold" font-family="monospace" text-anchor="end">19</text>
+</svg>
