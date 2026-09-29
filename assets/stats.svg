@@ -1,10 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="412" height="234" viewBox="0 0 412 234">
-    <rect x="0.5" y="0.5" width="411" height="233" rx="12" fill="#1a1b27" stroke="#414868"/>
-    <text x="206" y="38" fill="#7aa2f7" font-size="16" font-weight="bold" font-family="monospace" text-anchor="middle">antono4's GitHub Stats</text>
-    <text x="206" y="72" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Repositories: 402</text>
-    <text x="206" y="100" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Total Stars: 77</text>
-    <text x="206" y="128" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Total Forks: 6</text>
-    <text x="206" y="156" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Public Repos: 402</text>
-    <text x="206" y="184" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Followers: 3</text>
-    <text x="206" y="212" fill="#f8f8f2" font-size="13" font-family="monospace" text-anchor="middle">Following: 25</text>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="220" viewBox="0 0 495 220">
+  <rect x="0.5" y="0.5" width="494" height="219" rx="12" fill="#1a1b27" stroke="#414868"/>
+  <text x="247.5" y="36" fill="#7aa2f7" font-size="16" font-weight="bold" font-family="monospace" text-anchor="middle">GitHub Stats</text>
+  <line x1="24" y1="52" x2="471" y2="52" stroke="#414868" stroke-width="1" opacity="0.6"/>
+  <text x="40" y="82" fill="#a9b1d6" font-size="14" font-family="monospace">Repositories</text>
+  <text x="455" y="82" fill="#f8f8f2" font-size="15" font-weight="bold" font-family="monospace" text-anchor="end">402</text>
+  <text x="40" y="113" fill="#a9b1d6" font-size="14" font-family="monospace">Total Stars</text>
+  <text x="455" y="113" fill="#f8f8f2" font-size="15" font-weight="bold" font-family="monospace" text-anchor="end">77</text>
+  <text x="40" y="144" fill="#a9b1d6" font-size="14" font-family="monospace">Total Forks</text>
+  <text x="455" y="144" fill="#f8f8f2" font-size="15" font-weight="bold" font-family="monospace" text-anchor="end">6</text>
+  <text x="40" y="175" fill="#a9b1d6" font-size="14" font-family="monospace">Followers</text>
+  <text x="455" y="175" fill="#f8f8f2" font-size="15" font-weight="bold" font-family="monospace" text-anchor="end">3</text>
+  <text x="40" y="206" fill="#a9b1d6" font-size="14" font-family="monospace">Following</text>
+  <text x="455" y="206" fill="#f8f8f2" font-size="15" font-weight="bold" font-family="monospace" text-anchor="end">25</text>
+</svg>
