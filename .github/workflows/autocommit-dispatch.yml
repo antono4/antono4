@@ -1,0 +1,70 @@
+name: Roll Out autocommit workflow_dispatch
+
+# Adds a `workflow_dispatch:` trigger to autocommit.yml in every repo, so the central
+# routine scheduler in this repo can re-fire it when its schedule goes quiet.
+#
+# This never writes to a default branch: it opens one PR per repo.
+
+on:
+  workflow_dispatch:
+    inputs:
+      only_repos:
+        description: 'Comma-separated repo names to limit the run (blank = all repos)'
+        default: ''
+      dry_run:
+        description: 'Report what would change without opening any PR'
+        type: boolean
+        default: false
+      limit:
+        description: 'Stop after this many repos (0 = no limit)'
+        default: '0'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: autocommit-dispatch-rollout
+  cancel-in-progress: false
+
+jobs:
+  roll-out:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check rollout token
+        env:
+          ROLLOUT_PAT: ${{ secrets.ROUTINE_PAT }}
+        run: |
+          if [ -z "$ROLLOUT_PAT" ]; then
+            echo "::error::Secret ROUTINE_PAT is not set. A token with 'repo' + 'workflow' scope is required to create branches and pull requests in other repositories."
+            exit 1
+          fi
+
+      - name: Install dependencies
+        run: pip install --quiet pyyaml
+
+      - name: Roll out workflow_dispatch trigger
+        env:
+          GH_TOKEN: ${{ secrets.ROUTINE_PAT }}
+          OWNER: ${{ github.repository_owner }}
+          ONLY_REPOS: ${{ inputs.only_repos }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+          LIMIT: ${{ inputs.limit || '0' }}
+          INCLUDE_FORKS: 'true'
+          INCLUDE_ARCHIVED: 'false'
+          WORKERS: '4'
+          JSON_REPORT: autocommit-dispatch-report.json
+        run: python3 scripts/add_workflow_dispatch.py
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: autocommit-dispatch-report
+          path: autocommit-dispatch-report.json
+          if-no-files-found: ignore
+          retention-days: 14
