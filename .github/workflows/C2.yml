@@ -1,0 +1,40 @@
+name: C2
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    # Setiap 10 menit, offset 1 (menit 01, 11, 21, 31, 41, 51).
+    - cron: '1-59/10 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  # Grup yang sama dengan C1/C3 -> run akan mengantre, tidak saling menimpa README.
+  group: readme-updater
+  cancel-in-progress: false
+
+jobs:
+  update-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+
+      - name: Configure Git
+        run: |
+          git config user.name "antono4"
+          git config user.email "antonockr1@gmail.com"
+
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          export TZ="Asia/Jakarta"
+          TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S %Z")
+          echo "Last updated: $TIMESTAMP" > README.md
+          git add README.md
+          git commit -m "Auto update README at $(date +'%Y-%m-%d %H:%M:%S') WIB" || echo "No changes to commit"
+          git pull --rebase origin ${{ github.ref_name }}
+          git push origin ${{ github.ref_name }}
