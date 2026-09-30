@@ -3,7 +3,7 @@
   <text x="247.5" y="36" fill="#7aa2f7" font-size="16" font-weight="bold" font-family="monospace" text-anchor="middle">GitHub Stats</text>
   <line x1="24" y1="52" x2="471" y2="52" stroke="#414868" stroke-width="1" opacity="0.6"/>
   <text x="40" y="82" fill="#a9b1d6" font-size="14" font-family="monospace">Repositories</text>
-  <text x="455" y="82" fill="#f8f8f2" font-size="15" font-weight="bold" font-family="monospace" text-anchor="end">402</text>
+  <text x="455" y="82" fill="#f8f8f2" font-size="15" font-weight="bold" font-family="monospace" text-anchor="end">403</text>
   <text x="40" y="113" fill="#a9b1d6" font-size="14" font-family="monospace">Total Stars</text>
   <text x="455" y="113" fill="#f8f8f2" font-size="15" font-weight="bold" font-family="monospace" text-anchor="end">77</text>
   <text x="40" y="144" fill="#a9b1d6" font-size="14" font-family="monospace">Total Forks</text>
