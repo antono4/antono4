@@ -3,13 +3,13 @@
   <text x="247.5" y="36" fill="#7aa2f7" font-size="16" font-weight="bold" font-family="monospace" text-anchor="middle">Most Used Languages</text>
   <line x1="24" y1="52" x2="471" y2="52" stroke="#414868" stroke-width="1" opacity="0.6"/>
   <text x="30" y="70" fill="#f8f8f2" font-size="13" font-family="monospace">HTML</text>
-  <text x="465" y="70" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">33%</text>
+  <text x="465" y="70" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">32%</text>
   <rect x="30" y="76" width="435" height="6" rx="3" fill="#2a2e3f"/>
-  <rect x="30" y="76" width="143.55" height="6" rx="3" fill="#7aa2f7"/>
+  <rect x="30" y="76" width="139.20" height="6" rx="3" fill="#7aa2f7"/>
   <text x="30" y="95" fill="#f8f8f2" font-size="13" font-family="monospace">TypeScript</text>
-  <text x="465" y="95" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">12%</text>
+  <text x="465" y="95" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">13%</text>
   <rect x="30" y="101" width="435" height="6" rx="3" fill="#2a2e3f"/>
-  <rect x="30" y="101" width="52.20" height="6" rx="3" fill="#7aa2f7"/>
+  <rect x="30" y="101" width="56.55" height="6" rx="3" fill="#7aa2f7"/>
   <text x="30" y="120" fill="#f8f8f2" font-size="13" font-family="monospace">Python</text>
   <text x="465" y="120" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">12%</text>
   <rect x="30" y="126" width="435" height="6" rx="3" fill="#2a2e3f"/>
