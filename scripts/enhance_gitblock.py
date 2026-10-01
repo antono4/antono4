@@ -1,64 +1,140 @@
 #!/usr/bin/env python3
-"""Post-process the GitBlock 3D contribution SVG into a neon "cyber city" look.
+"""Post-process the GitBlock 3D contribution SVG into a colorful neon look.
 
 The upstream generator (yoshi389111/github-profile-3d-contrib) overwrites
 profile-gitblock.svg on every run, so all visual work is applied here instead of
 by hand-editing the file.
 
 Usage:
-    python scripts/enhance_gitblock.py [path/to/profile-gitblock.svg]
+    python scripts/enhance_gitblock.py [--theme rainbow|cyber] [path/to/svg]
 
-The file is rewritten in place.
+The file is rewritten in place. Default theme: rainbow.
 """
 from __future__ import annotations
 
+import argparse
 import random
 import re
-import sys
 
 WIDTH = 1280
 HEIGHT = 850
-ACCENT = "#24ff9b"
-ACCENT_2 = "#4dd8ff"
 
-# level -> (top, left, right, window) fills. Level 0 is the empty/background
-# cell, 1-4 are the increasing contribution intensities.
-NEON_LEVELS = {
-    0: ("#101a2e", "#0b1220", "#070c16", "#2b3f63"),
-    1: ("#0e4d3a", "#0a3b2d", "#072a20", "#7dffb0"),
-    2: ("#0f7a52", "#0a5c3e", "#07402b", "#9dffc4"),
-    3: ("#12b06a", "#0d8a51", "#0a613a", "#c8ffe0"),
-    4: ("#24ff9b", "#17d97c", "#0fa85e", "#ffffff"),
+
+def _clamp(value: float) -> int:
+    return max(0, min(255, int(round(value))))
+
+
+def hex_to_rgb(color: str):
+    color = color.lstrip("#")
+    return tuple(int(color[i : i + 2], 16) for i in (0, 2, 4))
+
+
+def rgb_to_hex(r: float, g: float, b: float) -> str:
+    return "#%02x%02x%02x" % (_clamp(r), _clamp(g), _clamp(b))
+
+
+def shade(color: str, factor: float) -> str:
+    """Darken (factor < 1) or lighten toward white (factor > 1) a hex color."""
+    r, g, b = hex_to_rgb(color)
+    if factor <= 1:
+        return rgb_to_hex(r * factor, g * factor, b * factor)
+    t = factor - 1
+    return rgb_to_hex(r + (255 - r) * t, g + (255 - g) * t, b + (255 - b) * t)
+
+
+def build_levels(base_colors: dict) -> dict:
+    """Expand one base color per level into (top, left, right, window) fills."""
+    levels = {}
+    for level, base in base_colors.items():
+        if level == 0:
+            levels[0] = (
+                base,
+                shade(base, 0.75),
+                shade(base, 0.55),
+                shade(base, 2.4),
+            )
+            continue
+        levels[level] = (
+            base,
+            shade(base, 0.55),
+            shade(base, 0.38),
+            shade(base, 1.5),
+        )
+    return levels
+
+
+# --- themes -----------------------------------------------------------------
+# level 0 is the empty/background cell, 1-4 are increasing contribution counts.
+THEMES = {
+    "rainbow": {
+        "base_colors": {
+            0: "#141c30",
+            1: "#22d3ee",  # cyan
+            2: "#4ade80",  # green
+            3: "#fbbf24",  # amber
+            4: "#f472b6",  # pink
+        },
+        "bg": (
+            (0.0, "#1a0b2e"),
+            (0.25, "#0b1b3a"),
+            (0.5, "#06301f"),
+            (0.75, "#3a2a06"),
+            (1.0, "#3a0b22"),
+        ),
+        "title": ("#ff5f6d", "#ffc371", "#7dffb0", "#4dd8ff", "#c084fc"),
+        "accent": "#8b5cf6",
+        "accent_2": "#f472b6",
+        "star_colors": ("#ff5f6d", "#ffc371", "#7dffb0", "#4dd8ff", "#c084fc"),
+        "fill_strong": "#c084fc",
+        "fill_weak": "#8b93b8",
+        "stroke_weak": "#3b4a7a",
+        "radar": "#f472b6",
+        "scanline": "#ffffff",
+        "sweep": ("#ff3b3b", "#ffd23b", "#5dff8a", "#3bd6ff", "#6a5bff", "#ff3bd6"),
+    },
+    "cyber": {
+        "base_colors": {
+            0: "#101a2e",
+            1: "#0e4d3a",
+            2: "#0f7a52",
+            3: "#12b06a",
+            4: "#24ff9b",
+        },
+        "bg": ((0.0, "#05070f"), (0.55, "#080e1d"), (1.0, "#0b1424")),
+        "title": ("#4dd8ff", "#24ff9b", "#4dd8ff"),
+        "accent": "#24ff9b",
+        "accent_2": "#4dd8ff",
+        "star_colors": ("#bfefff",),
+        "fill_strong": "#7dffd0",
+        "fill_weak": "#5f7fa8",
+        "stroke_weak": "#2c5a7a",
+        "radar": "#24ff9b",
+        "scanline": "#7dffd0",
+    },
 }
 
-STYLE_OVERRIDES = """* { font-family: "Ubuntu", "Helvetica", "Arial", sans-serif; }
-.fill-bg { fill: #05070f; }
-.fill-fg { fill: #e8fbff; }
-.stroke-fg { stroke: #e8fbff; }
-.fill-strong { fill: #7dffd0; }
-.fill-weak { fill: #5f7fa8; }
-.stroke-weak { stroke: #2c5a7a; }
-.radar { stroke: #24ff9b; fill: #24ff9b; fill-opacity: 0.22; }
-"""
 
-SCANLINE_PATTERN = (
-    '<pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">'
-    '<rect width="4" height="4" fill="#000000" opacity="0"/>'
-    '<rect width="4" height="1" fill="#7dffd0" opacity="0.07"/>'
-    "</pattern>"
-)
-
-
-def build_level_css() -> str:
-    out = []
-    for level, (top, left, right, win) in NEON_LEVELS.items():
-        out.append(f".cont-top-bg-{level} {{ fill: {top}; }}")
-        out.append(f".cont-top-fg-{level} {{ fill: {win}; }}")
-        out.append(f".cont-left-bg-{level} {{ fill: {left}; }}")
-        out.append(f".cont-left-fg-{level} {{ fill: {win}; }}")
-        out.append(f".cont-right-bg-{level} {{ fill: {right}; }}")
-        out.append(f".cont-right-fg-{level} {{ fill: {win}; }}")
-    return "\n".join(out)
+def build_style(theme: dict) -> str:
+    levels = build_levels(theme["base_colors"])
+    lines = [
+        '* { font-family: "Ubuntu", "Helvetica", "Arial", sans-serif; }',
+        ".fill-bg { fill: #05070f; }",
+        ".fill-fg { fill: #eef2ff; }",
+        ".stroke-fg { stroke: #eef2ff; }",
+        f'.fill-strong {{ fill: {theme["fill_strong"]}; }}',
+        f'.fill-weak {{ fill: {theme["fill_weak"]}; }}',
+        f'.stroke-weak {{ stroke: {theme["stroke_weak"]}; }}',
+        f'.radar {{ stroke: {theme["radar"]}; fill: {theme["radar"]}; '
+        "fill-opacity: 0.22; }",
+    ]
+    for level, (top, left, right, win) in levels.items():
+        lines.append(f".cont-top-bg-{level} {{ fill: {top}; }}")
+        lines.append(f".cont-top-fg-{level} {{ fill: {win}; }}")
+        lines.append(f".cont-left-bg-{level} {{ fill: {left}; }}")
+        lines.append(f".cont-left-fg-{level} {{ fill: {win}; }}")
+        lines.append(f".cont-right-bg-{level} {{ fill: {right}; }}")
+        lines.append(f".cont-right-fg-{level} {{ fill: {win}; }}")
+    return "\n".join(lines)
 
 
 def neon_rect(match: re.Match) -> str:
@@ -88,7 +164,7 @@ def extract_radar(svg: str):
     return None
 
 
-def build_defs() -> str:
+def build_defs(theme: dict) -> str:
     glow = []
     for level in range(5):
         glow.append(
@@ -97,22 +173,33 @@ def build_defs() -> str:
             '<feMerge><feMergeNode in="b"/><feMergeNode in="b"/>'
             '<feMergeNode in="SourceGraphic"/></feMerge></filter>'
         )
+
+    bg_stops = "".join(
+        f'<stop offset="{offset:.3f}" stop-color="{c}"/>'
+        for offset, c in theme["bg"]
+    )
+    title_stops = "".join(
+        f'<stop offset="{i / (len(theme["title"]) - 1):.3f}" stop-color="{c}"/>'
+        for i, c in enumerate(theme["title"])
+    )
+    scanline = (
+        '<pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">'
+        '<rect width="4" height="4" fill="#000000" opacity="0"/>'
+        f'<rect width="4" height="1" fill="{theme["scanline"]}" opacity="0.07"/>'
+        "</pattern>"
+    )
     return (
         "<defs>"
         '<linearGradient id="cyberBg" x1="0" y1="0" x2="0" y2="1">'
-        '<stop offset="0" stop-color="#05070f"/>'
-        '<stop offset="0.55" stop-color="#080e1d"/>'
-        '<stop offset="1" stop-color="#0b1424"/>'
-        "</linearGradient>"
+        + bg_stops
+        + "</linearGradient>"
         '<radialGradient id="cyberVignette" cx="0.5" cy="0.45" r="0.75">'
         '<stop offset="0.55" stop-color="#000000" stop-opacity="0"/>'
         '<stop offset="1" stop-color="#000000" stop-opacity="0.65"/>'
         "</radialGradient>"
         '<linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">'
-        '<stop offset="0" stop-color="#4dd8ff"/>'
-        '<stop offset="0.5" stop-color="#24ff9b"/>'
-        '<stop offset="1" stop-color="#4dd8ff"/>'
-        "</linearGradient>"
+        + title_stops
+        + "</linearGradient>"
         '<filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">'
         '<feGaussianBlur stdDeviation="2.4" result="b"/>'
         '<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>'
@@ -121,24 +208,42 @@ def build_defs() -> str:
         '<feGaussianBlur stdDeviation="3.2" result="b"/>'
         '<feMerge><feMergeNode in="b"/><feMergeNode in="b"/>'
         '<feMergeNode in="SourceGraphic"/></feMerge></filter>'
-        + SCANLINE_PATTERN
+        + scanline
         + "".join(glow)
+        + _sweep_gradient(theme)
         + "</defs>"
     )
 
 
-def build_backdrop() -> str:
+def _sweep_gradient(theme: dict) -> str:
+    """Horizontal rainbow band blended over the city (see build_overlay)."""
+    sweep = theme.get("sweep")
+    if not sweep:
+        return ""
+    stops = "".join(
+        f'<stop offset="{i / (len(sweep) - 1):.3f}" stop-color="{c}"/>'
+        for i, c in enumerate(sweep)
+    )
+    return (
+        '<linearGradient id="rainbowSweep" x1="0" y1="0" x2="1" y2="0">'
+        + stops
+        + "</linearGradient>"
+    )
+
+
+def build_backdrop(theme: dict) -> str:
     rng = random.Random(42)
     stars = []
-    for _ in range(140):
+    for _ in range(150):
         x = rng.uniform(0, WIDTH)
         y = rng.uniform(0, 430)
         r = rng.choice([0.6, 0.9, 1.2, 1.6])
-        base = rng.uniform(0.12, 0.55)
+        base = rng.uniform(0.12, 0.6)
         dur = rng.uniform(2.5, 6.0)
         delay = rng.uniform(0, 5)
+        color = rng.choice(theme["star_colors"])
         stars.append(
-            f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="#bfefff" '
+            f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r}" fill="{color}" '
             f'opacity="{base:.2f}">'
             f'<animate attributeName="opacity" values="{base:.2f};0.05;{base:.2f}" '
             f'dur="{dur:.1f}s" begin="{delay:.1f}s" repeatCount="indefinite"/>'
@@ -153,14 +258,15 @@ def build_backdrop() -> str:
 
     return (
         f'<rect x="0" y="0" width="{WIDTH}" height="{HEIGHT}" fill="url(#cyberBg)"/>'
-        f'<g stroke="{ACCENT}" stroke-opacity="0.05" stroke-width="1">{"".join(grid)}</g>'
+        f'<g stroke="{theme["accent"]}" stroke-opacity="0.05" stroke-width="1">'
+        f'{"".join(grid)}</g>'
         f'<g>{"".join(stars)}</g>'
-        f'<line x1="0" y1="470" x2="{WIDTH}" y2="470" stroke="{ACCENT}" '
-        'stroke-opacity="0.14" stroke-width="1"/>'
+        f'<line x1="0" y1="470" x2="{WIDTH}" y2="470" stroke="{theme["accent"]}" '
+        'stroke-opacity="0.16" stroke-width="1"/>'
     )
 
 
-def build_title() -> str:
+def build_title(theme: dict) -> str:
     cx = WIDTH / 2
     return (
         '<g filter="url(#titleGlow)">'
@@ -168,29 +274,39 @@ def build_title() -> str:
         'style="font-size: 34px; font-weight: 700; letter-spacing: 12px;">'
         "CONTRIBUTION CITY</text>"
         "</g>"
-        f'<text x="{cx:.0f}" y="76" text-anchor="middle" fill="#5f7fa8" '
+        f'<text x="{cx:.0f}" y="76" text-anchor="middle" fill="{theme["fill_weak"]}" '
         'style="font-size: 13px; letter-spacing: 5px;">'
         "@antono4 · LIVE 3D CONTRIBUTION MAP</text>"
         f'<rect x="{cx - 130:.0f}" y="88" width="260" height="2" fill="url(#titleGrad)" '
         'opacity="0.75">'
         '<animate attributeName="opacity" values="0.25;0.9;0.25" dur="4s" '
         'repeatCount="indefinite"/></rect>'
-        f'<g fill="none" stroke="{ACCENT_2}" stroke-opacity="0.35" stroke-width="2">'
+        f'<g fill="none" stroke="{theme["accent_2"]}" stroke-opacity="0.4" stroke-width="2">'
         '<path d="M24 24 h46 M24 24 v46"/><path d="M1256 24 h-46 M1256 24 v46"/>'
         '<path d="M24 826 h46 M24 826 v-46"/><path d="M1256 826 h-46 M1256 826 v-46"/>'
         "</g>"
     )
 
 
-def build_overlay() -> str:
-    return (
+def build_overlay(theme: dict) -> str:
+    parts = []
+    if theme.get("sweep"):
+        parts.append(
+            f'<rect x="0" y="0" width="{WIDTH}" height="{HEIGHT}" '
+            'fill="url(#rainbowSweep)" opacity="0.6" '
+            'style="mix-blend-mode: color;"/>'
+        )
+    parts.append(
         f'<rect x="0" y="0" width="{WIDTH}" height="{HEIGHT}" fill="url(#cyberVignette)"/>'
+    )
+    parts.append(
         f'<rect x="0" y="0" width="{WIDTH}" height="{HEIGHT}" fill="url(#scanlines)" '
         'opacity="0.5" style="mix-blend-mode: overlay;"/>'
     )
+    return "".join(parts)
 
 
-def enhance(svg: str) -> str:
+def enhance(svg: str, theme: dict) -> str:
     if "CONTRIBUTION CITY" in svg:
         return svg
 
@@ -203,14 +319,13 @@ def enhance(svg: str) -> str:
     svg = (
         svg[:style_start]
         + "<style>"
-        + STYLE_OVERRIDES
-        + build_level_css()
+        + build_style(theme)
         + "</style>"
         + svg[style_end:]
     )
 
     # 2. extra gradients/filters/pattern
-    svg = svg.replace("</defs>", build_defs() + "</defs>", 1)
+    svg = svg.replace("</defs>", build_defs(theme) + "</defs>", 1)
 
     # 3. backdrop + title replace the flat background rect
     bg = '<rect x="0" y="0" width="1280" height="850" class="fill-bg"></rect>'
@@ -218,7 +333,7 @@ def enhance(svg: str) -> str:
         bg = '<rect x="0" y="0" width="1280" height="850" class="fill-bg"/>'
     if bg not in svg:
         raise SystemExit("background rect not found")
-    svg = svg.replace(bg, build_backdrop() + build_title(), 1)
+    svg = svg.replace(bg, build_backdrop(theme) + build_title(theme), 1)
 
     # 4. neon glow on every contribution block
     svg = re.sub(r"<rect\b[^>]*/>", neon_rect, svg)
@@ -245,7 +360,7 @@ def enhance(svg: str) -> str:
     # 6. overlay above the city but below the footer stats
     footer = svg.rfind("<g>")
     if footer > 0:
-        svg = svg[:footer] + build_overlay() + svg[footer:]
+        svg = svg[:footer] + build_overlay(theme) + svg[footer:]
 
     # 7. footer text gets a soft neon glow
     footer = svg.rfind("<g>")
@@ -256,19 +371,29 @@ def enhance(svg: str) -> str:
 
 
 def main() -> None:
-    path = (
-        sys.argv[1]
-        if len(sys.argv) > 1
-        else "profile-3d-contrib/profile-gitblock.svg"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--theme",
+        choices=sorted(THEMES),
+        default="rainbow",
+        help="color theme (default: rainbow)",
     )
-    with open(path, encoding="utf-8") as fh:
+    parser.add_argument(
+        "path",
+        nargs="?",
+        default="profile-3d-contrib/profile-gitblock.svg",
+        help="path to the SVG to enhance in place",
+    )
+    args = parser.parse_args()
+
+    with open(args.path, encoding="utf-8") as fh:
         svg = fh.read()
 
-    out = enhance(svg)
+    out = enhance(svg, THEMES[args.theme])
 
-    with open(path, "w", encoding="utf-8") as fh:
+    with open(args.path, "w", encoding="utf-8") as fh:
         fh.write(out)
-    print(f"enhanced {path}: {len(svg)} -> {len(out)} bytes")
+    print(f"enhanced {args.path} [{args.theme}]: {len(svg)} -> {len(out)} bytes")
 
 
 if __name__ == "__main__":

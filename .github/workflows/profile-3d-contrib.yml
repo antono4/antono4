@@ -32,8 +32,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      - name: Enhance GitBlock SVG (neon cyber city)
-        run: python3 scripts/enhance_gitblock.py profile-3d-contrib/profile-gitblock.svg
+      - name: Enhance GitBlock SVG (colorful neon)
+        run: python3 scripts/enhance_gitblock.py --theme rainbow profile-3d-contrib/profile-gitblock.svg
 
       - name: Commit & Push
         run: |
