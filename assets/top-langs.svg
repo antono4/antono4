@@ -6,14 +6,14 @@
   <text x="465" y="70" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">32%</text>
   <rect x="30" y="76" width="435" height="6" rx="3" fill="#2a2e3f"/>
   <rect x="30" y="76" width="139.20" height="6" rx="3" fill="#7aa2f7"/>
-  <text x="30" y="95" fill="#f8f8f2" font-size="13" font-family="monospace">TypeScript</text>
+  <text x="30" y="95" fill="#f8f8f2" font-size="13" font-family="monospace">Python</text>
   <text x="465" y="95" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">13%</text>
   <rect x="30" y="101" width="435" height="6" rx="3" fill="#2a2e3f"/>
   <rect x="30" y="101" width="56.55" height="6" rx="3" fill="#7aa2f7"/>
-  <text x="30" y="120" fill="#f8f8f2" font-size="13" font-family="monospace">Python</text>
-  <text x="465" y="120" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">12%</text>
+  <text x="30" y="120" fill="#f8f8f2" font-size="13" font-family="monospace">TypeScript</text>
+  <text x="465" y="120" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">13%</text>
   <rect x="30" y="126" width="435" height="6" rx="3" fill="#2a2e3f"/>
-  <rect x="30" y="126" width="52.20" height="6" rx="3" fill="#7aa2f7"/>
+  <rect x="30" y="126" width="56.55" height="6" rx="3" fill="#7aa2f7"/>
   <text x="30" y="145" fill="#f8f8f2" font-size="13" font-family="monospace">JavaScript</text>
   <text x="465" y="145" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">11%</text>
   <rect x="30" y="151" width="435" height="6" rx="3" fill="#2a2e3f"/>
