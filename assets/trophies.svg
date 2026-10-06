@@ -3,7 +3,7 @@
   <text x="247.5" y="36" fill="#7aa2f7" font-size="16" font-weight="bold" font-family="monospace" text-anchor="middle">Achievements</text>
   <line x1="24" y1="52" x2="471" y2="52" stroke="#414868" stroke-width="1" opacity="0.6"/>
   <rect x="30" y="70" width="115" height="60" rx="10" fill="#22243a"/>
-  <text x="87.5" y="94" text-anchor="middle" fill="#f1fa8c" font-size="20" font-weight="bold" font-family="monospace">80</text>
+  <text x="87.5" y="94" text-anchor="middle" fill="#f1fa8c" font-size="20" font-weight="bold" font-family="monospace">76</text>
   <text x="87.5" y="114" text-anchor="middle" fill="#a9b1d6" font-size="12" font-family="monospace">⭐ Stars</text>
   <rect x="190" y="70" width="115" height="60" rx="10" fill="#22243a"/>
   <text x="247.5" y="94" text-anchor="middle" fill="#f1fa8c" font-size="20" font-weight="bold" font-family="monospace">407</text>
@@ -12,12 +12,12 @@
   <text x="407.5" y="94" text-anchor="middle" fill="#f1fa8c" font-size="20" font-weight="bold" font-family="monospace">5</text>
   <text x="407.5" y="114" text-anchor="middle" fill="#a9b1d6" font-size="12" font-family="monospace">👥 Followers</text>
   <rect x="30" y="142" width="115" height="60" rx="10" fill="#22243a"/>
-  <text x="87.5" y="166" text-anchor="middle" fill="#f1fa8c" font-size="20" font-weight="bold" font-family="monospace">862</text>
+  <text x="87.5" y="166" text-anchor="middle" fill="#f1fa8c" font-size="20" font-weight="bold" font-family="monospace">866</text>
   <text x="87.5" y="186" text-anchor="middle" fill="#a9b1d6" font-size="12" font-family="monospace">🔀 Merged PRs</text>
   <rect x="190" y="142" width="115" height="60" rx="10" fill="#22243a"/>
   <text x="247.5" y="166" text-anchor="middle" fill="#f1fa8c" font-size="20" font-weight="bold" font-family="monospace">19</text>
   <text x="247.5" y="186" text-anchor="middle" fill="#a9b1d6" font-size="12" font-family="monospace">📋 Issues</text>
   <rect x="350" y="142" width="115" height="60" rx="10" fill="#22243a"/>
-  <text x="407.5" y="166" text-anchor="middle" fill="#f1fa8c" font-size="20" font-weight="bold" font-family="monospace">445K</text>
+  <text x="407.5" y="166" text-anchor="middle" fill="#f1fa8c" font-size="20" font-weight="bold" font-family="monospace">446K</text>
   <text x="407.5" y="186" text-anchor="middle" fill="#a9b1d6" font-size="12" font-family="monospace">🚀 Commits</text>
 </svg>
