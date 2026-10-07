@@ -9,12 +9,6 @@
       <stop offset="100%" stop-color="#0b0f1a"/>
     </linearGradient>
 
-    <radialGradient id="ava" cx="35%" cy="30%" r="80%">
-      <stop offset="0%" stop-color="#2dd4bf"/>
-      <stop offset="55%" stop-color="#3b82f6"/>
-      <stop offset="100%" stop-color="#a855f7"/>
-    </radialGradient>
-
     <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#2dd4bf">
         <animate attributeName="stop-color" values="#2dd4bf;#a855f7;#3b82f6;#2dd4bf" dur="12s" repeatCount="indefinite"/>
@@ -27,9 +21,34 @@
       </stop>
     </linearGradient>
 
+    <!-- frosted glass tint: light falling from the top-left -->
+    <linearGradient id="glassTint" x1="0" y1="0" x2="0.55" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.11"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.035"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- specular streak reflected off the glass -->
+    <linearGradient id="reflection" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.13"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="topHi" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="photoGloss" cx="30%" cy="24%" r="85%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
     <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.05"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
 
@@ -70,22 +89,38 @@
   <g clip-path="url(#card)">
     <rect width="880" height="645" fill="url(#bg)"/>
 
-    <!-- ambient glow -->
-    <circle cx="130" cy="110" r="180" fill="#2dd4bf" opacity="0.05">
-      <animate attributeName="opacity" values="0.05;0.11;0.05" dur="9s" repeatCount="indefinite"/>
+    <!-- ambient glow seen through the glass -->
+    <circle cx="130" cy="110" r="180" fill="#2dd4bf" opacity="0.07">
+      <animate attributeName="opacity" values="0.07;0.13;0.07" dur="9s" repeatCount="indefinite"/>
     </circle>
     <circle cx="790" cy="520" r="210" fill="#a855f7" opacity="0.06">
       <animate attributeName="opacity" values="0.10;0.04;0.10" dur="11s" repeatCount="indefinite"/>
     </circle>
 
-    <!-- floating panel -->
+    <!-- floating glass panel -->
     <g>
       <animateTransform attributeName="transform" type="translate" dur="8s" repeatCount="indefinite"
         values="0 0;0 -7;0 0"/>
       <rect x="40" y="40" width="800" height="565" rx="18" fill="#0f1524" stroke="#2a3446" stroke-width="1.5"/>
       <rect x="41" y="41" width="798" height="563" rx="17" fill="none" stroke="url(#edge)" stroke-width="1.4" opacity="0.5"/>
 
-      <!-- sweeping sheen -->
+      <!-- base: dark tinted glass -->
+      <rect x="40" y="40" width="800" height="590" rx="18" fill="#0d1424" fill-opacity="0.72"/>
+      <!-- frosted light -->
+      <rect x="40" y="40" width="800" height="590" rx="18" fill="url(#glassTint)"/>
+      <!-- diagonal reflection band -->
+      <path d="M40 40 L 250 40 L 60 630 L 40 630 Z" fill="url(#reflection)"/>
+      <path d="M40 40 L 96 40 L 40 350 Z" fill="url(#reflection)" opacity="0.7"/>
+      <!-- specular top edge -->
+      <rect x="44" y="42" width="792" height="1.6" rx="0.8" fill="url(#topHi)"/>
+      <!-- glass rim -->
+      <rect x="40.5" y="40.5" width="799" height="589" rx="18" fill="none"
+        stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.2"/>
+      <!-- animated accent rim -->
+      <rect x="41" y="41" width="798" height="588" rx="17" fill="none"
+        stroke="url(#edge)" stroke-width="1.4" opacity="0.5"/>
+
+      <!-- light sweeping across the glass -->
       <g clip-path="url(#panel)">
         <rect x="-240" y="40" width="200" height="565" fill="url(#sheen)">
           <animateTransform attributeName="transform" type="translate" dur="7s" repeatCount="indefinite"
@@ -98,7 +133,7 @@
         <animate attributeName="opacity" dur="19s" repeatCount="indefinite"
           keyTimes="0;0.979;1" values="1;1;0"/>
 
-        <!-- ===== header ===== -->
+        <!-- ===== header on its own glass slab ===== -->
         <g opacity="0">
           <animate attributeName="opacity" dur="19s" repeatCount="indefinite"
             keyTimes="0;0.004;0.03;1" values="0;0;1;1"/>
@@ -138,7 +173,7 @@
 
         <!-- ===== body ===== -->
         <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
-           font-size="20" fill="#e6edf3">
+           font-size="20" fill="#eaf1f8">
 
           <g clip-path="url(#l1)">
             <text x="76" y="220">I'm a <tspan fill="#2dd4bf" font-weight="700">Full-Stack Developer</tspan> based in Indonesia</text>
