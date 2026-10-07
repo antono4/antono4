@@ -9,10 +9,10 @@
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
   <a href="https://linkedin.com/in/antono4" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge" alt="LinkedIn" />
   </a>
   <a href="https://twitter.com/antono4" target="_blank" rel="noopener">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=x&logoColor=white" alt="Twitter" />
   </a>
   <a href="mailto:antonockr1@gmail.com">
     <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
@@ -52,7 +52,7 @@ principles: Ship reliably · Automate the repetitive · Keep it maintainable
   <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go" />
-  <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell" />
+  <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge" alt="PowerShell" />
 </p>
 
 <h3 align="center">Frontend</h3>
@@ -80,7 +80,7 @@ principles: Ship reliably · Automate the repetitive · Keep it maintainable
 
 <p align="center">
   <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain" />
-  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" />
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge" alt="OpenAI" />
   <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
 </p>
 
@@ -88,7 +88,7 @@ principles: Ship reliably · Automate the repetitive · Keep it maintainable
 
 <p align="center">
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge" alt="AWS" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
 </p>
@@ -139,11 +139,11 @@ AI-powered content generation for social media, blogs, and marketing. Built with
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
 <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
 <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" alt="LangChain" />
-<img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI" />
+<img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square" alt="OpenAI" />
 </p>
 
 <p>
-<a href="https://antono4.github.io/ai-content-generator/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages&logoColor=white" alt="Live Demo" /></a>
+<a href="https://antono4.github.io/ai-content-generator/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=githubpages&logoColor=white" alt="Live Demo" /></a>
 <a href="https://github.com/antono4/ai-content-generator" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Source-7AA2F7?style=flat-square&logo=github&logoColor=white" alt="Source" /></a>
 </p>
 
@@ -152,16 +152,16 @@ AI-powered content generation for social media, blogs, and marketing. Built with
 
 ### 🧠 LUMA-AI
 
-Full-stack AI web application with a TypeScript frontend and backend, shipped as a deployable product.
+Full-stack AI web application with a React + TypeScript frontend and a FastAPI backend, shipped as a deployable product.
 
 <p>
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
 </p>
 
 <p>
-<a href="https://antono4.github.io/LUMA-AI/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages&logoColor=white" alt="Live Demo" /></a>
+<a href="https://antono4.github.io/LUMA-AI/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=githubpages&logoColor=white" alt="Live Demo" /></a>
 <a href="https://github.com/antono4/LUMA-AI" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Source-7AA2F7?style=flat-square&logo=github&logoColor=white" alt="Source" /></a>
 </p>
 
@@ -181,7 +181,7 @@ Interactive space-themed STEM learning platform for kids — educational games, 
 </p>
 
 <p>
-<a href="https://antono4.github.io/GalaxyQuest/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages&logoColor=white" alt="Live Demo" /></a>
+<a href="https://antono4.github.io/GalaxyQuest/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=githubpages&logoColor=white" alt="Live Demo" /></a>
 <a href="https://github.com/antono4/GalaxyQuest" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Source-7AA2F7?style=flat-square&logo=github&logoColor=white" alt="Source" /></a>
 </p>
 
@@ -194,12 +194,12 @@ IT and general asset management application for tracking inventory, ownership, a
 
 <p>
 <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" />
-<img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel" />
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
+<img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" />
 </p>
 
 <p>
-<a href="https://antono4.github.io/AssetManager/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=github-pages&logoColor=white" alt="Live Demo" /></a>
+<a href="https://antono4.github.io/AssetManager/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=githubpages&logoColor=white" alt="Live Demo" /></a>
 <a href="https://github.com/antono4/AssetManager" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Source-7AA2F7?style=flat-square&logo=github&logoColor=white" alt="Source" /></a>
 </p>
 
@@ -215,7 +215,7 @@ Hospital management information system built with PHP and MySQL, covering core c
 <p>
 <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" />
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
-<img src="https://img.shields.io/badge/CodeIgniter-EF4223?style=flat-square&logo=codeigniter&logoColor=white" alt="CodeIgniter" />
+<img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" />
 </p>
 
 <p>
@@ -230,8 +230,8 @@ Hospital management information system built with PHP and MySQL, covering core c
 Windows optimization suite that improves performance, privacy, and security on Windows 10 and 11 through scripted, reversible tweaks.
 
 <p>
-<img src="https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white" alt="PowerShell" />
-<img src="https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows" />
+<img src="https://img.shields.io/badge/PowerShell-5391FE?style=flat-square" alt="PowerShell" />
+<img src="https://img.shields.io/badge/Windows-0078D6?style=flat-square" alt="Windows" />
 </p>
 
 <p>
@@ -252,9 +252,9 @@ I'm open to collaboration on web platforms, AI integrations, and automation work
 
 <p align="center">
   <a href="mailto:antonockr1@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://linkedin.com/in/antono4" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://linkedin.com/in/antono4" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge" alt="LinkedIn" /></a>
   <a href="https://github.com/antono4" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="https://twitter.com/antono4" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" /></a>
+  <a href="https://twitter.com/antono4" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=x&logoColor=white" alt="Twitter" /></a>
 </p>
 
 ---
