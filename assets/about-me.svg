@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="645" viewBox="0 0 880 645" fill="none" role="img" aria-label="Antono — About Me">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="670" viewBox="0 0 880 670" fill="none" role="img" aria-label="Antono — About Me">
   <title>Antono — About Me</title>
-  <desc>Animated terminal-style card: role, background, what I build, what I care about, and the tools I use.</desc>
+  <desc>Animated glass terminal card: profile photo, role, background, what I build, and the tools I use.</desc>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -8,12 +8,6 @@
       <stop offset="55%" stop-color="#141d33"/>
       <stop offset="100%" stop-color="#0b0f1a"/>
     </linearGradient>
-
-    <radialGradient id="ava" cx="35%" cy="30%" r="80%">
-      <stop offset="0%" stop-color="#2dd4bf"/>
-      <stop offset="55%" stop-color="#3b82f6"/>
-      <stop offset="100%" stop-color="#a855f7"/>
-    </radialGradient>
 
     <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#2dd4bf">
@@ -27,14 +21,40 @@
       </stop>
     </linearGradient>
 
-    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.06"/>
+    <!-- frosted glass tint: light falling from the top-left -->
+    <linearGradient id="glassTint" x1="0" y1="0" x2="0.55" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.11"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.035"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
 
-    <clipPath id="card"><rect x="0" y="0" width="880" height="645" rx="24"/></clipPath>
-    <clipPath id="panel"><rect x="40" y="40" width="800" height="565" rx="18"/></clipPath>
+    <!-- specular streak reflected off the glass -->
+    <linearGradient id="reflection" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.13"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="topHi" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="photoGloss" cx="30%" cy="24%" r="85%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <clipPath id="card"><rect x="0" y="0" width="880" height="670" rx="24"/></clipPath>
+    <clipPath id="panel"><rect x="40" y="40" width="800" height="590" rx="18"/></clipPath>
+    <clipPath id="avaclip"><circle cx="118" cy="116" r="36"/></clipPath>
 
     <!-- typewriter reveal masks: one growing rect per line -->
     <clipPath id="l1"><rect x="76" y="188" height="34" width="0">
@@ -68,26 +88,40 @@
   </defs>
 
   <g clip-path="url(#card)">
-    <rect width="880" height="645" fill="url(#bg)"/>
+    <rect width="880" height="670" fill="url(#bg)"/>
 
-    <!-- ambient glow -->
-    <circle cx="130" cy="110" r="180" fill="#2dd4bf" opacity="0.05">
-      <animate attributeName="opacity" values="0.05;0.11;0.05" dur="9s" repeatCount="indefinite"/>
+    <!-- ambient glow seen through the glass -->
+    <circle cx="130" cy="110" r="180" fill="#2dd4bf" opacity="0.07">
+      <animate attributeName="opacity" values="0.07;0.13;0.07" dur="9s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="790" cy="520" r="210" fill="#a855f7" opacity="0.06">
-      <animate attributeName="opacity" values="0.10;0.04;0.10" dur="11s" repeatCount="indefinite"/>
+    <circle cx="790" cy="545" r="210" fill="#a855f7" opacity="0.08">
+      <animate attributeName="opacity" values="0.12;0.05;0.12" dur="11s" repeatCount="indefinite"/>
     </circle>
 
-    <!-- floating panel -->
+    <!-- floating glass panel -->
     <g>
       <animateTransform attributeName="transform" type="translate" dur="8s" repeatCount="indefinite"
         values="0 0;0 -7;0 0"/>
-      <rect x="40" y="40" width="800" height="565" rx="18" fill="#0f1524" stroke="#2a3446" stroke-width="1.5"/>
-      <rect x="41" y="41" width="798" height="563" rx="17" fill="none" stroke="url(#edge)" stroke-width="1.4" opacity="0.5"/>
 
-      <!-- sweeping sheen -->
+      <!-- base: dark tinted glass -->
+      <rect x="40" y="40" width="800" height="590" rx="18" fill="#0d1424" fill-opacity="0.72"/>
+      <!-- frosted light -->
+      <rect x="40" y="40" width="800" height="590" rx="18" fill="url(#glassTint)"/>
+      <!-- diagonal reflection band -->
+      <path d="M40 40 L 250 40 L 60 630 L 40 630 Z" fill="url(#reflection)"/>
+      <path d="M40 40 L 96 40 L 40 350 Z" fill="url(#reflection)" opacity="0.7"/>
+      <!-- specular top edge -->
+      <rect x="44" y="42" width="792" height="1.6" rx="0.8" fill="url(#topHi)"/>
+      <!-- glass rim -->
+      <rect x="40.5" y="40.5" width="799" height="589" rx="18" fill="none"
+        stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.2"/>
+      <!-- animated accent rim -->
+      <rect x="41" y="41" width="798" height="588" rx="17" fill="none"
+        stroke="url(#edge)" stroke-width="1.4" opacity="0.5"/>
+
+      <!-- light sweeping across the glass -->
       <g clip-path="url(#panel)">
-        <rect x="-240" y="40" width="200" height="565" fill="url(#sheen)">
+        <rect x="-240" y="40" width="200" height="590" fill="url(#sheen)">
           <animateTransform attributeName="transform" type="translate" dur="7s" repeatCount="indefinite"
             values="0 0;1160 0"/>
         </rect>
@@ -98,39 +132,51 @@
         <animate attributeName="opacity" dur="19s" repeatCount="indefinite"
           keyTimes="0;0.979;1" values="1;1;0"/>
 
-        <!-- ===== header ===== -->
+        <!-- ===== header on its own glass slab ===== -->
         <g opacity="0">
           <animate attributeName="opacity" dur="19s" repeatCount="indefinite"
             keyTimes="0;0.004;0.03;1" values="0;0;1;1"/>
 
-          <!-- avatar -->
-          <ellipse cx="118" cy="180" rx="44" ry="7" fill="#2dd4bf" opacity="0.12"/>
-          <circle cx="118" cy="116" r="34" fill="url(#ava)"/>
-          <circle cx="118" cy="116" r="34" fill="none" stroke="#0b0f1a" stroke-width="3"/>
-          <circle cx="118" cy="116" r="42" fill="none" stroke="url(#edge)" stroke-width="2"
-                  stroke-dasharray="18 12" opacity="0.7">
+          <rect x="66" y="70" width="748" height="122" rx="16" fill="#ffffff" fill-opacity="0.04"/>
+          <rect x="66" y="70" width="748" height="122" rx="16" fill="url(#glassTint)"/>
+          <rect x="66.5" y="70.5" width="747" height="121" rx="16" fill="none"
+            stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+          <rect x="96" y="71.5" width="240" height="1.2" rx="0.6" fill="url(#topHi)" opacity="0.8"/>
+
+          <!-- profile photo -->
+          <circle cx="118" cy="116" r="42" fill="#2dd4bf" opacity="0.14">
+            <animate attributeName="opacity" values="0.14;0.24;0.14" dur="6s" repeatCount="indefinite"/>
+          </circle>
+          <ellipse cx="118" cy="180" rx="44" ry="7" fill="#2dd4bf" opacity="0.10"/>
+          <image href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACAAIADASIAAhEBAxEB/8QAHAAAAgIDAQEAAAAAAAAAAAAAAAECBAUGBwMI/8QAMhAAAQMDAwMCBgECBwAAAAAAAQACAwQFEQYhMQcSQVGBCBMiMmFxFCOxFRYlM1KR0f/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwD44CEN4CFkMJnZJDiECVmiZmUHCrjc4V6haA4INktb/lsG+FlWVRA+5YGle4lrI2uc5xAa1oyXE8ABdJ0X0/p66ldcdV6hp9P0EcwhcZC3vLvLcE/cPI3IzuAg1KaqLmkErB3c97Cuh6h0VZZDPPozWdtvkLJOxtPM4wVW/ALSMdx8DO/72XNqx5+tjwWuaSCCMEEcgoMBUtxIvIKzVAF5Vc7IHtjlIoG6MIBCMJeEBHu0JnlJuwCZ5QA5ScPCaOUBGMOV+lxkZyqcYVyEYGUG+9I7Bf8AUWr4INNW1twuVI0VUMUhxGHNe0AyH/iM5I84X1NF8NEN5tLajX2qbrcKwl080VGxtPD8xxJc77S553Iy45x6Bci+FbRupL3p/VN4sLWMe50FvbJJPLE07OkfvEQ84/p7Bw5BPGF1vVOldanR9o0DQ6zqDVuL6irnbVTOc1g3ZEJMl/dznJ42/KK471K6EWuzsnk0xX3CKobkMiq5GvjkA8E4Bb+1xOuFXJRNqqtrjOyQwTuPOQPpz7efOF3bUem+oOn6StN4qpzamM7SJq50zeNnRmQ948ggkjyuD2u7Rw2y/WmsaZf5TY30znbmOaOUYI9MsMjfdVGHn3OVWcDkqzKcu3Vd+xQATSRwoH4SQhAhjwmk3hHlAJHOVJLG6D1YrMbsBVhnK9QdkH2J8IuphZuh9zay31Vw/wBRqGTRUzmtMbHsbmRziR2tA88heGjtUaPtHUds+mtKVcFX8ote+3XL+XTBnb2B0g7iBgfjbJPquAdF+qd16cVtcKSgjuNNVt7nwPdgNe0bO/65H4WX1v15veoaeeOCzW+3Szt7XzQjDiDt4ACq1d+IzqLW6gvUtFDVEU7X/UGu2JC5G4NZaog90fzXSFzWCMd4G31F3O/gH0VGaWSeR0sriSeSSk0k4LieMblEezjlebvuUlB/KgjvlNCAgWU/BRlBOQUCb9qZ2CTdsBMoECmEvKeQg9MqRcA1QYcrNaS0rftWVxo7Fbpat7N5HjDY4h6vedm++/7VFnpzTn/N9mq54wKV9xjpiXDZzn7Eb84BBP7Hqtw6zaHpbfVy3anp6WzUx+lzPmEtlf5LG8gn0C1G8U8+mdZUFruFwjrae0yxSCSjd3R4JbI/5ZOM75GfJC2nr3rPSWszZ67T3+IMqIvmiqiqYAwDu7SMEOIO4cg5U/I28FThbJI7tZG9xxnDRkoaHE93GeF0H4fWMHVaz1D39opnumz5JAwP7oNADttkOwvtHqVorpBqCgmut8paexVjWl8lbbnNhccclzMdjvcZ/K+S9U2ywQXOZumL5NdaNuSw1FKYJSB+MkO9iP0gwGQmoE44UhwoGjwgDykTsQgAg5SZwpeMoEjygc8o85QbJ0/prRPe2SXyIz0cWP6AcW/OeeGkjcN5Jx6flfQFu1NFDYnm209LQUcDH/x4qeMRxs7WlznYHJAHJ3yQvmuwtlluEUEQy6Q9rffbP910u+3dkOmqyGn+mGKldBEQME5GCfcnKo5LI9zzJKScuJA9zkqETe52/A5U5TnsiaPtG/7PKlkNAA91QzyVl9HXR9mvba5ju0sY7f2WGJUHOIB/KgzmotS3O7QujqaqRzJn97m52wNmj9cn3WBY4seHtOC05CBvz4R2lBJ/b8xxaMNJyApNGUngbEeRuPQptOFAzsEnHZNxPCieEA3hSPCiE0EfKYS9kEILNrqHU1a2RvOCM+gPJHsszdrwJrc+lAyXbuPgDI/8Wudxa7IQ4l3c4laEmklxceSjjlRB+nA5SwTygnnKi4ZUm8I4UAMICT0NUE+49nYeM5CQ5QgYQDkgmRjlIY8IIjOVNJvGU0AkcJlLALsEgD1KCDvKY/2tuS5GNkY4HorQmjdSQBun5QA4R4KaAoEd0gMKRKEAUDlHIQgCkn4SOwQDNmhMcpN+0JhAFR5KaQ5wgeEipIQR3ARnflMjIUcIJZGEE7JcI85QIlPJSwE/CBg5QkEcoGT4ScdkFJ3Co//Z" x="82" y="80" width="72" height="72"
+                 preserveAspectRatio="xMidYMid slice" clip-path="url(#avaclip)"/>
+          <circle cx="118" cy="116" r="36" fill="url(#photoGloss)" clip-path="url(#avaclip)"/>
+          <circle cx="118" cy="116" r="36" fill="none" stroke="#0b0f1a" stroke-opacity="0.9" stroke-width="3"/>
+          <circle cx="118" cy="116" r="37.6" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="1.2"/>
+          <circle cx="118" cy="116" r="45" fill="none" stroke="url(#edge)" stroke-width="2"
+                  stroke-dasharray="18 12" opacity="0.75">
             <animateTransform attributeName="transform" type="rotate" dur="18s"
               repeatCount="indefinite" from="0 118 116" to="360 118 116"/>
           </circle>
 
           <!-- name + tagline -->
           <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace">
-            <text x="176" y="110" font-size="28" font-weight="700" fill="#e6edf3" letter-spacing="-0.5">Antono</text>
-            <text x="176" y="135" font-size="13" fill="#8b949e"> · Full-Stack Developer | AI &amp; Automation</text>
+            <text x="180" y="110" font-size="28" font-weight="700" fill="#f0f6fc" letter-spacing="-0.5">Antono</text>
+            <text x="180" y="135" font-size="13" fill="#a8b3c2"> · Full-Stack Developer | AI &amp; Automation</text>
 
             <!-- location with Indonesian flag -->
-            <rect x="176" y="147" width="22" height="7.7" rx="1" fill="#ce1126"/>
-            <rect x="176" y="154.7" width="22" height="7.7" rx="1" fill="#f0f6fc"/>
-            <rect x="176" y="147" width="22" height="15.4" rx="1" fill="none" stroke="#2a3446" stroke-width="1"/>
-            <text x="206" y="160" font-size="13" fill="#8b949e">Indonesia</text>
+            <rect x="180" y="150.4" width="22" height="7.7" rx="1" fill="#ce1126"/>
+            <rect x="180" y="158.1" width="22" height="7.7" rx="1" fill="#f0f6fc"/>
+            <rect x="180" y="150.4" width="22" height="15.4" rx="1" fill="none" stroke="#334055" stroke-width="1"/>
+            <text x="210" y="164" font-size="13" fill="#a8b3c2">Indonesia</text>
           </g>
 
           <!-- right-aligned link -->
-          <text x="804" y="160" text-anchor="end" font-size="13" fill="#3b82f6"
+          <text x="796" y="164" text-anchor="end" font-size="13" fill="#60a5fa"
             font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace">github.com/antono4</text>
 
           <!-- divider, draws itself in -->
-          <rect x="76" y="178" width="0" height="2" rx="1" fill="url(#edge)" opacity="0.6">
+          <rect x="76" y="196" width="0" height="2" rx="1" fill="url(#edge)" opacity="0.6">
             <animate attributeName="width" dur="19s" repeatCount="indefinite" fill="freeze"
               keyTimes="0;0.02;0.07;1" values="0;0;728;728"/>
           </rect>
@@ -138,39 +184,39 @@
 
         <!-- ===== body ===== -->
         <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
-           font-size="20" fill="#e6edf3">
+           font-size="20" fill="#eaf1f8">
 
           <g clip-path="url(#l1)">
-            <text x="76" y="220">I'm a <tspan fill="#2dd4bf" font-weight="700">Full-Stack Developer</tspan> based in Indonesia</text>
+            <text x="76" y="238">I'm a <tspan fill="#2dd4bf" font-weight="700">Full-Stack Developer</tspan> based in Indonesia</text>
           </g>
 
           <g clip-path="url(#l2)">
-            <text x="76" y="256">with a background in <tspan fill="#f59e0b" font-weight="700">computational chemistry</tspan>.</text>
+            <text x="76" y="274">with a background in <tspan fill="#f59e0b" font-weight="700">computational chemistry</tspan>.</text>
           </g>
 
           <g clip-path="url(#l3)">
-            <text x="76" y="292">I build <tspan fill="#a855f7" font-weight="700">production web systems</tspan> <tspan fill="#8b949e">&amp;</tspan> <tspan fill="#2dd4bf" font-weight="700">AI-powered tools</tspan>,</text>
+            <text x="76" y="310">I build <tspan fill="#a855f7" font-weight="700">production web systems</tspan> <tspan fill="#8b949e">&amp;</tspan> <tspan fill="#2dd4bf" font-weight="700">AI-powered tools</tspan>,</text>
           </g>
 
           <g clip-path="url(#l4)">
-            <text x="76" y="328">from <tspan fill="#f59e0b" font-weight="700">hospital</tspan> <tspan fill="#8b949e">&amp;</tspan> <tspan fill="#f59e0b" font-weight="700">enterprise</tspan> management platforms</text>
+            <text x="76" y="346">from <tspan fill="#f59e0b" font-weight="700">hospital</tspan> <tspan fill="#8b949e">&amp;</tspan> <tspan fill="#f59e0b" font-weight="700">enterprise</tspan> management platforms</text>
           </g>
 
           <g clip-path="url(#l5)">
-            <text x="76" y="364">to <tspan fill="#3b82f6" font-weight="700">automation</tspan> <tspan fill="#8b949e">&amp;</tspan> <tspan fill="#3b82f6" font-weight="700">content pipelines</tspan>.</text>
+            <text x="76" y="382">to <tspan fill="#3b82f6" font-weight="700">automation</tspan> <tspan fill="#8b949e">&amp;</tspan> <tspan fill="#3b82f6" font-weight="700">content pipelines</tspan>.</text>
           </g>
 
           <g clip-path="url(#l6)">
-            <text x="76" y="400">I care about <tspan fill="#2dd4bf" font-weight="700">clean architecture</tspan>, <tspan fill="#2dd4bf" font-weight="700">reliable delivery</tspan>,</text>
+            <text x="76" y="418">I care about <tspan fill="#2dd4bf" font-weight="700">clean architecture</tspan>, <tspan fill="#2dd4bf" font-weight="700">reliable delivery</tspan>,</text>
           </g>
 
           <g clip-path="url(#l7)">
-            <text x="76" y="436">and software that solves <tspan fill="#2dd4bf" font-weight="700">real operational problems</tspan>.</text>
+            <text x="76" y="454">and software that solves <tspan fill="#2dd4bf" font-weight="700">real operational problems</tspan>.</text>
           </g>
         </g>
 
         <!-- blinking caret once typing finishes -->
-        <rect x="690" y="416" width="12" height="24" fill="#2dd4bf" opacity="0">
+        <rect x="690" y="434" width="12" height="24" fill="#2dd4bf" opacity="0">
           <animate attributeName="opacity" dur="19s" repeatCount="indefinite"
             keyTimes="0;0.83684;0.844;0.89474;1" values="0;0;1;1;0"/>
         </rect>
@@ -185,81 +231,81 @@
           <g>
             <animateTransform attributeName="transform" type="translate" dur="3.4s" repeatCount="indefinite"
               values="0 0;0 -3.5;0 0"/>
-            <rect x="73" y="458" width="165" height="34" rx="11" fill="#2dd4bf" fill-opacity="0.13" stroke="#2dd4bf" stroke-opacity="0.5"/>
-            <text x="89" y="480" fill="#2dd4bf">FULL-STACK</text>
+            <rect x="73" y="476" width="165" height="34" rx="11" fill="#2dd4bf" fill-opacity="0.10" stroke="#2dd4bf" stroke-opacity="0.45"/>
+            <text x="89" y="498" fill="#2dd4bf">FULL-STACK</text>
           </g>
           <g>
             <animateTransform attributeName="transform" type="translate" dur="4.3s" repeatCount="indefinite"
               values="0 0;0 -4;0 0"/>
-            <rect x="248" y="458" width="165" height="34" rx="11" fill="#a855f7" fill-opacity="0.13" stroke="#a855f7" stroke-opacity="0.5"/>
-            <text x="264" y="480" fill="#c084fc">AI &amp; AUTOMATION</text>
+            <rect x="248" y="476" width="165" height="34" rx="11" fill="#a855f7" fill-opacity="0.10" stroke="#a855f7" stroke-opacity="0.45"/>
+            <text x="264" y="498" fill="#c084fc">AI &amp; AUTOMATION</text>
           </g>
           <g>
             <animateTransform attributeName="transform" type="translate" dur="3.8s" repeatCount="indefinite"
               values="0 0;0 -3;0 0"/>
-            <rect x="423" y="458" width="165" height="34" rx="11" fill="#f59e0b" fill-opacity="0.13" stroke="#f59e0b" stroke-opacity="0.5"/>
-            <text x="439" y="480" fill="#fbbf24">CHEMISTRY</text>
+            <rect x="423" y="476" width="165" height="34" rx="11" fill="#f59e0b" fill-opacity="0.10" stroke="#f59e0b" stroke-opacity="0.45"/>
+            <text x="439" y="498" fill="#fbbf24">CHEMISTRY</text>
           </g>
           <g>
             <animateTransform attributeName="transform" type="translate" dur="4.7s" repeatCount="indefinite"
               values="0 0;0 -4;0 0"/>
-            <rect x="598" y="458" width="165" height="34" rx="11" fill="#3b82f6" fill-opacity="0.13" stroke="#3b82f6" stroke-opacity="0.5"/>
-            <text x="614" y="480" fill="#60a5fa">LANGCHAIN</text>
+            <rect x="598" y="476" width="165" height="34" rx="11" fill="#3b82f6" fill-opacity="0.10" stroke="#3b82f6" stroke-opacity="0.45"/>
+            <text x="614" y="498" fill="#60a5fa">LANGCHAIN</text>
           </g>
 
           <!-- row 2 -->
           <g>
             <animateTransform attributeName="transform" type="translate" dur="4.1s" repeatCount="indefinite"
               values="0 0;0 -3.5;0 0"/>
-            <rect x="73" y="502" width="165" height="34" rx="11" fill="#34d399" fill-opacity="0.13" stroke="#34d399" stroke-opacity="0.5"/>
-            <text x="89" y="524" fill="#34d399">FASTAPI</text>
+            <rect x="73" y="520" width="165" height="34" rx="11" fill="#34d399" fill-opacity="0.10" stroke="#34d399" stroke-opacity="0.45"/>
+            <text x="89" y="542" fill="#34d399">FASTAPI</text>
           </g>
           <g>
             <animateTransform attributeName="transform" type="translate" dur="3.6s" repeatCount="indefinite"
               values="0 0;0 -3;0 0"/>
-            <rect x="248" y="502" width="165" height="34" rx="11" fill="#a78bfa" fill-opacity="0.13" stroke="#a78bfa" stroke-opacity="0.5"/>
-            <text x="264" y="524" fill="#a78bfa">TYPESCRIPT</text>
+            <rect x="248" y="520" width="165" height="34" rx="11" fill="#a78bfa" fill-opacity="0.10" stroke="#a78bfa" stroke-opacity="0.45"/>
+            <text x="264" y="542" fill="#a78bfa">TYPESCRIPT</text>
           </g>
           <g>
             <animateTransform attributeName="transform" type="translate" dur="4.4s" repeatCount="indefinite"
               values="0 0;0 -4;0 0"/>
-            <rect x="423" y="502" width="165" height="34" rx="11" fill="#60a5fa" fill-opacity="0.13" stroke="#60a5fa" stroke-opacity="0.5"/>
-            <text x="439" y="524" fill="#60a5fa">POSTGRES</text>
+            <rect x="423" y="520" width="165" height="34" rx="11" fill="#60a5fa" fill-opacity="0.10" stroke="#60a5fa" stroke-opacity="0.45"/>
+            <text x="439" y="542" fill="#60a5fa">POSTGRES</text>
           </g>
           <g>
             <animateTransform attributeName="transform" type="translate" dur="3.9s" repeatCount="indefinite"
               values="0 0;0 -3.5;0 0"/>
-            <rect x="598" y="502" width="165" height="34" rx="11" fill="#38bdf8" fill-opacity="0.13" stroke="#38bdf8" stroke-opacity="0.5"/>
-            <text x="614" y="524" fill="#38bdf8">DOCKER</text>
+            <rect x="598" y="520" width="165" height="34" rx="11" fill="#38bdf8" fill-opacity="0.10" stroke="#38bdf8" stroke-opacity="0.45"/>
+            <text x="614" y="542" fill="#38bdf8">DOCKER</text>
           </g>
 
           <!-- row 3 -->
           <g>
             <animateTransform attributeName="transform" type="translate" dur="4.9s" repeatCount="indefinite"
               values="0 0;0 -4;0 0"/>
-            <rect x="73" y="546" width="165" height="34" rx="11" fill="#e879f9" fill-opacity="0.13" stroke="#e879f9" stroke-opacity="0.5"/>
-            <text x="89" y="568" fill="#e879f9">NESTJS</text>
+            <rect x="73" y="564" width="165" height="34" rx="11" fill="#e879f9" fill-opacity="0.10" stroke="#e879f9" stroke-opacity="0.45"/>
+            <text x="89" y="586" fill="#e879f9">NESTJS</text>
           </g>
           <g>
             <animateTransform attributeName="transform" type="translate" dur="4.0s" repeatCount="indefinite"
               values="0 0;0 -3;0 0"/>
-            <rect x="248" y="546" width="165" height="34" rx="11" fill="#fb7185" fill-opacity="0.13" stroke="#fb7185" stroke-opacity="0.5"/>
-            <text x="264" y="568" fill="#fb7185">LARAVEL</text>
+            <rect x="248" y="564" width="165" height="34" rx="11" fill="#fb7185" fill-opacity="0.10" stroke="#fb7185" stroke-opacity="0.45"/>
+            <text x="264" y="586" fill="#fb7185">LARAVEL</text>
           </g>
           <g>
             <animateTransform attributeName="transform" type="translate" dur="4.6s" repeatCount="indefinite"
               values="0 0;0 -3.5;0 0"/>
-            <rect x="423" y="546" width="165" height="34" rx="11" fill="#ff9900" fill-opacity="0.13" stroke="#ff9900" stroke-opacity="0.5"/>
-            <text x="439" y="568" fill="#ffb454">AWS</text>
+            <rect x="423" y="564" width="165" height="34" rx="11" fill="#ff9900" fill-opacity="0.10" stroke="#ff9900" stroke-opacity="0.45"/>
+            <text x="439" y="586" fill="#ffb454">AWS</text>
           </g>
           <g>
             <animateTransform attributeName="transform" type="translate" dur="3.5s" repeatCount="indefinite"
               values="0 0;0 -4;0 0"/>
-            <rect x="598" y="546" width="165" height="34" rx="11" fill="#3b82f6" fill-opacity="0.13" stroke="#3b82f6" stroke-opacity="0.5"/>
-            <rect x="614" y="557" width="18" height="6.3" rx="1" fill="#ce1126"/>
-            <rect x="614" y="563.3" width="18" height="6.3" rx="1" fill="#f0f6fc"/>
-            <rect x="614" y="557" width="18" height="12.6" rx="1" fill="none" stroke="#2a3446" stroke-width="0.8"/>
-            <text x="640" y="568" fill="#60a5fa">INDONESIA</text>
+            <rect x="598" y="564" width="165" height="34" rx="11" fill="#3b82f6" fill-opacity="0.10" stroke="#3b82f6" stroke-opacity="0.45"/>
+            <rect x="614" y="575" width="18" height="6.3" rx="1" fill="#ce1126"/>
+            <rect x="614" y="581.3" width="18" height="6.3" rx="1" fill="#f0f6fc"/>
+            <rect x="614" y="575" width="18" height="12.6" rx="1" fill="none" stroke="#334055" stroke-width="0.8"/>
+            <text x="640" y="586" fill="#60a5fa">INDONESIA</text>
           </g>
         </g>
       </g>
