@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Antono&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=ffffff&desc=Full-Stack%20Developer%20%7C%20AI%20%26%20Automation&descSize=18&descAlignY=55" width="100%" alt="Antono — Full-Stack Developer | AI & Automation" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Antono&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=ffffff&desc=Full-Stack%20Developer%20%7C%20AI%20%26amp%3B%20Automation&descSize=18&descAlignY=55" width="100%" alt="Antono — Full-Stack Developer | AI & Automation" />
 
 </div>
 
