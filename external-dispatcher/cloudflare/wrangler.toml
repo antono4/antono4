@@ -1,0 +1,19 @@
+name = "antono4-routine-dispatcher"
+main = "src/worker.js"
+compatibility_date = "2025-01-01"
+
+# Cloudflare runs this Worker every minute; the Worker only dispatches the routines
+# whose minute offset matches, which gives each routine a 10-minute cadence.
+[triggers]
+crons = ["* * * * *"]
+
+[vars]
+OWNER = "antono4"
+REPO = "antono4"
+REF = "main"
+ROUTINES = "activity-graph.yml,generate-assets.yml,profile-3d-contrib.yml,profile-stats.yml,autocommit.yml"
+MINUTE_OFFSETS = "2,4,6,8,10"
+
+# Secrets are set with `wrangler secret put`, never committed:
+#   wrangler secret put GITHUB_TOKEN      # PAT with repo + workflow scope
+#   wrangler secret put DISPATCH_TOKEN    # optional, protects the fetch endpoint
