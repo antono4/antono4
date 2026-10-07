@@ -9,7 +9,7 @@ on:
   schedule:
     # Offset from the :00/:10/... marks the routine crons use, so this reads the state
     # those runs left behind rather than racing them.
-    - cron: '37 */2 * * *'
+    - cron: '7 */2 * * *'
   workflow_dispatch:
     inputs:
       mode:

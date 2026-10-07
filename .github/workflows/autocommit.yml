@@ -5,7 +5,8 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 0 * * *" # See https://crontab.guru/
+    # setiap 10 menit, digeser 8 menit agar tidak bentrok dengan routine lain
+    - cron: "8-59/10 * * * *" # See https://crontab.guru/
 
   workflow_dispatch:
 permissions:

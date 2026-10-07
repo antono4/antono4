@@ -35,17 +35,16 @@ DEFAULT_ROUTINES = [
 # `workflow_dispatch:` trigger globally and stop spending calls on it.
 NON_DISPATCHABLE_AFTER = 5
 
-# How long a routine may go without a run before this scheduler re-fires it. The values
-# track each file's own cron: the short-cron routines only need a nudge when something is
-# genuinely wrong, while `autocommit.yml` is expected to sit idle between daily runs.
+# How long a routine may go without a run before this scheduler re-fires it. Every
+# routine now runs on a 10-minute cron, so a gap of a few runs means something is wrong.
 ROUTINE_STALENESS_MINUTES = {
     "activity-graph.yml": 30,
     "profile-3d-contrib.yml": 30,
-    "generate-assets.yml": 40,
-    "profile-stats.yml": 40,
-    "autocommit.yml": 1500,
+    "generate-assets.yml": 30,
+    "profile-stats.yml": 30,
+    "autocommit.yml": 30,
 }
-DEFAULT_STALENESS_MINUTES = 40
+DEFAULT_STALENESS_MINUTES = 30
 
 
 def as_bool(value):
