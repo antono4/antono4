@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="500" viewBox="0 0 880 500" fill="none" role="img" aria-label="Antono — About Me">
+  <title>Antono — About Me</title>
+  <desc>Animated terminal-style card: role, background, and what I build.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f1a"/>
+      <stop offset="55%" stop-color="#141d33"/>
+      <stop offset="100%" stop-color="#0b0f1a"/>
+    </linearGradient>
+
+    <radialGradient id="ava" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="55%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </radialGradient>
+
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2dd4bf">
+        <animate attributeName="stop-color" values="#2dd4bf;#a855f7;#3b82f6;#2dd4bf" dur="12s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#3b82f6">
+        <animate attributeName="stop-color" values="#3b82f6;#2dd4bf;#a855f7;#3b82f6" dur="12s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#a855f7">
+        <animate attributeName="stop-color" values="#a855f7;#3b82f6;#2dd4bf;#a855f7" dur="12s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <clipPath id="card"><rect x="0" y="0" width="880" height="500" rx="24"/></clipPath>
+    <clipPath id="panel"><rect x="40" y="40" width="800" height="420" rx="18"/></clipPath>
+
+    <!-- typewriter reveal masks: one growing rect per line -->
+    <clipPath id="l1"><rect x="76" y="208" height="34" width="0">
+      <animate attributeName="width" dur="14s" repeatCount="indefinite" fill="freeze"
+        keyTimes="0;0.0214;0.1643;1" values="0;0;554;554"/>
+    </rect></clipPath>
+    <clipPath id="l2"><rect x="76" y="246" height="34" width="0">
+      <animate attributeName="width" dur="14s" repeatCount="indefinite" fill="freeze"
+        keyTimes="0;0.1893;0.3321;1" values="0;0;554;554"/>
+    </rect></clipPath>
+    <clipPath id="l3"><rect x="76" y="284" height="34" width="0">
+      <animate attributeName="width" dur="14s" repeatCount="indefinite" fill="freeze"
+        keyTimes="0;0.3571;0.5286;1" values="0;0;614;614"/>
+    </rect></clipPath>
+    <clipPath id="l4"><rect x="76" y="322" height="34" width="0">
+      <animate attributeName="width" dur="14s" repeatCount="indefinite" fill="freeze"
+        keyTimes="0;0.5536;0.7179;1" values="0;0;578;578"/>
+    </rect></clipPath>
+    <clipPath id="l5"><rect x="76" y="360" height="34" width="0">
+      <animate attributeName="width" dur="14s" repeatCount="indefinite" fill="freeze"
+        keyTimes="0;0.7429;0.8643;1" values="0;0;422;422"/>
+    </rect></clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="880" height="500" fill="url(#bg)"/>
+
+    <!-- ambient glow -->
+    <circle cx="130" cy="110" r="180" fill="#2dd4bf" opacity="0.05">
+      <animate attributeName="opacity" values="0.05;0.11;0.05" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="790" cy="410" r="200" fill="#a855f7" opacity="0.06">
+      <animate attributeName="opacity" values="0.10;0.04;0.10" dur="11s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- floating panel -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" dur="8s" repeatCount="indefinite"
+        values="0 0;0 -7;0 0"/>
+      <rect x="40" y="40" width="800" height="420" rx="18" fill="#0f1524" stroke="#2a3446" stroke-width="1.5"/>
+      <rect x="41" y="41" width="798" height="418" rx="17" fill="none" stroke="url(#edge)" stroke-width="1.4" opacity="0.5"/>
+
+      <!-- sweeping sheen -->
+      <g clip-path="url(#panel)">
+        <rect x="-240" y="40" width="200" height="420" fill="url(#sheen)">
+          <animateTransform attributeName="transform" type="translate" dur="7s" repeatCount="indefinite"
+            values="0 0;1160 0"/>
+        </rect>
+      </g>
+
+      <!-- content fades out at the end of each loop -->
+      <g>
+        <animate attributeName="opacity" dur="14s" repeatCount="indefinite"
+          keyTimes="0;0.95;1" values="1;1;0"/>
+
+        <!-- ===== header ===== -->
+        <g opacity="0">
+          <animate attributeName="opacity" dur="14s" repeatCount="indefinite"
+            keyTimes="0;0.007;0.05;1" values="0;0;1;1"/>
+
+          <!-- avatar -->
+          <ellipse cx="118" cy="188" rx="46" ry="7" fill="#2dd4bf" opacity="0.12"/>
+          <circle cx="118" cy="124" r="36" fill="url(#ava)"/>
+          <circle cx="118" cy="124" r="36" fill="none" stroke="#0b0f1a" stroke-width="3"/>
+          <circle cx="118" cy="124" r="44" fill="none" stroke="url(#edge)" stroke-width="2"
+                  stroke-dasharray="18 12" opacity="0.7">
+            <animateTransform attributeName="transform" type="rotate" dur="18s"
+              repeatCount="indefinite" from="0 118 124" to="360 118 124"/>
+          </circle>
+
+          <!-- name + tagline -->
+          <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace">
+            <text x="176" y="118" font-size="30" font-weight="700" fill="#e6edf3" letter-spacing="-0.5">Antono</text>
+            <text x="176" y="143" font-size="13" fill="#8b949e"> · Full-Stack Developer | AI &amp; Automation</text>
+
+            <!-- location with Indonesian flag -->
+            <rect x="176" y="152" width="22" height="7.7" rx="1" fill="#ce1126"/>
+            <rect x="176" y="159.7" width="22" height="7.7" rx="1" fill="#f0f6fc"/>
+            <rect x="176" y="152" width="22" height="15.4" rx="1" fill="none" stroke="#2a3446" stroke-width="1"/>
+            <text x="206" y="165" font-size="13" fill="#8b949e">Indonesia</text>
+          </g>
+
+          <!-- right-aligned link -->
+          <text x="804" y="165" text-anchor="end" font-size="13" fill="#3b82f6"
+            font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace">github.com/antono4</text>
+
+          <!-- divider, draws itself in -->
+          <rect x="76" y="186" width="0" height="2" rx="1" fill="url(#edge)" opacity="0.6">
+            <animate attributeName="width" dur="14s" repeatCount="indefinite" fill="freeze"
+              keyTimes="0;0.0143;0.0857;1" values="0;0;728;728"/>
+          </rect>
+        </g>
+
+        <!-- ===== body ===== -->
+        <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
+           font-size="20" fill="#e6edf3">
+
+          <g clip-path="url(#l1)">
+            <text x="76" y="228">I'm a <tspan fill="#2dd4bf" font-weight="700">Full-Stack Developer</tspan> based in Indonesia</text>
+          </g>
+
+          <g clip-path="url(#l2)">
+            <text x="76" y="266">with a background in <tspan fill="#f59e0b" font-weight="700">computational chemistry</tspan>.</text>
+          </g>
+
+          <g clip-path="url(#l3)">
+            <text x="76" y="304">I build <tspan fill="#a855f7" font-weight="700">production web systems</tspan> <tspan fill="#8b949e">&amp;</tspan> <tspan fill="#2dd4bf" font-weight="700">AI-powered tools</tspan>,</text>
+          </g>
+
+          <g clip-path="url(#l4)">
+            <text x="76" y="342">from <tspan fill="#f59e0b" font-weight="700">hospital</tspan> <tspan fill="#8b949e">&amp;</tspan> <tspan fill="#f59e0b" font-weight="700">enterprise</tspan> management platforms</text>
+          </g>
+
+          <g clip-path="url(#l5)">
+            <text x="76" y="380">to <tspan fill="#3b82f6" font-weight="700">automation</tspan> <tspan fill="#8b949e">&amp;</tspan> <tspan fill="#3b82f6" font-weight="700">content pipelines</tspan>.</text>
+          </g>
+        </g>
+
+        <!-- blinking caret once typing finishes -->
+        <rect x="486" y="362" width="12" height="24" fill="#2dd4bf" opacity="0">
+          <animate attributeName="opacity" dur="14s" repeatCount="indefinite"
+            keyTimes="0;0.8643;0.872;0.967;0.974;1" values="0;0;1;1;0;0"/>
+        </rect>
+
+        <!-- ===== skill chips ===== -->
+        <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
+           font-size="13" font-weight="700" letter-spacing="1" opacity="0">
+          <animate attributeName="opacity" dur="14s" repeatCount="indefinite"
+            keyTimes="0;0.880;0.940;1" values="0;0;1;1"/>
+
+          <g>
+            <animateTransform attributeName="transform" type="translate" dur="3.4s" repeatCount="indefinite"
+              values="0 0;0 -3.5;0 0"/>
+            <rect x="175" y="414" width="110" height="34" rx="11" fill="#a855f7" fill-opacity="0.13" stroke="#a855f7" stroke-opacity="0.5"/>
+            <text x="191" y="436" fill="#c084fc">AI TOOLS</text>
+          </g>
+
+          <g>
+            <animateTransform attributeName="transform" type="translate" dur="4.3s" repeatCount="indefinite"
+              values="0 0;0 -4;0 0"/>
+            <rect x="299" y="414" width="140" height="34" rx="11" fill="#3b82f6" fill-opacity="0.13" stroke="#3b82f6" stroke-opacity="0.5"/>
+            <rect x="315" y="424.7" width="18" height="6.3" rx="1" fill="#ce1126"/>
+            <rect x="315" y="431" width="18" height="6.3" rx="1" fill="#f0f6fc"/>
+            <rect x="315" y="424.7" width="18" height="12.6" rx="1" fill="none" stroke="#2a3446" stroke-width="0.8"/>
+            <text x="341" y="436" fill="#60a5fa">AUTOMATION</text>
+          </g>
+
+          <g>
+            <animateTransform attributeName="transform" type="translate" dur="3.8s" repeatCount="indefinite"
+              values="0 0;0 -3;0 0"/>
+            <rect x="453" y="414" width="120" height="34" rx="11" fill="#2dd4bf" fill-opacity="0.13" stroke="#2dd4bf" stroke-opacity="0.5"/>
+            <text x="469" y="436" fill="#2dd4bf">FULL-STACK</text>
+          </g>
+
+          <g>
+            <animateTransform attributeName="transform" type="translate" dur="4.7s" repeatCount="indefinite"
+              values="0 0;0 -4;0 0"/>
+            <rect x="587" y="414" width="118" height="34" rx="11" fill="#f59e0b" fill-opacity="0.13" stroke="#f59e0b" stroke-opacity="0.5"/>
+            <text x="603" y="436" fill="#fbbf24">CHEMISTRY</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
