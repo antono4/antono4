@@ -84,36 +84,27 @@ dengan:
 
 - Header `Authorization: Bearer <PAT>`
 - Header `Accept: application/vnd.github+json`
+- Header `Content-Type: application/json`
 - Body `{"ref":"main"}`
 - Jadwal: setiap 10 menit pada menit offset masing-masing.
 
-| Routine | Menit eksekusi |
+| Routine | Menit eksekusi (UTC) |
 | --- | --- |
 | `activity-graph.yml` | 2, 12, 22, 32, 42, 52 |
 | `generate-assets.yml` | 4, 14, 24, 34, 44, 54 |
 | `profile-3d-contrib.yml` | 6, 16, 26, 36, 46, 56 |
 | `profile-stats.yml` | 8, 18, 28, 38, 48, 58 |
-| `autocommit.yml` | 10, 20, 30, 40, 50, 0 |
+| `autocommit.yml` | 0, 10, 20, 30, 40, 50 |
 
-Di UI cron-job.org, pilih "Every 10 minutes" lalu atur menitnya secara manual, atau
-memakai REST API:
+**Panduan langkah demi langkah lengkap ada di
+[`cron-job-org/README.md`](cron-job-org/README.md).** Ada juga script otomatis
+[`cron-job-org/create-cron-jobs.sh`](cron-job-org/create-cron-jobs.sh) yang membuat/
+meng-update kelima job sekaligus:
 
 ```bash
-curl -X PUT https://api.cron-job.org/jobs \
-  -H "Authorization: Bearer <API_KEY_cron-job.org>" \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "job": {
-      "url": "https://api.github.com/repos/antono4/antono4/actions/workflows/activity-graph.yml/dispatches",
-      "requestMethod": 1,
-      "requestHeaders": [
-        {"name": "Authorization", "value": "Bearer <PAT>"},
-        {"name": "Accept", "value": "application/vnd.github+json"}
-      ],
-      "requestBody": "{\"ref\":\"main\"}",
-      "schedule": {"timezone": "UTC", "minutes": [2,12,22,32,42,52], "hours": [-1], "mdays": [-1], "months": [-1], "wdays": [-1]}
-    }
-  }'
+cd external-dispatcher/cron-job-org
+CRONJOB_API_KEY=xxx GITHUB_TOKEN=ghp_xxx DRY_RUN=1 ./create-cron-jobs.sh  # pratinjau
+CRONJOB_API_KEY=xxx GITHUB_TOKEN=ghp_xxx ./create-cron-jobs.sh           # buat
 ```
 
 > Catatan: cron-job.org mendukung header kustom dan method POST dengan body. Header
