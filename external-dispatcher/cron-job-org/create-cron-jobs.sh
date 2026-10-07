@@ -98,16 +98,39 @@ PY
   fi
 
   if [ -n "$job_id" ]; then
-    code=$(curl -sS -o /tmp/cronjob.out -w '%{http_code}' -X PATCH \
+    method="PATCH"
+    target="$api/jobs/${job_id}"
+  else
+    method="PUT"
+    target="$api/jobs"
+  fi
+
+  # cron-job.org allows ~5 write requests/minute, so retry 429 with backoff.
+  attempt=1
+  max_attempts=6
+  while :; do
+    code=$(curl -sS -o /tmp/cronjob.out -w '%{http_code}' -X "$method" \
       -H "$auth" -H 'Content-Type: application/json' \
-      -d "$payload" "$api/jobs/${job_id}")
+      -d "$payload" "$target")
+    if [ "$code" != "429" ]; then
+      break
+    fi
+    if [ "$attempt" -ge "$max_attempts" ]; then
+      echo "GAGAL ${title}: masih 429 setelah ${max_attempts} percobaan" >&2
+      break
+    fi
+    wait_s=$((attempt * 15))
+    echo "  ${title}: HTTP 429 (rate limit), tunggu ${wait_s}s lalu coba lagi (percobaan $((attempt + 1)))"
+    sleep "$wait_s"
+    attempt=$((attempt + 1))
+  done
+
+  if [ "$method" = "PATCH" ]; then
     echo "updated ${title} (jobId=${job_id}) -> HTTP ${code}"
   else
-    code=$(curl -sS -o /tmp/cronjob.out -w '%{http_code}' -X PUT \
-      -H "$auth" -H 'Content-Type: application/json' \
-      -d "$payload" "$api/jobs")
     echo "created ${title} -> HTTP ${code} $(cat /tmp/cronjob.out)"
   fi
+  sleep 2
 done
 
 echo
