@@ -29,9 +29,7 @@
 
 ## 👋 About Me
 
-I'm a **Full-Stack Developer** based in **Indonesia** 🇮🇩 with a background in **computational chemistry**. I build production web systems and AI-powered tools — from hospital and enterprise management platforms to automation and content pipelines.
 
-I care about clean architecture, reliable delivery, and software that solves real operational problems.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/antono4/antono4/main/assets/about-me.svg" alt="Antono — animated About Me" width="100%" />
