@@ -1,16 +1,16 @@
-name: Refresh Activity Graph Every 5 Minutes
+name: Refresh Activity Graph Every 10 Minutes
 
 on:
   schedule:
-    # setiap 5 menit
-    - cron: '*/5 * * * *'
+    # setiap 10 menit
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: activity-graph-5min
+  group: activity-graph-10min
   cancel-in-progress: false
 
 jobs:
