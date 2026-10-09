@@ -2,7 +2,7 @@
 <rect width="100%" height="100%" rx="4.5" fill="#44475a" stroke="#ffffff" stroke-opacity="1" style="stroke-width:1"/>
 <style>svg { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; } .header { font: 600 20px 'Segoe UI', Ubuntu, Sans-Serif; } text { user-select: none; }</style>
 <text x="600" y="40" fill="#f8f8f2" text-anchor="middle" class="header">antono4&#39;s GitHub Activity Graph</text>
-<text x="600" y="65" fill="#f8f8f2" text-anchor="middle" font-size="14">99,108 contributions in the last 31 days</text>
+<text x="600" y="65" fill="#f8f8f2" text-anchor="middle" font-size="14">99,150 contributions in the last 31 days</text>
 <line x1="65" x2="1135" y1="555" y2="555" stroke="#f8f8f2" stroke-opacity="0.15"/>
 <text x="57" y="559" fill="#f8f8f2" text-anchor="end" font-size="12">0</text>
 <line x1="65" x2="1135" y1="448.75" y2="448.75" stroke="#f8f8f2" stroke-opacity="0.15"/>
@@ -13,8 +13,8 @@
 <text x="57" y="240.25" fill="#f8f8f2" text-anchor="end" font-size="12">5943</text>
 <line x1="65" x2="1135" y1="130" y2="130" stroke="#f8f8f2" stroke-opacity="0.15"/>
 <text x="57" y="134" fill="#f8f8f2" text-anchor="end" font-size="12">7924</text>
-<path d="M 65.00 282.54 L 100.67 276.80 L 136.33 262.64 L 172.00 214.80 L 207.67 228.26 L 243.33 283.93 L 279.00 317.77 L 314.67 372.21 L 350.33 454.27 L 386.00 445.64 L 421.67 480.34 L 457.33 488.60 L 493.00 488.06 L 528.67 499.11 L 564.33 491.12 L 600.00 493.37 L 635.67 494.77 L 671.33 488.01 L 707.00 494.12 L 742.67 501.10 L 778.33 435.13 L 814.00 448.37 L 849.67 380.63 L 885.33 379.94 L 921.00 328.72 L 956.67 337.19 L 992.33 356.77 L 1028.00 391.68 L 1063.67 361.00 L 1099.33 130.00 L 1135.00 282.48 L 1135.00 555 L 65 555 Z" fill="#ff79c6" fill-opacity="0.3"/>
-<path d="M 65.00 282.54 L 100.67 276.80 L 136.33 262.64 L 172.00 214.80 L 207.67 228.26 L 243.33 283.93 L 279.00 317.77 L 314.67 372.21 L 350.33 454.27 L 386.00 445.64 L 421.67 480.34 L 457.33 488.60 L 493.00 488.06 L 528.67 499.11 L 564.33 491.12 L 600.00 493.37 L 635.67 494.77 L 671.33 488.01 L 707.00 494.12 L 742.67 501.10 L 778.33 435.13 L 814.00 448.37 L 849.67 380.63 L 885.33 379.94 L 921.00 328.72 L 956.67 337.19 L 992.33 356.77 L 1028.00 391.68 L 1063.67 361.00 L 1099.33 130.00 L 1135.00 282.48" stroke="#ff79c6" stroke-width="2" fill="none"/>
+<path d="M 65.00 282.54 L 100.67 276.80 L 136.33 262.64 L 172.00 214.80 L 207.67 228.26 L 243.33 283.93 L 279.00 317.77 L 314.67 372.21 L 350.33 454.33 L 386.00 445.59 L 421.67 480.34 L 457.33 488.60 L 493.00 488.06 L 528.67 499.11 L 564.33 491.12 L 600.00 493.37 L 635.67 494.77 L 671.33 488.01 L 707.00 494.12 L 742.67 501.10 L 778.33 435.13 L 814.00 448.37 L 849.67 380.63 L 885.33 379.94 L 921.00 328.72 L 956.67 337.19 L 992.33 356.77 L 1028.00 391.68 L 1063.67 361.00 L 1099.33 130.00 L 1135.00 280.23 L 1135.00 555 L 65 555 Z" fill="#ff79c6" fill-opacity="0.3"/>
+<path d="M 65.00 282.54 L 100.67 276.80 L 136.33 262.64 L 172.00 214.80 L 207.67 228.26 L 243.33 283.93 L 279.00 317.77 L 314.67 372.21 L 350.33 454.33 L 386.00 445.59 L 421.67 480.34 L 457.33 488.60 L 493.00 488.06 L 528.67 499.11 L 564.33 491.12 L 600.00 493.37 L 635.67 494.77 L 671.33 488.01 L 707.00 494.12 L 742.67 501.10 L 778.33 435.13 L 814.00 448.37 L 849.67 380.63 L 885.33 379.94 L 921.00 328.72 L 956.67 337.19 L 992.33 356.77 L 1028.00 391.68 L 1063.67 361.00 L 1099.33 130.00 L 1135.00 280.23" stroke="#ff79c6" stroke-width="2" fill="none"/>
 <circle cx="65.00" cy="282.54" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
 <circle cx="100.67" cy="276.80" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
 <circle cx="136.33" cy="262.64" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
@@ -23,8 +23,8 @@
 <circle cx="243.33" cy="283.93" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
 <circle cx="279.00" cy="317.77" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
 <circle cx="314.67" cy="372.21" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
-<circle cx="350.33" cy="454.27" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
-<circle cx="386.00" cy="445.64" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
+<circle cx="350.33" cy="454.33" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
+<circle cx="386.00" cy="445.59" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
 <circle cx="421.67" cy="480.34" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
 <circle cx="457.33" cy="488.60" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
 <circle cx="493.00" cy="488.06" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
@@ -45,7 +45,7 @@
 <circle cx="1028.00" cy="391.68" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
 <circle cx="1063.67" cy="361.00" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
 <circle cx="1099.33" cy="130.00" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
-<circle cx="1135.00" cy="282.48" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
+<circle cx="1135.00" cy="280.23" r="5" fill="#bd93f9" stroke="#44475a" stroke-width="1"/>
 <text x="65.00" y="580" fill="#f8f8f2" text-anchor="middle" font-size="12">09/09</text>
 <text x="243.33" y="580" fill="#f8f8f2" text-anchor="middle" font-size="12">09/14</text>
 <text x="421.67" y="580" fill="#f8f8f2" text-anchor="middle" font-size="12">09/19</text>
