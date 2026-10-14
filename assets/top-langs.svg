@@ -15,9 +15,9 @@
   <rect x="30" y="126" width="435" height="6" rx="3" fill="#2a2e3f"/>
   <rect x="30" y="126" width="56.55" height="6" rx="3" fill="#7aa2f7"/>
   <text x="30" y="145" fill="#f8f8f2" font-size="13" font-family="monospace">JavaScript</text>
-  <text x="465" y="145" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">11%</text>
+  <text x="465" y="145" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">12%</text>
   <rect x="30" y="151" width="435" height="6" rx="3" fill="#2a2e3f"/>
-  <rect x="30" y="151" width="47.85" height="6" rx="3" fill="#7aa2f7"/>
+  <rect x="30" y="151" width="52.20" height="6" rx="3" fill="#7aa2f7"/>
   <text x="30" y="170" fill="#f8f8f2" font-size="13" font-family="monospace">PHP</text>
   <text x="465" y="170" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">9%</text>
   <rect x="30" y="176" width="435" height="6" rx="3" fill="#2a2e3f"/>
