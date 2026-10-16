@@ -244,6 +244,69 @@ Windows optimization suite that improves performance, privacy, and security on W
 
 </td>
 </tr>
+<tr>
+<td align="center" width="50%" valign="top">
+
+### 🧩 MarbelAI
+
+Free multi-model AI chat workspace — runs several free models in parallel and returns the fastest working answer, with automatic provider failover and a DoLa mode for more factual replies.
+
+<p>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
+<img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages" />
+</p>
+
+<p>
+<a href="https://antono4.github.io/MarbelAI/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=githubpages&logoColor=white" alt="Live Demo" /></a>
+<a href="https://github.com/antono4/MarbelAI" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Source-7AA2F7?style=flat-square&logo=github&logoColor=white" alt="Source" /></a>
+</p>
+
+</td>
+<td align="center" width="50%" valign="top">
+
+### 🎨 MarbelAIv2.1
+
+Next-generation Marbel AI workspace that also generates images and short video illustrations — shipped as both a web app and an Android APK, with no account, API key, or cost.
+
+<p>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
+<img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android" />
+</p>
+
+<p>
+<a href="https://antono4.github.io/MarbelAIv2.1/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=githubpages&logoColor=white" alt="Live Demo" /></a>
+<a href="https://github.com/antono4/MarbelAIv2.1" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Source-7AA2F7?style=flat-square&logo=github&logoColor=white" alt="Source" /></a>
+</p>
+
+</td>
+</tr>
+<tr>
+<td align="center" width="50%" valign="top">
+
+### 🦙 phi3-mini-ai
+
+Fully local Phi-3 Mini 4k Instruct chatbot running on llama.cpp CPU — CLI, REST API, and web UI, with OpenAI-compatible endpoints, a LoRA fine-tuning pipeline, and text-to-image/video modes.
+
+<p>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
+<img src="https://img.shields.io/badge/llama.cpp-000000?style=flat-square" alt="llama.cpp" />
+</p>
+
+<p>
+<a href="https://antono4.github.io/phi3-mini-ai/static/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Live_Demo-2EA44F?style=flat-square&logo=githubpages&logoColor=white" alt="Live Demo" /></a>
+<a href="https://github.com/antono4/phi3-mini-ai" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Source-7AA2F7?style=flat-square&logo=github&logoColor=white" alt="Source" /></a>
+</p>
+
+</td>
+<td align="center" width="50%" valign="top">
+
+&nbsp;
+
+</td>
+</tr>
 </table>
 
 <p align="center"><a href="https://github.com/antono4?tab=repositories"><img src="https://img.shields.io/badge/Browse_all_repositories-0D1117?style=for-the-badge&logo=github&logoColor=white" alt="Browse all repositories" /></a></p>
