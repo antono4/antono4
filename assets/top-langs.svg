@@ -23,7 +23,7 @@
   <rect x="30" y="176" width="435" height="6" rx="3" fill="#2a2e3f"/>
   <rect x="30" y="176" width="39.15" height="6" rx="3" fill="#7aa2f7"/>
   <text x="30" y="195" fill="#f8f8f2" font-size="13" font-family="monospace">CSS</text>
-  <text x="465" y="195" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">6%</text>
+  <text x="465" y="195" fill="#6272a4" font-size="13" font-family="monospace" text-anchor="end">7%</text>
   <rect x="30" y="201" width="435" height="6" rx="3" fill="#2a2e3f"/>
-  <rect x="30" y="201" width="26.10" height="6" rx="3" fill="#7aa2f7"/>
+  <rect x="30" y="201" width="30.45" height="6" rx="3" fill="#7aa2f7"/>
 </svg>
